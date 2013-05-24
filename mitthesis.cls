@@ -402,7 +402,7 @@ reserved.\par\permission}}
 % Occacionally you will need to exactly specify the text of the 
 % copyright notice.  The \copyrightnoticetext command is then useful.
 \long\def\copyrightnoticetext#1{\gdef\@copyrightnotice{#1}}
-\def\@copyrightnotice{\copyright\ \Mit\ \@degreeyear.  All rights reserved.}
+\def\@copyrightnotice{\copyright\ \Upc\ \@degreeyear.  All rights reserved.}
 
 %% `vi' documentclass option: Specifying this option automatically
 %% copyrights the thesis to the author and gives MIT permission to copy and
@@ -463,7 +463,7 @@ by\par
 \choosecase{\@degree}
 \par
 at the
-\par\MIT\par
+\par\UPC\par
 \@degreemonth\ \@degreeyear
 \par
 \@copyrightnotice
@@ -520,6 +520,12 @@ requirements for the \@degreeword\ of \\
 
 \def\MIT{MASSACHUSETTS INSTITUTE OF TECHNOLOGY}
 \def\Mit{Massachusetts Institute of Technology}
+
+\def\UPC{TECHNICAL UNIVERSITY OF CATALONIA}
+\def\Upc{Technical University of Catalonia (BarcelonaTech)}
+
+\def\FIB{BARCELONA SCHOOL OF INFORMATICS}
+\def\Fib{Barcelona School of Informatics}
 
 \def\permission{\par\noindent{\centering
    The author hereby grants to MIT permission to reproduce and to
