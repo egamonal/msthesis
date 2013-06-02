@@ -4,23 +4,47 @@
 %% You can process specific files by typing their names in at the 
 %% \files=
 %% prompt when you run the file main.tex through LaTeX.
+
+fix the abstract to include UPC (currently only FIB is shown)
+
+\chapter{bio note?}
+after the abstract, Biographical Note and Acknowledgment
+
+Although not a requirement, each thesis may contain a short biography of the candidate, including institutions attended and dates of attendance, degrees and honors, titles of publications, teaching and professional experience, and other matters that may be pertinent.  An acknowledgment page may also be included.  These sections may be single-spaced.\cite{Darwin} \cite{Crockford} \cite{Stefanov} \cite{AngularJSGuide} \cite{Fowler}
+
+
 \chapter{Introduction}
 stuff that should be somewhere: DSL, TDD, .deb, linux and tools, debugging,etc opensourcing. DRY and DRA (do not repeat angularjs docs), xml (our lang) and how we use it (themes, inheritance, composition, urls)...
 why angularjs instead of, say, a lemon.
 
-\section{Environment Overview}
-What we do in PAL and the robots. the technology. my context: where is the web? why are we moving to open web technologies? flash is dead. motivations.
+\section{Environment Overview (chooose a better title)}
+What we do in PAL and the robots. the technology. my context: where is the web? why are we moving to open web technologies? flash is dead. motivations. reserach questions?
 
 \section{Goals}
 Goals in general (be a good engineer, help the society, be nice to people.. check goals of this master).
 
 specific goals: big milestones of this project. quality, intense testing. 
 
+the object of this thesis is to develop an original software using web technologies to substitute the current Adobe Flash (copyright) system.
+
 \section{Organisation of this document}
 should this section be here? an overview of the contents of this document. scope, order, chapters, target audience...
 
+\chapter{Background - previous work - state of the art (?)}
+should I include a chapter about DSL (?), javascript, flash, development... ?
+
+\url{https://vpn.upc.edu/10.1145/1120000/1118892/,DanaInfo=delivery.acm.org+p316-mernik.pdf?ip=147.83.201.40&acc=ACTIVE%20SERVICE&key=C2716FEBFA981EF161F5D4B6734BF3A99E438D22375C4622&CFID=334341738&CFTOKEN=33150097&__acm__=1370190334_3caa844b1de4068b33f962e0e5e78d90}
+
+This can be useful too: "GERMON, R. 2001. Using XML as an intermediate form for compiler development. In XML Conference Proceedings"
+
+i can probably include  theory about XML to provide context. focus on why it is useful in this project (expressivity, semantics, relation with HTML, good for browsers, good for json..).
+
+what's previous work here? the current flash version? specs like the api?
+
+what's state of the art here? trends flash->html5? JS? JS frameworks? TDD? continuous integration?
+
 \chapter{Plan}
-check section name. check contents.
+check section name (roadmap?). check contents.
 description of the dev process: research, write small pieces of code, intense unit testing, refactoring, TDD...
 
 \section{Phases}
@@ -33,9 +57,10 @@ numbers here.
 maybe this subsection is not needed
 \section{Scope}
 scope of the project. what will be done and what will not. e.g backend.basestation, old xml syntax.
+
 \section{Functional requirements}
 do we need a section somewhere about DSL? is our XML a DSL?
-basically, make it work. test. deploy it. make it compatible with backend
+basically, make it work and make it work fast. test. deploy it. make it compatible with backend
 
 \section{Non Functional Requirements}
 intense testing, robust application, modern standards, easy to maintain, specific platform, specific hardware, touchscreen, UI/UX/usability 
@@ -48,17 +73,17 @@ Users: no users (well, a "virtual" user does exist). it's a meta-app that reads 
 
 contracts: no contracts. TDD as opposed to design by contract??? check literature
 
-Use Cases: one per directive, settings and entities??
+Use Cases: one per directive, settings and entities?? users: the system.
 
 \chapter{Design}
-internal design of the application.
+internal design of the application. this should be the fun part.
 \section{Technology}
 angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
 
 \section{Architecture}
 MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use)
 
-dependency injection and angularJS
+dependency injection and angularJS (and literature: fowler)
 
 \section{Static View}
 the model, the view and the controllers. angualar modules, services, filters, controllers...
