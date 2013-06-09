@@ -1,0 +1,146 @@
+%% This is an example first chapter.  You should put chapter/appendix that you
+%% write into a separate file, and add a line \include{yourfilename} to
+%% main.tex, where `yourfilename.tex' is the name of the chapter/appendix file.
+%% You can process specific files by typing their names in at the 
+%% \files=
+%% prompt when you run the file main.tex through LaTeX.
+
+fix the abstract to include UPC (currently only FIB is shown)
+\cite{Darwin} \cite{Crockford} \cite{Stefanov} \cite{AngularJSGuide} \cite{Fowler}
+
+
+\chapter{Related Work}
+This chapter is a short introduction to.. general concepts. doesnt make references to
+robots, qt or anything. no ref to UX or UI design. my problem is an app that renders
+apps, not the screens editor or a particular design.
+
+\section{Systems Reengineering}
+
+\section{Web Technologies}
+goals: explain evolution of web tech, state of the art, and why it is better than flash.
+
+* programs in browsers. isolate them? flash plugin. flash is dead (jobs or other
+articles) 
+* browsers: architecture (dom, js engine, html renderer...) from mosaic to
+fx/ch/qtwebkit 
+** webkit and qtwebkit
+
+* client-side tech: JS, css, html/xml 
+** evaluation and comparison 
+** frameworks
+
+browsers, JS engines, chrome v8, fx gecko, QtBrowser
+ functionaliyy (interoperability, security), reliability (maturity), usability: (learn-
+ability, attractiveness) Efficiency: (time behavior, resource utilization) Maintainabil-
+ity: (stability) Portability: (installability)
+
+\section{From Plain Documents to Applications}
+”HyperText is a way to link and access information of various kinds as a web of
+nodes in which the user can browse at will. Potentially, HyperText provides a single
+user-interface to many large classes of stored information such as reports, notes, data-
+bases, computer documentation and on-line systems help” \cite{BernersLee:1990}
+
+    When the WWW was started in 1990 it was intended to be a document viewing
+platform with plain text, some static images and navigation with links (anchors).
+    The WWW was born as a document viewing platform and has evolved gradually
+into an application platform. First the web consisted of truly pages that contained
+structured text and some images. Navigation was done using simple links between
+pages. In a second phase, web sites became interactive: it was the time of animated
+graphics, browser plug-ins and JavaScript. More recently web sites have adopted
+features from traditional desktop software in RIAs. .
+    * from old plain html to RIA 
+    * browse docs to single page apps
+
+\section{Programs in Browsers}    
+
+\section{Browsers}
+\section{Client-side Technology}
+
+\subsection{Comparison of languages}
+\subsection{Frameworks}
+
+\section{Test-Driven Development}
+\section{XML as an intermediate representation}
+
+
+\chapter{Plan}
+check section name (roadmap?). check contents.
+description of the dev process: research, write small pieces of code, intense unit testing, refactoring, TDD...
+
+\section{Phases}
+4 phases: proof of concept, first iteration, second, report (?). gantt
+\section{Budget}
+numbers here.
+\section{Execution}
+progress, deviations, final cost
+
+
+\chapter{Requirements}
+\section{Stakeholders}
+maybe this subsection is not needed
+\section{Scope}
+scope of the project. what will be done and what will not. e.g backend.basestation, old xml syntax.
+
+\section{Functional requirements}
+do we need a section somewhere about DSL? is our XML a DSL?
+basically, make it work and make it work fast. test. deploy it. make it compatible with backend
+
+\section{Non Functional Requirements}
+intense testing, robust application, modern standards, easy to maintain, specific platform, specific hardware, touchscreen, UI/UX/usability
+
+\chapter{Specification}
+uhms, I don't think this section will have interesting diagrams.
+should it contain the theory? DSL, XML (vocabulary, grammar, motivations), intercommunication with other systems (config files, structure.xml...)
+
+Users: no users (well, a "virtual" user does exist). it's a meta-app that reads apps in xml and renders them in html. define input and output.
+
+contracts: no contracts. TDD as opposed to design by contract??? check literature
+
+Use Cases: one per directive, settings and entities?? users: the system.
+
+\chapter{Design}
+internal design of the application. this should be the fun part.
+\section{Technology}
+angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
+
+\section{Architecture}
+MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use)
+
+dependency injection and angularJS (and literature: fowler)
+
+\section{Static View}
+the model, the view and the controllers. angualar modules, services, filters, controllers...
+talk about the data model and \$rootScope ?
+
+\section{Dynamic view}
+the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
+
+specific flow of an app. bootstrap, the compile-link phase, push classes, push styles, get url params, etc.
+
+\section{Physical view}
+robots, backend.basestation, wi-fi, vpn...
+
+\section{External view}
+there isn't! it's a backend app to create a frontend app.
+
+\section{should there be any more sections?}
+
+\chapter{Implementation}
+\section{Development environment set-up}
+webstorm, chrome+batarang, firefox+firebug, karma, qtwebkit, qt5 and qt4, linux, ssh to access the robots and basestation, python, virtual environments, svn, robot code, run levels (htmldialog, guiServer, statemachine (WARNING: CONFIDENTIAL?): motivation and benefits.
+
+\section{Examples (application)}
+this is gonna be too big. should examples be included somewhere else?
+
+include examples about: a service, a simple directive, a controller (and the execution flow?).
+
+include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
+
+\chapter{Testing}
+i'm gonna enjoy myself here.
+TDD, karma, unit tests, specification with tests, safe refactoring, integration of karma in webstorm, tweak karma to run in Qt...
+
+
+\chapter{Future Work and Conclusions}
+\section{Future Work}
+\section{Conclusions}
