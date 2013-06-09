@@ -26,7 +26,7 @@ For many people the browser is the most used software in many devices.
 The web creates opportunities and makes documents accessible like tax records, maps, banking information, phone directories or product catalogues.
 New business models, like new ways of promoting products, selling music or movies, are developed having the web as a core part.
 Innovation goes beyond all these with experiments and products like FirefoxOS or ChromeOS to build an operating system designed to mainly let the user browse the web. 
-Other companies, like Citrix or eyeOS, offer web applications that resemble an operating system \cite{Gamonal:2011}.
+Other companies, like Citrix or eyeOS, offer web applications that resemble an operating system %\cite{Gamonal:2011}.
 
 %goals: explain evolution of web tech, state of the art, and why it is better than flash.
 
@@ -66,7 +66,7 @@ There are 3D engines ported to web, real time collaboration, full HD video witho
 
 \paragraph{\acp{RIA}}
 \acs{RIA} are neither web services or web pages. 
-They are software systems based on technologies and standards of the \ac{W3C} that provide web specific resources such as content and services through a web browser \cite{Kappel}.
+They are software systems based on technologies and standards of the \ac{W3C} that provide web specific resources such as content and services through a web browser \cite{Kappel:2006}.
 Typically one designs them as single page websites.
 
 % FIXME language
@@ -105,11 +105,21 @@ Despite the fact that it works in the specific content of a robot, globality is 
 %    * from old plain html to RIA 
 %    * browse docs to single page apps
 
-\subsection{Programs in Browsers}    
-Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. At the end of the day, a \ac{RIA} is a distributed software. In the old days the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with even local storage,  hardware-accelerated components or websockets.
+\subsection{Browsers and isolation of programs}    
+Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. At the end of the day, a \ac{RIA} is a distributed software. 
+In the old days the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with local storage, hardware-accelerated components, websockets and other advanced capabilites.
+
+In spite of the fact that \acp{RIA} have grown in complexity and now demand more resources, browsers architectures still do not provide sufficient isolation between concurrently executing programs.
+A similar problem occurred in early operating systems (e.g. MS-DOS), before processes appeared \cite{Reis:2009}. 
+
+Browsers have typically the following components: TODO
+
+Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on OS processes. Another way of isolating web applications is running them in a plug-in container. 
+
+The project of this thesis uses Qt WebKit, the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. Qt WebKit components comprise the WebCore and SquirrelFish Extreme, which compiles Javascript into native machine code. It is compatible with Adoble Flash Player but because it will not receive more updates in the future, it will not be used any more.
+The Flash plugin is a black box isolated from other elements in the \ac{DOM}. Isolation is not an issue in this project because there is only one application running at a time.
 
 
-\section{Browsers}
 \section{Client-side Technology}
 
 \subsection{Comparison of languages}
