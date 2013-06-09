@@ -17,41 +17,97 @@ apps, not the screens editor or a particular design.
 \section{Systems Reengineering}
 
 \section{Web Technologies}
-goals: explain evolution of web tech, state of the art, and why it is better than flash.
+% quotations: something about emacs life style, or berners lee
+The \ac{WWW} plays a central role in many people's lives.
+The first drafts date back to the 1980s, the first web browser prototype by Tim Berners-Lee was built in December 1990 and the Mosaic browser was completed in 1993.
+After that, Netscape, Mozilla Firefox, Microsoft Internet Explorer, Google Chrome, Safari, Opera, Konqueror and many other browsers appeared, along with some nowadays popular websites (e.g. amazon.com 1995).
 
-* programs in browsers. isolate them? flash plugin. flash is dead (jobs or other
-articles) 
-* browsers: architecture (dom, js engine, html renderer...) from mosaic to
-fx/ch/qtwebkit 
-** webkit and qtwebkit
+For many people the browser is the most used software in many devices. 
+The web creates opportunities and makes documents accessible like tax records, maps, banking information, phone directories or product catalogues.
+New business models, like new ways of promoting products, selling music or movies, are developed having the web as a core part.
+Innovation goes beyond all these with experiments and products like FirefoxOS or ChromeOS to build an operating system designed to mainly let the user browse the web. 
+Other companies, like Citrix or eyeOS, offer web applications that resemble an operating system \cite{Gamonal:2011}.
 
-* client-side tech: JS, css, html/xml 
-** evaluation and comparison 
-** frameworks
+%goals: explain evolution of web tech, state of the art, and why it is better than flash.
 
-browsers, JS engines, chrome v8, fx gecko, QtBrowser
- functionaliyy (interoperability, security), reliability (maturity), usability: (learn-
-ability, attractiveness) Efficiency: (time behavior, resource utilization) Maintainabil-
-ity: (stability) Portability: (installability)
+%* programs in browsers. isolate them? flash plugin. flash is dead (jobs or other
+%articles) 
+%* browsers: architecture (dom, js engine, html renderer...) from mosaic to
+%%fx/ch/qtwebkit 
+%** webkit and qtwebkit
+%
+%* client-side tech: JS, css, html/xml 
+%** evaluation and comparison 
+%** frameworks
+%
+%browsers, JS engines, chrome v8, fx gecko, QtBrowser
+% functionaliyy (interoperability, security), reliability (maturity), usability: (learn-
+%ability, attractiveness) Efficiency: (time behavior, resource utilization) Maintainabil-
+%ity: (stability) Portability: (installability)
 
-\section{From Plain Documents to Applications}
-”HyperText is a way to link and access information of various kinds as a web of
-nodes in which the user can browse at will. Potentially, HyperText provides a single
-user-interface to many large classes of stored information such as reports, notes, data-
-bases, computer documentation and on-line systems help” \cite{BernersLee:1990}
+\subsection{From Plain Documents to Applications}
+\paragraph{The Evolution of the Web}
+"HyperText is a way to link and access information of various kinds as a web of nodes in which the user can browse at will. Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help" \cite{BernersLee:1990}
 
-    When the WWW was started in 1990 it was intended to be a document viewing
-platform with plain text, some static images and navigation with links (anchors).
-    The WWW was born as a document viewing platform and has evolved gradually
-into an application platform. First the web consisted of truly pages that contained
-structured text and some images. Navigation was done using simple links between
-pages. In a second phase, web sites became interactive: it was the time of animated
-graphics, browser plug-ins and JavaScript. More recently web sites have adopted
-features from traditional desktop software in RIAs. .
-    * from old plain html to RIA 
-    * browse docs to single page apps
+When the \ac{WWW} was started in 1990 it was intended to be a document viewing platform. It has evolved in at least three phases \cite{Anttonen:2011} \cite{Taivalsaari:2008}:
+At first, documents were just plain text, forms and page-structured artifacts, possibly static images and hyper-links (anchors) to provide navigation. 
 
-\section{Programs in Browsers}    
+Later on, browsers added programming capabilities, plug-ins and allowed animated graphics. Web pages became interactive and client-server communication increased in complexity.
+Adobe Flash (at that time Macromedia Flash), ShockWave, Java, QuickTime and a few others allowed the inclusion of multimedia contents or even programs (e.g. Java Applets).
+
+More recently, despite the fact that the web browser was not designed for running applications, since 2008 users have headed this way. 
+In this third phase, web pages are not just documents: they have complex user interaction capabilities, they do not require full page refresh and typical use cases have evolved. 
+It is not only about viewing documents but about world-wide sharing, collaboration and interaction, possibly in real time. 
+
+Web browsers have become a widely-used platform for software applications. 
+Video editors, spreadsheets, calendars or 3D games used to run exclusively on desktop computers. 
+Today, they run in a variety of devices and some of them even do it in a browser. 
+There are 3D engines ported to web, real time collaboration, full HD video without plug-ins and many more features built-in a system that is not an ideal execution environment for desktop applications.
+
+\paragraph{\acp{RIA}}
+\acs{RIA} are neither web services or web pages. 
+They are software systems based on technologies and standards of the \ac{W3C} that provide web specific resources such as content and services through a web browser \cite{Kappel}.
+Typically one designs them as single page websites.
+
+% FIXME language
+Web applications differ a lot between them. 
+They can be document-centered, workflow-based, portal-oriented, collaborative, social, etc. 
+They all have some common characteristics. Amongst others:
+\begin{itemize}
+    \item The product
+    \begin{itemize}
+        \item Content is the core.
+        \item Hyper-text: non-linearity is a main distinction to traditional software systems. There are many ways of landing on a certain page. This can lead to disorientation or cognitive overload for users.
+        \item Presentation aesthetics, usability and interaction are closer to a desktop application than to a web page
+    \end{itemize}
+    \item Use
+    \begin{itemize}
+        \item Globality: Spontaneity and multiculturality of users. Web applications are publicly available.
+        \item Quality suffers from unknown network characteristics
+        \item Multiplaform delivery involves having different devices, browsers and degrees of functionality and performance
+        \item Intense network usage. Remote calls are to be minimised. The use of software patterns like remote facade, remote proxy, DTO or RPC is frequent
+    \end{itemize}
+    \item Evolution
+    \begin{itemize}
+         \item Continuous change
+         \item Competitive pressure
+         \item Fast pace development
+    \end{itemize}   
+\end{itemize}
+
+The project of this thesis is, in a sense, both a \ac{RIA} and a \acp{RIA} generator. 
+It is a \ac{RIA} because, among other reasons, it works in the browser with web technology and has an intense use of the network to fetch the model or other components to build the screens.
+The rendered application works in a browser, has an intense use of the network as well and is content-centered.
+Despite the fact that it works in the specific content of a robot, globality is still an issue. A typical scenario would be a fleet of robots in a conference: users from many different cultural backgrounds can use the application at any time.
+
+
+
+%    * from old plain html to RIA 
+%    * browse docs to single page apps
+
+\subsection{Programs in Browsers}    
+Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. At the end of the day, a \ac{RIA} is a distributed software. In the old days the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with even local storage,  hardware-accelerated components or websockets.
+
 
 \section{Browsers}
 \section{Client-side Technology}
@@ -139,6 +195,7 @@ include directive examples: normal (back-button), with isolated components (subs
 \chapter{Testing}
 i'm gonna enjoy myself here.
 TDD, karma, unit tests, specification with tests, safe refactoring, integration of karma in webstorm, tweak karma to run in Qt...
+quality factors of a webapp: kappel
 
 
 \chapter{Future Work and Conclusions}

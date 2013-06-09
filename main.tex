@@ -28,6 +28,8 @@
 \documentclass[12pt,twoside]{mitthesis}
 \usepackage{lgrind}
 \usepackage{url}
+\usepackage{acronym}
+\usepackage[colorlinks=true,urlcolor=black,colorlinks=true,linkcolor=black,citecolor=black,filecolor=black,urlcolor=black,]{hyperref}
 %\usepackage[backend=bibtex,url=true]{biblatex} 
 \pagestyle{plain}
 
@@ -49,8 +51,12 @@
 % \include{signature}
 \pagestyle{plain}
 \include{contents}
+% FIXME should acronyms go here?
+\newpage
+\include{acronyms}
+
 \include{chap1}
-%\include{chap2}
+\include{chap2}
 \appendix
 %\include{appa}
 %\include{appb}

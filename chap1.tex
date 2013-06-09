@@ -6,128 +6,82 @@
 %% prompt when you run the file main.tex through LaTeX.
 
 fix the abstract to include UPC (currently only FIB is shown)
-
-\chapter{bio note?}
-after the abstract, Biographical Note and Acknowledgment
-
-Although not a requirement, each thesis may contain a short biography of the candidate, including institutions attended and dates of attendance, degrees and honors, titles of publications, teaching and professional experience, and other matters that may be pertinent.  An acknowledgment page may also be included.  These sections may be single-spaced.\cite{Darwin} \cite{Crockford} \cite{Stefanov} \cite{AngularJSGuide} \cite{Fowler}
+\cite{Darwin} \cite{Crockford} \cite{Stefanov} \cite{AngularJSGuide} \cite{Fowler}
 
 
 \chapter{Introduction}
+% possible quotations: welcome humans. goodwill. and we have a plan.
 stuff that should be somewhere: DSL, TDD, .deb, linux and tools, debugging,etc opensourcing. DRY and DRA (do not repeat angularjs docs), xml (our lang) and how we use it (themes, inheritance, composition, urls), restful/services to fetch API data
 why angularjs instead of, say, a lemon.
 
-\section{Environment Overview (chooose a better title)}
-What we do in PAL and the robots. the technology. my context: where is the web? why are we moving to open web technologies? flash is dead. motivations. reserach questions?
+\section{PAL Robotics}
+Pal Robotics is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
+An international team of mostly mechanical, electronics and software engineers pushes forward the research on different fields, like speech recognition and generation, computer vision, walking, grasping, machine learning, navigation and others.
+The company has developed 5 humanoid robots in 2013: Reem-A, Reem-B, Reem H1, H2 and H3, and Reem-C (still in the labs).
+This project targets Reem H2 and H3.
+
+\section{Current System}
+The Reem series have big potential in human robot interaction. 
+Besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
+It can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
+
+DIAGRAM: ROBOTS, BACKEND-BASESTATION, client
+
+The Basestation is an application server that hosts Flango, an \ac{RIA} to manage contents and robots made with Django. 
+Clients can create application contents with the Screens Editor, a tool built with Adobe Flex (c), in Flango.
+When application contents are ready, clients can associate 1 application with 1 robot to display it in the touch screen.
+The components of a contents application (screens and entities) have an \ac{XML} representation, an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
+
+Reem robots have built-in software to render the content applications that receive from Basestation. 
+It is also made with Adobe Flex (c). The main concern of this software is transforming \ac{XML} files into a \ac{UI}.
+
+This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies.
+
+\section{New Web System (Problem statement?}
+The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
+First the web consisted of truly pages that contained structured text and some images. 
+Navigation was done using simple links between pages. 
+In a second phase, web sites became interactive: 
+it was the time of animated graphics, browser plug-ins and JavaScript. More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
+
+For a decade, the Adobe Flash Player plug-in has provided a platform to enable rich and interactive content in browsers. However, Adobe has made the updates exclusive to the Google Chrome browser \cite{FlashRoadmap}. 
+The browser used in the robot, QtWebBrowser, will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
+
+The solution is moving to modern web technologies.
+There are a number of options and \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
+It has become such a popular combination that major browser vendors already provide an extensive support in a wide range of products.
+A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, YUI...), but even server-side (e.g. NodeJS).
+
+The project documented in this thesis is using Google AngularJS, a \ac{MVC} framework that lets developers teach the browser new syntax. Thus, the syntax of the XML files coming from the Screens Editor can be interpreted natively in a browser. 
+This has some advantages over Flash \cite{Jobs:ThoughtsOnFlash}:
+\begin{itemize}
+    \item No use of third-party plug-ins
+    \item Openness
+    \item Reliability, security and performance
+    \item Keeps power consumption lower (e.g. using the GPU to decode video or apply transformations and smooth transitions to elements on the screen)
+    \item Touch-enabled: the new screen of Reem H3 is multitouch and requires heavy rewriting of the current Flash application.
+\end{itemize}
+
 
 \section{Goals}
-Goals in general (be a good engineer, help the society, be nice to people.. check goals of this master).
+This thesis is part of the specialisation of Software Engineering and Information Systems. 
+The goal is to develop an original high quality and fully functional software. 
+More specifically, the author has to gather the requirements from an existing system, plan in terms of scope, time and cost, make the system specifications, design and implement it using modern web technologies, use quality assurance tools and deploy it successfully in a Reem H3 robot.
 
-specific goals: big milestones of this project. quality, intense testing. 
-
-the object of this thesis is to develop an original software using web technologies to substitute the current Adobe Flash (copyright) system.
+Regarding the project, there are two big milestones:
+\begin{itemize}
+    \item Prototype. Develop a prototype to validate the technology and guarantee that the project can be completed.
+    \item Implementation. Extend the prototype to meet all the requirements.
+\end{itemize}
 
 \section{Organisation of this document}
-should this section be here? an overview of the contents of this document. scope, order, chapters, target audience...
+This document describes the system developed at PAL Robotics to render on the Reem H2 and H3 series the screens created with the Screens Editor. It does not cover other software on the robots or Basestation.
 
-\chapter{Background - previous work - state of the art (?)}
-should I include a chapter about DSL (?), javascript, flash, development... ?
+% TODO check the easy to read phrase
+This project has been developed iteratively using a \ac{TDD} methodology. 
+This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an eaier reading:
+it first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention on the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
+Readers will find an overview section at the beginning of each chapter to put them in context.
 
-\url{https://vpn.upc.edu/10.1145/1120000/1118892/,DanaInfo=delivery.acm.org+p316-mernik.pdf?ip=147.83.201.40&acc=ACTIVE%20SERVICE&key=C2716FEBFA981EF161F5D4B6734BF3A99E438D22375C4622&CFID=334341738&CFTOKEN=33150097&__acm__=1370190334_3caa844b1de4068b33f962e0e5e78d90}
-
-This can be useful too: "GERMON, R. 2001. Using XML as an intermediate form for compiler development. In XML Conference Proceedings"
-
-i can probably include  theory about XML to provide context. focus on why it is useful in this project (expressivity, semantics, relation with HTML, good for browsers, good for json..).
-
-what's previous work here? the current flash version? specs like the api?
-
-what's state of the art here? trends flash->html5? JS? JS frameworks? TDD? continuous integration?
-
-\chapter{Plan}
-check section name (roadmap?). check contents.
-description of the dev process: research, write small pieces of code, intense unit testing, refactoring, TDD...
-
-\section{Phases}
-4 phases: proof of concept, first iteration, second, report (?). gantt
-\section{Budget}
-numbers here.
-
-\chapter{Requirements}
-\section{Stakeholders}
-maybe this subsection is not needed
-\section{Scope}
-scope of the project. what will be done and what will not. e.g backend.basestation, old xml syntax.
-
-\section{Functional requirements}
-do we need a section somewhere about DSL? is our XML a DSL?
-basically, make it work and make it work fast. test. deploy it. make it compatible with backend
-
-\section{Non Functional Requirements}
-intense testing, robust application, modern standards, easy to maintain, specific platform, specific hardware, touchscreen, UI/UX/usability 
-
-\chapter{Specification}
-uhms, I don't think this section will have interesting diagrams.
-should it contain the theory? DSL, XML (vocabulary, grammar, motivations), intercommunication with other systems (config files, structure.xml...)
-
-Users: no users (well, a "virtual" user does exist). it's a meta-app that reads apps in xml and renders them in html. define input and output.
-
-contracts: no contracts. TDD as opposed to design by contract??? check literature
-
-Use Cases: one per directive, settings and entities?? users: the system.
-
-\chapter{Design}
-internal design of the application. this should be the fun part.
-\section{Technology}
-angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
-
-\section{Architecture}
-MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use)
-
-dependency injection and angularJS (and literature: fowler)
-
-\section{Static View}
-the model, the view and the controllers. angualar modules, services, filters, controllers...
-talk about the data model and \$rootScope ?
-
-\section{Dynamic view}
-the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
-
-specific flow of an app. bootstrap, the compile-link phase, push classes, push styles, get url params, etc.
-
-\section{Physical view}
-robots, backend.basestation, wi-fi, vpn...
-
-\section{External view}
-there isn't! it's a backend app to create a frontend app.
-
-\section{should there be any more sections?}
-
-\chapter{Implementation}
-\section{Development environment set-up}
-webstorm, chrome+batarang, firefox+firebug, karma, qtwebkit, qt5 and qt4, linux, ssh to access the robots and basestation, python, virtual environments, svn, robot code, run levels (htmldialog, guiServer, statemachine (WARNING: CONFIDENTIAL?): motivation and benefits.
-
-\section{Examples (application)}
-this is gonna be too big. should examples be included somewhere else?
-
-include examples about: a service, a simple directive, a controller (and the execution flow?).
-
-include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
-
-\chapter{Testing}
-i'm gonna enjoy myself here.
-TDD, karma, unit tests, specification with tests, safe refactoring, integration of karma in webstorm, tweak karma to run in Qt...
-
-\chapter{Deployment}
-install it in a robot. instructions?
-
-\chapter{legal stuff?}
-licensing, libraries, company policy? github, svn, opensourcing
-
-\chapter{Execution of the plan and budget}
-progress, deviations, final cost
-
-\chapter{Future Work}
-there is a lot of work here bla bla bla
-
-\chapter{Conclusions}
-nice
+\subsection{Conventions}
+no conventions so far. thank you \LaTeX
