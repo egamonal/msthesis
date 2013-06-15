@@ -16,7 +16,7 @@ why angularjs instead of, say, a lemon.
 
 \section{PAL Robotics}
 Pal Robotics is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
-An international team of mostly mechanical, electronics and software engineers pushes forward the research on different fields, like speech recognition and generation, computer vision, walking, grasping, machine learning, navigation and others.
+An international team of mostly mechanical, electronics and software engineers pushes forward the research on different fields, like speech recognition and generation, computer vision, walking, grasping, machine learning and navigation amongst others.
 The company has developed 5 humanoid robots in 2013: Reem-A, Reem-B, Reem H1, H2 and H3, and Reem-C (still in the labs).
 This project targets Reem H2 and H3.
 
@@ -32,8 +32,20 @@ Clients can create application contents with the Screens Editor, a tool built wi
 When application contents are ready, clients can associate 1 application with 1 robot to display it in the touch screen.
 The components of a contents application (screens and entities) have an \ac{XML} representation, an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
 
-Reem robots have built-in software to render the content applications that receive from Basestation. 
-It is also made with Adobe Flex (c). The main concern of this software is transforming \ac{XML} files into a \ac{UI}.
+A contents application is essentially a set of screens, navigation, multimedia contents that users can manage with the media library, and entities. 
+The last are domain objects that can be instantiated and represented in a view. 
+This way a client can show information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "meet people"), display videos and picture galleries, etc.
+This allows for more human-robot interaction and enriches the experience. 
+Using other tools, clients can also associate sentences to screens and the speech synthesiser reads them aloud.
+
+SCREENSHOT HERE
+
+Reem robots have a built-in software to render the content applications that receive from Basestation. 
+It is also made with Adobe Flex (c).
+The main concern of this software is transforming \ac{XML} files into a \ac{UI}. 
+This software has no \ac{GUI} or direct interaction with a person.
+
+DIAGRAM HERE: XML --> software --> view
 
 This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies.
 
@@ -42,28 +54,33 @@ The \ac{WWW} was born as a document viewing platform and has evolved gradually i
 First the web consisted of truly pages that contained structured text and some images. 
 Navigation was done using simple links between pages. 
 In a second phase, web sites became interactive: 
-it was the time of animated graphics, browser plug-ins and JavaScript. More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
+it was the time of animated graphics, browser plug-ins and JavaScript. 
+More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
 
-For a decade, the Adobe Flash Player plug-in has provided a platform to enable rich and interactive content in browsers. However, Adobe has made the updates exclusive to the Google Chrome browser \cite{FlashRoadmap}. 
+For a decade, the Adobe Flash Player plug-in has provided a platform to enable rich and interactive content in browsers.
+However, Adobe has made the updates exclusive to the Google Chrome browser \cite{FlashRoadmap}. 
 The browser used in the robot, QtWebBrowser, will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
 
 The solution is moving to modern web technologies.
-There are a number of options and \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
+There are a number of options. \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
 It has become such a popular combination that major browser vendors already provide an extensive support in a wide range of products.
 A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, YUI...), but even server-side (e.g. NodeJS).
 
-The project documented in this thesis is using Google AngularJS, a \ac{MVC} framework that lets developers teach the browser new syntax. Thus, the syntax of the XML files coming from the Screens Editor can be interpreted natively in a browser. 
+The project documented in this thesis is using Google AngularJS, an \ac{MVC} framework that lets developers teach the browser new syntax. 
+Thus, the syntax of the \ac{XML} files coming from the Screens Editor can be interpreted natively in a browser. 
 This has some advantages over Flash \cite{Jobs:ThoughtsOnFlash}:
 \begin{itemize}
     \item No use of third-party plug-ins
     \item Openness
     \item Reliability, security and performance
     \item Keeps power consumption lower (e.g. using the GPU to decode video or apply transformations and smooth transitions to elements on the screen)
-    \item Touch-enabled: the new screen of Reem H3 is multitouch and requires heavy rewriting of the current Flash application.
+    \item Touch-enabled: the new screen of Reem H3 is multi-touch. To enable gestures, heavy rewriting of the current Flash application is required.
 \end{itemize}
 
 
 \section{Goals}
+TODO: This section should probably be expanded
+
 This thesis is part of the specialisation of Software Engineering and Information Systems. 
 The goal is to develop an original high quality and fully functional software. 
 More specifically, the author has to gather the requirements from an existing system, plan in terms of scope, time and cost, make the system specifications, design and implement it using modern web technologies, use quality assurance tools and deploy it successfully in a Reem H3 robot.
@@ -75,12 +92,13 @@ Regarding the project, there are two big milestones:
 \end{itemize}
 
 \section{Organisation of this document}
-This document describes the system developed at PAL Robotics to render on the Reem H2 and H3 series the screens created with the Screens Editor. It does not cover other software on the robots or Basestation.
+This document describes the system developed at PAL Robotics to render on the Reem H2 and H3 series the screens created with the Screens Editor.
+It does not cover other software on the robots or Basestation.
 
 % TODO check the easy to read phrase
 This project has been developed iteratively using a \ac{TDD} methodology. 
 This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an eaier reading:
-it first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention on the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
+It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention on the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
 Readers will find an overview section at the beginning of each chapter to put them in context.
 
 \subsection{Conventions}
