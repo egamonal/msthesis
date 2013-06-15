@@ -3,7 +3,7 @@ This chapter is a short introduction to.. general concepts. doesnt make referenc
 robots, qt or anything. no ref to UX or UI design. my problem is an app that renders
 apps, not the screens editor or a particular design.
 
-\section{Systems Reengineering}
+\section{Reengineering}
 TODO: two options here. either include the  quote by pressman or rethink it.
 \begin{quote} 
 Consider any technology product that has served you well. 
@@ -13,9 +13,49 @@ What to do? If the product is hardware, you'll likely throw it away and buy a ne
 But if it's custom-built software, that option may not be available. 
 You'll need to rebuild it. 
 You'll create a product with added functionality, better performance and reliability, and improved maintainability.
-That's what we call reengineering.
+That's what we call reengineering. \cite{Pressman:2007}
 \end{quote}
 
+Unlike other products, software does not degrade with time due to external factors like the inclemencies of the weather, power outages or intense use.
+Software packages are adapted, corrected, extended and improved constantly and that can lead to unstable applications or unexpected side effects, even if the original product had been designed with the best practices at that time.
+Documentation gets outdated, the specification does not match the product any more and changes are harder to implement every time. % FIXME language
+The product then becomes unmaintainable. 
+
+
+introduction
+--
+software reenginering:
+main activities (software reengineering prcess model defines 6 activities, fig 30.2):
+inventory analysis
+document reestructure (option 1)
+reverse engineering
+code restructuring
+data restructuring
+forward engineering
+--
+reverse engineering:
+keys: abstraction level, completeness, directionality:
+abstraction: make it as high as possible (ideally, entity-relationship models)
+completeness: how much detail prvided at an abstraction level?
+(there are tools to analyse software but this thesis isn't using them)
+directionality: one way. extract info from the source code, give it to an engineer, use it during any mmaintenance activty,. it can also be two-way (feed info to a reengineering tool that fixes the old program)
+
+first activity of reverse engineering: understand processing. analyse code at varying levels of abstraction: system, program, component, pattern, statement. 
+understand overall functionality before doing more steps (set a context, pay attention to interoperabilty issues). Block diagrams of the programs (show interaction). do some narrative for each component.
+normally there is code for: prepare data, process data, prepare results for the view
+
+next activity: understand data:
+internal data structures. goal: identify classes. focus on teh definition of classes of objects. book is old-fashioned and assumes crappy old code.
+database structure. bottomline: rethink the design.
+
+next: reverse enginer UI
+
+restructuring
+(mention it. this is related to TDD)
+code restructuring is not enough. it alleviates immediate problems. real benefit is achieved only when data and architecture are restrucured. spaguetti-bowl code to structured programming.
+data restructuring: standarise, rationalise, make physical modifications.
+
+forward engineering: change the code, redesign, or make big changes (completely redesign, recode, test..). preventive maintenance. cost of maintenance.
 
 
 \section{Web Technologies}
