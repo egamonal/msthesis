@@ -2,10 +2,36 @@
 check section name (roadmap?). check contents.
 description of the dev process: research, write small pieces of code, intense unit testing, refactoring, TDD...
 
+This chapter describes the planning of this project in terms of scope, time, budget, methodology and risk.
+The execution and deviations are shown at the end of this chapter.
+
+\section{Methodology: Test-Driven Development}
+The software written for this thesis is executed in a complex environment.
+Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
+Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the Qt system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+Reengineering this system has, at least, two sources of potential errors: 
+undocumented features in the original application (unknown, documented wrongly, partially documented or not described at all) and integration of the new software in the current system.
+
+\ac{TDD} is based on having numerous and very short iterations with these steps:
+\begin{enumerate}
+    \item Add an initial (failing) test
+    \item Run all tests and see if the new one fails
+    \item Write the minimum amount of code to pass the test
+    \item Run the automated tests and see them succeed
+    \item Refactor the code. Conform to standards and best practices
+\end{enumerate}
+This methodology is specially useful in the implementation of this project for two reasons: 
+the Google AngularJS framework is extremely friendly with unit testing and E2E tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.
+
+
 \section{Phases}
 4 phases: proof of concept, first iteration, second, report (?). gantt
+
+
 \section{Budget}
 numbers here.
+\section{Risk Analysis}
+
 \section{Execution}
 progress, deviations, final cost
 
