@@ -1,17 +1,16 @@
-\chapter{Plan}
-check section name (roadmap?). check contents.
-description of the dev process: research, write small pieces of code, intense unit testing, refactoring, TDD...
-
-This chapter describes the planning of this project in terms of scope, time, budget, methodology and risk.
+\chapter{Project Management}
+This chapter describes the planning of this project in terms of scope, schedule, cost, methodology and risk.
 The execution and deviations are shown at the end of this chapter.
 
 \section{Methodology: Test-Driven Development}
 The software written for this thesis is executed in a complex environment.
 Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
 Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the Qt system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+
 Reengineering this system has, at least, two sources of potential errors: 
 undocumented features in the original application (unknown, documented wrongly, partially documented or not described at all) and integration of the new software in the current system.
 
+% maybe put all this in a table?
 \ac{TDD} is based on having numerous and very short iterations with these steps:
 \begin{enumerate}
     \item Add an initial (failing) test
@@ -20,17 +19,93 @@ undocumented features in the original application (unknown, documented wrongly, 
     \item Run the automated tests and see them succeed
     \item Refactor the code. Conform to standards and best practices
 \end{enumerate}
+
+As opposed to classic development methodologies (e.g. waterfall, where test are done in the last place), with \ac{TDD} tests go first. 
+Specification and documentation of the system are not artifacts created before the implementation but the tests themselves.
+
+Testing earlier and heavily has benefits over the classical approach:
+
+\textbf{Efficiency} Defects (and their causes) are identified earlier.
+
+\textbf{Robustness} The system is more reliable and stable. 
+The \ac{QA} process is easier to maintain and much more strict.
+
+\textbf{Maintainability} Small fixes can introduce new errors in the system. 
+Testing continuously and producing the minimum amount of code to implement a feature reduces this.
+
+\textbf{Extensibility} \ac{XP} embraces change. 
+It is easier to adapt to changes in the requirements. 
+This thesis is reengineering a project that is not frozen. 
+During the development, the original software keeps adding features.
+
 This methodology is specially useful in the implementation of this project for two reasons: 
-the Google AngularJS framework is extremely friendly with unit testing and E2E tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.
+the Google AngularJS framework is extremely friendly with unit testing and \ac{E2E} tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.
 
 
-\section{Phases}
-4 phases: proof of concept, first iteration, second, report (?). gantt
+\section{Schedule}
+This project has 4 phases that match the typical 4 groups of processes: initiating, planning, executing (and monitoring + control) and closing.
+The execution has 4 deliverables: viability and proof of concept, iteration 1 (basic program), iteration 2 (extended program), iteration 3 (improvements).
 
+\subsection{Phase 1: Initiating}
+\paragraph{April, 1 -- April 4}
+The initiating processes determine the goals of the project and the scope.
+This stage was partially done before the beginning of this thesis to ensure its viability in the company.
+It was agreed that the project would reengineer the current system using web technologies (SEE CHAPTER WHATEVER ABOUT SCOPE)
 
-\section{Budget}
+\subsection{Phase 2: Planning}
+\paragraph{April, 5 -- April 6}
+
+The first draft of the plan is a rough estimation of the tasks length and a definition of the big milestones.
+Because there is only one engineer there are no concurrent tasks and free floats are always zero.
+Other activities of this phase include an estimation of the resource requirements for upcoming tasks, developing the budget (CROSS REFERENCE TO SECTION ) and risk planning (CROSS REFERENCE TO SECTION).
+See the Gantt chart in (CROSS REFERENCE HERE) 
+
+\subsection{Phase 3: Execution}
+\paragraph{April, 7 -- August 28}
+The execution phase focuses on building the product. 
+A web engineering process should be incremental, with frequent changes and short iterations \cite{Kappel:2006}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Milestones and deliverables of the execution phase}
+    \label{tab:milestones}
+    \begin{tabularx}{\linewidth}{| X | X |}
+    \hline
+    Milestone & Deliverables \\
+    \hline
+    Proof of concept & Research on frameworks and tools to develop the project. Choose one. Build a minimal working example to illustrate key aspects of the project. \\ \hline
+    Iteration 1 & Build a prototype comprehensive in number of features but simple in their implementation to validate the technology. \\ \hline
+    Iteration 2 & Extend the prototype of Iteration 1 to complex cases of the features. \\ \hline
+    Iteration 3 & Add special new features. \\
+    \hline
+    \end{tabularx}
+\end{table}
+
+This phase has 4 big milestones, one per iteration (\fref{tab:milestones}). 
+The outcome of each iteration is a product with a set of stable features and the corresponding unit tests which, in turn, serve for the purpose of documentation.
+
+\subsection{Phase 4: Closing}
+\paragraph{August, 29 -- September 14}
+Prepare package with a stable set of features, presentation and documentation.
+
+\section{Cost}
 numbers here.
+
+\section{Scope}
+The system has two parts: the basestation (with the backend) and the screens renderer in the robots (the frontend).
+This project reengineers the frontend with web technologies but not the backend, that remains in Django and Adobe Flash.
+
+The new frontend accepts a contents application (GLOSSARY??) as input, generated with the Screens Editor in the backend, and outputs the screen rendered with web elements.
+Contents applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
+This project can read the configuration files and set up the front-end.
+A screen of a contents application is an \ac{XML} file. 
+This project accepts valid syntax generated with the Screens Editor for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates HTML5 that renders them as defined.
+
+Developing an intense testing strategy and is part of this project.
+The final artifact is this master thesis that describes the system and the rationale that guides all decisions.
+
 \section{Risk Analysis}
+
 
 \section{Execution}
 progress, deviations, final cost
