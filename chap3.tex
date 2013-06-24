@@ -1,46 +1,19 @@
 \chapter{Project Management}
-This chapter describes the planning of this project in terms of scope, schedule, cost, methodology and risk.
+This chapter describes the planning of this project in terms of scope, schedule, cost and risk.
 The execution and deviations are shown at the end of this chapter.
 
-\section{Methodology: Test-Driven Development}
-The software written for this thesis is executed in a complex environment.
-Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
-Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the Qt system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+\section{Scope}
+The system has two parts: the basestation (with the backend) and the screens renderer in the robots (the frontend).
+This project reengineers the frontend with web technologies but not the backend, that remains in Django and Adobe Flash.
 
-Reengineering this system has, at least, two sources of potential errors: 
-undocumented features in the original application (unknown, documented wrongly, partially documented or not described at all) and integration of the new software in the current system.
+The new frontend accepts a contents application (GLOSSARY??) as input, generated with the Screens Editor in the backend, and outputs the screen rendered with web elements.
+Contents applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
+This project can read the configuration files and set up the front-end.
+A screen of a contents application is an \ac{XML} file. 
+This project accepts valid syntax generated with the Screens Editor for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates HTML5 that renders them as defined.
 
-% maybe put all this in a table?
-\ac{TDD} is based on having numerous and very short iterations with these steps:
-\begin{enumerate}
-    \item Add an initial (failing) test
-    \item Run all tests and see if the new one fails
-    \item Write the minimum amount of code to pass the test
-    \item Run the automated tests and see them succeed
-    \item Refactor the code. Conform to standards and best practices
-\end{enumerate}
-
-As opposed to classic development methodologies (e.g. waterfall, where test are done in the last place), with \ac{TDD} tests go first. 
-Specification and documentation of the system are not artifacts created before the implementation but the tests themselves.
-
-Testing earlier and heavily has benefits over the classical approach:
-
-\textbf{Efficiency} Defects (and their causes) are identified earlier.
-
-\textbf{Robustness} The system is more reliable and stable. 
-The \ac{QA} process is easier to maintain and much more strict.
-
-\textbf{Maintainability} Small fixes can introduce new errors in the system. 
-Testing continuously and producing the minimum amount of code to implement a feature reduces this.
-
-\textbf{Extensibility} \ac{XP} embraces change. 
-It is easier to adapt to changes in the requirements. 
-This thesis is reengineering a project that is not frozen. 
-During the development, the original software keeps adding features.
-
-This methodology is specially useful in the implementation of this project for two reasons: 
-the Google AngularJS framework is extremely friendly with unit testing and \ac{E2E} tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.
-
+Developing an intense testing strategy and is part of this project.
+The final artifact is this master thesis that describes the system and the rationale that guides all decisions.
 
 \section{Schedule}
 This project has 4 phases that match the typical 4 groups of processes: initiating, planning, executing (and monitoring + control) and closing.
@@ -54,7 +27,6 @@ It was agreed that the project would reengineer the current system using web tec
 
 \subsection{Phase 2: Planning}
 \paragraph{April, 5 -- April 6}
-
 The first draft of the plan is a rough estimation of the tasks length and a definition of the big milestones.
 Because there is only one engineer there are no concurrent tasks and free floats are always zero.
 Other activities of this phase include an estimation of the resource requirements for upcoming tasks, developing the budget (CROSS REFERENCE TO SECTION ) and risk planning (CROSS REFERENCE TO SECTION).
@@ -89,97 +61,33 @@ The outcome of each iteration is a product with a set of stable features and the
 Prepare package with a stable set of features, presentation and documentation.
 
 \section{Cost}
-numbers here.
+The estimated length of the project is $105 days \times 8 \euro{} \times 8 hours = 6720 \euro{} $
 
-\section{Scope}
-The system has two parts: the basestation (with the backend) and the screens renderer in the robots (the frontend).
-This project reengineers the frontend with web technologies but not the backend, that remains in Django and Adobe Flash.
+FIXME check cost control (amortized? price?)
 
-The new frontend accepts a contents application (GLOSSARY??) as input, generated with the Screens Editor in the backend, and outputs the screen rendered with web elements.
-Contents applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
-This project can read the configuration files and set up the front-end.
-A screen of a contents application is an \ac{XML} file. 
-This project accepts valid syntax generated with the Screens Editor for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates HTML5 that renders them as defined.
+\begin{table}[ht]
+    \centering
+    \caption{Budget}
+    \label{tab:budget}
+    \begin{tabularx}{\linewidth}{| X | X |}
+    \hline
+    Labour & 6720\euro{} \\ \hline
+    \multirow{3}{*}{Hardware} 
+        & Desktop Computer (amortized) 250\euro{} \\ % check this
+        & 22 Monitor (amortized) 50\euro{} \\
+        & Reem H3 testing time 150\euro{} \\ \hline   
+    \multirow{2}{*}{Software}
+        & JetBrains WebStorm license 89.10\euro{} \\ % check this    
+        & GNU/Linux 0\euro{} \\ \hline
+     Overall & 7259.10\euro{} \\ 
+     \hline
+    \end{tabularx}
+\end{table}
 
-Developing an intense testing strategy and is part of this project.
-The final artifact is this master thesis that describes the system and the rationale that guides all decisions.
+There are some infrastructure related costs excluded from the budget because they are part of the office maintenance monthly expenses. This is the case of subversion servers, network, power, backups, etc. 
 
 \section{Risk Analysis}
-
+for each risk: title, description, mitigation plan, action plan
 
 \section{Execution}
 progress, deviations, final cost
-
-
-\chapter{Requirements}
-\section{Stakeholders}
-maybe this subsection is not needed
-\section{Scope}
-scope of the project. what will be done and what will not. e.g backend.basestation, old xml syntax.
-
-\section{Functional requirements}
-do we need a section somewhere about DSL? is our XML a DSL?
-basically, make it work and make it work fast. test. deploy it. make it compatible with backend
-
-\section{Non Functional Requirements}
-intense testing, robust application, modern standards, easy to maintain, specific platform, specific hardware, touchscreen, UI/UX/usability
-
-\chapter{Specification}
-uhms, I don't think this section will have interesting diagrams.
-should it contain the theory? DSL, XML (vocabulary, grammar, motivations), intercommunication with other systems (config files, structure.xml...)
-
-relate to reengineering (R Pressmann): abstraction, procedures, etc.
-
-Users: no users (well, a "virtual" user does exist). it's a meta-app that reads apps in xml and renders them in html. define input and output.
-
-contracts: no contracts. TDD as opposed to design by contract??? check literature
-
-Use Cases: one per directive, settings and entities?? users: the system.
-
-\chapter{Design}
-internal design of the application. this should be the fun part.
-\section{Technology}
-angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
-
-\section{Architecture}
-MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use)
-
-dependency injection and angularJS (and literature: fowler)
-
-\section{Static View}
-the model, the view and the controllers. angualar modules, services, filters, controllers...
-talk about the data model and \$rootScope ?
-
-\section{Dynamic view}
-the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
-
-specific flow of an app. bootstrap, the compile-link phase, push classes, push styles, get url params, etc.
-
-\section{Physical view}
-robots, backend.basestation, wi-fi, vpn...
-
-\section{External view}
-there isn't! it's a backend app to create a frontend app.
-
-\section{should there be any more sections?}
-
-\chapter{Implementation}
-\section{Development environment set-up}
-webstorm, chrome+batarang, firefox+firebug, karma, qtwebkit, qt5 and qt4, linux, ssh to access the robots and basestation, python, virtual environments, svn, robot code, run levels (htmldialog, guiServer, statemachine (WARNING: CONFIDENTIAL?): motivation and benefits.
-
-\section{Examples (application)}
-this is gonna be too big. should examples be included somewhere else?
-
-include examples about: a service, a simple directive, a controller (and the execution flow?).
-
-include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
-
-\chapter{Testing}
-i'm gonna enjoy myself here.
-TDD, karma, unit tests, specification with tests, safe refactoring, integration of karma in webstorm, tweak karma to run in Qt...
-quality factors of a webapp: kappel
-
-
-\chapter{Future Work and Conclusions}
-\section{Future Work}
-\section{Conclusions}

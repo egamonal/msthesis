@@ -27,7 +27,7 @@ Simple put, it is all about understanding the current logic of a program and mod
 The project of this thesis is not modifying the current program but developing a new one with new technology, focusing on reverse engineering the original program. 
 
 introduction
---
+
 software reenginering:
 main activities (software reengineering prcess model defines 6 activities, fig 30.2):
 inventory analysis
@@ -36,7 +36,7 @@ reverse engineering
 code restructuring
 data restructuring
 forward engineering
---
+
 reverse engineering:
 keys: abstraction level, completeness, directionality:
 abstraction: make it as high as possible (ideally, entity-relationship models)
@@ -180,6 +180,44 @@ Isolation is not an issue in this project because there is only one application 
 \subsection{Frameworks}
 
 \section{Test-Driven Development}
+The software written for this thesis is executed in a complex environment.
+Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
+Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the Qt system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+
+Reengineering this system has, at least, two sources of potential errors: 
+undocumented features in the original application (unknown, documented wrongly, partially documented or not described at all) and integration of the new software in the current system.
+
+% maybe put all this in a table?
+\ac{TDD} is based on having numerous and very short iterations with these steps:
+\begin{enumerate}
+    \item Add an initial (failing) test
+    \item Run all tests and see if the new one fails
+    \item Write the minimum amount of code to pass the test
+    \item Run the automated tests and see them succeed
+    \item Refactor the code. Conform to standards and best practices
+\end{enumerate}
+
+As opposed to classic development methodologies (e.g. waterfall, where test are done in the last place), with \ac{TDD} tests go first. 
+Specification and documentation of the system are not artifacts created before the implementation but the tests themselves.
+
+Testing earlier and heavily has benefits over the classical approach:
+
+\textbf{Efficiency} Defects (and their causes) are identified earlier.
+
+\textbf{Robustness} The system is more reliable and stable. 
+The \ac{QA} process is easier to maintain and much more strict.
+
+\textbf{Maintainability} Small fixes can introduce new errors in the system. 
+Testing continuously and producing the minimum amount of code to implement a feature reduces this.
+
+\textbf{Extensibility} \ac{XP} embraces change. 
+It is easier to adapt to changes in the requirements. 
+This thesis is reengineering a project that is not frozen. 
+During the development, the original software keeps adding features.
+
+This methodology is specially useful in the implementation of this project for two reasons: 
+the Google AngularJS framework is extremely friendly with unit testing and \ac{E2E} tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.
+
 \section{XML as an intermediate representation}
 
 
