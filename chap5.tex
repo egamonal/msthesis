@@ -1,0 +1,60 @@
+\chapter{Specification}
+uhms, I don't think this section will have interesting diagrams.
+should it contain the theory? DSL, XML (vocabulary, grammar, motivations), intercommunication with other systems (config files, structure.xml...)
+
+relate to reengineering (R Pressmann): abstraction, procedures, etc.
+
+Users: no users (well, a "virtual" user does exist). it's a meta-app that reads apps in xml and renders them in html. define input and output.
+
+contracts: no contracts. TDD as opposed to design by contract??? check literature
+
+Use Cases: one per directive, settings and entities?? users: the system.
+
+\chapter{Design}
+internal design of the application. this should be the fun part.
+\section{Technology}
+angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
+
+\section{Architecture}
+MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use)
+
+dependency injection and angularJS (and literature: fowler)
+
+\section{Static View}
+the model, the view and the controllers. angualar modules, services, filters, controllers...
+talk about the data model and \$rootScope ?
+
+\section{Dynamic view}
+the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
+
+specific flow of an app. bootstrap, the compile-link phase, push classes, push styles, get url params, etc.
+
+\section{Physical view}
+robots, backend.basestation, wi-fi, vpn...
+
+\section{External view}
+there isn't! it's a backend app to create a frontend app.
+
+\section{should there be any more sections?}
+
+\chapter{Implementation}
+
+\section{Development environment set-up}
+webstorm, chrome+batarang, firefox+firebug, karma, qtwebkit, qt5 and qt4, linux, ssh to access the robots and basestation, python, virtual environments, svn, robot code, run levels (htmldialog, guiServer, statemachine (WARNING: CONFIDENTIAL?): motivation and benefits.
+
+\section{Examples (application)}
+this is gonna be too big. should examples be included somewhere else?
+
+include examples about: a service, a simple directive, a controller (and the execution flow?).
+
+include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
+
+\chapter{Testing}
+i'm gonna enjoy myself here.
+TDD, karma, unit tests, specification with tests, safe refactoring, integration of karma in webstorm, tweak karma to run in Qt...
+quality factors of a webapp: kappel
+
+
+\chapter{Future Work and Conclusions}
+\section{Future Work}
+\section{Conclusions}
