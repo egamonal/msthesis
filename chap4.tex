@@ -1,17 +1,47 @@
 \chapter{Requirements}
-zz
+Requirements can be gathered using interviews with customers, users and stakeholders, with observation, questionnaires, prototyping or even from an existing application.
+In this project requirements are obtained mainly from the current implementation of the software (\fref{sec:reengineering}) and from interviews with the developer of the old version.
+
 \section{Stakeholders}
 maybe this subsection is not needed
 
 \section{Functional requirements}
+
+\subsection{Glossary}
+\subsection{Domain properties and hypothesis}
+\subsection{Constraints}
+\subsection{Constraints}
+\subsection{Functional requirements}
+\begin{enumerate}
+    \item Render UI Components with HTML. UI components, currently defined with XML, have to be eventually transformed to HTML so that a browser can render them.
+    \begin{enumerate}
+        \item Support for multiple languages via the parameter lang.
+        \item Components 
+        \begin{enumerate}
+            \item Basic components screen, subscreen, textarea, img, button, group, video, showreel, swf, layout, qr, group\_button
+            \item Theme components
+            \item Properties inline or in tags. x, y, width, height, scrolly, scrollx, loop, loopy, loopx, src, style, caption
+            \item Action properties onclick, onload, action, param
+        \end{enumerate}
+        
+    \end{enumerate}
+    \item Themes. Support Theming. Different look feel
+    \item Internal navigation (subscreens)
+    \item Settings management
+    \item External communication with the robot and backend
+    \item Entities support
+    \item Screen saver / Sessions
+\end{enumerate}
+
+
 do we need a section somewhere about DSL? is our XML a DSL?
 basically, make it work and make it work fast. test. deploy it. make it compatible with backend
 
 \section{Non Functional Requirements}
 \begin{enumerate}
-    \item Target browser: QtWebKit (Qt 5.0.x)
+    \item Target browser: QtWebKit (Qt 5.0.x) (FIXME! maybe chrome)
     \item Extensibility: The software has to be extensible. The design has to allow adding new features in the future.
-    \item Robustness: the software has to be reliable and has to be delivered with comprehensive test suites. It should be compatible with Jenkins and continous integration.
+    \item Robustness: the software has to be reliable and has to be delivered with a comprehensive test suite. It should be compatible with Jenkins and continuous integration.
     \item Technology: the project has to be implemented using modern web technologies (HTML5, JavaScript, CSS).
     \item Hardware: the software has to perform smoothly in Reem H2 and a multitouch screen.
     \item UX: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change.
