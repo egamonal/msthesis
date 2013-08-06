@@ -1,0 +1,31 @@
+% ==============================================================================
+% Template for risks (Volere)
+% for each risk: title, description, mitigation plan, action plan
+% ==============================================================================
+\newcounter{riskc}
+\setcounter{riskc}{0}
+
+\newenvironment{risk}[4]
+{
+    \medskip
+    \refstepcounter{riskc}
+
+    %\noindent \textbf{\arabic{riskc} #1}
+    %\par \noindent #2
+    %\par \noindent \textbf{Mitigation Plan} 
+    %\par \noindent \textbf{Action Plan} 
+    
+    \begin{table}[ht]
+    \begin{tabularx}{\linewidth}{| l | X |}%{| X | X |}
+    \multicolumn{2}{l}{\textbf{\arabic{riskc} #1}} \\ \hline
+    \multicolumn{2}{|l|}{#2}\\ \hline 
+    Mitigation Plan & #3 \\ \hline
+    Action Plan & #4 \\
+    \hline
+    \end{tabularx}
+    \centering
+    \caption{#1}
+
+    \end{table}
+}
+{}
