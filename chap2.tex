@@ -19,47 +19,82 @@ That's what we call reengineering. \cite{Pressman:2007}
 Unlike other products, software does not degrade with time due to external factors like the inclemencies of the weather, power outages or intense use.
 Software packages are adapted, corrected, extended and improved constantly and that can lead to unstable applications or unexpected side effects, even if the original product had been designed with the best practices at that time.
 Documentation gets outdated, after a certain amount of time the specification does not match the product any more and changes are harder to implement . % FIXME language
-Using frameworks, libraries and third-party software is a common practice. Sometimes the vendor of the technology used in a project stops supporting it and the only solution is substituting the components that depend on it. 
+Using frameworks, libraries and third-party software is a common practice. 
+Sometimes the vendor of the technology used in a project stops supporting it and the only solution is substituting the components that depend on it. 
 The product becomes unmaintainable in many aspects and reenginering is required. 
 
 Software reengineering comprises 6 activities: inventory analysis, document reestructure, reverse engineering, code restructuring, data restructuring and forward engineering.
 Simple put, it is all about understanding the current logic of a program and modifying the three typical components: data, logic and view.
-The project of this thesis is not modifying the current program but developing a new one with new technology, focusing on reverse engineering the original program. 
+The project of this thesis is not modifying the current program but developing a new one with new technology, focusing on reverse engineering the original software. 
 
-introduction
+Doing an inventory of the software that belongs to the system is part of the definition of the project scope.
+Making a list of programs with the current status, dependencies and physical location helps on getting an overview of the project.
+Usually software has documentation that needs to be added to the inventory and, sometimes, restructured.
+After this, the reverse engineering process can start.
 
-software reenginering:
-main activities (software reengineering prcess model defines 6 activities, fig 30.2):
-inventory analysis
-document reestructure (option 1)
-reverse engineering
-code restructuring
-data restructuring
-forward engineering
+\paragraph{Reverse Engineering}
+Three dimensions drive tasks in the reverse engineering activity (FIXME task in activity or the other way round?): abstraction level, completeness and directionality.
+To understand what the software does, abstraction should be as high as possible.
+This information can have many details or not (completeness) and can be created in one way (extracting it from the source code) or two-way (feed information to the reengineering tool).
 
-reverse engineering:
-keys: abstraction level, completeness, directionality:
-abstraction: make it as high as possible (ideally, entity-relationship models)
-completeness: how much detail prvided at an abstraction level?
-(there are tools to analyse software but this thesis isn't using them)
-directionality: one way. extract info from the source code, give it to an engineer, use it during any mmaintenance activty,. it can also be two-way (feed info to a reengineering tool that fixes the old program)
+\subparagraph{Understand current program}
+A program normally has input data, logic that processes it and a view:
+The first activity is understanding the processing.
+Code can be examined at several levels of abstraction: system, program, component, pattern, statement.
+Some key aspects include the interaction, interoperability or the context.
+Data structures, classes, schemas in databases, etc have to be identified and possibly redesigned in the next steps.
+Finally, the \ac{UI} has to be analised as well. 
+There are issues related to presentation of data, interaction, usability, etc that have to be identified.
 
-first activity of reverse engineering: understand processing. analyse code at varying levels of abstraction: system, program, component, pattern, statement. 
-understand overall functionality before doing more steps (set a context, pay attention to interoperabilty issues). Block diagrams of the programs (show interaction). do some narrative for each component.
-normally there is code for: prepare data, process data, prepare results for the view
+\paragraph{Restructure code and data}
+Sometimes the solution is restructuring the current program.
+The project of this thesis is skipping this part because a new application is being developed using the output of the first activity (FIXME: activity?): understand the current program
+Restructuring the code might no be enough in most cases. 
+It can fix immediate issues but it is not a long-term solution.
+To improve the software design both data and architecture should be restructured.
+\ac{TDD} can provide robustness to this process: if there are tests available, the new design can be proven to work, at least, for these cases. If not, the solution can be built incrementally with tests that define the requirements of the system (extracted in the first activity (FIXME: activity?), thus using them as an specification.
 
-next activity: understand data:
-internal data structures. goal: identify classes. focus on teh definition of classes of objects. book is old-fashioned and assumes crappy old code.
-database structure. bottomline: rethink the design.
+\paragraph{Forward engineering}
+There is a number of options when it comes to apply changes in the current program. 
+For example, apply patches, redesign parts of the software or completely redesign it.
+Depending on the circumstances, completely redesigning a software might be costly but, in the long-term, it might be a cost-effective solution.
+This would be preventive maintenance.
+The project of this thesis is redesigning the software to incorporate new practices, new technology and, in the future (out of the scope of the thesis), additional requirements.
 
-next: reverse enginer UI
+%introduction
 
-restructuring
-(mention it. this is related to TDD)
-code restructuring is not enough. it alleviates immediate problems. real benefit is achieved only when data and architecture are restrucured. spaguetti-bowl code to structured programming.
-data restructuring: standarise, rationalise, make physical modifications.
+%software reenginering:
+%main activities (software reengineering prcess model defines 6 activities, fig 30.2):
+%inventory analysis
+%document reestructure (option 1)
+%reverse engineering
+%code restructuring
+%data restructuring
+%forward engineering
 
-forward engineering: change the code, redesign, or make big changes (completely redesign, recode, test..). preventive maintenance. cost of maintenance.
+%reverse engineering:
+%keys: abstraction level, completeness, directionality:
+%abstraction: make it as high as possible (ideally, entity-relationship models)
+%completeness: how much detail prvided at an abstraction level?
+%(there are tools to analyse software but this thesis isn't using them)
+%directionality: one way. extract info from the source code, give it to an engineer, use it during any mmaintenance %activty,. it can also be two-way (feed info to a reengineering tool that fixes the old program)
+
+%first activity of reverse engineering: understand processing. analyse code at varying levels of abstraction: system, %program, component, pattern, statement. 
+%understand overall functionality before doing more steps (set a context, pay attention to interoperabilty issues). %Block diagrams of the programs (show interaction). do some narrative for each component.
+%normally there is code for: prepare data, process data, prepare results for the view
+
+%next activity: understand data:
+%internal data structures. goal: identify classes. focus on teh definition of classes of objects. book is old-fashioned %and assumes crappy old code.
+%database structure. bottomline: rethink the design.
+
+%next: reverse enginer UI
+
+%restructuring
+%(mention it. this is related to TDD)
+%code restructuring is not enough. it alleviates immediate problems. real benefit is achieved only when data and %architecture are restrucured. spaguetti-bowl code to structured programming.
+%data restructuring: standarise, rationalise, make physical modifications.
+
+%forward engineering: change the code, redesign, or make big changes (completely redesign, recode, test..). preventive %maintenance. cost of maintenance.
 
 
 \section{Web Technologies}
@@ -93,14 +128,17 @@ Other companies, like Citrix or eyeOS, offer web applications that resemble an o
 
 \subsection{From Plain Documents to Applications}
 \paragraph{The Evolution of the Web}
-"HyperText is a way to link and access information of various kinds as a web of nodes in which the user can browse at will. Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help" \cite{BernersLee:1990}
+\begin{quote} 
+HyperText is a way to link and access information of various kinds as a web of nodes in which the user can browse at will. Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help" \cite{BernersLee:1990}
+\end{quote} 
 
 When the \ac{WWW} was started in 1990 it was intended to be a document viewing platform.
 It has evolved in at least three phases \cite{Anttonen:2011} \cite{Taivalsaari:2008}:
 
 In the early days, websites were basically a few files with plain text, forms and page-structured artifacts, possibly static images and hyper-links (anchors) to provide navigation. 
 
-Later on, browsers added programming capabilities, plug-ins and allowed animated graphics. Web pages became interactive and client-server communication increased in complexity.
+Later on, browsers added programming capabilities, plug-ins and allowed animated graphics. 
+Web pages became interactive and client-server communication increased in complexity.
 Adobe Flash (at that time Macromedia Flash), ShockWave, Java, QuickTime and a few others allowed the inclusion of multimedia contents or even programs (e.g. Java Applets).
 Engineers could combine server-side and client-side technology to provide some more capabilities along with content.
 
@@ -151,10 +189,6 @@ The rendered application works in a browser, has an intense use of the network a
 Despite the fact that it works in the specific content of a robot, globality is still an issue. A typical scenario would be a fleet of robots in a conference: users from many different cultural backgrounds can use the application at any time.
 
 
-
-%    * from old plain html to RIA 
-%    * browse docs to single page apps
-
 \subsection{Browsers and isolation of programs}    
 Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. At the end of the day, a \ac{RIA} is a distributed software. 
 In the old days the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with local storage, hardware-accelerated components, websockets and other advanced capabilites.
@@ -167,17 +201,19 @@ Browsers have typically the following components: TODO
 Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on OS processes. 
 Another way of isolating web applications is running them in a plug-in container. 
 
-The project of this thesis uses Qt WebKit, the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
+The project of this thesis uses Qt WebKit (FIXME: WARNING! it might be google chrome), the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
 Qt WebKit components comprise the WebCore and SquirrelFish Extreme, which compiles Javascript into native machine code. 
 It is compatible with Adoble Flash Player but because it will not receive more updates in the future, it will not be used any more.
 The Flash plugin is a black box isolated from other elements in the \ac{DOM}.
-Isolation is not an issue in this project because there is only one application running at a time.
+Isolation is not an issue in this project because there is only one application running at a time and, even in a normal use of a browser, with many websites running at once, isolation is not a blocking issue.
 
-\section{Client-side Technology}
+% MOVE THIS TO DESIGN
+%\section{Client-side Technology}
+%The software of this thesis is developed mainly on the client side and is part of a Web system.
+%There is a number of technologies to develop applications client side. 
 
-
-\subsection{Comparison of languages}
-\subsection{Frameworks}
+%\subsection{Comparison of languages}
+%\subsection{Frameworks}
 
 \section{Test-Driven Development}
 The software written for this thesis is executed in a complex environment.
@@ -213,7 +249,7 @@ Testing continuously and producing the minimum amount of code to implement a fea
 \textbf{Extensibility} \ac{XP} embraces change. 
 It is easier to adapt to changes in the requirements. 
 This thesis is reengineering a project that is not frozen. 
-During the development, the original software keeps adding features.
+During the development, the original software keeps adding features and bug fixes.
 
 This methodology is specially useful in the implementation of this project for two reasons: 
 the Google AngularJS framework is extremely friendly with unit testing and \ac{E2E} tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.

@@ -55,7 +55,7 @@ It can display multimedia contents like corporate videos, information about the 
 
 DIAGRAM: ROBOTS, BACKEND-BASESTATION, client
 
-The Basestation is an application server that hosts Flango, an \ac{RIA} to manage contents and robots made with Django. 
+The Basestation is an application server that hosts Flango, an \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
 Clients can create application contents with the Screens Editor, a tool built with Adobe Flex (c), in Flango.
 When application contents are ready, clients can associate 1 application with 1 robot to display it in the touch screen.
 The components of a contents application (screens and entities) have an \ac{XML} representation, an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
@@ -63,6 +63,8 @@ The components of a contents application (screens and entities) have an \ac{XML}
 A contents application is essentially a set of screens, navigation, multimedia contents that users can manage with the media library, and entities. 
 The last are domain objects that can be instantiated and represented in a view. 
 This way a client can show information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "meet people"), display videos and picture galleries, etc.
+All of these components are localisable. 
+They can be resized, repositioned, repainted... depending on the current language.
 This allows for more human-robot interaction and enriches the experience. 
 Using other tools, clients can also associate sentences to screens and the speech synthesiser reads them aloud.
 
@@ -87,7 +89,7 @@ More recently web sites have adopted features from traditional desktop software 
 
 For a decade, the Adobe Flash Player plug-in has provided a platform to enable rich and interactive content in browsers.
 However, Adobe has made the updates exclusive to the Google Chrome browser \cite{FlashRoadmap}. 
-The browser used in the robot, QtWebBrowser, will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
+The browser in the robot application, QtWebBrowser (FIXME! it might be Chrome, in the end), uses this plug-in but will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
 
 The solution is moving to modern web technologies.
 There are a number of options. \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
@@ -121,12 +123,12 @@ Regarding the project, the goals are:
 \end{itemize}
 
 \section{Organisation of this document}
-This document describes the system developed at PAL Robotics to render on the Reem H2 and H3 series the screens created with the Screens Editor.
-It does not cover other software on the robots or Basestation.
+This document describes the system developed at PAL Robotics to render the screens created with the Screens Editor on the Reem H2 and H3 series.
+It does not cover other software on the robots or in Basestation.
 
 % TODO check the easy to read phrase
 This project has been developed iteratively using a \ac{TDD} methodology. 
-This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an eaier reading:
+This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an easier reading:
 It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention on the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
 Readers will find an overview section at the beginning of each chapter to put them in context.
 
