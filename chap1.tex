@@ -48,7 +48,7 @@ They can be used in public places such as hotels, malls, airports or museums.
 \end{table}
 
 
-\section{Current System}
+\section{The Current System}
 The Reem series have big potential in human robot interaction. 
 Besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
 It can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
@@ -79,7 +79,7 @@ DIAGRAM HERE: XML --> software --> view
 
 This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies.
 
-\section{New Web System (Problem statement?}
+\section{The New System}
 The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
 First the web consisted of truly pages that contained structured text and some images. 
 Navigation was done using simple links between pages. 
@@ -92,6 +92,7 @@ However, Adobe has made the updates exclusive to the Google Chrome browser \cite
 The browser in the robot application, QtWebBrowser (FIXME! it might be Chrome, in the end), uses this plug-in but will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
 
 The solution is moving to modern web technologies.
+Any other technology could be used but the web allows the product to be easily portable, very extensible and open to many developers.
 There are a number of options. \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
 It has become such a popular combination that major browser vendors already provide an extensive support in a wide range of products.
 A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, YUI...), but even server-side (e.g. NodeJS).
@@ -107,6 +108,11 @@ This has some advantages over Flash \cite{Jobs:ThoughtsOnFlash}:
     \item Touch-enabled: the new screen of Reem H3 is multi-touch. To enable gestures, heavy rewriting of the current Flash application is required.
 \end{itemize}
 
+\section{Context of the work}
+TODO FIXME
+The work context diagram identifies the boundaries of the work that you need to investigate to be able to build the product. Note that it includes more than the intended product. Unless we understand the work that the product will support, we have little chance of building a product that will fit cleanly into its environment.
+
+The adjacent systems on the context diagram (e.g., Weather Forecasting Service) indicate other subject matter domains (systems, people, and organizations) that need to be understood. The interfaces between the adjacent systems and the work context indicate why we are interested in the adjacent system. In the case of Weather Forecasting Service, we can say that we are interested in the details of when, how, where, who, what, and why it produces the District Weather Forecasts information.
 
 \section{Goals}
 TODO: This section should probably be expanded
