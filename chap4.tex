@@ -47,18 +47,17 @@ Certain constraints are defined before the beginning of the project:
         \item Support for multiple languages via the parameter lang.
         \item Components 
         \begin{enumerate}
-            \item Basic components screen, subscreen, textarea, img, button, group, video, showreel, swf, layout, qr, group\_button
+            \item Basic components screen, subscreen, textarea, img, button, group, video, showreel, swf, layout, qr, group\_button.
             \item Theme components
             \item Properties inline or in tags. x, y, width, height, scrolly, scrollx, loop, loopy, loopx, src, style, caption
             \item Action properties onclick, onload, action, param
         \end{enumerate}
         
     \end{enumerate}
-    \item Themes. Support Theming. Different look feel
-    \item Internal navigation (subscreens)
-    \item Settings management
-    \item External communication with the robot and backend
-    \item Entities support
+    \item Themes. The current version has a default theme, a set of UI components that extend the basic ones and provide a certain look and feel. All theme components are eventually implemented with a basic component, e.g. a back-button, a home-button, a base-button, etc.
+    \item Internal navigation (subscreens). Subscreens are containers whose content is determined by the url.
+    \item Settings management. There are three configurations to load: generic settings (default language, paths...), application specific settings (current language, current theme...) and structure of the application (a tree that defines an id and a \ac{URL} for each node (screen)).
+    \item Entities support. 
     \item Screen saver / Sessions
 \end{enumerate}
 
@@ -71,6 +70,11 @@ basically, make it work and make it work fast. test. deploy it. make it compatib
     \item Target browser: QtWebKit (Qt 5.0.x) (FIXME! maybe chrome)
     \item Extensibility: The software has to be extensible. The design has to allow adding new features in the future.
     \item Robustness: the software has to be reliable and has to be delivered with a comprehensive test suite. It should be compatible with Jenkins and continuous integration.
-    \item Hardware: the software has to perform smoothly in Reem H2 and a multitouch screen.
-    \item UX: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. 
+    \item Hardware: the software has to perform smoothly in Reem H3 and a multitouch screen.
+    \item UX: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. Rendered components should be aesthetically pleasant.
+    \item Interoperability: it has to interoperate with:
+    \begin{itemize}
+        \item Backend: there is an API in a Django backend that provides settings and serves the contents
+        \item RobotBehaviour: the Qt program that runs in the robot and governs the behaviour. Sometimes the touchscreen displays dialogs from Qt, sometimes it displays the application contents. 
+    \end{itemize}
 \end{enumerate}
