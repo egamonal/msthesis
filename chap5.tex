@@ -11,7 +11,6 @@ There are 3 key issues in understanding the current system: abstraction level, c
 This specification uses a system-level abstraction, only takes into account interaction with external actors, and is one-way (from current system to the specification of the new system).
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
 
-
 \section{Interaction, interoperability and context}
 
 \subsection{Context}
@@ -122,7 +121,7 @@ Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend
         & add\_robot \\
     \hline
     
-    \multirow{6}{*}{$flango-api-0.1/pal$} 
+    \multirow{6}{*}{\texttt{flango-api-0.1/pal}} 
         & home \\
         & add \\
         & execute \\
@@ -160,8 +159,27 @@ Both current and new implementation use this.
 However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friendly: it has less overhead and it is easier to deserialise.
 
 \section{conceptual model}
+There are only a few classes of objects in the system.
+This project only reengeneers Flango Content Manager.
+Because the Screens Editor (Flango Frontend) remains "as is", and the input of the new software is the output of this program, it has to be compatible with the current implementation.
+Otherwise, users would create contents applications with the Screens Editor that would look different when they are displayed in the robot.
+To ensure compatibility, it is necessary a good understanding not only at system level, but at component level.
+It is required, then, that the new implementation can render consistently all of the \ac{UI} components that the Screens Editor can create and all of their properties. 
+Same applies to settings and use of "entities".
+Thus, there are at least 3 classes of objects: Setting, UI Component (and UI Theme Component), Entity.
 
-classes of objects: setting, ui component (basic, theme), "entity". 
+A UI Component is an element of the \ac{UI}, for example a Button or an Image.
+Users drag and drop them to a canvas in the Screens Editor to create the contents. 
+All UI Components have an \ac{XML} code.
+
+TODO : maybe --- I can't remember what I was going to write here.
+For instance, the \ac{XML} code of a Button UI Component in \fref{chap:specification-button-example-1}
+
+\lstinputlisting[language=XML, caption={Basic UI Component Button XML}]{src/specification-button-example-1.xml}
+
+DIAGRAM HERE
+
+
 constraints?
 
 \section{use case model}

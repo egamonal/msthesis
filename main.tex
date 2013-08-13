@@ -35,11 +35,35 @@
 \usepackage{fancyref}
 \usepackage{graphicx} 
 \usepackage[gen]{eurosym}
+\usepackage{listings, color}
 %\usepackage[backend=bibtex,url=true]{biblatex} 
 \usepackage{misc/packages/risk-tpl}
 \pagestyle{plain}
 
-
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+ 
+\lstset{
+  basicstyle=\ttfamily,
+  numbers=left,
+  lineskip={-1.5pt} ,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+ 
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily\color{darkblue}\bfseries,
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type, id, lang, src, caption, x, y, width, height, loop, loopy, loopx, scrolly, scrollx, scroll}% list your attributes here
+}
 
 %% This bit allows you to either specify only the files which you wish to
 %% process, or `all' to process all files which you \include.

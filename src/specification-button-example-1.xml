@@ -1,0 +1,9 @@
+<ui id="3" type="button">
+    <x lang="en">268</x>
+    <y lang="en">494</y>
+    <width lang="en">200</width>
+    <height lang="en">100</height>
+    <onload lang="en"/>
+    <onclick lang="en"/>
+    <caption lang="en">Button</caption>
+</ui>
