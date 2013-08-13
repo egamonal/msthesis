@@ -107,18 +107,17 @@ Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend
 
 \begin{table}[ht]
     \centering
-    \caption{Flango Backend API}
     \label{tab:milestones}
     \begin{tabularx}{\linewidth}{| l | X |}
     \hline
     Root URL & Matching URLs \\
     \hline
-    \multirow{2}{*}{$flango-api-0.1/robots$}
+    \multirow{2}{*}{\texttt{flango-api-0.1/robots}}
         & get\_robots \\ 
         & add\_robot \\
     \hline 
     
-    \multirow{2}{*}{$flango-api-0.1/bl$} 
+    \multirow{2}{*}{\texttt{flango-api-0.1/bl}} 
         & entity/(\textless entity\_name\textgreater).xml \\ 
         & add\_robot \\
     \hline
@@ -144,9 +143,19 @@ Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend
         & getApps \\
         & upload\_app \\
     \hline
+    
+    \multirow{7}{*}{\texttt{flango-api-0.1/stats}}
+        & robot/use/<robotID>/<duration>/<data> \\
+        & robot/base \\
+        & app/use/<robotID>/<duration>/<data> \\
+        & app/top/<robotID>/<duration>/<data> \\
+        & app/toptable/<page> \\
+        & application/<screen> \\
+        & <name> \\
+    \hline
     \end{tabularx}
+    \caption{Flango Backend API}
 \end{table}
-
 Both current and new implementation use this.
 However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friendly: it has less overhead and it is easier to deserialise.
 
