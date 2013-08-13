@@ -159,6 +159,21 @@ Both current and new implementation use this.
 However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friendly: it has less overhead and it is easier to deserialise.
 
 \section{conceptual model}
+TODO FIXME subindex in captions
+\begin{figure}[htb]
+    \label{fig:specification-conceptual-model-1}
+    \centering
+    \includegraphics[width=\textwidth]{figures/specification-conceptual-model-1}
+    \caption{Conceptual model (a)}
+\end{figure}
+
+\begin{figure}[htb]
+    \label{fig:specification-conceptual-model-2}
+    \centering
+    \includegraphics[width=\textwidth]{figures/specification-conceptual-model-2}
+    \caption{Conceptual model (b)}
+\end{figure}
+
 There are only a few classes of objects in the system.
 This project only reengeneers Flango Content Manager.
 Because the Screens Editor (Flango Frontend) remains "as is", and the input of the new software is the output of this program, it has to be compatible with the current implementation.
@@ -171,6 +186,9 @@ Thus, there are at least 3 classes of objects: Setting, UI Component (and UI The
 A UI Component is an element of the \ac{UI}, for example a Button or an Image.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
 All UI Components have an \ac{XML} code.
+Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model-1} and \fref{fig:specification-conceptual-model-2} is created from the current implementation.
+
+TODO explain XML here? explain theming here? fallbacks? ambiguity?
 
 TODO : maybe --- I can't remember what I was going to write here.
 For instance, the \ac{XML} code of a Button UI Component in \fref{chap:specification-button-example-1}
