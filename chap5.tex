@@ -12,7 +12,7 @@ This specification uses a system-level abstraction, only takes into account inte
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
 
 \section{Interaction, interoperability and context}
-
+\label{sec:context}
 \subsection{Context}
 \begin{figure}[htb]
     \label{fig:context-original}
@@ -187,6 +187,116 @@ A UI Component is an element of the \ac{UI}, for example a Button or an Image.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
 All UI Components have an \ac{XML} code.
 Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model-1} and \fref{fig:specification-conceptual-model-2} is created from the current implementation.
+To support themes, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
+All UI Theme Component are eventually implemented with a basic UI Component.
+
+\begin{lstlisting}[caption=Basic UI Components, label=onelabel]
+ButtonComponent.as
+GroupButtonComponent.as
+GroupComponent.as
+ImageComponent.as
+MenuComponent.as
+QRComponent.as
+ScreenComponent.as
+ScrollComponent.as
+ShowReelComponent.as
+SubscreenComponent.as
+SWFComponent.as
+TextareaComponent.as
+UIComponent.as
+VideoComponent.as
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Theme UI Components, label=anotherlabel]
+arabic_button
+back_button
+base_button
+big_button
+call_to_action_screen
+camera_button
+config_button
+english_button
+forward_button
+home_button
+info_button
+korean_button
+language_button
+left_arrow_button
+line
+list_button
+main_menu
+next_button
+reem_body_button
+reem_button
+right_arrow_button
+smartphone_menu
+synchronizing_screen
+video_button
+wide_button
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Application State (Settings class), label=anotherlabel2]
+api_endpoint:String
+app_id:String
+app_name:String
+current_node:String
+debug_level:String
+debug_mode:Boolean
+default_api_endpoint:String
+def_lang:String
+def_theme:String
+enable_stats_bkp:Boolean
+enable_stats:Boolean
+history:Array
+history_current:int
+history_limit:int
+home_node:String
+initial_node:String
+lang_list:Object
+lang:String
+log:String
+media_path:String
+performance_monitor:Boolean
+perform_callbacks_bkp:Boolean
+perform_callbacks:Boolean
+redirects:Array
+report_stats:Boolean
+robot_id:String
+scale_factor:Number
+screensaver_node:String
+screens:Object
+screen_transitions:Boolean
+security_level:int
+session_fadeout:int
+session_timeout:int
+show_cursor:Boolean
+static_api_endpoint:String
+static_media_path:String
+static_themes_path:String
+structure:XML
+theme_list:Object
+themes_path:String
+theme:String
+themes:XMLList
+zone:String
+
+\end{lstlisting}
+
+\ref{onelabel} and \ref{anotherlabel} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
+Notice that all files in \ref{onelabel} have the corresponding class in the conceptual model.
+The elements of \ref{anotherlabel} are in fact folders but they can be considered objects in this specification as they are part of the domain of the problem.
+The state of the application is defined with DTOs sent from the server.
+A collection of the necessary the attributes of the class that encapsulates the configuration is in \ref{anotherlabel1} and has been extracted from the current implementation as well.
+
+Entities are classes that represent classes in the Screens Editor. 
+Imagine the following scenario: Alice is creating screens with the Screens Editor.
+She rented the robot for a congress and wants to add information about job openings in her company.
+She can define, with Flango, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
+
+A Contents Application can have themes.
+There is a default theme that defines the look and feel of all UI Theme Components.
+All themes have the same UI Theme Components to guarantee that themes can be changed safely.
+Basic UI Components look always the same way.
 
 TODO explain XML here? explain theming here? fallbacks? ambiguity?
 
@@ -201,17 +311,27 @@ DIAGRAM HERE
 constraints?
 
 \section{use case model}
-system actors:
-robotbehaviour, system
-Users: no users (well, a "virtual" user does exist). it's a meta-app that reads apps in xml and renders them in html. define input and output.
+This section describes the services of the system as sequences of events triggered by external actors.
+
+\subsection{Actors}
+Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
+For example: the program renders a screen with one button whose action is to make Reem say "hi, my name is Reem".
+The input is an \ac{XML} file, the output is a web \ac{GUI} ready to be used.
+Humans can now touch the button that sends events to robotBehaviour so, essentially, the \ac{GUI} of the program and not only the output is built as a function of the input.
+The actual actors are robotBehaviour, the basestation and, eventually, a user of the contents.
+
+
+\subsection{System Use Cases}
+Examining the current implementation at a program level one can determine a number of use cases:
 
 
 system use cases:
 configure app (generic settings, app-specific settings, structure with nodes and screens)
-render UI (define XML syntax here. XML (vocabulary, grammar, motivations). one sub-usecase per UI component?)
+render UI (define XML syntax here ????. XML (vocabulary, grammar, motivations). one sub-usecase per UI component?)
 render entity (use render UI)
 navigate to URI
 interoperate with robotBehaviour 
+interoperate with BS (sync, fetch config)
 
 \section{behaviour model}
 seq diagrams of system operations
