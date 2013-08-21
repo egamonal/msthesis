@@ -1,18 +1,79 @@
 \chapter{Specification}
 The specification of the program defines what it does rather than how.
-This chapter presents the specification of the system taking into consideration general software engineering principles, like the models proposed by Larman (at least conceptual, use case and behaviour models) and Meyer's \ac{DbC}.
+This chapter presents the specification of the system taking into consideration general software engineering principles, like the models proposed by Larman (FIXME CITE??)(at least conceptual, use case and behaviour models) and Meyer's (FIXME CITE??) \ac{DbC}.
 For the particular case of this thesis, the specification takes into account reengineering principles and procedures and \ac{TDD} as a tool to define what the system does as opposed to a simple testing technique.
 
-Reengeneering a software involves reverse engineering, understanding what the system does.
-The outcome of this process (FIXME: activity, task?) derives part of this specification.
+Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2): 
+\begin{enumerate}
+    \item Inventory Analysis
+    \item Documentation reestructure (FIXME Language)
+    \item Reverse Engineering
+    \item Code Restructuring
+    \item Data Restructuring
+    \item Forward Engineering
+\end{enumerate}   
+   
+The outcome of these activities (FIXME: activity, task?) derives part of this specification.
 For example, use cases are extracted from the current system.
+The first three focus on what the system does and are used in this chapter, whereas the last three are highly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
+
+\section{Inventory Analysis}
+list software, current status, etc and whatever pressman says
+
+
+    name of the application
+    year it was originally created
+    number of substantive changes made to it
+    total effort applied to make these changes
+    date of last substantive change
+    effort applied to make the last change
+    system(s) in which it resides
+    applications to which it interfaces
+    database(s) that it accesses
+    errors reported over the past 18 months
+    number of users
+    number of machines on which it is installed
+    complexity of 
+
+        program architecture
+        code
+        documentation 
+
+    quality of documentation
+    overall maintainability (scale value)
+    projected longevity (in years)
+    projected number of changes over the next 36 months
+    annual cost of maintenance
+    annual cost of operation
+    annual business value
+    business criticality 
+    
+    The following checklist may help to determine which applications are candidates for reengineering. The more questions that receive a positive ("yes") response, the higher the probability that the application is a candidate for reengineering.
+
+    Is the application more than five years old?
+    Is the application business critical?
+    Is the project longevity projected to be more than five years?
+    Is the number of users large by local standards?
+    Is the number of users likely to increase?
+    Are major changes contemplated for the application?
+    If so, will these major changes require substantial commitent of effort by local standards?
+    Is the cost of continuing annual maintenance known?
+    Is the annual value of the application known?
+    Is the projected total cost of change known?
+    Can the cost to reengineer the application be estimated to within 20%?
+    If so, is reengineering cost less than the cost to make changes plus the cost of maintenance?
+
+\section{Document reestructure}
+maybe we don't need this.
+
+\section{Reverse Engineering}
+\label{sec:context}
+Reengeneering a software involves reverse engineering, understanding what the system does.
 
 There are 3 key issues in understanding the current system: abstraction level, completeness and direction.
 This specification uses a system-level abstraction, only takes into account interaction with external actors, and is one-way (from current system to the specification of the new system).
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
 
-\section{Interaction, interoperability and context}
-\label{sec:context}
 \subsection{Context}
 \begin{figure}[htb]
     \label{fig:context-original}
@@ -157,6 +218,7 @@ Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend
 \end{table}
 Both current and new implementation use this.
 However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friendly: it has less overhead and it is easier to deserialise.
+
 
 \section{conceptual model}
 TODO FIXME subindex in captions
