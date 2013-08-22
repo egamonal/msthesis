@@ -29,3 +29,38 @@
     \end{table}
 }
 {}
+
+% software inventory analysis template
+
+\newcounter{swc}
+\setcounter{swc}{0}
+
+\define@key{inventory}{name}{ \def \inventory@name{#1} }
+\define@key{inventory}{year}{ \def \inventory@year{#1} }
+
+
+\newenvironment{inventory}[1]{%
+  \setkeys{inventory}{#1} 
+% template here
+    the name of the application is \inventory@name
+    \medskip
+    \refstepcounter{swc}
+    
+    \begin{table}[ht]
+    \begin{tabularx}{\linewidth}{| l | X |}%{| X | X |}
+    \multicolumn{2}{l}{\textbf{\arabic{swc} \inventory@name }} \\ \hline
+    Year & \inventory@year \\
+    \hline
+    \end{tabularx}
+    \centering
+%    \caption{asdv}
+
+    \end{table}
+}
+{
+
+}
+
+
+
+    
