@@ -35,31 +35,64 @@
 \newcounter{swc}
 \setcounter{swc}{0}
 
-\define@key{inventory}{name}{ \def \inventory@name{#1} }
-\define@key{inventory}{year}{ \def \inventory@year{#1} }
+\define@key{inventory}{name}[none]{ \def \inventory@name{#1} }
+\define@key{inventory}{year}[none]{ \def \inventory@year{#1} }
+\define@key{inventory}{nchanges}[none]{ \def \inventory@nchanges{#1} }
+\define@key{inventory}{lastchange}[none]{ \def \inventory@lastchange{#1} }
+\define@key{inventory}{sysresides}[none]{ \def \inventory@sysresides{#1} }
+\define@key{inventory}{appinterfaces}[none]{ \def \inventory@appinterfaces{#1} }
+\define@key{inventory}{dbs}[none]{ \def \inventory@dbs{#1} }
+\define@key{inventory}{errors}[none]{ \def \inventory@errors{#1} }
+\define@key{inventory}{nusers}[none]{ \def \inventory@nusers{#1} }
+\define@key{inventory}{ninstallations}[none]{ \def \inventory@ninstallations{#1} }
+\define@key{inventory}{complexityArch}[none]{ \def \inventory@complexityArch{#1} }
+\define@key{inventory}{complexityCode}[none]{ \def \inventory@complexityCode{#1} }
+\define@key{inventory}{complexityDocs}[none]{ \def \inventory@complexityDocs{#1} }
+\define@key{inventory}{qualityDocs}[none]{ \def \inventory@qualityDocs{#1} }
+\define@key{inventory}{overallMainten}[none]{ \def \inventory@overallMainten{#1} }
+\define@key{inventory}{projLongevity}[none]{ \def \inventory@projLongevity{#1} }
+\define@key{inventory}{projNchanges36}[none]{ \def \inventory@projNchanges36{#1} }
+\define@key{inventory}{maintenCost}[none]{ \def \inventory@maintenCost{#1} }
+\define@key{inventory}{operCost}[none]{ \def \inventory@operCost{#1} }
+\define@key{inventory}{bizVal}[none]{ \def \inventory@bizVal{#1} }
+\define@key{inventory}{bizCrit}[none]{ \def \inventory@bizCrit{#1} }
 
 
 \newenvironment{inventory}[1]{%
   \setkeys{inventory}{#1} 
 % template here
-    the name of the application is \inventory@name
     \medskip
     \refstepcounter{swc}
     
     \begin{table}[ht]
     \begin{tabularx}{\linewidth}{| l | X |}%{| X | X |}
     \multicolumn{2}{l}{\textbf{\arabic{swc} \inventory@name }} \\ \hline
-    Year & \inventory@year \\
+    Year & \inventory@year \\ \hline
+    Substantive changes & \inventory@nchanges \\ \hline
+    Last substantive change & \inventory@lastchange \\ \hline
+    System(s) where it resides & \inventory@sysresides \\ \hline
+    Applications to which it interfaces & \inventory@appinterfaces \\ \hline
+    \ac{DB} it accesses & \inventory@dbs \\ \hline
+    Errors reported (18 months) & \inventory@errors \\ \hline
+    Number of users & \inventory@nusers \\ \hline
+    Number of machines where it is installed & \inventory@ninstallations \\ \hline
+    Complexity & \inventory@complexityArch \inventory@complexityCode \inventory@complexityDocs \\ \hline
+    Quality of documentation & \inventory@qualityDocs \\ \hline
+    Overall maintainability (scale value) & \inventory@overallMainten \\ \hline
+    Projected longevity (in years) & \inventory@projLongevity \\ \hline
+    Projected number of changes (36 months) & \inventory@projNchanges36 \\ \hline
+    Annual cost of maintenance & \inventory@maintenCost \\ \hline
+    Annual cost of operation & \inventory@operCost \\ \hline    
+    Annual business value & \inventory@bizVal \\ \hline
+    Business criticality & \inventory@bizCrit \\ \hline
     \hline
     \end{tabularx}
     \centering
-%    \caption{asdv}
+    \caption{asdv}
 
     \end{table}
-}
-{
-
-}
+  }
+{}
 
 
 

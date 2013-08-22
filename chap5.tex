@@ -18,43 +18,90 @@ For example, use cases are extracted from the current system.
 The first three focus on what the system does and are used in this chapter, whereas the last three are highly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
 
 \section{Inventory Analysis}
+A sorted list of software in the organisation makes candidates for reengeneering appear.
+The scope of this thesis is reengeneering Flango in the robot and it is a decision taken before starting this work.
+However, Flango uses other software that might have to be reengeneered in the future.
 list software, current status, etc and whatever pressman says
 
+applications involved in the flango project: robot content management, frontend and screens editor, backend
 
-\begin{inventory}{name=yeha, year=2000}
-
+\begin{inventory}
+{name=Flango Frontend (robot), 
+year=May 2011,
+nchanges=5 big milestones,
+lastchange=August 2013,
+sysresides=Reem H2 and H3,
+appinterfaces=Flango Backend; robotBehaviour,
+dbs=SQLite in the robot (exclusive use),
+errors=not tracked,
+nusers=all employees (+40) and business leads (at least one per week),
+ninstallations=3 (one per dev robot in the office),
+complexityArch=Simple (MVC),
+complexityCode=Medium (custom \ac{XML} parser),
+complexityDocs=No documentation,
+qualityDocs=N/A,
+overallMainten=One software engineer full-time (extension and maintenance),
+projLongevity=Until September 2013,
+projNchanges36=0,
+maintenCost=1 software engineer full-time,
+operCost=no exclusive cost,
+bizVal=high (no revenue generated yet but it can be sold without the robot),
+bizCrit=very high (contents have big impact: they belong to the \ac{UI})
+}
 \end{inventory}
-%\inventory{name=aloha}
-    
 
+\begin{inventory}
+{
+name=Flango Screens Editor, 
+year=December 2012,
+nchanges=4 (first version; some new features; bug fixing),
+lastchange=August 2013,
+sysresides=Basestation,
+appinterfaces=Flango Frontend (robot); Flango Backend,
+dbs=flango (postgresql through the Backend),
+errors=not tracked,
+nusers=business department (+5 people) and a some software engineers (+7),
+ninstallations=2,
+complexityArch=Simple (MVC),
+complexityCode=Medium (large ActionScript codebase and custom \ac{XML} parser),
+complexityDocs=No documentation,
+qualityDocs=N/A,
+overallMainten=1 software engineer full-time,
+projLongevity=At least until January 2015,
+projNchanges36=Bug fixing,
+maintenCost=1 software engineer full-time,
+operCost=no exclusive cost,
+bizVal=high (no revenue generated yet but it can be sold without the robot),
+bizCrit=very high (contents have big impact: they belong to the \ac{UI})
+}
+\end{inventory}
 
+\begin{inventory}
+{
+name=Flango Backend, 
+year=October 2012,
+nchanges=3 (first version; statistics; new features),
+lastchange=August 2013,
+sysresides=Basestation,
+appinterfaces=Flango Frontend (robot); Flango Screens Editor,
+dbs=flango (postgresql),
+errors=not tracked,
+nusers=business department (+5 people) and a some software engineers (+7),
+ninstallations=2,
+complexityArch=Simple ("MVC"),
+complexityCode=Medium (large Django codebase),
+complexityDocs=Simple for this project,
+qualityDocs=Very high for Django; Poor for Flango Backend,
+overallMainten=1 software engineer full-time,
+projLongevity=At least until January 2015,
+projNchanges36=Unspecified number of new features and bug fixing,
+maintenCost=1 software engineer full-time,
+operCost=no exclusive cost,
+bizVal=high (no revenue generated yet but it can be sold without the robot),
+bizCrit=very high (contents have big impact: they belong to the \ac{UI})
+}
+\end{inventory}    
 
-    name of the application
-    year it was originally created
-    number of substantive changes made to it
-    total effort applied to make these changes
-    date of last substantive change
-    effort applied to make the last change
-    system(s) in which it resides
-    applications to which it interfaces
-    database(s) that it accesses
-    errors reported over the past 18 months
-    number of users
-    number of machines on which it is installed
-    complexity of 
-
-        program architecture
-        code
-        documentation 
-
-    quality of documentation
-    overall maintainability (scale value)
-    projected longevity (in years)
-    projected number of changes over the next 36 months
-    annual cost of maintenance
-    annual cost of operation
-    annual business value
-    business criticality 
     
     The following checklist may help to determine which applications are candidates for reengineering. The more questions that receive a positive ("yes") response, the higher the probability that the application is a candidate for reengineering.
 
