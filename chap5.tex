@@ -15,11 +15,11 @@ Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2):
    
 The outcome of these activities (FIXME: activity, task?) derives part of this specification.
 For example, use cases are extracted from the current system.
-The first three focus on what the system does and are used in this chapter, whereas the last three are highly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
+The first three focus on what the system does and are used in this chapter, whereas the last three are tightly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
 
 \section{Inventory Analysis}
 A sorted list of software in the organisation makes candidates for reengeneering appear.
-The scope of this thesis is reengeneering Flango in the robot and it is a decision taken before starting this work.
+The scope of this thesis is reengineering Flango in the robot and it is a decision taken before starting this work.
 However, Flango uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
 \begin{inventory}
@@ -120,7 +120,7 @@ maybe we don't need this.
 
 \section{Reverse Engineering}
 \label{sec:context}
-Reengeneering a software involves reverse engineering, understanding what the system does.
+Reengineering a software involves reverse engineering, understanding what the system does.
 
 There are 3 key issues in understanding the current system: abstraction level, completeness and direction.
 This specification uses a system-level abstraction, only takes into account interaction with external actors, and is one-way (from current system to the specification of the new system).
@@ -141,10 +141,9 @@ Other levels of abstraction do not apply here to keep this specification technol
     \caption{New context}
 \end{figure}
 
-Key aspects when understanding the current program include the interaction, interoperability and the context.
 ReemH-3 has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
 The program that manages the state machine is \textbf{robotBehaviour}, a \texttt{Qt} program that glues all software parts and serves as an interface to the hardware.
-A dialog in this program contains a QtWebKit widget (FIXME maybe chrome!), the embedded web browser that loads the contents shown in the touchscreen.
+A window in this program contains a QtWebKit widget (FIXME maybe chrome!), the embedded web browser that loads the contents in the touchscreen.
 Contents are fetched from Basestation, a server that hosts \textbf{Flango Frontend}, a web application (Django + Flash) that lets users edit screens, add media contents and synchronise them with robots (\fref{fig:context-original}).
 The Frontend has an \ac{API} to serve the contents applications to the robots.
 The project of this thesis is reengineering the \textbf{Flango Content Manager}, in the robot (\fref{fig:context-new}).
@@ -154,7 +153,7 @@ The project of this thesis is reengineering the \textbf{Flango Content Manager},
     \label{fig:interaction-original}
     \centering
     \includegraphics[width=0.7\textwidth]{figures/interaction-original}
-    \caption{current interaction}
+    \caption{Current interaction}
 \end{figure}
 
 \begin{figure}[htb]
@@ -164,7 +163,8 @@ The project of this thesis is reengineering the \textbf{Flango Content Manager},
     \caption{New interaction}
 \end{figure}
 
-The content manager's input is \ac{XML} files and the output is an \ac{HTML} single page application (\fref{fig:interaction-original} and \fref{fig:interaction-new}).
+The content manager's input is \ac{XML} code and the output is an \ac{HTML} single page application (\fref{fig:interaction-original} and \fref{fig:interaction-new}).
+The general boot steps are:
 
 \begin{enumerate}
     \item The robot boots
@@ -417,7 +417,7 @@ DIAGRAM HERE
 
 constraints?
 
-\section{use case model}
+\section{Use Case Model}
 This section describes the services of the system as sequences of events triggered by external actors.
 
 \subsection{Actors}
@@ -425,7 +425,7 @@ Humans only interact directly with the output of this software (see \fref{sec:co
 For example: the program renders a screen with one button whose action is to make Reem say "hi, my name is Reem".
 The input is an \ac{XML} file, the output is a web \ac{GUI} ready to be used.
 Humans can now touch the button that sends events to robotBehaviour so, essentially, the \ac{GUI} of the program and not only the output is built as a function of the input.
-The actual actors are robotBehaviour, the basestation and, eventually, a user of the contents.
+The actual actors are robotBehaviour, the Basestation and, eventually, a user of the contents.
 
 
 \subsection{System Use Cases}
@@ -433,26 +433,36 @@ Examining the current implementation at a program level one can determine a numb
 
 
 system use cases:
-configure app (generic settings, app-specific settings, structure with nodes and screens)
+Manage configuration (CRUD: generic settings, app-specific settings, structure with nodes and screens)
 render UI (define XML syntax here ????. XML (vocabulary, grammar, motivations). one sub-usecase per UI component?)
-render entity (use render UI)
 navigate to URI
 interoperate with robotBehaviour 
-interoperate with BS (sync, fetch config)
+interoperate with Basestation (synchronise, fetch configuration)
 
 \section{behaviour model}
 seq diagrams of system operations
 
-This thesis combines design by contract and tdd. basically, tests define the behaviour for specific cases and dbc defines the general behaviour. thus, there are no tests for edge cases or negative behaviours because conracts, and more specirfically preconditions, protect the component.
-Advantages:
-with tdd:
-build only what is required now. keep it simple.
-have a suite of automated tests for refactoring safely, continuous integration and regression testing.
-drive design decisions from tests (from specs).
-using formal specs (dbc):
-higher code quality
-less checks (preconditions)
-design decisions derived from preconditions
+This thesis combines \ac{DbC} and \ac{TDD}, two techniques that are not mutually exclusive.
+Basically, tests define the behaviour for specific cases and \ac{DbC} defines the general behaviour. 
+Thus, there are no tests for edge cases or negative behaviours because contracts, and more specifically preconditions, protect the component.
+In spite of the name, \ac{TDD} tests are actual executable specifications.
+Tests (specifications) are written before the code and define the behaviour of components.
+In this thesis, they are implemented with Jasmine and AngularJS but this chapter focuses on what the tests describe rather than how they are executed and controlled.
+
+Combining the two techniques one can use the best parts of each to define the behaviour of the system.
+With \ac{TDD}:
+\begin{itemize}
+    \item Build only what is required (Keep it simple and control the scope of the project)
+    \item Drive design decisions from tests (i.e. from the specification)
+\end{itemize}
+
+With formal specifications (\ac{DbC}):
+\begin{itemize}
+    \item Higher code quality
+    \item Less checks (preconditions)
+    \item Drive design decisions from preconditions
+\end{itemize}
+
 
 Larman: system sequence diagram + Meyer: contracts of system operations
 %http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.313&rep=rep1&type=pdf
@@ -467,9 +477,7 @@ Identify system events and system operations
 operations "
 
 
-TDD specs:
-clarify this is here because we write tests before writing code. tests are implemented with a certain framework and oriented to a certain technology but this chapter focuses on what the tests say and why we do it this way.
-outline tests
+
 
 
 Design by Contract and Test Driven Development are not at all mutually exclusive.
