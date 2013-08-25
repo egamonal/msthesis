@@ -51,13 +51,18 @@ They can be used in public places such as hotels, malls, airports or museums.
 \section{The Current System}
 The Reem series have big potential in human robot interaction. 
 Besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
-It can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
+Reem can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
 
-DIAGRAM: ROBOTS, BACKEND-BASESTATION, client
+\begin{figure}[htb]
+    \label{fig:intro-system-overview}
+    \centering
+    \includegraphics[width=\textwidth]{figures/intro-system-overview}
+    \caption{Overview of the system}
+\end{figure}
 
 The Basestation is an application server that hosts Flango, an \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
 Clients can create application contents with the Screens Editor, a tool built with Adobe Flex (c), in Flango.
-When application contents are ready, clients can associate 1 application with 1 robot to display it in the touch screen.
+When application contents are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
 The components of a contents application (screens and entities) have an \ac{XML} representation, an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
 
 A contents application is essentially a set of screens, navigation, multimedia contents that users can manage with the media library, and entities. 
@@ -75,7 +80,7 @@ It is also made with Adobe Flex (c).
 The main concern of this software is transforming \ac{XML} files into a \ac{UI}. 
 This software has no \ac{GUI} or direct interaction with a person.
 
-DIAGRAM HERE: XML --> software --> view
+DIAGRAM HERE (screenshots?): XML --> software --> view
 
 This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies.
 
