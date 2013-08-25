@@ -20,10 +20,7 @@ The first three focus on what the system does and are used in this chapter, wher
 \section{Inventory Analysis}
 A sorted list of software in the organisation makes candidates for reengeneering appear.
 The scope of this thesis is reengeneering Flango in the robot and it is a decision taken before starting this work.
-However, Flango uses other software that might have to be reengeneered in the future.
-list software, current status, etc and whatever pressman says
-
-applications involved in the flango project: robot content management, frontend and screens editor, backend
+However, Flango uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
 \begin{inventory}
 {name=Flango Frontend (robot), 
@@ -147,7 +144,7 @@ Other levels of abstraction do not apply here to keep this specification technol
 Key aspects when understanding the current program include the interaction, interoperability and the context.
 ReemH-3 has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
 The program that manages the state machine is \textbf{robotBehaviour}, a \texttt{Qt} program that glues all software parts and serves as an interface to the hardware.
-A dialog in this program contains a QtWebKit widget, the embedded web browser that loads the contents shown in the touchscreen.
+A dialog in this program contains a QtWebKit widget (FIXME maybe chrome!), the embedded web browser that loads the contents shown in the touchscreen.
 Contents are fetched from Basestation, a server that hosts \textbf{Flango Frontend}, a web application (Django + Flash) that lets users edit screens, add media contents and synchronise them with robots (\fref{fig:context-original}).
 The Frontend has an \ac{API} to serve the contents applications to the robots.
 The project of this thesis is reengineering the \textbf{Flango Content Manager}, in the robot (\fref{fig:context-new}).
@@ -167,7 +164,7 @@ The project of this thesis is reengineering the \textbf{Flango Content Manager},
     \caption{New interaction}
 \end{figure}
 
-The content manager's input is \ac{XML} files and the output is an \ac{HTML} single page application (\fref{fig:interaction}).
+The content manager's input is \ac{XML} files and the output is an \ac{HTML} single page application (\fref{fig:interaction-original} and \fref{fig:interaction-new}).
 
 \begin{enumerate}
     \item The robot boots
@@ -218,11 +215,11 @@ Despite the fact that this specification should be technology agnostic, to integ
 In any case, it is clear that there has to be an interface between robotBehaviour and the browser, as they run in separate processes (as opposed to sharing at least one parent process in the current implementation).
 
 \paragraph{BaseStation (Flango Backend API} The Content Manager has to fetch data from Basestation in order to load the correct contents.
-Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend and frontend) has an API for this:
+Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend and frontend) has an API for this (\fref{tab:flango-api}):
 
 \begin{table}[ht]
+    \label{tab:flango-api}
     \centering
-    \label{tab:milestones}
     \begin{tabularx}{\linewidth}{| l | X |}
     \hline
     Root URL & Matching URLs \\
@@ -277,19 +274,12 @@ However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friend
 
 \section{conceptual model}
 TODO FIXME subindex in captions
-\begin{figure}[htb]
-    \label{fig:specification-conceptual-model-1}
+\begin{sidewaysfigure}[htb]
+    \label{fig:specification-conceptual-model}
     \centering
-    \includegraphics[width=\textwidth]{figures/specification-conceptual-model-1}
-    \caption{Conceptual model (a)}
-\end{figure}
-
-\begin{figure}[htb]
-    \label{fig:specification-conceptual-model-2}
-    \centering
-    \includegraphics[width=\textwidth]{figures/specification-conceptual-model-2}
-    \caption{Conceptual model (b)}
-\end{figure}
+    \includegraphics[width=\textwidth]{figures/specification-conceptual-model}
+    \caption{Conceptual model}
+\end{sidewaysfigure}
 
 There are only a few classes of objects in the system.
 This project only reengeneers Flango Content Manager.
@@ -303,7 +293,7 @@ Thus, there are at least 3 classes of objects: Setting, UI Component (and UI The
 A UI Component is an element of the \ac{UI}, for example a Button or an Image.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
 All UI Components have an \ac{XML} code.
-Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model-1} and \fref{fig:specification-conceptual-model-2} is created from the current implementation.
+Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model} is created from the current implementation.
 To support themes, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
 All UI Theme Component are eventually implemented with a basic UI Component.
 
