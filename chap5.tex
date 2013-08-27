@@ -429,25 +429,35 @@ The actual actors are robotBehaviour, the Basestation and, eventually, a user of
 
 
 \subsection{System Use Cases}
-Examining the current implementation at a program level one can determine a number of use cases:
+There is a number of use cases determined by examining the current implementation at a program level.
 
 
 system use cases:
-Manage configuration (CRUD: generic settings, app-specific settings, structure with nodes and screens)
+Manage configuration (CRU: generic settings, app-specific settings, structure with nodes and screens)
 render UI (define XML syntax here ????. XML (vocabulary, grammar, motivations). one sub-usecase per UI component?)
-navigate to URI
-interoperate with robotBehaviour 
-interoperate with Basestation (synchronise, fetch configuration)
+Manage screensaver and sessions (robotbehaviour) (general case with callbacks is probably better in the design chapter=)
 
-\section{behaviour model}
+mmm?
+interoperate with Basestation (synchronise, fetch configuration)
+navigate to URI
+
+
+
+\section{Behaviour Model}
 seq diagrams of system operations
 
 This thesis combines \ac{DbC} and \ac{TDD}, two techniques that are not mutually exclusive.
 Basically, tests define the behaviour for specific cases and \ac{DbC} defines the general behaviour. 
 Thus, there are no tests for edge cases or negative behaviours because contracts, and more specifically preconditions, protect the component.
 In spite of the name, \ac{TDD} tests are actual executable specifications.
+They become tests only after having implemented all the functionality being test-driven.
+Before this, there is nothing to actually test and these artifacts are rather executable specifications, but not tests.
 Tests (specifications) are written before the code and define the behaviour of components.
-In this thesis, they are implemented with Jasmine and AngularJS but this chapter focuses on what the tests describe rather than how they are executed and controlled.
+
+Additionally, they are used as documentation of the program but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be achieved using formal specifications,
+e.g. using Meyer's \ac{DbC} \cite{Baumeister:2004}.
+
+In this thesis, tests are implemented with Jasmine and AngularJS but this chapter focuses on what the tests describe rather than how they are executed and controlled.
 
 Combining the two techniques one can use the best parts of each to define the behaviour of the system.
 With \ac{TDD}:
@@ -465,7 +475,6 @@ With formal specifications (\ac{DbC}):
 
 
 Larman: system sequence diagram + Meyer: contracts of system operations
-%http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.313&rep=rep1&type=pdf
 "System Sequence Diagrams:
 –
 Identify system events and system operations
@@ -476,35 +485,7 @@ Identify system events and system operations
 – Define the pre- and post-conditions for system
 operations "
 
-
-
-
-
-Design by Contract and Test Driven Development are not at all mutually exclusive.
-TDD is not about testing!! is about executable specs
-"The first idea is about test-driven development not being a testing technique;
-automatic tests only become ”tests” after having implemented all the functionality
-being test-
-driven
-. Before that there is nothing to actually
-test
-and those artifacts
-rather serve as executable
-specifications
-but not tests"
-
 up to date documentation: a common problem is that docs are hardly ever updated
-
-
----
-Extreme Programming advocates test driven development where tests are used
-to specify the behavior of a program before the program code is actually written.
-Together with using the simplest design possible and intention revealing program
-code, tests are additionally used as a documentation of the program. However,
-tests are not sufficient to completely define the behavior of a program because
-they are only able to test properties of a program by example and do not allow to
-state general properties. The latter can be achieved using formal specifications,
-e.g. using Meyer’s design by contract % http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.313&rep=rep1&type=pdf
 
 \section{XML Representation}
 explain syntax here?
