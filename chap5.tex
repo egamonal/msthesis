@@ -416,6 +416,8 @@ DIAGRAM HERE
 
 
 constraints?
+\FloatBarrier
+
 
 \section{Use Case Model}
 This section describes the services of the system as sequences of events triggered by external actors.
@@ -447,8 +449,56 @@ For example: the user touches a button that makes Reem say a sentence aloud (not
 The software system that controls the robot, robotBehaviour, can also trigger actions in the contents application.
 Amongst others, it can manage the screensaver and sessions and some special settings (including: show the cursor, enable debug mode, enable sending message to robotBehaviour, contents application ID, etc)
 
+\begin{suc}
+{title of the use case}
+{a description}
+{actors}
+{preconditions}
+{postconditions}
+{main scenario
+    \begin{enumerate}
+        \item first step
+        \item second step
+    \end{enumerate}
+}
+{extensions}
+\end{suc}
 
+\begin{suc}
+{Start Robot's Applications}
+{A user can start robot's applications like face recognition, ball grasping, meet people, etc.}
+{Content Application User}
+{robotBehaviour is running}
+{The robot application starts}
+{main scenario
+    \begin{enumerate}
+        \item The User chooses a robot's application and asks the system to start it
+        \item The system starts the application
+    \end{enumerate}
+}
+{None}
+\end{suc}
 
+\begin{suc}
+{Change language}
+{A user changes the language of the \ac{UI}}
+{Content Application User}
+{robotBehaviour is running}
+{
+    \begin{enumerate}
+        \item The current screen is shown with the chosen language
+        \item The current language is set to the chosen language
+    \end{enumerate}
+}
+{main scenario
+    \begin{enumerate}
+        \item TODO
+    \end{enumerate}
+}
+{None}
+\end{suc}
+
+\FloatBarrier
 
 \section{Behaviour Model}
 seq diagrams of system operations

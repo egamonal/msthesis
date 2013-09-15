@@ -31,6 +31,39 @@
 {}
 
 
+% ==============================================================================
+% Template for use cases
+% ==============================================================================
+\newcounter{succ}
+\setcounter{succ}{0}
+
+\newenvironment{suc}[7]
+{
+    \medskip
+    \refstepcounter{succ}
+
+    %\noindent \textbf{\arabic{riskc} #1}
+    %\par \noindent #2
+    %\par \noindent \textbf{Mitigation Plan} 
+    %\par \noindent \textbf{Action Plan} 
+    
+    \begin{table}[ht]
+    \begin{tabularx}{\linewidth}{| l | p{10cm} |}%{| X | X |}
+    \multicolumn{2}{X}{\textbf{\arabic{succ} #1}} \\ \hline
+    \multicolumn{2}{|p{12.5cm}|}{#2}\\ \hline 
+    Actors & #3 \\ \hline
+    Preconditions & #4 \\ \hline
+    Postconditions & #5 \\ \hline
+    Main Success Scenario & #6\\ \hline
+    Extensions & #7\\
+    \hline
+    \end{tabularx}
+    \centering
+    \caption{#1}
+
+    \end{table}
+}
+{}
 
 
 % software inventory analysis template
