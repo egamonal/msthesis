@@ -105,21 +105,87 @@ strategy:
 application: reeng with no local application experts available 
 reengineerd system does not perform adequately
 
+project risks: schedule, cost, personnel, resource, customer, requirements, complexity, size, structural uncertainty. 
+tech risks: A) design, implementation, interface,verification,maintenance problems.– (B)leading edge technologies
+
 \label{sec:risk}
 \begin{risk}
-{Schedule deviation}
+{Schedule: deviation}
 {There might be urgent needs in the company, like demos to potential customers or hot bugs related to contents applications}
 {Some of the needs are unpredictable. However, preventive maintenance and good documentation of bugs in tickets can reduce the chances that this risk will occur.}
 {Do the urgent task and reschedule the project}
 \end{risk}
 
+
 \begin{risk}
-{Unnatural implementation with web technology}
+{Resources: deviation}
+{The engineer might have to dedicate resources to other tasks in the company non-related to this project.}
+{Coordinate action monthly with the managers and track deviations and progress weekly. Avoid dedicating less than 50PERCENT of time to this project.}
+{Limit scope and extend deadlines to have the expected number of hours dedicated to this project.}
+\end{risk}
+
+\begin{risk}
+{Resources: infrastructure crash}
+{The development system might die}
+{Use version control systems and do frequent and small commits. Delegate backups to the IT team.}
+{Restore backups}
+\end{risk}
+
+\begin{risk}
+{Resources: testing environment not available}
+{Most of the testing can be done with regular computers. However, final tests have to be conducted with real hardware: ReemH3-1 or 2 and Reem-H2, which are frequently booked to go on tour, perform shows, demos or development.}
+{Book 3 days in advance if testing is critical. }
+{Share the robot with a team that doesn't need the media computer of the robot, where this project is hosted.}
+\end{risk}
+
+\begin{risk}
+{Personnel: Application expert leaves the project}
+{There is only one application expert that can leave the company. Nobody else has advanced knowledge on the internals of the current implementation.}
+{Build a common agenda with the expert and document critical and complex parts of the current application. Find experts in similar technology in the team}
+{Reach him on-line, hire him as consultant, take conflicting features out of the scope of the project.}
+\end{risk}
+
+\begin{risk}
+{Quality: critical use cases not implemented}
+{One or more critical use cases can not be implemented}
+{Verify that the technology allows implementing them. Build a prototype. }
+{Find a workaround. Assess the importance of the affected use cases and adapt to change: decide if changing the specification of the use case will fix this.}
+\end{risk}
+
+\begin{risk}
+{Quality: look and feel of the current theme can't be implemented}
+{The current look and feel and interaction is designed for Adobe Flash. It might not suit the way web technology works.}
+{Verify that the technology allows it with a prototype.}
+{Change the external design to balance the needs of the technology and the customer}
+\end{risk}
+
+\begin{risk}
+{Scope: Non-intuitive implementation with web technology}
 {Current implementation is designed for Adobe Flex. Some of the use cases to implement might not fit well with the new technology}
 {Analyse and discuss use cases with the author of the old implementation}
 {Explore ways to change the implementation of the use case in the Screens Editor (which generates the input for the new program) to fit in the new design}
 \end{risk}
 
+\begin{risk}
+{Inadequate technology}
+{The chosen technology is inadequate: it doesn't allow a complete reengineering of the application (100PERCENT of chosen use cases), performance is more than 10PERCENT lower, it is not reliable and fails in more than 3PERCENT of action executions}
+{Assess at least 2 solutions before implementing a prototype. Implement a prototype with basic cases of at least each critical feature.}
+{sdnsdgndf}
+\end{risk}
+
+\begin{risk}
+{Tool: Flango or Screens Editor do not perform as advertised}
+{The current implementation of the backend or the screens editor might have bugs. Some undocumented features or \ac{XML} elements might be misleading (e.g. The normal behaviour for the QR component is generating a QR code. "ui type="qr" src="path" does not generate a QR code, but embeds an image that already exists instead.) }
+{Contact the application expert before implementing the feature.}
+{Fix the backend (python) or ask/hire the application expert to fix the screens editor (Adobe Flash)}
+\end{risk}
+
+\begin{risk}
+{AngularJS or dependencies do not perform as advertised}
+{The chosen framework and libraries have young maturity and might contain bugs, be subject to rapid changing cycles and new versions might break older versions (FOOTNOTE: THIS RISK WAS ADDED AFTER SPECS}
+{Use stable versions}
+{Investigate the bug, isolate it, create a minimal full working example and, if possible, open a pull request with a fix in Github or notify the error to the project managers.}
+\end{risk}
 
 \section{Execution}
 progress, deviations, final cost
