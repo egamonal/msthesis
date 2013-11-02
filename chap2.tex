@@ -3,10 +3,19 @@ This chapter is a short introduction to.. general concepts. doesnt make referenc
 robots, qt or anything. no ref to UX or UI design. my problem is an app that renders
 apps, not the screens editor or a particular design.
 
+This chapter is a short introduction to the main knowledge areas involved in the development of this project.
+It describes what has been done before in the field and the theory the project is based upon.
+It includes the motivation and the steps to reengineer an application (\cite{Pressman:2007}), the evolution of web technology from simple documents to \ac{RIA} like the one of this thesis, the \ac{TDD} method and the relationship with \ac{DbC} and, finally, \ac{XML} as an intermediate representation of the model to interoperate between Basestation and Flango Content Management in the robot.
+
 \section{Reengineering}
 \label{sec:reengineering}
+This thesis takes over the work of the past two years at PAL Robotics in content management.
+The initial situation is a system made with Flash and Django called Flango.
+The Screens Editor and the robot's content management are Flash applications.
+Whereas the first one runs in a modern browser, on desktop computers, the robot's content management runs in the robot.
+The robot is a Linux system and the browser is a QtWebKit widget embeded in the Qt application that governs the hardware.
+The Flash plugin will not be updated and this part of the system has to be rewritten in a different technology.
 
-TODO: two options here. either include the  quote by pressman or rethink it.
 \begin{quote} 
 Consider any technology product that has served you well. 
 You use it regularly, but it's getting old. 
@@ -38,6 +47,7 @@ After this, the reverse engineering process can start.
 Three dimensions drive tasks in the reverse engineering activity (FIXME task in activity or the other way round?): abstraction level, completeness and directionality.
 To understand what the software does, abstraction should be as high as possible.
 This information can have many details or not (completeness) and can be created in one way (extracting it from the source code) or two-way (feed information to the reengineering tool).
+This project does not use any computer-assisted reengineering tool.
 
 \subparagraph{Understand current program}
 A program normally has input data, logic that processes it and a view:
@@ -47,21 +57,24 @@ Some key aspects include the interaction, interoperability or the context.
 Data structures, classes, schemas in databases, etc have to be identified and possibly redesigned in the next steps.
 Finally, the \ac{UI} has to be analised as well. 
 There are issues related to presentation of data, interaction, usability, etc that have to be identified.
+This project focuses on system and program levels of abstraction and on interoperability.
+The software does not have any views or databases to be reconsidered.
+However, it does have some formats server-side (in the backend) that are candidates in this process (e.g. definition of settings with XML might have to become JSON or have a different structure).
 
 \paragraph{Restructure code and data}
 Sometimes the solution is restructuring the current program.
 The project of this thesis is skipping this part because a new application is being developed using the output of the first activity (FIXME: activity?): understand the current program
-Restructuring the code might no be enough in most cases. 
+Restructuring the code might not be enough in most cases. 
 It can fix immediate issues but it is not a long-term solution.
 However, when doing so, \ac{TDD} is useful because tests breaks immediately and often, specially if they are running in the background or periodically.
 To improve the software design both data and architecture should be restructured.
-\ac{TDD} can provide robustness to this process: if there are tests available, the new design can be proven to work, at least, for these cases. If not, the solution can be built incrementally with tests that define the requirements of the system (extracted in the first activity (FIXME: activity?), thus using them as an specification.
+\ac{TDD} can provide robustness to this process: if there are tests available, the new design can be proven to work, at least, for the example cases. 
+If not, the solution can be built incrementally with tests that define the requirements of the system (extracted in the first activity (FIXME: activity?), thus using them as an specification.
 
 \paragraph{Forward engineering}
 There is a number of options when it comes to apply changes in the current program. 
 For example, apply patches, redesign parts of the software or completely redesign it.
 Depending on the circumstances, completely redesigning a software might be costly but, in the long-term, it might be a cost-effective solution.
-This would be preventive maintenance.
 The project of this thesis is redesigning the software to incorporate new practices, new technology and, in the future (out of the scope of the thesis), additional requirements.
 The outcome of this process (FIXME process vs activity vs task) is a new software that replaces the current implementation.
 
@@ -105,13 +118,13 @@ The outcome of this process (FIXME process vs activity vs task) is a new softwar
 % quotations: something about emacs life style, or berners lee
 The \ac{WWW} plays a central role in many people's lives.
 The first drafts date back to the 1980s, the first web browser prototype by Tim Berners-Lee was built in December 1990 and the Mosaic browser was completed in 1993.
-After that, Netscape, Mozilla Firefox, Microsoft Internet Explorer, Google Chrome, Safari, Opera, Konqueror and many other browsers appeared, along with some nowadays popular websites (e.g. amazon.com 1995).
+After that, Netscape, Mozilla Firefox, Microsoft Internet Explorer, Google Chrome, Safari, Opera, Konqueror and many other browsers appeared, along with some nowadays popular websites (e.g. Amazon, 1995).
 
-For many people the browser is the most used software in many devices. 
+For many people the browser is the most used application in many devices. 
 The web creates opportunities and makes documents accessible like tax records, maps, banking information, phone directories or product catalogues.
 New business models, like new ways of promoting products, selling music or movies, are developed having the web as a core part.
-Innovation goes beyond all these with experiments and products like FirefoxOS or ChromeOS to build an operating system designed to mainly let the user browse the web. 
-Other companies, like Citrix or eyeOS, offer web applications that resemble an operating system %\cite{Gamonal:2011}.
+Innovation goes beyond all these with experiments and products like FirefoxOS or ChromeOS to build an operating system where the web is the main development platform.
+Other companies, like Citrix or eyeOS, offer web applications or virtualisation tools that resemble an operating system %\cite{Gamonal:2011}.
 
 %goals: explain evolution of web tech, state of the art, and why it is better than flash.
 
@@ -133,7 +146,8 @@ Other companies, like Citrix or eyeOS, offer web applications that resemble an o
 \subsection{From Plain Documents to Applications}
 \paragraph{The Evolution of the Web}
 \begin{quote} 
-HyperText is a way to link and access information of various kinds as a web of nodes in which the user can browse at will. Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help" \cite{BernersLee:1990}
+HyperText is a way to link and access information of various kinds as a web of nodes in which the user can browse at will. 
+Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help" \cite{BernersLee:1990}
 \end{quote} 
 
 When the \ac{WWW} was started in 1990 it was intended to be a document viewing platform.
@@ -202,7 +216,7 @@ A similar problem occurred in early operating systems (e.g. MS-DOS), before proc
 
 Browsers have typically the following components: TODO
 
-Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on OS processes. 
+Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on \ac{OS} processes. 
 Another way of isolating web applications is running them in a plug-in container. 
 
 The project of this thesis uses Qt WebKit (FIXME: WARNING! it might be google chrome), the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
@@ -260,4 +274,4 @@ the Google AngularJS framework is extremely friendly with unit testing and \ac{E
 
 \section{XML as an intermediate representation}
 
-
+lorem ipsum

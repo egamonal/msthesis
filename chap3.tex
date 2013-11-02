@@ -4,21 +4,30 @@ The execution and deviations are shown at the end of this chapter.
 
 \section{Scope}
 \label{sec:scope}
-The system has two parts: the basestation (with the backend) and the screens renderer in the robots (the frontend).
+The system has three parts: the backend, the front-end (with the screens editor) both at basestation, and the screens renderer in the robots (the robot's content manager \fref{fig:system-overview}).
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=14cm]{figures/intro-system-overview}
+    \caption{System components)}
+    \label{fig:system-overview}
+\end{figure}
+
+
 This project reengineers the frontend with web technologies but not the backend, that remains in Django and Adobe Flash.
 
-The new frontend accepts a contents application (GLOSSARY??) as input, generated with the Screens Editor in the backend, and outputs the screen rendered with web elements.
+The new frontend accepts a contents application (GLOSSARY??) as input, generated with the Screens Editor, and outputs the screen rendered with web elements.
 Contents applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
 This project can read the configuration files and set up the front-end.
 A screen of a contents application is an \ac{XML} file. 
-This project accepts valid syntax generated with the Screens Editor for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates HTML5 that renders them as defined.
+This project accepts valid syntax generated with the Screens Editor for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates \ac{HTML5} that renders them as defined.
 
-Developing an intense testing strategy and is part of this project.
+Developing an intense testing strategy is part of this project.
 The final artifact is this master thesis that describes the system and the rationale that guides all decisions.
 
 \section{Schedule}
-This project has 4 phases that match the typical 4 groups of processes: initiating, planning, executing (and monitoring + control) and closing.
-The execution has 4 deliverables: viability and proof of concept, iteration 1 (basic program), iteration 2 (extended program), iteration 3 (improvements).
+This project has 4 phases that match the 4 typical groups of processes: initiating, planning, executing (and monitoring + control) and closing.
+The execution has 3 deliverables: viability and proof of concept, iteration 1 (basic program) and iteration 2 (extended program).
 
 \subsection{Phase 1: Initiating}
 \paragraph{April, 1 -- April 4}
@@ -54,14 +63,13 @@ A web engineering process should be incremental, with frequent changes and short
     \hline
     Proof of concept & Research on frameworks and tools to develop the project. Choose one. Build a minimal working example to illustrate key aspects of the project. \\ \hline
     Iteration 1 & Build a prototype comprehensive in number of features but simple in their implementation to validate the technology. \\ \hline
-    Iteration 2 & Extend the prototype of Iteration 1 to complex cases of the features. \\ \hline
-    Iteration 3 & Add special new features. \\
+    Iteration 2 & Extend the prototype of Iteration 1 to complex cases of the features. \\
     \hline
     \end{tabularx}
     \caption{Milestones and deliverables of the execution phase}
 \end{table}
 
-This phase has 4 big milestones, one per iteration (\fref{tab:milestones}). 
+This phase has 3 big milestones, one per iteration (\fref{tab:milestones}). 
 The outcome of each iteration is a product with a set of stable features and the corresponding unit tests which, in turn, serve for the purpose of documentation.
 
 \subsection{Phase 4: Closing}

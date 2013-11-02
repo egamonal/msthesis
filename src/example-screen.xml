@@ -1,0 +1,16 @@
+<fl:screen xmlns:fl='http://www.pal-robotics.com/flango-namespace'>
+
+    <fl:ui fl:height="190" fl:type="base-button" fl:width="200" fl:x="120.0" fl:y="28.0">
+      	<fl:onclick>
+	      	<fl:action fl:type="external_call">
+		        <fl:param fl:name="palEvent" fl:value="doTask"/>
+		        <fl:param fl:name="subtype" fl:value="dipo"/>
+		    </fl:action>
+	    </fl:onclick>
+	
+      	<fl:caption fl:lang="en">Map and Guide</fl:caption>
+      	<fl:caption fl:lang="ca">Mapa i Guia</fl:caption>
+        <fl:caption fl:lang="ar">دليل&lt;br/&gt;يوسورشاد</fl:caption>
+    </fl:ui>
+
+</fl:screen>

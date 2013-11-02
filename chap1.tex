@@ -6,13 +6,20 @@
 %% prompt when you run the file main.tex through LaTeX.
 
 fix the abstract to include UPC (currently only FIB is shown)
-\cite{Darwin} \cite{Crockford} \cite{Stefanov} \cite{AngularJSGuide} \cite{Fowler}
-
 
 \chapter{Introduction}
 % possible quotations: welcome humans. goodwill. and we have a plan.
 stuff that should be somewhere: DSL, TDD, .deb, linux and tools, debugging,etc opensourcing. DRY and DRA (do not repeat angularjs docs), xml (our lang) and how we use it (themes, inheritance, composition, urls), restful/services to fetch API data
 why angularjs instead of, say, a lemon.
+
+This is a report for a master's thesis.
+This document is a stand alone presentation of the work done, which belongs to a bigger project: the Content Management System for the robots.
+More specifically, this thesis deals with the reengineering of Flango Content Management, the part of the system built in the robot that renders the screens on the touchscreen.
+Applying web technology to human-robot interaction is a novelty in the company that interoperates with non-reengineered parts of the system.
+It is desired not only to develop a practical solution but also to guarantee that the final output of the Content Management System is the same the old system generates.
+
+This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
+It is done to develop a sustainable product based on open standards (as opposed to the current implementation with Adobe Flash) that can be extended and reused for other robotic components that might be designed in the future.
 
 \section{PAL Robotics}
 Pal Robotics is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
@@ -21,68 +28,98 @@ The company has developed 5 humanoid robots in 2013: Reem-A, Reem-B, Reem H1, H2
 This project targets Reem H2 and H3.
 
 \subsection{Reem H2 and H3}
-Reem H2 and H3 are service robots featuring a screen on their torso.
+Reem H2 \fref{fig:reemh2} and H3 \fref{fig:reemh3} are humanoid service robots featuring a screen on their torso.
 They have an autonomous navigation system, speech recognition and synthetiser, they can find their way in different settings and help or entertain people in a friendly way.
 They can be used in public places such as hotels, malls, airports or museums.
 
-% mini page here.
-%  rh2pic rh3pic
-%  rh2tab rh3tab
+\begin{figure}
+   \centering
+   \begin{subfigure}[b]{0.3\textwidth}
+       \includegraphics[width=\textwidth]{figures/reemh2}
+       \caption{Reem H2}
+       \label{fig:reemh2}
+       \end{subfigure}%
+       ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+         %(or a blank line to force the subfigure onto a new line)
+       \begin{subfigure}[b]{0.3\textwidth}
+           \includegraphics[width=\textwidth]{figures/reemh3}
+           \caption{A tiger}
+           \label{fig:tiger}
+       \end{subfigure}
+       \caption{Reem series}
+       \label{fig:reemseries}
+\end{figure}
 
 \begin{table}[ht]
     \centering
-    \caption{Reem H2}
-    \label{tab:rh2}
-    \begin{tabularx}{\linewidth}{| X | X |}
+    \begin{tabularx}{\linewidth}{| X | X | X |}
     \hline
-    Weight & 90 Kg \\ \hline
-    Height & 1.70 m \\ \hline
-    Battery life & 8 h \\ \hline
-    Degrees of freedom & 22 \\ \hline
-    Payload & 30 Kg (mobile base), 3 Kg/arm \\ \hline
-    Speed & 4 Km/h \\ \hline
-    Computer & Core 2 Duo + Atom \\ \hline
-    Sensors & Microphone, stereo-camera, laser, ultrasounds, accelerometers and gyroscopes \\
+    Weight & 90 Kg & x same\\ \hline
+    Height & 1.70 m & same \\ \hline
+    Battery life & 8 h & same \\ \hline
+    Degrees of freedom & 22 & same \\ \hline
+    Payload & 30 Kg (mobile base), 3 Kg/arm & same\\ \hline
+    Speed & 4 Km/h & same\\ \hline
+    Computer & Core 2 Duo + Atom & Core 2 Duo + Atom \\ \hline
+    Sensors & Microphone, stereo-camera, laser, ultrasounds, accelerometers and gyroscopes & same \\
     \hline
     \end{tabularx}
+    \caption{Reem H2 and H3}
+    \label{tab:rh2}
 \end{table}
 
 
 \section{The Current System}
 The Reem series have big potential in human robot interaction. 
-Besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
+These humanoid robots have a multi-modal interface: besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
 Reem can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
 
 \begin{figure}[htb]
     \label{fig:intro-system-overview}
     \centering
-    \includegraphics[width=\textwidth]{figures/intro-system-overview}
-    \caption{Overview of the system}
+    \includegraphics[width=14cm]{figures/intro-system-overview}
+    \caption{Overview of the system (Hardware)}
 \end{figure}
 
-The Basestation is an application server that hosts Flango, an \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
-Clients can create application contents with the Screens Editor, a tool built with Adobe Flex (c), in Flango.
+
+
+The Contents Management System comprises Flango Frontend and Backend (both in Basestation), and Flango Content Management (in the robot).
+The Basestation is an application server that hosts Flango Backend, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
+Clients can create application contents with the Flango Frontend (Screens Editor), a tool built with Adobe Flex \copyright.
 When application contents are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
-The components of a contents application (screens and entities) have an \ac{XML} representation, an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
+
+\lstinputlisting[label=example-screen-xml,language=XML, caption={Example Screen XML}, breaklines=true]{src/example-screen.xml}
+
+The components of a contents application (screens and entities) have an \ac{XML} representation (\ref{example-screen-xml} ), an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
 
 A contents application is essentially a set of screens, navigation, multimedia contents that users can manage with the media library, and entities. 
 The last are domain objects that can be instantiated and represented in a view. 
-This way a client can show information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "meet people"), display videos and picture galleries, etc.
+This way a client can create an application that shows information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "shake hands"), display videos and picture galleries, etc.
 All of these components are localisable. 
 They can be resized, repositioned, repainted... depending on the current language.
 This allows for more human-robot interaction and enriches the experience. 
 Using other tools, clients can also associate sentences to screens and the speech synthesiser reads them aloud.
 
-SCREENSHOT HERE
+\begin{figure}[htb]
+    \label{fig:screens-editor}
+    \centering
+    \includegraphics[width=\textwidth]{figures/screens-editor}
+    \caption{Screens Editor, a Flash application in Flango}
+\end{figure}
 
 Reem robots have a built-in software to render the content applications that receive from Basestation. 
-It is also made with Adobe Flex (c).
+It is also made with Adobe Flash\copyright.
 The main concern of this software is transforming \ac{XML} files into a \ac{UI}. 
 This software has no \ac{GUI} or direct interaction with a person.
 
-DIAGRAM HERE (screenshots?): XML --> software --> view
+\begin{figure}[htb]
+    \label{fig:xml-flango-view}
+    \centering
+    \includegraphics[width=\textwidth]{figures/xml-flango-screenshot}
+    \caption{sequence}
+\end{figure}
 
-This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies.
+This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies instead of Adobe Flash.
 
 \section{The New System}
 The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
@@ -92,8 +129,8 @@ In a second phase, web sites became interactive:
 it was the time of animated graphics, browser plug-ins and JavaScript. 
 More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
 
-For a decade, the Adobe Flash Player plug-in has provided a platform to enable rich and interactive content in browsers.
-However, Adobe has made the updates exclusive to the Google Chrome browser \cite{FlashRoadmap}. 
+For a decade, the Adobe Flash Player\copyright plug-in has provided a platform to enable rich and interactive content in browsers.
+However, Adobe has made the updates exclusive to the Google Chrome\copyright browser \cite{FlashRoadmap}. 
 The browser in the robot application, QtWebBrowser (FIXME! it might be Chrome, in the end), uses this plug-in but will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
 
 The solution is moving to modern web technologies.
@@ -101,8 +138,9 @@ Any other technology could be used but the web allows the product to be easily p
 There are a number of options. \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
 It has become such a popular combination that major browser vendors already provide an extensive support in a wide range of products.
 A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, YUI...), but even server-side (e.g. NodeJS).
+Moreover, new HTML5 capabilities and APIs are an opportunity to add features to the project.
 
-The project documented in this thesis is using Google AngularJS, an \ac{MVC} framework that lets developers teach the browser new syntax. 
+The project documented in this thesis uses Google AngularJS\copyright, a \ac{MVC} framework that lets developers teach the browser new syntax. 
 Thus, the syntax of the \ac{XML} files coming from the Screens Editor can be interpreted natively in a browser. 
 This has some advantages over Flash \cite{Jobs:ThoughtsOnFlash}:
 \begin{itemize}
@@ -113,11 +151,15 @@ This has some advantages over Flash \cite{Jobs:ThoughtsOnFlash}:
     \item Touch-enabled: the new screen of Reem H3 is multi-touch. To enable gestures, heavy rewriting of the current Flash application is required.
 \end{itemize}
 
-\section{Context of the work}
-TODO FIXME
-The work context diagram identifies the boundaries of the work that you need to investigate to be able to build the product. Note that it includes more than the intended product. Unless we understand the work that the product will support, we have little chance of building a product that will fit cleanly into its environment.
+%\section{Context of the work}
+%TODO FIXME
 
-The adjacent systems on the context diagram (e.g., Weather Forecasting Service) indicate other subject matter domains (systems, people, and organizations) that need to be understood. The interfaces between the adjacent systems and the work context indicate why we are interested in the adjacent system. In the case of Weather Forecasting Service, we can say that we are interested in the details of when, how, where, who, what, and why it produces the District Weather Forecasts information.
+%The work context diagram identifies the boundaries of the work that you need to investigate to be able to build the product. Note that it includes more than the intended product. Unless we understand the work that the product will support, we have little chance of building a product that will fit cleanly into its environment.
+
+%The adjacent systems on the context diagram (e.g., Weather Forecasting Service) indicate other subject matter domains (systems, people, and organizations) that need to be understood. The interfaces between the adjacent systems and the work context indicate why we are interested in the adjacent system. In the case of Weather Forecasting Service, we can say that we are interested in the details of when, how, where, who, what, and why it produces the District Weather Forecasts information.
+
+%motivation To clearly define the boundary for the study of the work and hence the requirements effort. Without this definition, we have little chance of building a product that will fit seamlessly into its environment
+
 
 \section{Goals}
 TODO: This section should probably be expanded
@@ -128,10 +170,11 @@ More specifically, the author has to gather the requirements from an existing sy
 
 Regarding the project, the goals are:
 \begin{itemize}
-\item Reengineer the current system with web technologies
-\item Develop a testing strategy to make it robust
-\item Make it compatible with non-reengineered parts of the system
+	\item Reengineer the current system with web technologies
+	\item Develop a testing strategy to make it robust
+	\item Make it compatible with non-reengineered parts of the system
 \end{itemize}
+
 
 \section{Organisation of this document}
 This document describes the system developed at PAL Robotics to render the screens created with the Screens Editor on the Reem H2 and H3 series.
@@ -140,7 +183,7 @@ It does not cover other software on the robots or in Basestation.
 % TODO check the easy to read phrase
 This project has been developed iteratively using a \ac{TDD} methodology. 
 This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an easier reading:
-It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention on the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
+It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention to the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
 Readers will find an overview section at the beginning of each chapter to put them in context.
 
 \subsection{Conventions}
