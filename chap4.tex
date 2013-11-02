@@ -25,6 +25,7 @@ TODO: Add description or a few more details (?)
     \begin{itemize}
         \item jQuery and plug-ins: Bigvideo.js, jQuery-ui, jquery-mobile , jquery-kinetic  
         \item Hammer.js, jGestures , iScroll, swipe.js
+        \item Robot Web Tools
     \end{itemize} 
     \item \ac{CSS} Tools: LessCSS, SASS, Bootstrap
 \end{enumerate}
@@ -42,28 +43,25 @@ Certain constraints are defined before the beginning of the project:
 
 \subsection{Functional requirements}
 \begin{enumerate}
-    \item Render \ac{UI} Components with \ac{HTML}. \ac{UI} components, currently defined with \ac{XML}, have to be eventually transformed to \ac{HTML} so that a browser can render them.
+    \item Render 100PERCENT of critical \ac{UI} Components and properties with \ac{HTML}. \ac{UI} components, currently defined with \ac{XML}, have to be eventually transformed to \ac{HTML} so that a browser can render them.
     \begin{enumerate}
-        \item Support for multiple languages via the parameter lang.
+        \item Support for multiple languages with the parameter lang.
         \item Components 
         \begin{enumerate}
             \item Basic components screen, subscreen, textarea, img, button, group, video, showreel, swf, layout, qr, group\_button.
-            \item Theme components
+            \item Theme components (except menus)
             \item Properties inline or in tags. x, y, width, height, scrolly, scrollx, loop, loopy, loopx, src, style, caption
             \item Action properties onclick, onload, action, param
         \end{enumerate}
         
     \end{enumerate}
-    \item Themes. The current version has a default theme, a set of UI components that extend the basic ones and provide a certain look and feel. All theme components are eventually implemented with a basic component, e.g. a back-button, a home-button, a base-button, etc.
-    \item Internal navigation (subscreens). Subscreens are containers whose content is determined by the url.
+    \item Themes. Implement the default theme, a set of UI components that extend the basic ones and provide a certain look and feel. All theme components are eventually implemented with a basic component, e.g. a back-button, a home-button, a base-button, etc. Out of the scope: change things on the fly.
+    \item Internal navigation (subscreens). Subscreens are containers whose content is determined by the url. Includes special \ac{URL}s to go back, forward and to the home node.
     \item Settings management. There are three configurations to load: generic settings (default language, paths...), application specific settings (current language, current theme...) and structure of the application (a tree that defines an id and a \ac{URL} for each node (screen)).
     \item Entities support. 
     \item Screen saver / Sessions
 \end{enumerate}
 
-
-do we need a section somewhere about DSL? is our XML a DSL?
-basically, make it work and make it work fast. test. deploy it. make it compatible with backend
 
 \section{Non Functional Requirements}
 TODO: maybe add: political, economic, structural, quality
@@ -72,7 +70,7 @@ TODO: maybe add: political, economic, structural, quality
     \item Extensibility: The software has to be extensible. The design has to allow adding new features in the future.
     \item Robustness: the software has to be reliable and has to be delivered with a comprehensive test suite. It should be compatible with Jenkins and continuous integration.
     \item Hardware: the software has to perform smoothly in Reem H3 and a multitouch screen.
-    \item \ac{UX}: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. Rendered components should be aesthetically pleasant.
+    \item \ac{UX}: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. Rendered components should be aesthetically pleasant. Load time should be less than 2 seconds without caching.
     \item Interoperability: it has to interoperate with:
     \begin{itemize}
         \item Backend: there is an \ac{API} in a Django backend that provides settings and serves the contents
