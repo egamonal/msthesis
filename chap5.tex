@@ -23,7 +23,7 @@ The scope of this thesis is reengineering Flango in the robot and it is a decisi
 However, Flango uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
 \begin{inventory}
-{name=Flango Frontend (robot), 
+{name=Flango Content Manager (robot), 
 year=May 2011,
 nchanges=5 big milestones,
 lastchange=August 2013,
@@ -49,7 +49,7 @@ bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 
 \begin{inventory}
 {
-name=Flango Screens Editor, 
+name=Flango Frontend -- Screens Editor, 
 year=December 2012,
 nchanges=4 (first version; some new features; bug fixing),
 lastchange=August 2013,
@@ -102,8 +102,6 @@ bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 Flango Frontend, at the time the decision of reengineering it was made, was not very old but there were major changes already contemplated for the application (e.g. abandon Adobe Flash), that would require big commitment of effort and would not converge to a sustainable situation.
 Reengineering cost is less than the cost to make changes plus the cost of maintenance.
 
-\section{Document Reestructure}
-maybe we don't need this.
 
 \section{Reverse Engineering}
 \label{sec:context}
@@ -131,8 +129,8 @@ Other levels of abstraction do not apply here to keep this specification technol
 ReemH-3 has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
 The program that manages the state machine is \textbf{robotBehaviour}, a \texttt{Qt} program that glues all software parts and serves as an interface to the hardware.
 A window in this program contains a QtWebKit widget (FIXME maybe chrome!), the embedded web browser that loads the contents in the touchscreen.
-Contents are fetched from Basestation, a server that hosts \textbf{Flango Frontend}, a web application (Django + Flash) that lets users edit screens, add media contents and synchronise them with robots (\fref{fig:context-original}).
-The Frontend has an \ac{API} to serve the contents applications to the robots.
+Contents are fetched from Basestation, a server that hosts \textbf{Flango Backend}, a web application (Django + Flash (Screens Editor)) that lets users edit screens, add media contents and synchronise them with robots (\fref{fig:context-original}).
+The Backend has an \ac{API} to serve the contents applications to the robots.
 The project of this thesis is reengineering the \textbf{Flango Content Manager}, in the robot (\fref{fig:context-new}).
 
 \subsection{Interaction}
@@ -155,8 +153,8 @@ The general boot steps are:
 
 \begin{enumerate}
     \item The robot boots
-    \item robotBehaviour fetches settings (\ac{XML}) from Basestation: generic settings, contents application-specific settings and the structure.
-    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc. and requests the screens (the \ac{XML} files) to Basestation
+    \item robotBehaviour fetches generic settings (\ac{XML}) from Basestation
+    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc. Requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the Backend
     \item Basestation serves all the screens
     \item The Content Manager renders the screens. If during this process encounters an "entity", it fetches the data from Basestation.
 \end{enumerate}
@@ -184,6 +182,7 @@ Likewise, robotBehaviour uses an API in Flango, e.g. to restart a session or to 
 There is an interface defined for this to allow independent development in both ends.
 Notice that figures \fref{fig:interoperability-original} and \fref{fig:interoperability-new} do not show Basestation. See \fref{fig:context-original} and \fref{fig:context-new}.
 The current system to exchange messages between the Flash container and robotBehaviour is based on JavaScript callbacks.
+
 To send a message to robotBehaviour:
 \begin{enumerate}
     \item Flash opens a new tab with a specific url: \texttt{flashCallback.html?\textless paramList\textgreater}
@@ -201,7 +200,7 @@ The requirements state that the new software has to be implemented using web tec
 Despite the fact that this specification should be technology agnostic, to integrate the new software better in the system, the use of ROS Web Tools is suggested to exchange messages.
 In any case, it is clear that there has to be an interface between robotBehaviour and the browser, as they run in separate processes (as opposed to sharing at least one parent process in the current implementation).
 
-\paragraph{BaseStation (Flango Backend API} The Content Manager has to fetch data from Basestation in order to load the correct contents.
+\paragraph{BaseStation (Flango Backend API)} The Content Manager has to fetch data from Basestation in order to load the correct contents.
 Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend and frontend) has an API for this (\fref{tab:flango-api}):
 
 \begin{table}[ht]
@@ -232,7 +231,7 @@ Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend
     \multirow{10}{2.5cm}{\texttt{flango-api-0.1/gui}  \texttt{flango-api-0.1/app}}
         & \textless app\_id\textgreater /config.\textless format\textgreater xml$|$json \\
         & \textless app\_id\textgreater /structure.\textless format\textgreater xml$|$json \\
-        & \textless app\_id\textgreater /screen/( \textless screen\_id\textgreater.xml \\
+        & \textless app\_id\textgreater /screen/(\textless screen\_id\textgreater.xml \\
         & \textless app\_id\textgreater /node/\textless node\_id\textgreater \\
         & application \\
         & node \\
@@ -243,12 +242,12 @@ Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend
     \hline
     
     \multirow{7}{*}{\texttt{flango-api-0.1/stats}}
-        & robot/use/<robotID>/<duration>/<data> \\
+        & robot/use/\textless robotID>/\textless duration\textgreater/<data\textgreater \\
         & robot/base \\
-        & app/use/<robotID>/<duration>/<data> \\
-        & app/top/<robotID>/<duration>/<data> \\
-        & app/toptable/<page> \\
-        & application/<screen> \\
+        & app/use/\textless robotID\textgreater/\textless duration\textgreater/<data\textgreater \\
+        & app/top/\textless robotID\textgreater/\textless duration\textgreater/<data\textgreater \\
+        & app/toptable/\textless page\textgreater \\
+        & application/\textless screen\textgreater \\
         & <name> \\
     \hline
     \end{tabularx}
@@ -277,14 +276,14 @@ It is required, then, that the new implementation can render consistently all of
 Same applies to settings and use of "entities".
 Thus, there are at least 3 classes of objects: Setting, UI Component (and UI Theme Component), Entity.
 
-A UI Component is an element of the \ac{UI}, for example a Button or an Image.
+\paragraph{UI Components} A UI Component is an element of the \ac{UI}, for example a Button or an Image.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
 All UI Components have an \ac{XML} code.
 Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model} is created from the current implementation.
 To support themes, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
 All UI Theme Component are eventually implemented with a basic UI Component.
 
-\begin{lstlisting}[caption=Basic UI Components, label=onelabel]
+\begin{lstlisting}[caption=Basic UI Components, label=uicomponents-list]
 ButtonComponent.as
 GroupButtonComponent.as
 GroupComponent.as
@@ -301,7 +300,7 @@ UIComponent.as
 VideoComponent.as
 \end{lstlisting}
 
-\begin{lstlisting}[caption=Theme UI Components, label=anotherlabel]
+\begin{lstlisting}[caption=Theme UI Components, label=uithemecomponents-list]
 arabic_button
 back_button
 base_button
@@ -329,7 +328,7 @@ video_button
 wide_button
 \end{lstlisting}
 
-\begin{lstlisting}[caption=Application State (Settings class), label=anotherlabel2]
+\begin{lstlisting}[caption=Application State (Settings class), label=config-list]
 api_endpoint:String
 app_id:String
 app_name:String
@@ -376,45 +375,52 @@ zone:String
 
 \end{lstlisting}
 
-\ref{onelabel} and \ref{anotherlabel} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
-Notice that all files in \ref{onelabel} have the corresponding class in the conceptual model.
-The elements of \ref{anotherlabel} are in fact folders but they can be considered objects in this specification as they are part of the domain of the problem.
-The state of the application is defined with DTOs sent from the server.
-A collection of the necessary the attributes of the class that encapsulates the configuration is in \ref{anotherlabel1} and has been extracted from the current implementation as well.
+\ref{uicomponents-list} and \ref{uithemecomponents-list} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
+Notice that all files in \ref{uicomponents-list} have the corresponding class in the conceptual model.
+The elements of \ref{uithemecomponents-list} are in fact folders but they can be considered objects in this specification as they are part of the domain of the problem.
+However, some elements are not to be implemented because they are deprecated and some other components are to be implemented in future releases, but not in the software of this thesis.
 
-Entities are classes that represent classes in the Screens Editor. 
-Imagine the following scenario: Alice is creating screens with the Screens Editor.
+\subparagraph{Excluded elements} UI Components: GroupButtonComponent, GroupComponent, ScrollComponent. UI Theme Components: call\_to\_action\_screen, main\_menu, smartphone\_menu, synchronizing\_screen.
+
+
+\paragraph{Settings} The state of the application is defined with \ac{DTO} sent from the server.
+A collection of the necessary attributes of the class that encapsulates the configuration is in \ref{uithemecomponents-list} and has been extracted from the current implementation as well.
+\subparagraph{Excluded elements} Some Settings have names tightly coupled to technology (e.g. history, history\_current, etc). The concept is included in the specification but not with this specific names to keep it technology agnostic.
+
+\paragraph{Entities} Entities are classes that represent classes in the Screens Editor. 
+FIXME LANGUAGE An example scenario: Alice is creating screens with the Screens Editor.
 She rented the robot for a congress and wants to add information about job openings in her company.
-She can define, with Flango, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
+She can define, with Flango Frontend, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
 
-A Contents Application can have themes.
-There is a default theme that defines the look and feel of all UI Theme Components.
+\paragraph{Themes} A Contents Application can have themes.
+There is a default theme that defines the look and feel and default actions on click an on load of all UI Theme Components.
 All themes have the same UI Theme Components to guarantee that themes can be changed safely.
 Basic UI Components look always the same way.
 
-TODO explain XML here? explain theming here? fallbacks? ambiguity?
+TODO explain XML here (NO. section ahead)? explain theming here (nothing to explain)? fallbacks ( belongs to behaviour model)? ambiguity (belongs to behaviour model r xml representation)?
 
-TODO : maybe --- I can't remember what I was going to write here.
 For instance, the \ac{XML} code of a Button UI Component in \fref{chap:specification-button-example-1}
 
 \lstinputlisting[language=XML, caption={Basic UI Component Button XML}]{src/specification-button-example-1.xml}
 
 DIAGRAM HERE
 
-
 constraints?
 \FloatBarrier
-
 
 \section{Use Case Model}
 This section describes the services of the system as sequences of events triggered by external actors.
 
 \subsection{Actors}
-Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
+The actors who use the system are:
+\begin{itemize}
+	\item robotBehaviour: the software that governs the \ac{GUI} of the touchscreen. It can load application contents, bring them to the front, sent them to the back, load other \ac{GUI} etc.
+	\item Contents Application User: a person (or any other agent that can use a touchscreen) who interacts with the loaded contents application. Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
 For example: the program renders a screen with one button whose action is to make Reem say "hi, my name is Reem".
-The input is an \ac{XML} file, the output is a web \ac{GUI} ready to be used.
+The input is an \ac{XML} file, the output is a \ac{GUI} ready to be used.
 Humans can now touch the button that sends events to robotBehaviour so, essentially, the \ac{GUI} of the program and not only the output is built as a function of the input.
-The actual actors are robotBehaviour, the Flango Backend  and, eventually, a user of the contents.
+When the \ac{GUI} is ready, a new actor (Contents Application User) and new use cases appear.
+\end{itemize}
 
 
 \subsection{System Use Cases}
@@ -429,12 +435,13 @@ The actual actors are robotBehaviour, the Flango Backend  and, eventually, a use
 There is a number of use cases of the software determined by examining the current implementation at a program level.
 The use cases that are implemented in this project are shown in \fref{fig:specification-sucs}.
 
-A contents application user can see the rendered screens and manipulate it (e.g. change the language).
-For an application to load the configuration has to be fetched from Flango Backend.
-A user can also start other applications in the robot.
-For example: the user touches a button that makes Reem say a sentence aloud (notice that the application is sending a message to robotBehaviour).
-The software system that controls the robot, robotBehaviour, can also trigger actions in the contents application.
-Amongst others, it can manage the screensaver and sessions and some special settings (including: show the cursor, enable debug mode, enable sending message to robotBehaviour, contents application ID, etc)
+A contents application user can see the rendered screens and update some parameters (e.g. change the language) or start applications in the robot (e.g. a Qt dialog with a map).
+%Normally one would group use cases in "manage \ac{UC}" that include at least the \ac{CRUD} \ac{UC} FIXME plurals.
+%This document does not group them because different actors
+%For example: the user touches a button that makes Reem say a sentence aloud (notice that the application is sending a message to robotBehaviour).
+The software system that controls the robot, robotBehaviour, can also trigger actions in the contents application (for example, it can start it).
+Amongst others, it can manage the screensaver and sessions and some special settings (including: show the cursor, enable debug mode, enable start of robot's applications, contents application ID, etc). 
+Use cases Manage ScreenSaver and Manage Sessions do not belong to the scope of this project but are shown in the diagram to offer the big picture of the Flango Content Manager.
 
 \begin{suc}
 {title of the use case}
@@ -456,8 +463,8 @@ Amongst others, it can manage the screensaver and sessions and some special sett
 {A user can start robot's applications like face recognition, ball grasping, meet people, etc.}
 {Content Application User}
 {robotBehaviour is running}
-{The robot application starts}
-{main scenario
+{The chosen robot application starts}
+{
     \begin{enumerate}
         \item The User chooses a robot's application and asks the system to start it
         \item The system starts the application
@@ -467,22 +474,144 @@ Amongst others, it can manage the screensaver and sessions and some special sett
 \end{suc}
 
 \begin{suc}
-{Change language}
-{A user changes the language of the \ac{UI}}
-{Content Application User}
-{robotBehaviour is running}
+{Start contents application}
+{robotBehaviour wants to display the application on the touchscreen of the robot}
+{robotBehaviour}
+{
+	\begin{enumerate}
+        \item robotBehaviour is running
+        \item The application has been synchronised with the robot (i.e. the robot has all the necessary parts to load it)
+    \end{enumerate}
+}
+{
+The initial screen of the contents application is shown
+}
 {
     \begin{enumerate}
-        \item The current screen is shown with the chosen language
-        \item The current language is set to the chosen language
+        \item robotBehaviour determines the $app_id$ and asks the system to load the application with the given $app_id$ and initialisation parameters.
+        \item include Manage Configuration
+		\item the system loads the initial screen
     \end{enumerate}
 }
-{main scenario
+{    
+	\begin{itemize}
+        \item The application can't be found
+        \begin{enumerate}
+        	\item The system shows a default screen
+    	\end{enumerate}
+    	\item The application contains errors
+        \begin{enumerate}
+        	\item The system degrades progressively the contents application
+    	\end{enumerate}
+    \end{itemize}    
+}
+\end{suc}
+
+
+\begin{suc}
+{Manage Configuration -- Create}
+{The system fetches the configuration (on load) from the Backend. If it can't be found, it falls back to a default configuration. FIXME: no clear actor}
+{Event on-load}
+{
+	\begin{enumerate}
+        \item robotBehaviour is running
+        \item The application has been synchronised with the robot
+    \end{enumerate}}
+{
+The configuration object is created
+}
+{
     \begin{enumerate}
-        \item TODO
+        \item robotBehaviour starts the Flango Content Manager
+        \item The system requests the generic configuration to the Backend
+		\item The Backend sends the generic configuration $c$
+		\item The system requests the application-specific configuration for application $c.app_id$ or $auto$
+		\item The Backend returns the application-specific configuration $sc$
+		\item The system requests the application structure
+		\item The Backend returns the application structure $as$
+		\item The system reads the URL query string that overwrites parameters
+		\item The system creates the configuration object
     \end{enumerate}
 }
-{None}
+{    
+	\begin{itemize}
+        \item The generic configuration can't be found
+        \begin{enumerate}
+        	\item The system displays an error message
+    	\end{enumerate}
+    	\item The application specific configuration can't be found
+        \begin{enumerate}
+        	\item The system loads the default application and displays an error message
+    	\end{enumerate}
+    	\item The application structure can't be found
+        \begin{enumerate}
+        	\item The system displays an error message
+    	\end{enumerate}
+    \end{itemize}   
+}
+\end{suc}
+
+\begin{suc}
+{Manage Configuration -- Update}
+{The contents application user changes a parameter in the configuration or an event related to update the configuration is received}
+{Contents Application User, events}
+{
+	\begin{enumerate}
+        \item robotBehaviour is running
+        \item The application has been synchronised with the robot
+        \item The configuration object is initalized
+    \end{enumerate}
+}
+{
+The configuration object is mutated
+}
+{
+    \begin{enumerate}
+        \item The user asks the system to retrieve the configuration object
+        \item The system returns the configuration object
+        \item The user changes a value and asks the system to store it (e.g. current language)
+		\item The system updates the configuration object (FIXME and notifies the system?)
+    \end{enumerate}
+}
+{     
+}
+\end{suc}
+
+FIXME note: delete and retrieve are not exposed to the user. just for internal use.
+
+
+
+\begin{suc}
+{Retrieve Screen}
+{The content application user navigates to a screen }
+{Contents Application User}
+{
+	\begin{enumerate}
+        \item robotBehaviour is running
+        \item The application has been synchronised with the robot
+        \item The application is loaded
+    \end{enumerate}
+}
+{
+The requested screen is shown
+}
+{
+    \begin{enumerate}
+		\item The user asks the system a list of screens (e.g. a screen with buttons)
+        \item The system offers a list of screens to go
+        \item The user chooses a destination
+        \item The system shows the requested screen
+    \end{enumerate}
+}
+{
+    \begin{itemize}
+	    \item The screen is unavailable
+	    \begin{enumerate}
+	    	\item The system shows an error
+	    \end{enumerate}
+    \end{itemize}
+		
+}
 \end{suc}
 
 \FloatBarrier
@@ -498,7 +627,7 @@ They become tests only after having implemented all the functionality being test
 Before this, there is nothing to actually test and these artifacts are rather executable specifications, but not tests.
 Tests (specifications) are written before the code and define the behaviour of components.
 
-Additionally, they are used as documentation of the program but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be achieved using formal specifications,
+Additionally, they are used as documentation of the software but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be achieved using formal specifications,
 e.g. using Meyer's \ac{DbC} \cite{Baumeister:2004}.
 
 In this thesis, tests are implemented with Jasmine and AngularJS but this chapter focuses on what the tests describe rather than how they are executed and controlled.
