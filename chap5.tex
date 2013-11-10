@@ -110,6 +110,7 @@ Reengineering a software involves reverse engineering, understanding what the sy
 There are 3 key issues in understanding the current system: abstraction level, completeness and direction.
 This specification uses a system-level abstraction, only takes into account interaction with external actors, and is one-way (from current system to the specification of the new system).
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
+This section offers some technology-dependant details to understand the steps to reach the goal and the operations that Basestation exposes.
 
 \subsection{Context}
 \begin{figure}[htb]
@@ -154,7 +155,7 @@ The general boot steps are:
 \begin{enumerate}
     \item The robot boots
     \item robotBehaviour fetches generic settings (\ac{XML}) from Basestation
-    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc. Requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the Backend
+    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc. )t requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the Backend
     \item Basestation serves all the screens
     \item The Content Manager renders the screens. If during this process encounters an "entity", it fetches the data from Basestation.
 \end{enumerate}
@@ -267,14 +268,15 @@ TODO FIXME subindex in captions
     \label{fig:specification-conceptual-model}
 \end{sidewaysfigure}
 
-There are only a few classes of objects in the system.
-This project only reengineers Flango Content Manager.
-Because the Screens Editor (Flango Frontend) remains "as is", and the input of the new software is the output of this program, it has to be compatible with the current implementation.
+The new Flango Content Manager has to be compatible with the current implementation of the Screens Editor (Flango Frontend).
 Otherwise, users would create contents applications with the Screens Editor that would look different when they are displayed in the robot.
 To ensure compatibility, it is necessary a good understanding not only at system level, but at component level.
-It is required, then, that the new implementation can render consistently all of the \ac{UI} components that the Screens Editor can create and all of their properties. 
+It is required, then, that the new implementation renders consistently all of the \ac{UI} components that the Screens Editor can create exactly like it does with the old version. 
 Same applies to settings and use of "entities".
-Thus, there are at least 3 classes of objects: Setting, UI Component (and UI Theme Component), Entity.
+
+There are 7 classes: ContentsApplication, ApplicationNode, Configuration, Theme, Screen, UI Components and Entity.
+
+\paragraph{ContentsApplication} A
 
 \paragraph{UI Components} A UI Component is an element of the \ac{UI}, for example a Button or an Image.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
@@ -376,8 +378,8 @@ zone:String
 \end{lstlisting}
 
 \ref{uicomponents-list} and \ref{uithemecomponents-list} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
-Notice that all files in \ref{uicomponents-list} have the corresponding class in the conceptual model.
-The elements of \ref{uithemecomponents-list} are in fact folders but they can be considered objects in this specification as they are part of the domain of the problem.
+Notice that all files in \ref{uicomponents-list} have the corresponding class in the conceptual model if they have to be implemented.
+The elements of \ref{uithemecomponents-list} are in fact folders but they can be considered classes in this specification as they are part of the domain of the problem.
 However, some elements are not to be implemented because they are deprecated and some other components are to be implemented in future releases, but not in the software of this thesis.
 
 \subparagraph{Excluded elements} UI Components: GroupButtonComponent, GroupComponent, ScrollComponent. UI Theme Components: call\_to\_action\_screen, main\_menu, smartphone\_menu, synchronizing\_screen.
@@ -391,6 +393,7 @@ A collection of the necessary attributes of the class that encapsulates the conf
 FIXME LANGUAGE An example scenario: Alice is creating screens with the Screens Editor.
 She rented the robot for a congress and wants to add information about job openings in her company.
 She can define, with Flango Frontend, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
+FIXME: note about excluding this from the project scope
 
 \paragraph{Themes} A Contents Application can have themes.
 There is a default theme that defines the look and feel and default actions on click an on load of all UI Theme Components.
