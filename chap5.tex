@@ -276,13 +276,27 @@ Same applies to settings and use of "entities".
 
 There are 7 classes: ContentsApplication, ApplicationNode, Configuration, Theme, Screen, UI Components and Entity.
 
-\paragraph{ContentsApplication} A
+\paragraph{ContentsApplication} A contents application with an internal identifier and a descriptive, human-friendly name.
+
+\paragraph{ApplicationNode} An application has nodes that match the \ac{URI} with a screen.
+
+\paragraph{Configuration} A contents application has a configuration object that can be mutated during the execution.
+It represents the state of the application, the permissions, the paths to be used, etc.
+
+\paragraph{Theme} Themes are the look and feel and default behaviour of \ac{UI} components.
+The current implementation only has one (default) theme.
+However, a contents application can have many themes available.
+The active theme has to belong to the set of available themes. 
+It encapsulates data that define it (e.g. the name, etc). FIXME etc is too short
+
+\paragraph{Screen} A screen is the container for elements that the user can interact with.
+Screens contain \ac{UI} Components and can be reused in different Application Node of the same Contents Application. FIXME: verify this
 
 \paragraph{UI Components} A UI Component is an element of the \ac{UI}, for example a Button or an Image.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
 All UI Components have an \ac{XML} code.
 Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model} is created from the current implementation.
-To support themes, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
+To support theming, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
 All UI Theme Component are eventually implemented with a basic UI Component.
 
 \begin{lstlisting}[caption=Basic UI Components, label=uicomponents-list]
@@ -385,11 +399,12 @@ However, some elements are not to be implemented because they are deprecated and
 \subparagraph{Excluded elements} UI Components: GroupButtonComponent, GroupComponent, ScrollComponent. UI Theme Components: call\_to\_action\_screen, main\_menu, smartphone\_menu, synchronizing\_screen.
 
 
-\paragraph{Settings} The state of the application is defined with \ac{DTO} sent from the server.
+\paragraph{Configuration} The state of the application is defined with a configuration object sent from the server.
 A collection of the necessary attributes of the class that encapsulates the configuration is in \ref{uithemecomponents-list} and has been extracted from the current implementation as well.
-\subparagraph{Excluded elements} Some Settings have names tightly coupled to technology (e.g. history, history\_current, etc). The concept is included in the specification but not with this specific names to keep it technology agnostic.
+\subparagraph{Excluded elements} Some Configuration have names tightly coupled to technology (e.g. history, history\_current, etc). 
+The concept is included in the specification but not with this specific names to keep it technology agnostic.
 
-\paragraph{Entities} Entities are classes that represent classes in the Screens Editor. 
+\paragraph{Entity} Entities are classes that represent classes in the Screens Editor. 
 FIXME LANGUAGE An example scenario: Alice is creating screens with the Screens Editor.
 She rented the robot for a congress and wants to add information about job openings in her company.
 She can define, with Flango Frontend, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
