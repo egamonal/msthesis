@@ -4,11 +4,49 @@ internal design of the application. this should be the fun part.
 \section{Technology}
 angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
 
-\section{Architecture}
-context: comm with rob behaviour and rostopics.
-MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use)
 
+\section{Architecture}
+context: comm with rob behaviour and rostopics (SOA).
+MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use). what about MVVM?
+
+common patterns:
 dependency injection and angularJS (and literature: fowler)
+
+\subsection{Context}
+Flango Content Manager is a piece in the robot.
+\ac{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster. 
+It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
+It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA}.
+
+DIAGRAM HERE:_ rosmaster (service registry), services, topics
+
+Nodes are processes that perform computation, a "software module". 
+Nodes communicate with Messages, strictly typed data structures . There are some available by default, like $std_msgs/String$ and other primitive types.
+Nodes subscribe and publish to topics, identified by a name (string).
+Services are pairs of request/response messages offered in a node designed for simple synchronous transactions.
+FIXME add ActionServers???
+
+
+http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf
+
+The robot has two parts: robotBehaviour and Stacks.
+Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} workflow but still uses Topics to communicate with the Stacks, the part of the project that does use \ac{ROS}.
+In Stacks there are Servers and ActionServers that provide Services.
+Flango is a component in this system that interacts with robotBehaviour using \ac{ROS} Topics.
+It is not built as a service
+
+OR MAYBE DIAGRAM HERE:_ rosmaster (service registry), services, topics, FLANGO
+
+
+As of 2008,
+development continues primarily at Willow Garage, a robotics
+research institute/incubator, with more than twenty institutions
+collaborating in a federated development model. 
+
+ROS i SOA.
+robotbehaviour
+flango as a (bad) service.
+
 
 \section{Static View}
 the model, the view and the controllers. angualar modules, services, filters, controllers...
