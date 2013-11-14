@@ -16,6 +16,9 @@ Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2):
 The outcome of these activities (FIXME: activity, task?) derives part of this specification.
 For example, use cases are extracted from the current system.
 The first three focus on what the system does and are used in this chapter, whereas the last three are tightly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
+This chapter starts by describing the current system: the software parts (inventory analysis) and what it does (reverse engineering to understand the system with special attention to context, interaction and interoperability).
+It is followed by a description of what the new system has to do: the specification comprises a conceptual model, a use case model and a behaviour model.
+Finally, it describes the \ac{XML} used to represent contents applications.
 
 \section{Inventory Analysis}
 A sorted list of software in the organisation makes candidates for reengeneering appear.
@@ -108,9 +111,12 @@ Reengineering cost is less than the cost to make changes plus the cost of mainte
 Reengineering a software involves reverse engineering, understanding what the system does.
 
 There are 3 key issues in understanding the current system: abstraction level, completeness and direction.
-This specification uses a system-level abstraction, only takes into account interaction with external actors, and is one-way (from current system to the specification of the new system).
+This specification uses a system-level abstraction, only takes into account interaction with external elements, and is one-way (from current system to the specification of the new system).
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
-This section offers some technology-dependant details to understand the steps to reach the goal and the operations that Basestation exposes.
+This section focuses on what the current version of the software does and what the new version has to do.
+It and offers some technology-dependant details to understand the steps to reach the goal and the operations that Basestation exposes.
+
+Details of how this software does the same with a new technology are in  chapter 6 FIXME CROSS REF INTERNAL DESIGN
 
 \subsection{Context}
 \begin{figure}[htb]
@@ -128,7 +134,7 @@ This section offers some technology-dependant details to understand the steps to
 \end{figure}
 
 ReemH-3 has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
-The program that manages the state machine is \textbf{robotBehaviour}, a \texttt{Qt} program that glues all software parts and serves as an interface to the hardware.
+The program  that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, a \texttt{Qt} program.
 A window in this program contains a QtWebKit widget (FIXME maybe chrome!), the embedded web browser that loads the contents in the touchscreen.
 Contents are fetched from Basestation, a server that hosts \textbf{Flango Backend}, a web application (Django + Flash (Screens Editor)) that lets users edit screens, add media contents and synchronise them with robots (\fref{fig:context-original}).
 The Backend has an \ac{API} to serve the contents applications to the robots.
@@ -155,9 +161,9 @@ The general boot steps are:
 \begin{enumerate}
     \item The robot boots
     \item robotBehaviour fetches generic settings (\ac{XML}) from Basestation
-    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc. )t requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the Backend
+    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc), it requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the Backend
     \item Basestation serves all the screens
-    \item The Content Manager renders the screens. If during this process encounters an "entity", it fetches the data from Basestation.
+    \item The Content Manager renders the screens. If during this process finds an "entity", it fetches the data from Basestation.
 \end{enumerate}
 
 
@@ -176,25 +182,25 @@ The general boot steps are:
     \label{fig:interoperability-new}
 \end{figure}
 
-Flango Content Manager interoperates with two systems: robotBehaviour and Basestation.
+Flango Content Manager interoperates with two systems: robotBehaviour and Flango Backend.
 
-\paragraph{robotBehaviour} Flango can interact with the hardware of the robot through robotBehaviour, e.g. using text-to-speech capabilities, triggering a batch action (autopresentation, guide user to a certain place...).
-Likewise, robotBehaviour uses an API in Flango, e.g. to restart a session or to input information gathered with the robot's hardware.
+\paragraph{robotBehaviour} Flango interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities, triggering a batch action (autopresentation, guide user to a certain place...).
+Likewise, robotBehaviour uses an \ac{API} in Flango Content Manager, e.g. to restart a session or to input information gathered with the robot's hardware.
 There is an interface defined for this to allow independent development in both ends.
-Notice that figures \fref{fig:interoperability-original} and \fref{fig:interoperability-new} do not show Basestation. See \fref{fig:context-original} and \fref{fig:context-new}.
-The current system to exchange messages between the Flash container and robotBehaviour is based on JavaScript callbacks.
+FIXME Notice that figures \fref{fig:interoperability-original} and \fref{fig:interoperability-new} do not show Basestation. See \fref{fig:context-original} and \fref{fig:context-new}.
+The current system to exchange messages between the Flash container and robotBehaviour is based on JavaScript global functions.
 
 To send a message to robotBehaviour:
 \begin{enumerate}
-    \item Flash opens a new tab with a specific url: \texttt{flashCallback.html?\textless paramList\textgreater}
+    \item Flash opens a new tab with a specific \ac{URL}: \texttt{flashCallback.html?\textless paramList\textgreater}
     \item robotBehaviour intercepts the call, prevents QtWebKit from opening a new tab and executes an action specified with the parameters
 \end{enumerate}
 
 To send a message from robotBehaviour:
 \begin{enumerate}
-    \item Calls a \ac{JS} function in the Flash container (\texttt{/static/frontend/index.html})
-    \item The container forwards this call to the Flash container
-    \item The application facade of Flango Content Manager takes required action
+    \item Calls a \ac{JS} function in the Flash website (\texttt{/static/frontend/index.html})
+    \item The \ac{JS} function delegates to the Flash container
+    \item The application facade of Flango Content Manager starts the required action
 \end{enumerate}
 
 The requirements state that the new software has to be implemented using web technology. 

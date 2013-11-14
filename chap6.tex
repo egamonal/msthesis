@@ -1,9 +1,97 @@
 \chapter{Design}
+coming from previous chapter: Code Restructuring; Data Restructuring; Forward Engineering
+    
+    
 explain the internal design of the new application.
 internal design of the application. this should be the fun part.
 \section{Technology}
-angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's).
+angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's). tdd+jasmine
 
+The project of this thesis, Flango Content Manager, is designed to work client side in a web browser.
+The natural technology in this environment is JavaScript, HTML and CSS.
+It interoperates with other systems that feature a different technology. FIXME CROSS REF PHYISICAL DESIGN or CONTEXT
+
+
+\subsection{JavaScript}
+some hints. functional. scopes.
+language, jquery, qr, swf
+
+\subsection{AngularJS}
+about the framework. directives, services, 
+
+\paragraph{Overview} AngularJS is a framework for dynamic web applications.
+\ac{HTMl} was created to declare static documents. 
+It needs libraries and frameworks to enable application development.
+Angular lets developers use \ac{HTML} in the templates and extend the language syntax to express reusable components.
+It \textit{teaches the browser new syntax} through a construct called Directive.
+Features:
+\begin{itemize}
+    \item Tools to build \ac{CRUD} Applications: data-binding, basic templating directives, form validation, routing, deep-linking, reusable components, dependency injection.
+    \item Tools to test: unit-testing, end-to-end testing, mocks.
+\end{itemize}
+
+Flango Content Manager reads \ac{XML} and renders it as \ac{HTML}.
+There are two possible approaches: parsing the \ac{DOM} tree in the browser or teaching the browser new syntax.
+This project uses the second (FIXME language: the latter?): instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (AngularJS Directives) and includes the \ac{XML} files in the appropriate place in the \ac{DOM}. 
+The browser already traverses the tree to render the page and there is no need to do it manually.
+Normally a browser ignores an element that doesn't belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></ui>$)
+With AngularJS, the browser runs the behaviour defined in the reusable component.
+
+\paragraph{Building Blocks} There are several key components in AngularJS to build the application.
+
+\begin{itemize}
+    \item Controller: a function that binds the view with the model. It typically assigns objects to the \$scope variable to expose them to the template.
+    \item Directive: a construct to extend HTML with custom attributes and elements. It defines the template of the reusable component, the behaviour, the attributes, etc. For instance, the directive $flBaseButton$ states that the node $<fl:ui fl:type="base-button">$ in the \ac{DOM} tree should be transformed into a simple $button$ using the theme template $baseButton.xml$. 
+    \item Service: Singleton that encapsulates reusable business logic independent of views. For instance, a service to handle the configuration of the application. They can be injected in controllers, directives or other services.
+    \item Filter: a function that formats the value of an expression for display to the user. For instance, a filter to display a Number with currency format.
+    \item Module: These building blocks are grouped in Modules. They can have dependencies between them.
+\end{itemize}
+
+The framework provides all the necessary tools to use unit and end-to-end testing from the very beginning of the project.
+Considering testing as equal in importance to application writing makes the code to be more robust, lowers the cost of maintenance and helps to have a better internal design.
+\begin{itemize}
+    \item Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other framework and does not require a \ac{DOM}. It provides a simple, self-descriptive (FIXME language!) syntax to write test suites.
+    \item Angular Mocks: there are stub objects ready to load in tests (e.g. \$httpBackend mocks \ac{HTTP} calls)
+    \item Karma is a test runner to automate the execution of the test suites. 
+\end{itemize}
+    
+\paragraph{Compile-Link} To make directives possible Angular has a compiler.
+In this context, compiling means attaching event listeners to the \ac{HTML} to make it interactive.
+The compiler traverses the \ac{DOM} tree in two phases:
+Firstly it looks for tags that have directives associated (e.g. $<fl:ui fl:type="base-button">$ or even native \ac{HTML} elements $<a>$).
+Secondly it binds the model to the view.
+The compiler allows developers to attach behaviour to any \ac{HTML} element or attribute and even create new HTML elements or attributes with custom behaviour. Angular calls these behaviour extensions directives.
+
+\paragraph{Directive} At a high level, directives are markers on a \ac{DOM} element (such as an attribute, element name, \ac{CSS} class or a comment) that tell Angular's \ac{HTML} compiler to attach a specified behaviour to it or even replace it with another element.
+The \ac{HTML} compiler finds elements that match directives. 
+For example, for $<div ng-controller="myCtrl">$, the element $div$ matches the directive $ngController$.
+An example in Flango Content Manager: when the browser finds $<fl:width>150</fl:width>$ in the \ac{DOM}, the element $width$ matches the directive $flWidth$.
+The $flWidth$ directive is restricted to elements (it matches $<fl:width>150</fl:width>$ but not $<div fl:width>150</div>$ because it is an attribute), and it has a custom $link$ function that performs some computation.
+
+    
+\subsection{HTML5}
+maybe not useful. maybe just html
+
+\subsection{SASS}
+Writing plain \ac{CSS} can be tedious and error-prone.
+SASS stands for Syntactically Awesome CSS and is a pre-processor with syntax advancements that add features to \ac{CSS}.
+Sass is an extension of \ac{CSS}3, adding nested rules, variables, mixins, selector inheritance, and more.
+It is then translated into well-formated, standard \ac{CSS} using the command line tool.
+This makes reusing and extending \ac{CSS} easier.
+SASS has two syntaxes. This project uses the newest one, known as \ac{SCSS} (Sassy CSS).
+
+A key feature in this project is the "$@extend$" directive: it tells SASS that one selector should inherit styles of another selector.
+Example: the style $base-button$ has a grey background. The style $button$ sets the size of the element to $100 x 50 px$.
+Because all $base-button$s are $button$s, a $base-button$ should inherit the style from $button$ instead of replicating it, like one would do with \ac{OOD} in a programming language.
+With \ac{HTML} this would be written $<div class="base-button button" />$.
+With SASS one can write $.base-button { @extend .button }$ and keep \ac{HTML} cleaner: $<div class="base-button" />$
+
+SASS variables and mixins make it easier to scaffold (FIXME LANGUAGE!) themes for Flango Content Manager and have consistency in the visual design (e.g. all themes can have palettes of the same size).
+
+\subsection{Robot Web Tools}
+Robot Web Tools is a collection of open-source modules and tools for building web-based robot applications.
+It provides 3 core libraries to communicate with \ac{ROS} on the robot over rosbridge's WebSocket server: roslibjs, ros2js, and ros3djs.
+This project uses roslibjs to subscribe and publish to Topics.
 
 \section{Architecture}
 context: comm with rob behaviour and rostopics (SOA).
@@ -32,25 +120,70 @@ http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf
 The robot has two parts: robotBehaviour and Stacks.
 Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} workflow but still uses Topics to communicate with the Stacks, the part of the project that does use \ac{ROS}.
 In Stacks there are Servers and ActionServers that provide Services.
-Flango is a component in this system that interacts with robotBehaviour using \ac{ROS} Topics.
-It is not built as a service
+Flango is a component in this system that communicates with robotBehaviour using \ac{ROS} Topics and two types of messages.
+It is not designed strictly as a service to handle synchronous requests but it is able to use Topics to have asynchronous requests and provide feedback, like ActionServers.
+A typical use of a \ac{ROS} Topic is setting the language of the Content Manager or sending an action to robotBehaviour (e.g. shake hands, say a sentence).
+robotBehaviour is not a \ac{ROS} service and therefore it can not handle request/responses like other components in the system.
+Topics are the only way to communicate with it.
 
 OR MAYBE DIAGRAM HERE:_ rosmaster (service registry), services, topics, FLANGO
 
-
-As of 2008,
-development continues primarily at Willow Garage, a robotics
-research institute/incubator, with more than twenty institutions
-collaborating in a federated development model. 
+FIXME diagrams ROS-flango-robot-robotbehaviour etc go here? in specs  just include the description of what the system does.
 
 ROS i SOA.
 robotbehaviour
 flango as a (bad) service.
 
 
+\subsection{MVC}
+\ac{MVC} is a decoupled architecture with a strong separation of responsibilities.
+\begin{itemize}
+    \item Model (application state). Maintains application state and notifies dependent views and controllers when changes occur (with the observer pattern)
+    \item View (output) queries the model to print [parts of] it, listens for changes in the model
+    \item Controller (input) Listens for input and tells the model or the view to change accordingly
+\end{itemize}
+
+It is possible to have multiple views and controllers for the same model and they can be reused for other models.
+
+AngularJS applications take the most of the framework when they are designed with a \ac{MVC} architecture.
+A typical \ac{MVC} use case might be:
+\begin{itemize}
+    \item Model: [orange, apple, pineapple, coconut]
+    \item View: a list of 2 random pieces of fruit
+    \item Controller: logic that decides to fetch two pieces of fruit
+\end{itemize}
+
+Flango Content Manager does not have a \ac{GUI} or a set of predefined and stable use cases.
+This changes for every contents application.
+The system only knows the use cases after loading the contents application.
+The 
+
+\begin{itemize}
+    \item Model: screens
+    \item View built dynamically from the model
+    \item Controller: 
+\end{itemize}
+
+
+The model of the application is a set of screens, configuration parameters, entitites... that can be fetched from the server.
+The view is built dynamically using
+
+explain typical mvc app
+explain whats model, controllers and view in flango
+controllers "use services" 
+
+\subsection{Common Patterns in the project}
+DI, inversion of dependency, async, fowler...
+
+
+\subsection{Orientation to Web Components}
+
 \section{Static View}
 the model, the view and the controllers. angualar modules, services, filters, controllers...
-talk about the data model and \$rootScope ?
+talk about the data model and \$rootScope ? talk about properties
+
+un diagrama:
+moduls, serveis, controladors, etc. 
 
 \section{Dynamic view}
 the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
