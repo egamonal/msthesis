@@ -12,12 +12,19 @@ The natural technology in this environment is JavaScript, HTML and CSS.
 It interoperates with other systems that feature a different technology. FIXME CROSS REF PHYISICAL DESIGN or CONTEXT
 
 
+
 \subsection{JavaScript}
 some hints. functional. scopes.
 language, jquery, qr, swf
 
+Object Literal Notation, constructors, closures, var scope, concept of classes
+
+
+
 \subsection{AngularJS}
 about the framework. directives, services, 
+The framework enforces a very strict separation of responsibilities: DOM updates are abstracted away from model updates. 
+Directives act as the layer that keeps these two aspects loosely coupled. One one hand, directives translate data into user interfaces; and, on the other hand, directives translate user interactions back into \$scope behaviors. FIXME Reword this
 
 \paragraph{Overview} AngularJS is a framework for dynamic web applications.
 \ac{HTMl} was created to declare static documents. 
@@ -135,6 +142,7 @@ robotbehaviour
 flango as a (bad) service.
 
 
+
 \subsection{MVC}
 \ac{MVC} is a decoupled architecture with a strong separation of responsibilities.
 \begin{itemize}
@@ -145,35 +153,94 @@ flango as a (bad) service.
 
 It is possible to have multiple views and controllers for the same model and they can be reused for other models.
 
-AngularJS applications take the most of the framework when they are designed with a \ac{MVC} architecture.
-A typical \ac{MVC} use case might be:
+Angular applications take the most of the framework when they are designed with a \ac{MVC} architecture.
+A typical use case in a \ac{MVC} application might be:
 \begin{itemize}
     \item Model: [orange, apple, pineapple, coconut]
-    \item View: a list of 2 random pieces of fruit
+    \item View: displays a list of 2 random pieces of fruit
     \item Controller: logic that decides to fetch two pieces of fruit
 \end{itemize}
 
 Flango Content Manager does not have a \ac{GUI} or a set of predefined and stable use cases.
 This changes for every contents application.
 The system only knows the use cases after loading the contents application.
-The 
+There can not be controllers for application-specific use cases and the view is created dynamically from the model.
 
 \begin{itemize}
-    \item Model: screens
-    \item View built dynamically from the model
-    \item Controller: 
+    \item Model: screens definitions, entities, configuration... stored in the backend
+    \item View: built dynamically from the model. The application loads screens as the user browses to \ac{URL}s and transforms them to \ac{HTML} so that they can be displayed in the browser.
+    \item Controller: Typically, controllers in Angular manage the $\$scope$ and expose behaviour to the View. This application has some generic (as opposed to application-specific) ones. For example: an instance of $ActionCtrl$ for each button, a $ROSBridgeCtrl$ to respond to requests from ROS Bridge, etc. Directives also have a special type of controllers: Directive Controllers are defined within the context of one directive but they can be injected into other directives to facilitate inter-directive communication. For example, a controller in the $flUi$ directive manages its properties (x, y, width, height, caption...). $flWidth$, $flX$, and other directives use the controller in $flUi$.
 \end{itemize}
 
-
-The model of the application is a set of screens, configuration parameters, entitites... that can be fetched from the server.
-The view is built dynamically using
 
 explain typical mvc app
 explain whats model, controllers and view in flango
 controllers "use services" 
 
 \subsection{Common Patterns in the project}
-DI, inversion of dependency, async, fowler...
+DI, inversion of dependency, reveal, factory, async, fowler... hints of the remote façade and SOA¿?
+
+This subsection is a high-level description of the most relevant software patterns in the project.
+
+paragraphs for the patterns go here
+
+\paragraph{Constraints}
+FIXME this section sucks
+%Flango Content Manager has  been designed taking into account the guidelines of \ac{GRASP} and the five basic principles of \ac{SOLID}.
+The project follows object-oriented design adapted to the constraints induced by the technology and the requirements of the project.
+
+FIXME improve this:
+\begin{itemize}
+    \item The \textbf{Angular Framework} is an approach to Web Components but components are not fully reusable. Moreover, most of the cl
+    \item  Legacy \ac{XML}. The contents application uses \ac{XML} to define screens, templates, components, etc. The vocabulary and grammar of this \ac{XML} was designed having Adobe Flash and imperative programming in mind. While imperative programming is great for business logic, Angular prefers declarative programming for the view. 
+%    \item This project is not a traditional \ac{CRUD} application. The model is a set of screens and 
+\end{itemize}
+
+% FIXME these are horrible paragraphs
+\paragraph{\ac{GRASP}} The patterns used in \ac{GRASP} are: Controller, Creator, Indirection, Information Expert, High Cohesion, Low Coupling, Polymorphism, Protected Variations, and Pure Fabrication. 
+Angular enforces a strict separation of concerns between components and together with \ac{TDD} and unit testing, it helps keeping components loosely coupled.
+The framework provides an easy way to create Controllers, non-user interface objects responsible for receiving and handling events.
+They are mediators between the model and the view (indirection pattern). 
+For example, $ActionCtrl$ for buttons receive events from the \ac{UI} and delegate the action to the corresponding class.
+New elements of the framework, like Services or Directives, are created using a factory function.
+FIXME However, the model are the screens and instead of creating an object from an \ac{XML} file the system just appends it to the \ac{DOM} and defines the behaviour in Directives, the software hardly ever has to create instances of objects explicitly.
+FIXME should this be here?: The model is stable during the execution of the application. That is, new instances of classes of the model can not be created. 
+New instances of classes are hardly ever created because the model is stable during the execution of the application. 
+Changes are not made persistent. The application retrieves the model, renders it and lets the user interact with the contents in the touchscreen.
+
+\paragraph{\ac{SOLID}} Five basic principles in software design are present in this project.
+Classes have a single responsibility (e.g. Configuration for the $palSettings$, or managing properties of \ac{UI} elements with $palProperties$). 
+FIXME: This principle works well with unit testing.
+
+
+\paragraph{Dependency Injection} One of the \ac{SOLID} principles, inversion of dependency, states that one should “Depend upon Abstractions. Do not depend upon concretions.”
+QUOTE: Dependency Inversion is the strategy of depending upon interfaces or abstract functions and classes, rather than upon concrete functions and classes. This principle is the enabling force behind component design (http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf) Robert C. Martin (“Uncle Bob”), objectmentor.com. Last verified 2009-01-14.
+Dependency Injection is one of the implementations of this principle.
+The framework encourages the use of dependency injection in all components. 
+Thus, services can be injected in controllers and directives.
+Using the name and a service registry, the client class does not need to create an instance of the injected service. This allows
+A particular implementation of this principle is in the adapter for roslibjs: the service palROSBridge in the application is made injectable and provides callbacks to allow a decoupled desing. FIXME LANGUAGE.
+
+\paragraph{Factory} Directives, controllers, services... are registered on modules. 
+The $module.directive$ \ac{API} registers them. 
+It takes a normalised name and a factory function that returns an object with the fields that can be exposed to classes that use it.
+For example, a Directive Definition Object or a Service.
+
+\paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having the units of code for a project separated.
+JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
+The $new$ keyword used in a call to a constructor function makes JavaScript instantiate the new object with members defined by that function.
+Modules are a way to emulate the concept of classes.
+There are several options to implement them. 
+This project uses object literal notation (CROSS REF JAVASCRIPT)
+The module pattern encapsulates privacy, state and organisation using closures (CROSS REF JAVASCRIPT)
+Only a public \ac{API} is returned, keeping everything else hidden within the closure private.
+With the Revealing Module Pattern the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
+
+\paragraph{Remote Facade} FIXME: sure? do I have a remote facade in the app, in a controller?
+
+\paragraph{command pattern} cita el general i cita osmani \cite{Osmani:2012}
+
+FIXME posar diagrames per algun lloc 
 
 
 \subsection{Orientation to Web Components}
