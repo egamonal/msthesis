@@ -1,20 +1,16 @@
 \chapter{Related Work}
-This chapter is a short introduction to.. general concepts. doesnt make references to
-robots, qt or anything. no ref to UX or UI design. my problem is an app that renders
-apps, not the screens editor or a particular design.
-
 This chapter is a short introduction to the main knowledge areas involved in the development of this project.
 It describes what has been done before in the field and the theory the project is based upon.
-It includes the motivation and the steps to reengineer an application (\cite{Pressman:2007}), the evolution of web technology from simple documents to \ac{RIA} like the one of this thesis, the \ac{TDD} method and the relationship with \ac{DbC} and, finally, \ac{XML} as an intermediate representation of the model to interoperate between Basestation and Flango Content Management in the robot.
+It includes the motivation and the steps to reengineer an application , the evolution of web technology from simple documents to \ac{RIA} like the one of this thesis, the \ac{TDD} method and the relationship with \ac{DbC} and, finally, \ac{XML} as an intermediate representation of the model to interoperate between Basestation and Flango \cm in the robot.
 
 \section{Reengineering}
 \label{sec:reengineering}
-This thesis takes over the work of the past two years at PAL Robotics in content management.
-The initial situation is a system made with Flash and Django called Flango.
-The Screens Editor and the robot's content management are Flash applications.
-Whereas the first one runs in a modern browser, on desktop computers, the robot's content management runs in the robot.
+This thesis takes over the work of the past two years at \company in content management.
+The initial situation is a system made with \flash and Django called Flango.
+The \se and the robot's content management are \flash applications.
+Whereas the first one runs in a modern browser, on desktop computers, the robot's \cm runs in the robot.
 The robot is a Linux system and the browser is a QtWebKit widget embeded in the Qt application that governs the hardware.
-The Flash plugin will not be updated and this part of the system has to be rewritten in a different technology.
+The \flash plugin will not be updated and this part of the system has to be rewritten in a different technology.
 
 \begin{quote} 
 Consider any technology product that has served you well. 
@@ -29,12 +25,12 @@ That's what we call reengineering. \cite{Pressman:2007}
 
 Unlike other products, software does not degrade with time due to external factors like the inclemencies of the weather, power outages or intense use.
 Software packages are adapted, corrected, extended and improved constantly and that can lead to unstable applications or unexpected side effects, even if the original product had been designed with the best practices at that time.
-Documentation gets outdated, after a certain amount of time the specification does not match the product any more and changes are harder to implement . % FIXME language
+Documentation gets outdated, after a certain amount of time the specification does not match the product any more and changes are harder to implement. % FIXME language
 Using frameworks, libraries and third-party software is a common practice. 
 Sometimes the vendor of the technology used in a project stops supporting it and the only solution is substituting the components that depend on it. 
 The product becomes unmaintainable in many aspects and reenginering is required. 
 
-Software reengineering comprises 6 activities: inventory analysis, document reestructure, reverse engineering, code restructuring, data restructuring and forward engineering.
+Software reengineering comprises \textbf{6 activitie}s: \textbf{inventory analysis}, \textbf{document reestructure}, \textbf{reverse engineering}, \textbf{code restructuring}, \textbf{data restructuring} and \textbf{forward engineering}.
 Simple put, it is all about understanding the current logic of a program and modifying the three typical components: data, logic and view.
 The project of this thesis is not modifying the current program but developing a new one with new technology, focusing on reverse engineering the original software. 
 
@@ -59,11 +55,11 @@ Finally, the \ac{UI} has to be analised as well.
 There are issues related to presentation of data, interaction, usability, etc that have to be identified.
 This project focuses on system and program levels of abstraction and on interoperability.
 The software does not have any views or databases to be reconsidered.
-However, it does have some formats server-side (in the backend) that are candidates in this process (e.g. definition of settings with XML might have to become JSON or have a different structure).
+However, it does have some formats server-side (in the backend) that are candidates in this process (e.g. definition of settings with \ac{XML} might have to become \ac{JSON} or have a different structure).
 
 \paragraph{Restructure code and data}
 Sometimes the solution is restructuring the current program.
-The project of this thesis is skipping this part because a new application is being developed using the output of the first activity (FIXME: activity?): understand the current program
+The project of this thesis skips this part because a new application is being developed using the output of the first activity (FIXME: activity?): understand the current program
 Restructuring the code might not be enough in most cases. 
 It can fix immediate issues but it is not a long-term solution.
 However, when doing so, \ac{TDD} is useful because tests breaks immediately and often, specially if they are running in the background or periodically.
@@ -114,7 +110,7 @@ The outcome of this process (FIXME process vs activity vs task) is a new softwar
 %forward engineering: change the code, redesign, or make big changes (completely redesign, recode, test..). preventive %maintenance. cost of maintenance.
 
 
-\section{Web Technologies}
+\section{Web Technology}
 % quotations: something about emacs life style, or berners lee
 The \ac{WWW} plays a central role in many people's lives.
 The first drafts date back to the 1980s, the first web browser prototype by Tim Berners-Lee was built in December 1990 and the Mosaic browser was completed in 1993.
@@ -147,7 +143,7 @@ Other companies, like Citrix or eyeOS, offer web applications or virtualisation 
 \paragraph{The Evolution of the Web}
 \begin{quote} 
 HyperText is a way to link and access information of various kinds as a web of nodes in which the user can browse at will. 
-Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help" \cite{BernersLee:1990}
+Potentially, HyperText provides a single user-interface to many large classes of stored information such as reports, notes, data-bases, computer documentation and on-line systems help\cite{BernersLee:1990}
 \end{quote} 
 
 When the \ac{WWW} was started in 1990 it was intended to be a document viewing platform.
@@ -157,12 +153,13 @@ In the early days, websites were basically a few files with plain text, forms an
 
 Later on, browsers added programming capabilities, plug-ins and allowed animated graphics. 
 Web pages became interactive and client-server communication increased in complexity.
-Adobe Flash (at that time Macromedia Flash), ShockWave, Java, QuickTime and a few others allowed the inclusion of multimedia contents or even programs (e.g. Java Applets).
+\flash (at that time Macromedia Flash), ShockWave, Java, QuickTime and a few others allowed the inclusion of multimedia contents or even programs (e.g. Java Applets).
 Engineers could combine server-side and client-side technology to provide some more capabilities along with content.
 
 More recently, despite the fact that the web browser was not designed for running applications, since 2008 users have headed this way. 
 In this third phase, web pages are not just documents: they have complex user interaction capabilities, they do not require full page refresh and typical use cases have evolved. 
-A big part of applications is executed client-side, taking advantage of the computing capabilities of modern computers and decreasing the load in servers. In some cases, the application also needs huge server-side resources and uses strategies like cloud computing (e.g. Amazon EC2) to scale up.
+A big part of applications is executed client-side, taking advantage of the computing capabilities of modern hardware and decreasing the load in servers. 
+In some cases, the application also needs huge server-side resources and uses strategies like cloud computing (e.g. Amazon EC2) to scale up.
 Today the web is not only about viewing documents but about world-wide sharing, collaboration and interaction, possibly in real time. 
 
 Web browsers have become a widely-used platform for software applications. 
@@ -170,13 +167,13 @@ Video editors, spreadsheets, calendars or 3D games used to run exclusively on de
 Today, they run in a variety of devices and some of them even do it in a browser. 
 There are 3D engines ported to Web, real time collaboration, full HD video support without plug-ins and many more features built-in a system, the browser, that is not an ideal execution environment for desktop applications.
 
-\paragraph{\acp{RIA}}
-\acs{RIA} are neither web services or web pages. 
+\paragraph{\ac{RIA}}
+\acp{RIA} are neither web services or web pages. 
 They are software systems based on technologies and standards of the \ac{W3C} that provide web specific resources such as content and services through a web browser \cite{Kappel:2006}.
 Typically one designs them as single page websites.
 
 % FIXME language
-Web applications differ a lot between them. 
+Web applications differ between them. 
 They can be document-centered, workflow-based, portal-oriented, collaborative, social, etc. 
 They all have some common characteristics. Amongst others:
 \begin{itemize}
@@ -191,7 +188,7 @@ They all have some common characteristics. Amongst others:
         \item Globality: Spontaneity and multiculturality of users. Web applications are publicly available.
         \item Quality suffers from unknown network characteristics
         \item Multiplaform delivery involves having different devices, browsers and degrees of functionality and performance
-        \item Intense network usage. Remote calls are to be minimised. The use of software patterns like remote facade, remote proxy, DTO or RPC is frequent
+        \item Intense network usage. Remote calls are minimised. The use of software patterns like remote facade, remote proxy, \ac{DTO} or \ac{RPC} is frequent
     \end{itemize}
     \item Evolution
     \begin{itemize}
@@ -204,26 +201,28 @@ They all have some common characteristics. Amongst others:
 The project of this thesis is, in a sense, both a \ac{RIA} and a \acp{RIA} generator. 
 It is a \ac{RIA} because, among other reasons, it works in the browser with web technology and has an intense use of the network to fetch the model or other components to build the screens.
 The rendered application works in a browser, has an intense use of the network as well and is content-centered.
-Despite the fact that it works in the specific content of a robot, globality is still an issue. A typical scenario would be a fleet of robots in a conference: users from many different cultural backgrounds can use the application at any time.
+Despite the fact that it works in the specific content of a robot, globality is still an issue.
+A typical scenario would be a fleet of robots in a conference: users from many different cultural backgrounds can use the application at any time.
 
 
 \subsection{Browsers and isolation of programs}    
-Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. At the end of the day, a \ac{RIA} is a distributed software. 
-In the old days the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with local storage, hardware-accelerated components, websockets and other advanced capabilites.
+Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. 
+At the end of the day, a \ac{RIA} is a distributed software. 
+In the past the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with local storage, hardware-accelerated components, websockets and other advanced capabilites.
 
 In spite of the fact that \acp{RIA} have grown in complexity and now demand more resources, browsers architectures still do not provide sufficient isolation between concurrently executing programs.
 A similar problem occurred in early operating systems (e.g. MS-DOS), before processes appeared \cite{Reis:2009}. 
 
-Browsers have typically the following components: TODO
-
 Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on \ac{OS} processes. 
 Another way of isolating web applications is running them in a plug-in container. 
 
-The project of this thesis uses Qt WebKit (FIXME: WARNING! it might be google chrome), the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
+The project of this thesis does the first phase with Qt WebKit, the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
+The second part uses Chrome to meet the technology requirements.
 Qt WebKit components comprise the WebCore and SquirrelFish Extreme, which compiles Javascript into native machine code. 
 It is compatible with Adoble Flash Player but because it will not receive more updates in the future, it will not be used any more.
-The Flash plugin is a black box isolated from other elements in the \ac{DOM}.
+The \flash plugin is a black box isolated from other elements in the \ac{DOM}.
 Isolation is not an issue in this project because there is only one application running at a time and, even in a normal use of a browser, with many websites running at once, isolation is not a blocking issue.
+FIXME MAYBE ADD CHROME V8 engine, ETC.
 
 % MOVE THIS TO DESIGN
 %\section{Client-side Technology}
@@ -236,7 +235,7 @@ Isolation is not an issue in this project because there is only one application 
 \section{Test-Driven Development}
 The software written for this thesis is executed in a complex environment.
 Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
-Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the Qt system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
 
 Reengineering this system has, at least, two sources of potential errors: 
 undocumented features in the original application (unknown, documented wrongly, partially documented or not described at all) and integration of the new software in the current system.
@@ -251,7 +250,7 @@ undocumented features in the original application (unknown, documented wrongly, 
     \item Refactor the code. Conform to standards and best practices
 \end{enumerate}
 
-As opposed to classic development methodologies (e.g. waterfall, where test are done in the last place), with \ac{TDD} tests go first. 
+As opposed to classic development methodologies (e.g. waterfall, where tests are done in the last place), with \ac{TDD} tests go first. 
 Specification and documentation of the system are not artifacts created before the implementation but the tests themselves.
 
 Testing earlier and heavily has benefits over the classical approach:

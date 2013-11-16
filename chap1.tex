@@ -14,21 +14,21 @@ why angularjs instead of, say, a lemon.
 
 This is a report for a master's thesis.
 This document is a stand alone presentation of the work done, which belongs to a bigger project: the Content Management System for the robots.
-More specifically, this thesis deals with the reengineering of Flango Content Management, the part of the system built in the robot that renders the screens on the touchscreen.
+More specifically, this thesis deals with the reengineering of Flango \cm, the part of the system in the robot that renders the screens on the touchscreen.
 Applying web technology to human-robot interaction is a novelty in the company that interoperates with non-reengineered parts of the system.
-It is desired not only to develop a practical solution but also to guarantee that the final output of the Content Management System is the same the old system generates.
+It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same the old system generates.
 
 This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
-It is done to develop a sustainable product based on open standards (as opposed to the current implementation with Adobe Flash) that can be extended and reused for other robotic components that might be designed in the future.
+It is done to develop a sustainable product based on open standards (as opposed to the current implementation with Adobe Flash \copyright) that can be extended and reused for other robotic components that might be designed in the future.
 
-\section{PAL Robotics}
-Pal Robotics is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
+\section{\company}
+\company is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
 An international team of mostly mechanical, electronics and software engineers pushes forward the research on different fields, like speech recognition and generation, computer vision, walking, grasping, machine learning and navigation amongst others.
-The company has developed 5 humanoid robots in 2013: Reem-A, Reem-B, Reem H1, H2 and H3, and Reem-C (still in the labs).
-This project targets Reem H2 and H3.
+The company has developed 5 humanoid robots until 2013: \reem{A}, \reem{B}, \reem{H1}, H2 and H3, and \reem{C}.
+This project targets \reem{H2} and H3, service robots with wheels.
 
 \subsection{Reem H2 and H3}
-Reem H2 \fref{fig:reemh2} and H3 \fref{fig:reemh3} are humanoid service robots featuring a screen on their torso.
+\reem{H2} \fref{fig:reemh2} and H3 \fref{fig:reemh3} are humanoid service robots featuring a screen on their torso.
 They have an autonomous navigation system, speech recognition and synthetiser, they can find their way in different settings and help or entertain people in a friendly way.
 They can be used in public places such as hotels, malls, airports or museums.
 
@@ -36,17 +36,17 @@ They can be used in public places such as hotels, malls, airports or museums.
    \centering
    \begin{subfigure}[b]{0.3\textwidth}
        \includegraphics[width=\textwidth]{figures/reemh2}
-       \caption{Reem H2}
+       \caption{\reem{H2}}
        \label{fig:reemh2}
        \end{subfigure}%
        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
          %(or a blank line to force the subfigure onto a new line)
        \begin{subfigure}[b]{0.3\textwidth}
            \includegraphics[width=\textwidth]{figures/reemh3}
-           \caption{A tiger}
+           \caption{\reem{H3}}
            \label{fig:tiger}
        \end{subfigure}
-       \caption{Reem series}
+       \caption{\reem Series}
        \label{fig:reemseries}
 \end{figure}
 
@@ -70,9 +70,9 @@ They can be used in public places such as hotels, malls, airports or museums.
 
 
 \section{The Current System}
-The Reem series have big potential in human robot interaction. 
+The \reem{} series have big potential in human robot interaction. 
 These humanoid robots have a multi-modal interface: besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
-Reem can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
+\reem{} can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
 
 \begin{figure}[htb]
     \label{fig:intro-system-overview}
@@ -81,19 +81,17 @@ Reem can display multimedia contents like corporate videos, information about th
     \caption{Overview of the system (Hardware)}
 \end{figure}
 
-
-
-The Contents Management System comprises Flango Frontend and Backend (both in Basestation), and Flango Content Management (in the robot).
-The Basestation is an application server that hosts Flango Backend, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
-Clients can create application contents with the Flango Frontend (Screens Editor), a tool built with Adobe Flex \copyright.
+The Contents Management System comprises \flangofe and \flangobe (both in Basestation), and Flango \cm (in the robot).
+The Basestation is an application server that hosts Flango, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
+Clients can create application contents with the \flangofe (\se), a tool built with \flash .
 When application contents are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
 
 \lstinputlisting[label=example-screen-xml,language=XML, caption={Example Screen XML}, breaklines=true]{src/example-screen.xml}
 
-The components of a contents application (screens and entities) have an \ac{XML} representation (\ref{example-screen-xml} ), an approach similar to popular projects (e.g. Android, NetBeans) and even, in an abstract way, all \acp{RIA} made with \ac{HTML}.
+The components of a contents application (screens and entities) have an \ac{XML} representation (\ref{example-screen-xml} ), an approach similar to popular projects (e.g. Android, NetBeans) and even, in a sense, all \acp{RIA} made with \ac{HTML}.
 
-A contents application is essentially a set of screens, navigation, multimedia contents that users can manage with the media library, and entities. 
-The last are domain objects that can be instantiated and represented in a view. 
+A contents application is essentially a set of screens, navigation multimedia contents that users can manage with the media library, and entities. 
+FIXME LANGUAGE The last are domain objects that can be instantiated and represented in a view. 
 This way a client can create an application that shows information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "shake hands"), display videos and picture galleries, etc.
 All of these components are localisable. 
 They can be resized, repositioned, repainted... depending on the current language.
@@ -107,42 +105,47 @@ Using other tools, clients can also associate sentences to screens and the speec
     \caption{Screens Editor, a Flash application in Flango}
 \end{figure}
 
-Reem robots have a built-in software to render the content applications that receive from Basestation. 
-It is also made with Adobe Flash\copyright.
-The main concern of this software is transforming \ac{XML} files into a \ac{UI}. 
-This software has no \ac{GUI} or direct interaction with a person.
+\reem{} robots have a built-in software to render the content applications. 
+It is also made with \flash .
+The main responsibility of this software is transforming \ac{XML} files into a \ac{UI}. 
+Initially, this software has no \ac{GUI} or direct interaction with a person.
 
 \begin{figure}[htb]
     \label{fig:xml-flango-view}
     \centering
     \includegraphics[width=\textwidth]{figures/xml-flango-screenshot}
-    \caption{sequence}
+    \caption{Sequence of action: from \ac{XML} to the \ac{GUI}}
 \end{figure}
 
-This thesis documents the project to re-engineer the built-in software in the robot to use modern web technologies instead of Adobe Flash.
+This thesis documents the project to re-engineer the \cm , in the robot, to use modern web technologies instead of \flash.
 
 \section{The New System}
 The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
-First the web consisted of truly pages that contained structured text and some images. 
+First the web consisted of simple pages that contained structured text and some images. 
 Navigation was done using simple links between pages. 
 In a second phase, web sites became interactive: 
 it was the time of animated graphics, browser plug-ins and JavaScript. 
 More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
 
-For a decade, the Adobe Flash Player\copyright plug-in has provided a platform to enable rich and interactive content in browsers.
+For a decade, the \flash player plug-in has provided a platform to enable rich and interactive content in browsers.
 However, Adobe has made the updates exclusive to the Google Chrome\copyright browser \cite{FlashRoadmap}. 
-The browser in the robot application, QtWebBrowser (FIXME! it might be Chrome, in the end), uses this plug-in but will not receive updates from Adobe and PAL Robotics systems need to adapt to this new setting. 
+The browser in the robot application, QtWebBrowser, uses this plug-in but will not receive updates from Adobe and \company systems need to adapt to this new setting. 
+There are two solutions:
+\begin{itemize}
+	\item Use Google Chrome instead of QtWebKit
+	\item Use modern web technologies, either in QtWebKit or in another browser
+\end{itemize}
 
-The solution is moving to modern web technologies.
-Any other technology could be used but the web allows the product to be easily portable, very extensible and open to many developers.
-There are a number of options. \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
+The solution is rethinking the application to be a part of the robot's system and implement it with modern web technology.
+There is a number of technologies that could be used but the web allows the product to be easily portable, very extensible, open to many developers and sustainable as it does not depend on a single company.
+\ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
 It has become such a popular combination that major browser vendors already provide an extensive support in a wide range of products.
-A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, YUI...), but even server-side (e.g. NodeJS).
+A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, Yahoo User Interface Library...), but even server-side (e.g. NodeJS).
 Moreover, new HTML5 capabilities and APIs are an opportunity to add features to the project.
 
 The project documented in this thesis uses Google AngularJS\copyright, a \ac{MVC} framework that lets developers teach the browser new syntax. 
-Thus, the syntax of the \ac{XML} files coming from the Screens Editor can be interpreted natively in a browser. 
-This has some advantages over Flash \cite{Jobs:ThoughtsOnFlash}:
+Thus, the syntax of the \ac{XML} files coming from the \se can be interpreted natively in a browser. 
+This has some advantages over \flash \cite{Jobs:ThoughtsOnFlash}:
 \begin{itemize}
     \item No use of third-party plug-ins
     \item Openness
@@ -177,7 +180,7 @@ Regarding the project, the goals are:
 
 
 \section{Organisation of this document}
-This document describes the system developed at PAL Robotics to render the screens created with the Screens Editor on the Reem H2 and H3 series.
+This document describes the system developed at \company to render the screens created with the \se on the \reem{H2} and H3 series.
 It does not cover other software on the robots or in Basestation.
 
 % TODO check the easy to read phrase
@@ -185,6 +188,3 @@ This project has been developed iteratively using a \ac{TDD} methodology.
 This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an easier reading:
 It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention to the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
 Readers will find an overview section at the beginning of each chapter to put them in context.
-
-\subsection{Conventions}
-no conventions so far. thank you \LaTeX

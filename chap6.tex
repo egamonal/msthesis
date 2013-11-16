@@ -27,7 +27,7 @@ The framework enforces a very strict separation of responsibilities: DOM updates
 Directives act as the layer that keeps these two aspects loosely coupled. One one hand, directives translate data into user interfaces; and, on the other hand, directives translate user interactions back into \$scope behaviors. FIXME Reword this
 
 \paragraph{Overview} AngularJS is a framework for dynamic web applications.
-\ac{HTMl} was created to declare static documents. 
+\ac{HTML} was created to declare static documents. 
 It needs libraries and frameworks to enable application development.
 Angular lets developers use \ac{HTML} in the templates and extend the language syntax to express reusable components.
 It \textit{teaches the browser new syntax} through a construct called Directive.
@@ -113,7 +113,7 @@ Flango Content Manager is a piece in the robot.
 It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
 It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA}.
 
-DIAGRAM HERE:_ rosmaster (service registry), services, topics
+DIAGRAM HERE: rosmaster (service registry), services, topics
 
 Nodes are processes that perform computation, a "software module". 
 Nodes communicate with Messages, strictly typed data structures . There are some available by default, like $std_msgs/String$ and other primitive types.
@@ -133,7 +133,7 @@ A typical use of a \ac{ROS} Topic is setting the language of the Content Manager
 robotBehaviour is not a \ac{ROS} service and therefore it can not handle request/responses like other components in the system.
 Topics are the only way to communicate with it.
 
-OR MAYBE DIAGRAM HERE:_ rosmaster (service registry), services, topics, FLANGO
+OR MAYBE DIAGRAM HERE: rosmaster (service registry), services, topics, FLANGO
 
 FIXME diagrams ROS-flango-robot-robotbehaviour etc go here? in specs  just include the description of what the system does.
 
@@ -214,12 +214,12 @@ FIXME: This principle works well with unit testing.
 
 
 \paragraph{Dependency Injection} One of the \ac{SOLID} principles, inversion of dependency, states that one should “Depend upon Abstractions. Do not depend upon concretions.”
-QUOTE: Dependency Inversion is the strategy of depending upon interfaces or abstract functions and classes, rather than upon concrete functions and classes. This principle is the enabling force behind component design (http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf) Robert C. Martin (“Uncle Bob”), objectmentor.com. Last verified 2009-01-14.
+QUOTE: Dependency Inversion is the strategy of depending upon interfaces or abstract functions and classes, rather than upon concrete functions and classes. This principle is the enabling force behind component design (http://www.objectmentor.com/resources/articles/Principles and Patterns.pdf) Robert C. Martin ('Uncle Bob'), objectmentor.com. Last verified 2009-01-14.
 Dependency Injection is one of the implementations of this principle.
-The framework encourages the use of dependency injection in all components. 
+The framework encourages the use of this pattern in all components. 
 Thus, services can be injected in controllers and directives.
-Using the name and a service registry, the client class does not need to create an instance of the injected service. This allows
-A particular implementation of this principle is in the adapter for roslibjs: the service palROSBridge in the application is made injectable and provides callbacks to allow a decoupled desing. FIXME LANGUAGE.
+Using the name and a service registry, the client class does not need to create an instance of the injected service. 
+A particular implementation of this principle is in the wrapper for roslibjs: the service palROSBridge in the application is made injectable and provides callbacks to allow a decoupled desing. FIXME LANGUAGE.
 
 \paragraph{Factory} Directives, controllers, services... are registered on modules. 
 The $module.directive$ \ac{API} registers them. 

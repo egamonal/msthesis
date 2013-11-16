@@ -4,23 +4,20 @@ The execution and deviations are shown at the end of this chapter.
 
 \section{Scope}
 \label{sec:scope}
-The system has three parts: the backend, the front-end (with the screens editor) both at basestation, and the screens renderer in the robots (the robot's content manager \fref{fig:system-overview}).
+The system has three parts: the \flangobe, the \flangofe (with the \se) both at Basestation, and the screens renderer in the robots (the robot's \cm \fref{fig:system-overview}).
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=14cm]{figures/intro-system-overview}
-    \caption{System components)}
+    \caption{System components}
     \label{fig:system-overview}
 \end{figure}
 
-
-This project reengineers the frontend with web technologies but not the backend, that remains in Django and Adobe Flash.
-
-The new frontend accepts a contents application (GLOSSARY??) as input, generated with the Screens Editor, and outputs the screen rendered with web elements.
+This project reengineers the robot's \cm with web technologies but not the back-end and front-end, that remain in Django and \flash.
+The new \cm accepts a contents application as input, generated with the \se, and outputs the screen rendered with web elements.
 Contents applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
 This project can read the configuration files and set up the front-end.
-A screen of a contents application is an \ac{XML} file. 
-This project accepts valid syntax generated with the Screens Editor for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates \ac{HTML5} that renders them as defined.
+This project accepts valid syntax generated with the \se for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates \ac{HTML5} that renders them as defined.
 
 Developing an intense testing strategy is part of this project.
 The final artifact is this master thesis that describes the system and the rationale that guides all decisions.
@@ -37,17 +34,16 @@ It was agreed that the project would reengineer the current system using web tec
 
 \subsection{Phase 2: Planning}
 \begin{sidewaysfigure}[htb]   
-    \centering
     \includegraphics[width=\textwidth]{figures/plan-gantt-orig}
     \caption{Original Gantt Chart}
-    \label{fig:plan-gantt-orig}
+    \label{fig:plan-gantt}    
 \end{sidewaysfigure}
 
 \paragraph{April, 5 -- April 6}
 The first draft of the plan is a rough estimation of the tasks length and a definition of the big milestones.
 Because there is only one engineer there are no concurrent tasks and free floats are always zero.
 Other activities of this phase include an estimation of the resource requirements for upcoming tasks, developing the budget (\fref{sec:budget}) and risk planning (\fref{sec:risk}).
-See the Gantt chart in \fref{fig:plan-gantt-chart}.
+See the Gantt chart in \fref{fig:plan-gantt}.
 
 \subsection{Phase 3: Execution}
 \paragraph{April, 7 -- August 28}
@@ -55,18 +51,18 @@ The execution phase focuses on building the product.
 A web engineering process should be incremental, with frequent changes and short iterations \cite{Kappel:2006}.
 
 \begin{table}[ht]
-    \label{tab:milestones}
     \centering
     \begin{tabularx}{\linewidth}{| X | X |}
     \hline
     Milestone & Deliverables \\
     \hline
     Proof of concept & Research on frameworks and tools to develop the project. Choose one. Build a minimal working example to illustrate key aspects of the project. \\ \hline
-    Iteration 1 & Build a prototype comprehensive in number of features but simple in their implementation to validate the technology. \\ \hline
-    Iteration 2 & Extend the prototype of Iteration 1 to complex cases of the features. \\
+    Iteration 1 & Build a prototype comprehensive in number of features but simple in the implementation to validate the technology. \\ \hline
+    Iteration 2 & Extend the prototype of Iteration 1 to complex cases. \\
     \hline
     \end{tabularx}
     \caption{Milestones and deliverables of the execution phase}
+    \label{tab:milestones}
 \end{table}
 
 This phase has 3 big milestones, one per iteration (\fref{tab:milestones}). 
@@ -76,7 +72,12 @@ The outcome of each iteration is a product with a set of stable features and the
 \paragraph{August, 29 -- September 14}
 Prepare package with a stable set of features, presentation and documentation.
 
+\FloatBarrier
+
 \section{Cost}
+
+\FloatBarrier
+
 \label{sec:budget}
 The estimated length of the project is $105 days \times 8 \euro{} \times 8 hours = 6720 \euro{} $
 
@@ -123,7 +124,6 @@ tech risks: A) design, implementation, interface,verification,maintenance proble
 {Some of the needs are unpredictable. However, preventive maintenance and good documentation of bugs in tickets can reduce the chances that this risk will occur.}
 {Do the urgent task and reschedule the project}
 \end{risk}
-
 
 \begin{risk}
 {Resources: deviation}
@@ -194,6 +194,8 @@ tech risks: A) design, implementation, interface,verification,maintenance proble
 {Use stable versions}
 {Investigate the bug, isolate it, create a minimal full working example and, if possible, open a pull request with a fix in Github or notify the error to the project managers.}
 \end{risk}
+
+\FloatBarrier
 
 \section{Execution}
 progress, deviations, final cost

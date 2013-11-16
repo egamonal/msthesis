@@ -13,7 +13,7 @@ Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2):
     \item Forward Engineering
 \end{enumerate}   
    
-The outcome of these activities (FIXME: activity, task?) derives part of this specification.
+The outcome of these activities derives part of this specification.
 For example, use cases are extracted from the current system.
 The first three focus on what the system does and are used in this chapter, whereas the last three are tightly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
 This chapter starts by describing the current system: the software parts (inventory analysis) and what it does (reverse engineering to understand the system with special attention to context, interaction and interoperability).
@@ -21,12 +21,12 @@ It is followed by a description of what the new system has to do: the specificat
 Finally, it describes the \ac{XML} used to represent contents applications.
 
 \section{Inventory Analysis}
-A sorted list of software in the organisation makes candidates for reengeneering appear.
+A list of software in the organisation makes candidates for reengeneering appear.
 The scope of this thesis is reengineering Flango in the robot and it is a decision taken before starting this work.
 However, Flango uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
 \begin{inventory}
-{name=Flango Content Manager (robot), 
+{name=Flango \cm (robot), 
 year=May 2011,
 nchanges=5 big milestones,
 lastchange=August 2013,
@@ -52,7 +52,7 @@ bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 
 \begin{inventory}
 {
-name=Flango Frontend -- Screens Editor, 
+name=\flangofe -- \se , 
 year=December 2012,
 nchanges=4 (first version; some new features; bug fixing),
 lastchange=August 2013,
@@ -78,7 +78,7 @@ bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 
 \begin{inventory}
 {
-name=Flango Backend, 
+name=\flangobe , 
 year=October 2012,
 nchanges=3 (first version; statistics; new features),
 lastchange=August 2013,
@@ -102,21 +102,20 @@ bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 }
 \end{inventory}    
 
-Flango Frontend, at the time the decision of reengineering it was made, was not very old but there were major changes already contemplated for the application (e.g. abandon Adobe Flash), that would require big commitment of effort and would not converge to a sustainable situation.
-Reengineering cost is less than the cost to make changes plus the cost of maintenance.
-
+When it was decided to reengeneer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and would not converge to a sustainable situation.
+Reengineering cost is lower than the cost to make changes plus the cost of maintenance.
 
 \section{Reverse Engineering}
 \label{sec:context}
 Reengineering a software involves reverse engineering, understanding what the system does.
 
-There are 3 key issues in understanding the current system: abstraction level, completeness and direction.
+There are 3 key issues in understanding the current system: \textbf{abstraction level}, \textbf{completeness} and \textbf{direction}.
 This specification uses a system-level abstraction, only takes into account interaction with external elements, and is one-way (from current system to the specification of the new system).
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
 This section focuses on what the current version of the software does and what the new version has to do.
-It and offers some technology-dependant details to understand the steps to reach the goal and the operations that Basestation exposes.
+It offers some technology-dependant details to understand the steps to reach the goal and the operations that Basestation exposes.
 
-Details of how this software does the same with a new technology are in  chapter 6 FIXME CROSS REF INTERNAL DESIGN
+Details of how this software does the same with a new technology are in chapter 6 FIXME CROSS REF INTERNAL DESIGN
 
 \subsection{Context}
 \begin{figure}[htb]
@@ -133,12 +132,14 @@ Details of how this software does the same with a new technology are in  chapter
     \label{fig:context-new}
 \end{figure}
 
-ReemH-3 has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
-The program  that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, a \texttt{Qt} program.
-A window in this program contains a QtWebKit widget (FIXME maybe chrome!), the embedded web browser that loads the contents in the touchscreen.
-Contents are fetched from Basestation, a server that hosts \textbf{Flango Backend}, a web application (Django + Flash (Screens Editor)) that lets users edit screens, add media contents and synchronise them with robots (\fref{fig:context-original}).
-The Backend has an \ac{API} to serve the contents applications to the robots.
-The project of this thesis is reengineering the \textbf{Flango Content Manager}, in the robot (\fref{fig:context-new}).
+\reem{H3} has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
+The program that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, a Qt program.
+A window in this program contains a QtWebKit widget, the embedded web browser that loads the contents for the touchscreen.
+Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\fref{fig:context-original}).
+The \flangobe has an \ac{API} to serve the contents applications to the robots.
+The project of this thesis is reengineering the Flango \cm , in the robot (\fref{fig:context-new}).
+
+\FloatBarrier
 
 \subsection{Interaction}
 \begin{figure}[htb]
@@ -161,11 +162,12 @@ The general boot steps are:
 \begin{enumerate}
     \item The robot boots
     \item robotBehaviour fetches generic settings (\ac{XML}) from Basestation
-    \item The Content Manager uses the settings to decide which application to load, the language, the theme, etc), it requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the Backend
+    \item The \cm uses the settings to decide which application to load, the language, the theme, etc), it requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the \flangobe .
     \item Basestation serves all the screens
-    \item The Content Manager renders the screens. If during this process finds an "entity", it fetches the data from Basestation.
+    \item The \cm renders the screens. If during this process it finds an "entity", it fetches the data from Basestation.
 \end{enumerate}
 
+\FloatBarrier
 
 \subsection{Interoperability}
 \begin{figure}[htb]
@@ -185,14 +187,14 @@ The general boot steps are:
 Flango Content Manager interoperates with two systems: robotBehaviour and Flango Backend.
 
 \paragraph{robotBehaviour} Flango interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities, triggering a batch action (autopresentation, guide user to a certain place...).
-Likewise, robotBehaviour uses an \ac{API} in Flango Content Manager, e.g. to restart a session or to input information gathered with the robot's hardware.
+Likewise, robotBehaviour uses an \ac{API} in Flango \cm, e.g. to restart a session or to input information gathered with the robot's hardware.
 There is an interface defined for this to allow independent development in both ends.
 FIXME Notice that figures \fref{fig:interoperability-original} and \fref{fig:interoperability-new} do not show Basestation. See \fref{fig:context-original} and \fref{fig:context-new}.
-The current system to exchange messages between the Flash container and robotBehaviour is based on JavaScript global functions.
+The current system to exchange messages between the \flash container and robotBehaviour is based on JavaScript global functions.
 
 To send a message to robotBehaviour:
 \begin{enumerate}
-    \item Flash opens a new tab with a specific \ac{URL}: \texttt{flashCallback.html?\textless paramList\textgreater}
+    \item \cm (\flash) opens a new tab with a specific \ac{URL}: \texttt{flashCallback.html?\textless paramList\textgreater}
     \item robotBehaviour intercepts the call, prevents QtWebKit from opening a new tab and executes an action specified with the parameters
 \end{enumerate}
 
@@ -204,10 +206,10 @@ To send a message from robotBehaviour:
 \end{enumerate}
 
 The requirements state that the new software has to be implemented using web technology. 
-Despite the fact that this specification should be technology agnostic, to integrate the new software better in the system, the use of ROS Web Tools is suggested to exchange messages.
+Despite the fact that this specification should be technology agnostic, to integrate the new software better in the system, the use of \ac{ROS} Web Tools is suggested to exchange messages.
 In any case, it is clear that there has to be an interface between robotBehaviour and the browser, as they run in separate processes (as opposed to sharing at least one parent process in the current implementation).
 
-\paragraph{BaseStation (Flango Backend API)} The Content Manager has to fetch data from Basestation in order to load the correct contents.
+\paragraph{BaseStation (\flangobe \ac{API})} The \cm has to fetch data from Basestation in order to load the correct contents.
 Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend and frontend) has an API for this (\fref{tab:flango-api}):
 
 \begin{table}[ht]
