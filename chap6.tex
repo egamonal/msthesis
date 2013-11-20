@@ -4,6 +4,7 @@ coming from previous chapter: Code Restructuring; Data Restructuring; Forward En
     
 explain the internal design of the new application.
 internal design of the application. this should be the fun part.
+
 \section{Technology}
 angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's). tdd+jasmine
 
@@ -18,17 +19,60 @@ some hints. functional. scopes.
 language, jquery, qr, swf
 
 Object Literal Notation, constructors, closures, var scope, concept of classes
+notes:
 
+First thing you need to know is that JavaScript uses prototype-based inheritance. This means there is no distinction between classes and instances as in other OO languages (like Java). There are just objects. One implication of that is that differentiating between class and object diagrams does not make sense.
+
+Keep in mind that UML includes many types of diagrams, specifically a branch of behavior diagrams, including sequence and use case diagrams. Such diagrams specifically address your concern of modeling javascript as a behavior driven language.
+
+It is quite possible that a javascript system is not using object-oriented design. In such a case, class diagrams would probably not be appropriate, as you pointed out. However, since javascript does support object-oriented design, it is possible for class diagrams to effectively depict a system using javascript. It really depends on how the javascript is being used.
+
+JavaScript is an
+object-based
+language. Just as in C#, you can create objects, call their
+methods, pass them as parameters, and so on. You could see this clearly when working
+with the DOM, where you manipulated the HTML document through the methods
+and properties of the implicit
+document
+object. However, JavaScript isn't generally
+considered a fully object-oriented language because it lacks support for some features
+that you'd
+fi
+nd in "real" OOP languages, or simply implements them differently.
+
+ What does "object-oriented programming" mean anyway? Basically, as the name
+suggests, OOP puts objects at the centre of the programming model. The
+object
+is
+probably the most important concept in the world of OOP—a self-contained entity
+that has
+state
+and
+behavior
+, just like a real-world object. Each object is an instance of a
+class
+(also called
+type
+), which de
+fi
+nes the behavior that is shared by all its objects
+
+
+******
+description of the language and big uses
+objects
+functions
+prototypal inheritance (vs classical model, new, etc)
 
 
 \subsection{AngularJS}
 about the framework. directives, services, 
-The framework enforces a very strict separation of responsibilities: DOM updates are abstracted away from model updates. 
-Directives act as the layer that keeps these two aspects loosely coupled. One one hand, directives translate data into user interfaces; and, on the other hand, directives translate user interactions back into \$scope behaviors. FIXME Reword this
+The framework enforces a very strict separation of responsibilities: \ac{DOM} updates are abstracted away from model updates. 
+Directives act as the layer that keeps these two aspects loosely coupled.
+One one hand, directives translate data into user interfaces and, on the other hand, directives translate user interactions back into \$scope behaviors. FIXME Reword this
 
 \paragraph{Overview} AngularJS is a framework for dynamic web applications.
-\ac{HTML} was created to declare static documents. 
-It needs libraries and frameworks to enable application development.
+\ac{HTML} was created to declare static documents and needs libraries and frameworks to enable application development.
 Angular lets developers use \ac{HTML} in the templates and extend the language syntax to express reusable components.
 It \textit{teaches the browser new syntax} through a construct called Directive.
 Features:
@@ -232,18 +276,57 @@ The $new$ keyword used in a call to a constructor function makes JavaScript inst
 Modules are a way to emulate the concept of classes.
 There are several options to implement them. 
 This project uses object literal notation (CROSS REF JAVASCRIPT)
-The module pattern encapsulates privacy, state and organisation using closures (CROSS REF JAVASCRIPT)
-Only a public \ac{API} is returned, keeping everything else hidden within the closure private.
-With the Revealing Module Pattern the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
+The module pattern encapsulates privacy, state and organisation using closures (CROSS REF JAVASCRIPT).
+With the Revealing Module Pattern the code of the module is simplified: all the methods are kept private and only a few of the engineer's choice are exposed at the end, while setting up the public \ac{API}
 
 \paragraph{Remote Facade} FIXME: sure? do I have a remote facade in the app, in a controller?
 
-\paragraph{command pattern} cita el general i cita osmani \cite{Osmani:2012}
+\paragraph{Command} 
+Sometimes requests are issued to objects without knowing anything about the operation being requested or the receiver.
+The command pattern is a behavioural design pattern in which an object is used to represent all the information needed to call a method at a later time. 
+It lets objects make requests of unspecified application objects by turning the request itself into an object.
+This object can be stored and passed around like other objects \cite{GoF:1995}.
+Other names are Transaction or Action Pattern  
 
-FIXME posar diagrames per algun lloc 
+\fref{fig:design-command-general} shows the class diagram for a traditional object-oriented programming language.
+With JavaScript there are no abstract classes.
+The approach that Osmani proposes is having only concrete classes with a common $execute$ method \cite{Osmani:2012} CROSS REF CODE EXAMPLE
+
+FIXME include code design-command-1.js and design-command-2.js
+With a simple controller (CROSSREF listing 1) one would call the methods in the object.
+while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
+For example, there is no way to define the behaviour for a \texttt{UI Component :: Button} click handler.
+Only the contents application knows it.
+By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them CROSS REF listing 2
 
 
 \subsection{Orientation to Web Components}
+Web Components is a set of specifications that let web developers use \ac{HTML}, \ac{CSS} and JavaScript to build widgets that can be reused easily and reliably.
+A web component consists of five pieces\cite{W3CComponents:2013}:
+\begin{itemize}
+    \item \textbf{Templates} define chunks of mark-up that are inert but can be activated for use later.
+    \item \textbf{Decorators} apply templates based on CSS selectors to affect rich visual and behavioural changes to documents.
+    \item \textbf{Custom Elements} let authors define their own elements, with new tag names and new script interfaces.
+    \item \textbf{Shadow DOM}  encapsulates a DOM sub-tree for more reliable composition of user interface elements.
+    \item \textbf{Imports} defines how templates, decorators and custom elements are packaged and loaded as a resource.
+\end{itemize}
+
+At the time of developing this project, the specification of web components is still a work in progress.
+The technology, however, seems to fit in the needs of the project.
+There are 2 well-known initiatives that implement an approach to web components: Google Polymer and Google AngularJS.
+
+\paragraph{Polymer} Polymer is a framework that aims to use Web Components. 
+It's based on Custom Elements, i.e. everything is a component.
+With Polymer developers can compose and encapsulate bits of HTML that can be used in any other templating system or framework.
+It uses \ac{HTML} and the \ac{DOM} \acp{API} to separate the view (\ac{DOM}) from the model. 
+Updates to the model are reflected in the \ac{DOM} and user input in the view is immediately propagated to the model:: fast two-way data binding.
+
+Polymer is in pre-alpha stage and can not be used in a stable project.
+Angular, the framework of choice for this project, has features close to web components: it has declarative templates (in directives) that can be applied for elements, attributes, comments or classes (like Web Components decorators).
+Directives are custom elements: behaviour can be placed in a directive controller, in a compile or in a link function.
+Templates are usually \ac{HTML}, although it is not shadow \ac{DOM}.
+Units of code can be grouped in modules, services, etc and be reused.
+
 
 \section{Static View}
 the model, the view and the controllers. angualar modules, services, filters, controllers...
