@@ -1,0 +1,5954 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   contentScriptType="text/ecmascript"
+   zoomAndPan="magnify"
+   contentStyleType="text/css"
+   viewBox="97.0 15.400000000000091 1607.5 931.3"
+   preserveAspectRatio="xMidYMin meet"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48.3.1 r9886"
+   width="100%"
+   height="100%"
+   sodipodi:docname="Deployment Diagram.svg">
+  <metadata
+     id="metadata2054">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
+     id="namedview2052"
+     showgrid="false"
+     inkscape:zoom="1.4531882"
+     inkscape:cx="900.96926"
+     inkscape:cy="243.84732"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id0"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur7" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset9" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer11">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR13" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG15" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB17" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA19" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id2"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur22" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset24" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer26">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR28" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG30" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB32" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA34" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id4"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur37" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset39" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer41">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR43" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG45" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB47" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA49" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id7"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur52" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset54" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer56">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR58" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG60" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB62" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA64" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id11"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur67" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset69" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer71">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR73" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG75" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB77" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA79" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id14"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur82" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset84" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer86">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR88" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG90" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB92" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA94" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id17"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur97" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset99" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer101">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR103" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG105" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB107" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA109" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge111">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode113" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode115" />
+      </feMerge>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id18"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur118" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset120" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer122">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR124" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG126" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB128" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA130" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge132">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode134" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode136" />
+      </feMerge>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id19"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur139" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset141" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer143">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR145" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG147" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB149" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA151" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id25"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur154" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset156" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer158">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR160" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG162" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB164" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA166" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id28"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur169" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset171" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer173">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR175" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG177" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB179" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA181" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id31"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur184" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset186" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer188">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR190" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG192" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB194" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA196" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id34"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur199" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset201" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer203">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR205" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG207" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB209" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA211" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id37"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur214" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset216" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer218">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR220" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG222" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB224" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA226" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id39"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur229" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset231" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer233">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR235" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG237" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB239" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA241" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id41"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur244" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset246" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer248">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR250" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG252" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB254" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA256" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id45"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur259" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset261" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer263">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR265" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG267" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB269" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA271" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id47"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur274" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset276" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer278">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR280" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG282" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB284" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA286" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id49"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur289" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset291" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer293">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR295" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG297" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB299" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA301" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id53"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur304" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset306" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer308">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR310" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG312" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB314" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA316" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id55"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur319" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset321" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer323">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR325" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG327" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB329" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA331" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id57"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur334" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset336" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer338">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR340" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG342" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB344" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA346" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id61"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur349" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset351" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer353">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR355" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG357" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB359" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA361" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id63"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur364" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset366" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer368">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR370" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG372" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB374" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA376" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id65"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur379" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset381" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer383">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR385" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG387" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB389" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA391" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id69"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur394" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset396" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer398">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR400" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG402" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB404" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA406" />
+      </feComponentTransfer>
+    </filter>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id72"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="#000000"
+         d="M0 7.0 L7.0 0 L14.0 7.0 L7.0 14.0z"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path409" />
+    </marker>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id73"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="#000000"
+         d="M0 7.0 L7.0 0 L14.0 7.0 L7.0 14.0z"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path412" />
+    </marker>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id74"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="#000000"
+         d="M0 7.0 L7.0 0 L14.0 7.0 L7.0 14.0z"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path415" />
+    </marker>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id77"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="#000000"
+         d="M0 7.0 L7.0 0 L14.0 7.0 L7.0 14.0z"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path418" />
+    </marker>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id78"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur421" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset423" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer425">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR427" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG429" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB431" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA433" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id80"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur436" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset438" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer440">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR442" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG444" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB446" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA448" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id82"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur451" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset453" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer455">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR457" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG459" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB461" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA463" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id86"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur466" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset468" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer470">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR472" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG474" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB476" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA478" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id93"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur481" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset483" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer485">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR487" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG489" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB491" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA493" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id95"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur496" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset498" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer500">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR502" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG504" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB506" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA508" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id97"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur511" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset513" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer515">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR517" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG519" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB521" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA523" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id102"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur526" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset528" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer530">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR532" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG534" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB536" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA538" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id104"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur541" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset543" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer545">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR547" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG549" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB551" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA553" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id106"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur556" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset558" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer560">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR562" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG564" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB566" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA568" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id110"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur571" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset573" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer575">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR577" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG579" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB581" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA583" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge585">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode587" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode589" />
+      </feMerge>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id111"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur592" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset594" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer596">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR598" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG600" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB602" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA604" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge606">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode608" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode610" />
+      </feMerge>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id112"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur613" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset615" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer617">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR619" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG621" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB623" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA625" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id116"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur628" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset630" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer632">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR634" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG636" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB638" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA640" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge642">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode644" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode646" />
+      </feMerge>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id117"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur649" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset651" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer653">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR655" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG657" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB659" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA661" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge663">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode665" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode667" />
+      </feMerge>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id118"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur670" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset672" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer674">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR676" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG678" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB680" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA682" />
+      </feComponentTransfer>
+    </filter>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id122"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="#000000"
+         d="M0 7.0 L7.0 0 L14.0 7.0 L7.0 14.0z"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path685" />
+    </marker>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id123"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="#000000"
+         d="M0 7.0 L7.0 0 L14.0 7.0 L7.0 14.0z"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path688" />
+    </marker>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id126"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur691" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset693" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer695">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR697" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG699" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB701" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA703" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id128"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur706" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset708" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer710">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR712" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG714" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB716" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA718" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id130"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur721" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset723" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer725">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR727" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG729" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB731" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA733" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id134"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur736" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset738" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer740">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR742" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG744" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB746" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA748" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id137"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur751" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset753" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer755">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR757" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG759" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB761" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA763" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id140"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur766" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset768" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer770">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR772" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG774" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB776" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA778" />
+      </feComponentTransfer>
+    </filter>
+    <marker
+       refX="14.0"
+       refY="7.0"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id143"
+       markerHeight="14.0"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14.0"
+       overflow="visible">
+      <path
+         fill="none"
+         d="M7.0 3.5 L14.0 7.0 L7.0 10.5"
+         stroke-width="1.0"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke="#000000"
+         id="path781" />
+    </marker>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id144"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur784" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset786" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer788">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR790" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG792" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB794" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA796" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id146"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur799" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset801" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer803">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR805" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG807" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB809" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA811" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id148"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur814" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset816" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer818">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR820" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG822" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB824" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA826" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id152"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur829" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset831" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer833">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR835" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG837" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB839" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA841" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id154"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur844" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset846" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer848">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR850" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG852" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB854" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA856" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id156"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur859" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset861" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer863">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR865" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG867" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB869" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA871" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id159"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur874" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset876" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer878">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR880" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG882" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB884" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA886" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id161"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur889" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset891" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer893">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR895" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG897" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB899" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA901" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id163"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur904" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset906" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer908">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR910" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG912" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB914" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA916" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id166"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur919" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset921" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer923">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR925" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG927" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB929" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA931" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id169"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur934" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset936" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer938">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR940" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG942" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB944" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA946" />
+      </feComponentTransfer>
+    </filter>
+    <clipPath
+       id="id51-9">
+      <path
+         d="m 0,0 157.5,0 0,53.8 -157.5,0 z"
+         id="path1497-1"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+  </defs>
+  <g
+     id="g1489-2"
+     transform="translate(1043.2701,759.79597)">
+    <path
+       id="id46-1"
+       d="M 10,0 167.5,0 157.5,10 0,10 10,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <path
+       id="id48-2"
+       d="m 157.5,10 10,-10 0,53.8 -10,10 0,-53.8 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <path
+       id="id50-5"
+       d="m 0,10 157.5,0 0,53.8 L 0,63.8 0,10 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <g
+       transform="translate(0,10)"
+       id="g1494-7">
+      <clipPath
+         id="clipPath8798">
+        <path
+           d="m 0,0 157.5,0 0,53.8 -157.5,0 z"
+           id="path8800"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         font-size="12"
+         clip-path="url(#id51-9)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="bold"
+         id="text1499-9"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+    </g>
+  </g>
+  <g
+     transform="translate(837.2701,759.79597)"
+     id="g8845">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 167.5,0 157.5,10 0,10 10,0 z"
+       id="path8847" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 157.5,10 10,-10 0,53.8 -10,10 0,-53.8 z"
+       id="path8849" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 157.5,0 0,53.8 L 0,63.8 0,10 z"
+       id="path8851" />
+    <g
+       id="g8853"
+       transform="translate(0,10)">
+      <clipPath
+         id="clipPath8855">
+        <path
+           inkscape:connector-curvature="0"
+           id="path8857"
+           d="m 0,0 157.5,0 0,53.8 -157.5,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text8859"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id51-9)"
+         font-size="12" />
+    </g>
+  </g>
+  <g
+     id="g948">
+    <g
+       transform="translate(112.0 119.10000000000002)"
+       id="g950">
+      <use
+         xlink:href="#id1"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id0)"
+         id="use952" />
+      <use
+         xlink:href="#id3"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id2)"
+         id="use954" />
+      <use
+         xlink:href="#id5"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id4)"
+         id="use956" />
+    </g>
+    <g
+       transform="translate(126.5 180.70000000000005)"
+       id="g958">
+      <use
+         xlink:href="#id8"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id7)"
+         id="use960" />
+    </g>
+    <g
+       transform="translate(344.125 180.70000000000005)"
+       id="g962">
+      <use
+         xlink:href="#id12"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id11)"
+         id="use964" />
+    </g>
+    <g
+       transform="translate(554.25 180.70000000000005)"
+       id="g966">
+      <use
+         xlink:href="#id15"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id14)"
+         id="use968" />
+    </g>
+    <g
+       transform="translate(112.0 332.20000000000005)"
+       id="g970">
+      <g
+         transform="translate(12.5 0.0)"
+         id="g972">
+        <use
+           xlink:href="#id20"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id19)"
+           id="use974" />
+      </g>
+    </g>
+    <g
+       transform="translate(126.5 252.70000000000005)"
+       id="g976">
+      <use
+         xlink:href="#id26"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id25)"
+         id="use978" />
+    </g>
+    <g
+       transform="translate(344.125 252.70000000000005)"
+       id="g980">
+      <use
+         xlink:href="#id29"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id28)"
+         id="use982" />
+    </g>
+    <g
+       transform="translate(554.25 252.70000000000005)"
+       id="g984">
+      <use
+         xlink:href="#id32"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id31)"
+         id="use986" />
+    </g>
+    <g
+       transform="translate(607.75 360.95000000000005)"
+       id="g988">
+      <use
+         xlink:href="#id35"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id34)"
+         id="use990" />
+    </g>
+    <g
+       transform="translate(838.25 119.10000000000002)"
+       id="g992">
+      <use
+         xlink:href="#id38"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id37)"
+         id="use994" />
+      <use
+         xlink:href="#id40"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id39)"
+         id="use996" />
+      <use
+         xlink:href="#id42"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id41)"
+         id="use998" />
+    </g>
+    <g
+       transform="translate(1123.0 417.59999999999997)"
+       id="g1000">
+      <g
+         transform="translate(0.0 0.0)"
+         id="g1002">
+        <use
+           xlink:href="#id46"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id45)"
+           id="use1004" />
+        <use
+           xlink:href="#id48"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id47)"
+           id="use1006" />
+        <use
+           xlink:href="#id50"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id49)"
+           id="use1008" />
+      </g>
+    </g>
+    <g
+       transform="translate(874.0 511.1)"
+       id="g1010">
+      <g
+         transform="translate(0.0 0.0)"
+         id="g1012">
+        <use
+           xlink:href="#id54"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id53)"
+           id="use1014" />
+        <use
+           xlink:href="#id56"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id55)"
+           id="use1016" />
+        <use
+           xlink:href="#id58"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id57)"
+           id="use1018" />
+      </g>
+    </g>
+    <g
+       transform="translate(958.75 300.4)"
+       id="g1020">
+      <g
+         transform="translate(0.0 0.0)"
+         id="g1022">
+        <use
+           xlink:href="#id62"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id61)"
+           id="use1024" />
+        <use
+           xlink:href="#id64"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id63)"
+           id="use1026" />
+        <use
+           xlink:href="#id66"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id65)"
+           id="use1028" />
+      </g>
+    </g>
+    <g
+       transform="translate(854.0 183.80000000000007)"
+       id="g1030">
+      <use
+         xlink:href="#id70"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id69)"
+         id="use1032" />
+    </g>
+    <g
+       transform="translate(874.0 418.85)"
+       id="g1034">
+      <g
+         transform="translate(0.0 0.0)"
+         id="g1036">
+        <use
+           xlink:href="#id79"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id78)"
+           id="use1038" />
+        <use
+           xlink:href="#id81"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id80)"
+           id="use1040" />
+        <use
+           xlink:href="#id83"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id82)"
+           id="use1042" />
+      </g>
+    </g>
+    <g
+       transform="translate(1043.75 183.80000000000007)"
+       id="g1044">
+      <use
+         xlink:href="#id87"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id86)"
+         id="use1046" />
+    </g>
+    <g
+       transform="translate(836.6212686567177 875.0)"
+       id="g1048">
+      <g
+         transform="translate(0.0 0.0)"
+         id="g1050">
+        <use
+           xlink:href="#id94"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id93)"
+           id="use1052" />
+        <use
+           xlink:href="#id96"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id95)"
+           id="use1054" />
+        <use
+           xlink:href="#id98"
+           xlink:actuate="onLoad"
+           xlink:type="simple"
+           xlink:show="embed"
+           filter="url(#id97)"
+           id="use1056" />
+      </g>
+    </g>
+    <g
+       transform="translate(947.0 657.0)"
+       id="g1058">
+      <use
+         xlink:href="#id103"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id102)"
+         id="use1060" />
+      <use
+         xlink:href="#id105"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id104)"
+         id="use1062" />
+      <use
+         xlink:href="#id107"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id106)"
+         id="use1064" />
+    </g>
+    <g
+       transform="translate(1043.5 759.9375)"
+       id="g1066">
+      <g
+         transform="translate(0.0 0.0)"
+         id="g1068">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id112)"
+           inkscape:connector-curvature="0"
+           d="m 0,10 156.5,0 0,46.7 L 0,56.7 0,10 z"
+           id="use1070" />
+      </g>
+    </g>
+    <g
+       transform="translate(837.6212686567177 759.9375)"
+       id="g1072">
+      <path
+         id="use1074"
+         d="m 0,10 157.5,0 0,46.7 L 0,56.7 0,10 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id118)" />
+    </g>
+    <g
+       transform="translate(1362.5 30.40000000000009)"
+       id="g1076">
+      <use
+         xlink:href="#id127"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id126)"
+         id="use1078" />
+      <use
+         xlink:href="#id129"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id128)"
+         id="use1080" />
+      <use
+         xlink:href="#id131"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id130)"
+         id="use1082" />
+    </g>
+    <g
+       transform="translate(1381.0 84.70000000000005)"
+       id="g1084">
+      <use
+         xlink:href="#id135"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id134)"
+         id="use1086" />
+    </g>
+    <g
+       transform="translate(1381.0 157.70000000000005)"
+       id="g1088">
+      <use
+         xlink:href="#id138"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id137)"
+         id="use1090" />
+    </g>
+    <g
+       transform="translate(1381.0 233.70000000000005)"
+       id="g1092">
+      <use
+         xlink:href="#id141"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id140)"
+         id="use1094" />
+    </g>
+    <g
+       transform="translate(1366.0 399.0)"
+       id="g1096">
+      <use
+         xlink:href="#id145"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id144)"
+         id="use1098" />
+      <use
+         xlink:href="#id147"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id146)"
+         id="use1100" />
+      <use
+         xlink:href="#id149"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id148)"
+         id="use1102" />
+    </g>
+    <g
+       transform="translate(1386.0 477.0)"
+       id="g1104">
+      <use
+         xlink:href="#id153"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id152)"
+         id="use1106" />
+      <use
+         xlink:href="#id155"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id154)"
+         id="use1108" />
+      <use
+         xlink:href="#id157"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id156)"
+         id="use1110" />
+    </g>
+    <g
+       transform="translate(1535.0 477.0)"
+       id="g1112">
+      <use
+         xlink:href="#id160"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id159)"
+         id="use1114" />
+      <use
+         xlink:href="#id162"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id161)"
+         id="use1116" />
+      <use
+         xlink:href="#id164"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id163)"
+         id="use1118" />
+    </g>
+    <g
+       transform="translate(1045.0 854.0)"
+       id="g1120">
+      <use
+         xlink:href="#id167"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id166)"
+         id="use1122" />
+    </g>
+    <g
+       transform="translate(1056.0 584.8000000000001)"
+       id="g1124">
+      <use
+         xlink:href="#id170"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id169)"
+         id="use1126" />
+    </g>
+  </g>
+  <g
+     id="g1130"
+     transform="translate(112,119.1)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 645,0 635,10 0,10 10,0 z"
+       id="id1" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 635,10 10,-10 0,700.7 -10,10 0,-700.7 z"
+       id="id3" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 635,0 0,700.7 -635,0 L 0,10 z"
+       id="id5" />
+    <g
+       id="g1135"
+       transform="translate(0,10)">
+      <clipPath
+         id="id6">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1138"
+           d="m 0,0 635,0 0,700.7 -635,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1140"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id6)"
+         font-size="12" />
+    </g>
+  </g>
+  <g
+     id="g1142"
+     transform="translate(126.5,180.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 169,0 169,60 0,60 0,0 z"
+       id="id8" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1145"
+       d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1147"
+       d="m 159,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1149">
+      <clipPath
+         id="id9">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1152"
+           d="M 0,0 169,0 169,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1154"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id9)"
+         font-size="12">
+        <tspan
+           id="tspan1156"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="59">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1158"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id9)"
+         font-size="12">
+        <tspan
+           id="tspan1160"
+           textLength="63.0"
+           y="27"
+           xml:space="preserve"
+           x="53">ROS Lib JS</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1162"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id9)"
+         font-size="12">
+        <tspan
+           id="tspan1164"
+           textLength="101.0"
+           y="55"
+           xml:space="preserve"
+           x="34">app/lib/rosbridge/*</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1166"
+     transform="translate(112,133)">
+    <clipPath
+       id="id10">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1169"
+         d="m 0,0 633.25,0 0,33 L 0,33 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1171"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id10)"
+       font-size="12">
+      <tspan
+         id="tspan1173"
+         textLength="85.0"
+         y="13"
+         xml:space="preserve"
+         x="274">«web browser»</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1175"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id10)"
+       font-size="12">
+      <tspan
+         id="tspan1177"
+         textLength="78.0"
+         y="27"
+         xml:space="preserve"
+         x="277">:WebBrowser</tspan>    </text>
+  </g>
+  <g
+     id="g1179"
+     transform="translate(344.125,180.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 169,0 169,60 0,60 0,0 z"
+       id="id12" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1182"
+       d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1184"
+       d="m 159,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1186">
+      <clipPath
+         id="id13">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1189"
+           d="M 0,0 169,0 169,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1191"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id13)"
+         font-size="12">
+        <tspan
+           id="tspan1193"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="59">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1195"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id13)"
+         font-size="12">
+        <tspan
+           id="tspan1197"
+           textLength="123.0"
+           y="27"
+           xml:space="preserve"
+           x="23">MonoSpaced QRCode</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1199"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id13)"
+         font-size="12">
+        <tspan
+           id="tspan1201"
+           textLength="91.0"
+           y="55"
+           xml:space="preserve"
+           x="39">app/lib/qrcode.js</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1203"
+     transform="translate(554.25,180.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 169,0 169,60 0,60 0,0 z"
+       id="id15" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1206"
+       d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1208"
+       d="m 159,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1210">
+      <clipPath
+         id="id16">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1213"
+           d="M 0,0 169,0 169,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1215"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id16)"
+         font-size="12">
+        <tspan
+           id="tspan1217"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="59">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1219"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id16)"
+         font-size="12">
+        <tspan
+           id="tspan1221"
+           textLength="47.0"
+           y="27"
+           xml:space="preserve"
+           x="61">VideoJS</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1223"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id16)"
+         font-size="12">
+        <tspan
+           id="tspan1225"
+           textLength="87.0"
+           y="55"
+           xml:space="preserve"
+           x="41">app/lib/videojs/*</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1227"
+     transform="translate(112,332.2)">
+    <g
+       id="g1229"
+       transform="translate(12.5,0)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id17)"
+         inkscape:connector-curvature="0"
+         id="path1231"
+         d="m 10,0 588.75,0 -10,10 L 0,10 10,0 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id18)"
+         inkscape:connector-curvature="0"
+         id="path1233"
+         d="m 588.75,10 10,-10 0,455.1 -10,10 0,-455.1 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,10 588.75,0 0,455.1 L 0,465.1 0,10 z"
+         id="id20" />
+      <g
+         id="g1236"
+         transform="translate(0,10)">
+        <clipPath
+           id="id21">
+          <path
+             inkscape:connector-curvature="0"
+             id="path1239"
+             d="m 0,0 588.75,0 0,455.1 -588.75,0 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1241"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id21)"
+           font-size="12" />
+      </g>
+    </g>
+    <g
+       id="g1243"
+       transform="translate(0,12.1)">
+      <clipPath
+         id="id22">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1246"
+           d="m 0,0 599.25,0 0,33 L 0,33 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1248"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id22)"
+         font-size="12">
+        <tspan
+           id="tspan1250"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="274">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1252"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id22)"
+         font-size="12">
+        <tspan
+           id="tspan1254"
+           textLength="137.0"
+           y="27"
+           xml:space="preserve"
+           x="231">Flango Content Manager</tspan>      </text>
+    </g>
+    <g
+       id="g1256"
+       transform="translate(33,65.1)">
+      <clipPath
+         id="id23">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1259"
+           d="m 0,0 315.25,0 0,387 L 0,387 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'"
+         id="text1261"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id23)"
+         font-size="12">
+        <tspan
+           id="tspan1263"
+           textLength="49.0"
+           y="13"
+           xml:space="preserve"
+           x="2">├── css</tspan>        <tspan
+           id="tspan1265"
+           textLength="105.0"
+           y="27"
+           xml:space="preserve"
+           x="2">│   ├── app.css</tspan>        <tspan
+           id="tspan1267"
+           textLength="147.0"
+           y="41"
+           xml:space="preserve"
+           x="2">│   └── normalize.css</tspan>        <tspan
+           id="tspan1269"
+           textLength="154.0"
+           y="55"
+           xml:space="preserve"
+           x="2">├── flashCallback.html</tspan>        <tspan
+           id="tspan1271"
+           textLength="49.0"
+           y="69"
+           xml:space="preserve"
+           x="2">├── img</tspan>        <tspan
+           id="tspan1273"
+           textLength="98.0"
+           y="83"
+           xml:space="preserve"
+           x="2">├── index.html</tspan>        <tspan
+           id="tspan1275"
+           textLength="42.0"
+           y="97"
+           xml:space="preserve"
+           x="2">├── js</tspan>        <tspan
+           id="tspan1277"
+           textLength="98.0"
+           y="111"
+           xml:space="preserve"
+           x="2">│   ├── app.js</tspan>        <tspan
+           id="tspan1279"
+           textLength="154.0"
+           y="125"
+           xml:space="preserve"
+           x="2">│   ├── controllers.js</tspan>        <tspan
+           id="tspan1281"
+           textLength="126.0"
+           y="139"
+           xml:space="preserve"
+           x="2">│   ├── directives</tspan>        <tspan
+           id="tspan1283"
+           textLength="189.0"
+           y="153"
+           xml:space="preserve"
+           x="2">│   │   ├── reemi.entity.js</tspan>        <tspan
+           id="tspan1285"
+           textLength="189.0"
+           y="167"
+           xml:space="preserve"
+           x="2">│   │   ├── reemi.screen.js</tspan>        <tspan
+           id="tspan1287"
+           textLength="238.0"
+           y="181"
+           xml:space="preserve"
+           x="2">│   │   ├── reemi.theme.default.js</tspan>        <tspan
+           id="tspan1289"
+           textLength="231.0"
+           y="195"
+           xml:space="preserve"
+           x="2">│   │   ├── reemi.uicomponents.js</tspan>        <tspan
+           id="tspan1291"
+           textLength="161.0"
+           y="209"
+           xml:space="preserve"
+           x="2">│   │   ├── reemi.ui.js</tspan>        <tspan
+           id="tspan1293"
+           textLength="182.0"
+           y="223"
+           xml:space="preserve"
+           x="2">│   │   └── reemi.utils.js</tspan>        <tspan
+           id="tspan1295"
+           textLength="126.0"
+           y="237"
+           xml:space="preserve"
+           x="2">│   ├── filters.js</tspan>        <tspan
+           id="tspan1297"
+           textLength="112.0"
+           y="251"
+           xml:space="preserve"
+           x="2">│   └── services</tspan>        <tspan
+           id="tspan1299"
+           textLength="189.0"
+           y="265"
+           xml:space="preserve"
+           x="2">│       ├── palROSBridge.js</tspan>        <tspan
+           id="tspan1301"
+           textLength="189.0"
+           y="279"
+           xml:space="preserve"
+           x="2">│       ├── popupservice.js</tspan>        <tspan
+           id="tspan1303"
+           textLength="301.0"
+           y="293"
+           xml:space="preserve"
+           x="2">│       ├── reemi.services.palProperties.js</tspan>        <tspan
+           id="tspan1305"
+           textLength="287.0"
+           y="307"
+           xml:space="preserve"
+           x="2">│       ├── reemi.services.palSettings.js</tspan>        <tspan
+           id="tspan1307"
+           textLength="252.0"
+           y="321"
+           xml:space="preserve"
+           x="2">│       └── reemi.services.palUri.js</tspan>        <tspan
+           id="tspan1309"
+           textLength="49.0"
+           y="335"
+           xml:space="preserve"
+           x="2">├── lib</tspan>        <tspan
+           id="tspan1311"
+           textLength="77.0"
+           y="349"
+           xml:space="preserve"
+           x="2">├── screens</tspan>        <tspan
+           id="tspan1313"
+           textLength="133.0"
+           y="363"
+           xml:space="preserve"
+           x="2">│   ├── default.xml</tspan>      </text>
+    </g>
+    <g
+       id="g1315"
+       transform="translate(337,73.1)">
+      <clipPath
+         id="id24">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1318"
+           d="m 0,0 241.81063,0 0,379 L 0,379 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'"
+         id="text1320"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id24)"
+         font-size="12">
+        <tspan
+           id="tspan1322"
+           textLength="63.0"
+           y="13"
+           xml:space="preserve"
+           x="2">└── theme</tspan>        <tspan
+           id="tspan1324"
+           textLength="105.0"
+           y="27"
+           xml:space="preserve"
+           x="2">    └── default</tspan>        <tspan
+           id="tspan1326"
+           textLength="196.0"
+           y="41"
+           xml:space="preserve"
+           x="2">        ├── arabicButton.xml</tspan>        <tspan
+           id="tspan1328"
+           textLength="182.0"
+           y="55"
+           xml:space="preserve"
+           x="2">        ├── backButton.xml</tspan>        <tspan
+           id="tspan1330"
+           textLength="182.0"
+           y="69"
+           xml:space="preserve"
+           x="2">        ├── baseButton.xml</tspan>        <tspan
+           id="tspan1332"
+           textLength="175.0"
+           y="83"
+           xml:space="preserve"
+           x="2">        ├── bigButton.xml</tspan>        <tspan
+           id="tspan1334"
+           textLength="196.0"
+           y="97"
+           xml:space="preserve"
+           x="2">        ├── cameraButton.xml</tspan>        <tspan
+           id="tspan1336"
+           textLength="196.0"
+           y="111"
+           xml:space="preserve"
+           x="2">        ├── configButton.xml</tspan>        <tspan
+           id="tspan1338"
+           textLength="105.0"
+           y="125"
+           xml:space="preserve"
+           x="2">        ├── css</tspan>        <tspan
+           id="tspan1340"
+           textLength="140.0"
+           y="139"
+           xml:space="preserve"
+           x="2">        │   ├── scss</tspan>        <tspan
+           id="tspan1342"
+           textLength="196.0"
+           y="153"
+           xml:space="preserve"
+           x="2">        │   │   ├── main.css</tspan>        <tspan
+           id="tspan1344"
+           textLength="217.0"
+           y="167"
+           xml:space="preserve"
+           x="2">        │   └── ui-defaults.css</tspan>        <tspan
+           id="tspan1346"
+           textLength="203.0"
+           y="181"
+           xml:space="preserve"
+           x="2">        ├── englishButton.xml</tspan>        <tspan
+           id="tspan1348"
+           textLength="203.0"
+           y="195"
+           xml:space="preserve"
+           x="2">        ├── forwardButton.xml</tspan>        <tspan
+           id="tspan1350"
+           textLength="182.0"
+           y="209"
+           xml:space="preserve"
+           x="2">        ├── homeButton.xml</tspan>        <tspan
+           id="tspan1352"
+           textLength="105.0"
+           y="223"
+           xml:space="preserve"
+           x="2">        ├── img</tspan>        <tspan
+           id="tspan1354"
+           textLength="182.0"
+           y="237"
+           xml:space="preserve"
+           x="2">        ├── infoButton.xml</tspan>        <tspan
+           id="tspan1356"
+           textLength="196.0"
+           y="251"
+           xml:space="preserve"
+           x="2">        ├── koreanButton.xml</tspan>        <tspan
+           id="tspan1358"
+           textLength="210.0"
+           y="265"
+           xml:space="preserve"
+           x="2">        ├── languageButton.xml</tspan>        <tspan
+           id="tspan1360"
+           textLength="217.0"
+           y="279"
+           xml:space="preserve"
+           x="2">        ├── leftArrowButton.xml</tspan>        <tspan
+           id="tspan1362"
+           textLength="140.0"
+           y="293"
+           xml:space="preserve"
+           x="2">        ├── line.xml</tspan>        <tspan
+           id="tspan1364"
+           textLength="182.0"
+           y="307"
+           xml:space="preserve"
+           x="2">        ├── listButton.xml</tspan>        <tspan
+           id="tspan1366"
+           textLength="182.0"
+           y="321"
+           xml:space="preserve"
+           x="2">        ├── nextButton.xml</tspan>        <tspan
+           id="tspan1368"
+           textLength="210.0"
+           y="335"
+           xml:space="preserve"
+           x="2">        ├── reemBodyButton.xml</tspan>        <tspan
+           id="tspan1370"
+           textLength="182.0"
+           y="349"
+           xml:space="preserve"
+           x="2">        ├── reemButton.xml</tspan>        <tspan
+           id="tspan1372"
+           textLength="224.0"
+           y="363"
+           xml:space="preserve"
+           x="2">        ├── rightArrowButton.xml</tspan>        <tspan
+           id="tspan1374"
+           textLength="189.0"
+           y="377"
+           xml:space="preserve"
+           x="2">        └── videoButton.xml</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1376"
+     transform="translate(126.5,252.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 169,0 169,60 0,60 0,0 z"
+       id="id26" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1379"
+       d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1381"
+       d="m 159,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1383">
+      <clipPath
+         id="id27">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1386"
+           d="M 0,0 169,0 169,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1388"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id27)"
+         font-size="12">
+        <tspan
+           id="tspan1390"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="59">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1392"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id27)"
+         font-size="12">
+        <tspan
+           id="tspan1394"
+           textLength="59.0"
+           y="27"
+           xml:space="preserve"
+           x="55">AngularJS</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1396"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id27)"
+         font-size="12">
+        <tspan
+           id="tspan1398"
+           textLength="90.0"
+           y="55"
+           xml:space="preserve"
+           x="39">app/lib/angular/*</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1400"
+     transform="translate(344.125,252.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 169,0 169,60 0,60 0,0 z"
+       id="id29" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1403"
+       d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1405"
+       d="m 159,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1407">
+      <clipPath
+         id="id30">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1410"
+           d="M 0,0 169,0 169,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1412"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id30)"
+         font-size="12">
+        <tspan
+           id="tspan1414"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="59">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1416"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id30)"
+         font-size="12">
+        <tspan
+           id="tspan1418"
+           textLength="37.0"
+           y="27"
+           xml:space="preserve"
+           x="66">jQuery</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1420"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id30)"
+         font-size="12">
+        <tspan
+           id="tspan1422"
+           textLength="81.0"
+           y="55"
+           xml:space="preserve"
+           x="44">app/lib/jquery/*</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1424"
+     transform="translate(554.25,252.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 169,0 169,60 0,60 0,0 z"
+       id="id32" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1427"
+       d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1429"
+       d="m 159,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1431">
+      <clipPath
+         id="id33">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1434"
+           d="M 0,0 169,0 169,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1436"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id33)"
+         font-size="12">
+        <tspan
+           id="tspan1438"
+           textLength="50.0"
+           y="20"
+           xml:space="preserve"
+           x="59">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1440"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id33)"
+         font-size="12">
+        <tspan
+           id="tspan1442"
+           textLength="63.0"
+           y="34"
+           xml:space="preserve"
+           x="53">SWFObject</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1444"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id33)"
+         font-size="12">
+        <tspan
+           id="tspan1446"
+           textLength="100.0"
+           y="48"
+           xml:space="preserve"
+           x="34">app/lib/swfobject/*</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1448"
+     transform="translate(607.75,360.95)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,0 127.5,0 10,10 0,14 L 0,24 0,0 z"
+       id="id35" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1451"
+       d="m 127.5,0 10,10 -10,0 0,-10 z" />
+    <g
+       id="g1453"
+       transform="translate(5,0)">
+      <clipPath
+         id="id36">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1456"
+           d="m 0,0 127.5,0 0,24 L 0,24 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1458"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id36)"
+         font-size="12">
+        <tspan
+           id="tspan1460"
+           textLength="111.0"
+           y="13"
+           xml:space="preserve"
+           x="2">Project of this thesis</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1462"
+     transform="translate(838.25,119.1)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 410.5,0 400.5,10 0,10 10,0 z"
+       id="id38" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 400.5,10 10,-10 0,127.7 -10,10 0,-127.7 z"
+       id="id40" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 400.5,0 0,127.7 L 0,137.7 0,10 z"
+       id="id42" />
+    <g
+       id="g1467"
+       transform="translate(0,10)">
+      <clipPath
+         id="id43">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1470"
+           d="m 0,0 400.5,0 0,127.7 -400.5,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1472"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id43)"
+         font-size="12" />
+    </g>
+  </g>
+  <g
+     id="g1474"
+     transform="translate(838.25,134)">
+    <clipPath
+       id="id44">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1477"
+         d="m 0,0 397.12127,0 0,39.187299 -397.12127,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1479"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id44)"
+       font-size="12">
+      <tspan
+         id="tspan1481"
+         textLength="49.0"
+         y="13"
+         xml:space="preserve"
+         x="174">«device»</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1483"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id44)"
+       font-size="12">
+      <tspan
+         id="tspan1485"
+         textLength="93.0"
+         y="27"
+         xml:space="preserve"
+         x="152">:MediaComputer</tspan>    </text>
+  </g>
+  <g
+     id="g1489"
+     transform="translate(1123,417.6)">
+    <path
+       id="id46"
+       d="M 10,0 167.5,0 157.5,10 0,10 10,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <path
+       id="id48"
+       d="m 157.5,10 10,-10 0,53.8 -10,10 0,-53.8 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <path
+       id="id50"
+       d="m 0,10 157.5,0 0,53.8 L 0,63.8 0,10 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <g
+       transform="translate(0,10)"
+       id="g1494">
+      <clipPath
+         id="id51">
+        <path
+           d="m 0,0 157.5,0 0,53.8 -157.5,0 z"
+           id="path1497"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         font-size="12"
+         clip-path="url(#id51)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="bold"
+         id="text1499"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+    </g>
+  </g>
+  <g
+     transform="translate(1128.1145,438.98637)"
+     id="g1501">
+    <clipPath
+       id="id52">
+      <path
+         d="m 0,0 148.86132,0 0,34.980512 -148.86132,0 z"
+         id="path1504"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <text
+       font-size="12"
+       clip-path="url(#id52)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="normal"
+       id="text1506"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="7"
+         xml:space="preserve"
+         y="13"
+         textLength="135.0"
+         id="tspan1508">«executionEnvironment»</tspan>    </text>
+    <text
+       font-size="12"
+       clip-path="url(#id52)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       id="text1510"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="20"
+         xml:space="preserve"
+         y="27"
+         textLength="109.0"
+         id="tspan1512">:ROS Bridge Server</tspan>    </text>
+  </g>
+  <g
+     id="g1514"
+     transform="translate(874,511.1)">
+    <g
+       id="g1516">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 10,0 169.5,0 159.5,10 0,10 10,0 z"
+         id="id54" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 159.5,10 10,-10 0,46.7 -10,10 0,-46.7 z"
+         id="id56" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,10 159.5,0 0,46.7 L 0,56.7 0,10 z"
+         id="id58" />
+      <g
+         id="g1521"
+         transform="translate(0,10)">
+        <clipPath
+           id="id59">
+          <path
+             inkscape:connector-curvature="0"
+             id="path1524"
+             d="m 0,0 159.5,0 0,46.7 -159.5,0 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1526"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id59)"
+           font-size="12" />
+      </g>
+    </g>
+    <g
+       id="g1528"
+       transform="translate(0,17.712969)">
+      <clipPath
+         id="id60">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1531"
+           d="m 0,0 157.28378,0 0,30.523654 -157.28378,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1533"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id60)"
+         font-size="12">
+        <tspan
+           id="tspan1535"
+           textLength="135.0"
+           y="13"
+           xml:space="preserve"
+           x="11">«executionEnvironment»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1537"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id60)"
+         font-size="12">
+        <tspan
+           id="tspan1539"
+           textLength="60.0"
+           y="27"
+           xml:space="preserve"
+           x="48">:SQLite DB</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1541"
+     transform="translate(958.75,300.4)">
+    <g
+       id="g1543">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 10,0 169.5,0 159.5,10 0,10 10,0 z"
+         id="id62" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 159.5,10 10,-10 0,46.7 -10,10 0,-46.7 z"
+         id="id64" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,10 159.5,0 0,46.7 L 0,56.7 0,10 z"
+         id="id66" />
+      <g
+         id="g1548"
+         transform="translate(0,10)">
+        <clipPath
+           id="id67">
+          <path
+             inkscape:connector-curvature="0"
+             id="path1551"
+             d="m 0,0 159.5,0 0,46.7 -159.5,0 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1553"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id67)"
+           font-size="12" />
+      </g>
+    </g>
+    <g
+       id="g1555"
+       transform="translate(0,13.9)">
+      <clipPath
+         id="id68">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1558"
+           d="m 0,0 169.5,0 0,33 L 0,33 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1560"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id68)"
+         font-size="12">
+        <tspan
+           id="tspan1562"
+           textLength="85.0"
+           y="13"
+           xml:space="preserve"
+           x="42">«web browser»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1564"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id68)"
+         font-size="12">
+        <tspan
+           id="tspan1566"
+           textLength="78.0"
+           y="27"
+           xml:space="preserve"
+           x="46">:WebBrowser</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1568"
+     transform="translate(854,183.8)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,0 179.31063,0 0,60 L 0,60 0,0 z"
+       id="id70" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1571"
+       d="m 159.31063,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1573"
+       d="m 169.31063,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1575">
+      <clipPath
+         id="id71">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1578"
+           d="m 0,0 179.31063,0 0,60 L 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1580"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id71)"
+         font-size="12">
+        <tspan
+           id="tspan1582"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="64">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1584"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id71)"
+         font-size="12">
+        <tspan
+           id="tspan1586"
+           textLength="87.0"
+           y="27"
+           xml:space="preserve"
+           x="46">robotBehaviour</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1588"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id71)"
+         font-size="12">
+        <tspan
+           id="tspan1590"
+           textLength="164.0"
+           y="55"
+           xml:space="preserve"
+           x="7">/mnt_flash/bin/robotBehaviour</tspan>      </text>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id72)"
+     inkscape:connector-curvature="0"
+     id="path1592"
+     d="m 1043.5,300.4 0,-43.6" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id73)"
+     inkscape:connector-curvature="0"
+     id="path1594"
+     d="m 916.375,418.85 0,-81.025 24.5,0 0,-81.025" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id74)"
+     inkscape:connector-curvature="0"
+     id="path1596"
+     d="m 1206.75,417.6 0,-124.4 -60.625,0 0,-36.4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path1598"
+     d="m 1128.25,328.75 36.625,0 0,88.85" />
+  <g
+     id="g1600"
+     transform="translate(965.81063,380.375)">
+    <clipPath
+       id="id75">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1603"
+         d="m 0,0 53,0 0,23.45 -53,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1605"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id75)"
+       font-size="12">
+      <tspan
+         id="tspan1607"
+         textLength="34.0"
+         y="13"
+         xml:space="preserve"
+         x="2">«http»</tspan>    </text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path1609"
+     d="m 1001.125,357.1 0,61.75" />
+  <g
+     id="g1611"
+     transform="translate(1086.25,383.925)">
+    <clipPath
+       id="id76">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1614"
+         d="m 0,0 84,0 0,16.35 -84,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1616"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id76)"
+       font-size="12">
+      <tspan
+         id="tspan1618"
+         textLength="73.0"
+         y="13"
+         xml:space="preserve"
+         x="2">«websocket»</tspan>    </text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path1620"
+     d="m 1206.75,481.4 0,58.05 -163.25,0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id77)"
+     inkscape:connector-curvature="0"
+     id="path1622"
+     d="m 874,539.45 -60.75,0 0,-317.075 25,0" />
+  <g
+     id="g1624"
+     transform="translate(874,418.85)">
+    <g
+       id="g1626">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 10,0 169.5,0 159.5,10 0,10 10,0 z"
+         id="id79" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 159.5,10 10,-10 0,51.3 -10,10 0,-51.3 z"
+         id="id81" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,10 159.5,0 0,51.3 L 0,61.3 0,10 z"
+         id="id83" />
+      <g
+         id="g1631"
+         transform="translate(0,10)">
+        <clipPath
+           id="id84">
+          <path
+             inkscape:connector-curvature="0"
+             id="path1634"
+             d="m 0,0 159.5,0 0,51.3 -159.5,0 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1636"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id84)"
+           font-size="12" />
+      </g>
+    </g>
+    <g
+       id="g1638"
+       transform="translate(0,18.15)">
+      <clipPath
+         id="id85">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1641"
+           d="m 0,0 156.5,0 0,33 L 0,33 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1643"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id85)"
+         font-size="12">
+        <tspan
+           id="tspan1645"
+           textLength="135.0"
+           y="13"
+           xml:space="preserve"
+           x="10">«executionEnvironment»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1647"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id85)"
+         font-size="12">
+        <tspan
+           id="tspan1649"
+           textLength="116.0"
+           y="27"
+           xml:space="preserve"
+           x="20">:WebServer Lighttpd</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1651"
+     transform="translate(1043.75,183.8)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,0 179.31063,0 0,60 L 0,60 0,0 z"
+       id="id87" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1654"
+       d="m 159.31063,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1656"
+       d="m 169.31063,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1658">
+      <clipPath
+         id="id88">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1661"
+           d="m 0,0 179.31063,0 0,60 L 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1663"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id88)"
+         font-size="12">
+        <tspan
+           id="tspan1665"
+           textLength="50.0"
+           y="27"
+           xml:space="preserve"
+           x="64">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1667"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id88)"
+         font-size="12">
+        <tspan
+           id="tspan1669"
+           textLength="25.0"
+           y="41"
+           xml:space="preserve"
+           x="77">ROS</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1671"
+     transform="translate(811,206.1)">
+    <clipPath
+       id="id89">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1674"
+         d="m 0,0 27.25,0 0,29.7 -27.25,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1676"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id89)"
+       font-size="12">
+      <tspan
+         id="tspan1678"
+         textLength="7.0"
+         y="13"
+         xml:space="preserve"
+         x="2">1</tspan>    </text>
+  </g>
+  <g
+     id="g1680"
+     transform="translate(1164.25,263.3)">
+    <clipPath
+       id="id90">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1683"
+         d="m 0,0 12,0 0,18.85 -12,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1685"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id90)"
+       font-size="12">
+      <tspan
+         id="tspan1687"
+         textLength="7.0"
+         y="13"
+         xml:space="preserve"
+         x="2">1</tspan>    </text>
+  </g>
+  <g
+     id="g1689"
+     transform="translate(1052,263.3)">
+    <clipPath
+       id="id91">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1692"
+         d="m 0,0 12,0 0,18.85 -12,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1694"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id91)"
+       font-size="12">
+      <tspan
+         id="tspan1696"
+         textLength="7.0"
+         y="13"
+         xml:space="preserve"
+         x="2">1</tspan>    </text>
+  </g>
+  <g
+     id="g1698"
+     transform="translate(943.65532,272.725)">
+    <clipPath
+       id="id92">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1701"
+         d="m 0,0 12,0 0,18.85 -12,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1703"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id92)"
+       font-size="12">
+      <tspan
+         id="tspan1705"
+         textLength="7.0"
+         y="13"
+         xml:space="preserve"
+         x="2">1</tspan>    </text>
+  </g>
+  <g
+     id="g1707"
+     transform="translate(836.62127,875)">
+    <g
+       id="g1709">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 10,0 169.5,0 159.5,10 0,10 10,0 z"
+         id="id94" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 159.5,10 10,-10 0,46.7 -10,10 0,-46.7 z"
+         id="id96" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,10 159.5,0 0,46.7 L 0,56.7 0,10 z"
+         id="id98" />
+      <g
+         id="g1714"
+         transform="translate(0,10)">
+        <clipPath
+           id="id99">
+          <path
+             inkscape:connector-curvature="0"
+             id="path1717"
+             d="m 0,0 159.5,0 0,46.7 -159.5,0 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1719"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id99)"
+           font-size="12" />
+      </g>
+    </g>
+    <g
+       id="g1721"
+       transform="translate(0,13.9)">
+      <clipPath
+         id="id100">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1724"
+           d="m 0,0 169.5,0 0,33 L 0,33 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1726"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id100)"
+         font-size="12">
+        <tspan
+           id="tspan1728"
+           textLength="85.0"
+           y="13"
+           xml:space="preserve"
+           x="42">«web browser»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1730"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id100)"
+         font-size="12">
+        <tspan
+           id="tspan1732"
+           textLength="78.0"
+           y="27"
+           xml:space="preserve"
+           x="46">:WebBrowser</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1734"
+     transform="translate(884,835.2125)">
+    <clipPath
+       id="id101">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1737"
+         d="m 0,0 53,0 0,23.45 -53,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1739"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id101)"
+       font-size="12">
+      <tspan
+         id="tspan1741"
+         textLength="34.0"
+         y="13"
+         xml:space="preserve"
+         x="2">«http»</tspan>    </text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.94282103;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path1743"
+     d="m 921.37127,823.1209 0,51.8791" />
+  <g
+     id="g1745"
+     transform="translate(947,657)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 10,0 146.75,0 -10,10 L 0,10 10,0 z"
+       id="id103" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 146.75,10 10,-10 0,50.7 -10,10 0,-50.7 z"
+       id="id105" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 146.75,0 0,50.7 L 0,60.7 0,10 z"
+       id="id107" />
+    <g
+       id="g1750"
+       transform="translate(0,10)">
+      <clipPath
+         id="id108">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1753"
+           d="m 0,0 146.75,0 0,50.7 L 0,50.7 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1755"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id108)"
+         font-size="12" />
+    </g>
+  </g>
+  <g
+     id="g1757"
+     transform="translate(947,671.5127)">
+    <clipPath
+       id="id109">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1760"
+         d="m 0,0 145.12127,0 0,39.187299 -145.12127,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1762"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id109)"
+       font-size="12">
+      <tspan
+         id="tspan1764"
+         textLength="49.0"
+         y="13"
+         xml:space="preserve"
+         x="48">«device»</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1766"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id109)"
+       font-size="12">
+      <tspan
+         id="tspan1768"
+         textLength="71.0"
+         y="27"
+         xml:space="preserve"
+         x="37">:Basestation</tspan>    </text>
+  </g>
+  <g
+     transform="translate(1049.5,779.65047)"
+     id="g1786">
+    <clipPath
+       id="id115">
+      <path
+         d="m 0,0 154.5,0 0,30.523654 -154.5,0 z"
+         id="path1789"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <text
+       font-size="12"
+       clip-path="url(#id115)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="normal"
+       id="text1791"
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="9"
+         xml:space="preserve"
+         y="13"
+         textLength="135.0"
+         id="tspan1793">«executionEnvironment»</tspan>    </text>
+    <text
+       font-size="12"
+       clip-path="url(#id115)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       id="text1795"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="41"
+         xml:space="preserve"
+         y="27"
+         textLength="72.0"
+         id="tspan1797">:PostgreSQL</tspan>    </text>
+  </g>
+  <g
+     id="g1813"
+     transform="translate(842.73577,778.94388)">
+    <clipPath
+       id="id121">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1816"
+         d="m 0,0 148.86132,0 0,35.087697 -148.86132,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1818"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id121)"
+       font-size="12">
+      <tspan
+         id="tspan1820"
+         textLength="135.0"
+         y="13"
+         xml:space="preserve"
+         x="7">«executionEnvironment»</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1822"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id121)"
+       font-size="12">
+      <tspan
+         id="tspan1824"
+         textLength="120.0"
+         y="27"
+         xml:space="preserve"
+         x="14">:WebServer Apache2</tspan>    </text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id122)"
+     inkscape:connector-curvature="0"
+     id="path1826"
+     d="m 921.37127,759.9375 0,-21.11875 64.81623,0 0,-21.11875" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id123)"
+     inkscape:connector-curvature="0"
+     id="path1828"
+     d="m 1129.3601,759.9375 0,-21.11875 -64.7976,0 0,-21.11875" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path1830"
+     d="m 1005.1213,788.2875 38.3787,0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path1832"
+     d="m 958.75,480.15 2.65718,30.95" />
+  <g
+     id="g1834"
+     transform="translate(1076,720)">
+    <clipPath
+       id="id124">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1837"
+         d="m 0,0 12,0 0,18.85 -12,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1839"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id124)"
+       font-size="12">
+      <tspan
+         id="tspan1841"
+         textLength="7.0"
+         y="13"
+         xml:space="preserve"
+         x="2">1</tspan>    </text>
+  </g>
+  <g
+     id="g1843"
+     transform="translate(963,720)">
+    <clipPath
+       id="id125">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1846"
+         d="m 0,0 12,0 0,18.85 -12,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1848"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id125)"
+       font-size="12">
+      <tspan
+         id="tspan1850"
+         textLength="7.0"
+         y="13"
+         xml:space="preserve"
+         x="2">1</tspan>    </text>
+  </g>
+  <g
+     id="g1852"
+     transform="translate(1362.5,30.4)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 312.5,0 302.5,10 0,10 10,0 z"
+       id="id127" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 302.5,10 10,-10 0,272.3 -10,10 0,-272.3 z"
+       id="id129" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 302.5,0 0,272.3 L 0,282.3 0,10 z"
+       id="id131" />
+    <g
+       id="g1857"
+       transform="translate(0,10)">
+      <clipPath
+         id="id132">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1860"
+           d="m 0,0 302.5,0 0,272.3 -302.5,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1862"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id132)"
+         font-size="12" />
+    </g>
+  </g>
+  <g
+     id="g1864"
+     transform="translate(1362.5,45)">
+    <clipPath
+       id="id133">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1867"
+         d="m 0,0 300.5,0 0,33 L 0,33 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1869"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id133)"
+       font-size="12">
+      <tspan
+         id="tspan1871"
+         textLength="135.0"
+         y="13"
+         xml:space="preserve"
+         x="82">«executionEnvironment»</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1873"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id133)"
+       font-size="12">
+      <tspan
+         id="tspan1875"
+         textLength="67.0"
+         y="27"
+         xml:space="preserve"
+         x="116">:WebServer</tspan>    </text>
+  </g>
+  <g
+     id="g1877"
+     transform="translate(1381,84.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,0 255.5,0 0,60 L 0,60 0,0 z"
+       id="id135" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1880"
+       d="m 235.5,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1882"
+       d="m 245.5,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1884">
+      <clipPath
+         id="id136">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1887"
+           d="m 0,0 255.5,0 0,60 L 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1889"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id136)"
+         font-size="12">
+        <tspan
+           id="tspan1891"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="103">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1893"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id136)"
+         font-size="12">
+        <tspan
+           id="tspan1895"
+           textLength="120.0"
+           y="27"
+           xml:space="preserve"
+           x="68">Flango Backend (API)</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1897"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id136)"
+         font-size="12">
+        <tspan
+           id="tspan1899"
+           textLength="115.0"
+           y="55"
+           xml:space="preserve"
+           x="70">/mnt_flash/pal/flango</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1901"
+     transform="translate(1381,157.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 254,0 254,60 0,60 0,0 z"
+       id="id138" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1904"
+       d="m 234,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1906"
+       d="m 244,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1908">
+      <clipPath
+         id="id139">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1911"
+           d="M 0,0 254,0 254,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1913"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id139)"
+         font-size="12">
+        <tspan
+           id="tspan1915"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="102">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1917"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id139)"
+         font-size="12">
+        <tspan
+           id="tspan1919"
+           textLength="90.0"
+           y="27"
+           xml:space="preserve"
+           x="82">Flango Frontend</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1921"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id139)"
+         font-size="12">
+        <tspan
+           id="tspan1923"
+           textLength="234.0"
+           y="55"
+           xml:space="preserve"
+           x="10">/mnt_flash/srv/contents/frontend/index.html</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1925"
+     transform="translate(1381,233.7)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 0,0 254,0 254,60 0,60 0,0 z"
+       id="id141" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1928"
+       d="m 234,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path1930"
+       d="m 244,5 5,5 -5,0 0,-5 z" />
+    <g
+       id="g1932">
+      <clipPath
+         id="id142">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1935"
+           d="M 0,0 254,0 254,60 0,60 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1937"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id142)"
+         font-size="12">
+        <tspan
+           id="tspan1939"
+           textLength="50.0"
+           y="13"
+           xml:space="preserve"
+           x="102">«artifact»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1941"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id142)"
+         font-size="12">
+        <tspan
+           id="tspan1943"
+           textLength="124.0"
+           y="27"
+           xml:space="preserve"
+           x="65">Flango Screens Editor</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1945"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id142)"
+         font-size="12">
+        <tspan
+           id="tspan1947"
+           textLength="190.0"
+           y="55"
+           xml:space="preserve"
+           x="32">/mnt_flash/srv/contents/Flango.swf</tspan>      </text>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3;marker-end:url(#id143)"
+     inkscape:connector-curvature="0"
+     id="path1949"
+     d="m 1635,187.7 17,0 0,76 -17,0" />
+  <g
+     id="g1951"
+     transform="translate(1366,399)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 323.5,0 313.5,10 0,10 10,0 z"
+       id="id145" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 313.5,10 10,-10 0,146.7 -10,10 0,-146.7 z"
+       id="id147" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 313.5,0 0,146.7 L 0,156.7 0,10 z"
+       id="id149" />
+    <g
+       id="g1956"
+       transform="translate(0,10)">
+      <clipPath
+         id="id150">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1959"
+           d="m 0,0 313.5,0 0,146.7 -313.5,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1961"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id150)"
+         font-size="12" />
+    </g>
+  </g>
+  <g
+     id="g1963"
+     transform="translate(1366,413.9)">
+    <clipPath
+       id="id151">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1966"
+         d="m 0,0 309,0 0,50.187299 -309,0 z" />
+    </clipPath>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1968"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id151)"
+       font-size="12">
+      <tspan
+         id="tspan1970"
+         textLength="49.0"
+         y="13"
+         xml:space="preserve"
+         x="130">«device»</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1972"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id151)"
+       font-size="12">
+      <tspan
+         id="tspan1974"
+         textLength="35.0"
+         y="27"
+         xml:space="preserve"
+         x="137">:REEM</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text1976"
+       font-weight="normal"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id151)"
+       font-size="12">
+      <tspan
+         id="tspan1978"
+         textLength="100.0"
+         y="41"
+         xml:space="preserve"
+         x="104">{OS: Ubunu Linux}</tspan>    </text>
+  </g>
+  <g
+     id="g1980"
+     transform="translate(1386,477)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 131,0 121,10 0,10 10,0 z"
+       id="id153" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 121,10 10,-10 0,52.35 -10,10 0,-52.35 z"
+       id="id155" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 121,0 0,52.35 -121,0 L 0,10 z"
+       id="id157" />
+    <g
+       id="g1985"
+       transform="translate(0,10)">
+      <clipPath
+         id="id158">
+        <path
+           inkscape:connector-curvature="0"
+           id="path1988"
+           d="m 0,0 121,0 0,52.35 -121,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1990"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id158)"
+         font-size="12">
+        <tspan
+           id="tspan1992"
+           textLength="49.0"
+           y="23.174999"
+           xml:space="preserve"
+           x="36">«device»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1994"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id158)"
+         font-size="12">
+        <tspan
+           id="tspan1996"
+           textLength="93.0"
+           y="37.174999"
+           xml:space="preserve"
+           x="14">:MediaComputer</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g1998"
+     transform="translate(1535,477)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 10,0 131,0 121,10 0,10 10,0 z"
+       id="id160" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 121,10 10,-10 0,52.35 -10,10 0,-52.35 z"
+       id="id162" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,10 121,0 0,52.35 -121,0 L 0,10 z"
+       id="id164" />
+    <g
+       id="g2003"
+       transform="translate(0,10)">
+      <clipPath
+         id="id165">
+        <path
+           inkscape:connector-curvature="0"
+           id="path2006"
+           d="m 0,0 121,0 0,52.35 -121,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text2008"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id165)"
+         font-size="12">
+        <tspan
+           id="tspan2010"
+           textLength="49.0"
+           y="23.174999"
+           xml:space="preserve"
+           x="36">«device»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text2012"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id165)"
+         font-size="12">
+        <tspan
+           id="tspan2014"
+           textLength="100.0"
+           y="37.174999"
+           xml:space="preserve"
+           x="10">:ControlComputer</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g2016"
+     transform="translate(1045,854)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,0 110,0 10,10 0,32 L 0,42 0,0 z"
+       id="id167" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path2019"
+       d="m 110,0 10,10 -10,0 0,-10 z" />
+    <g
+       id="g2021"
+       transform="translate(5,0)">
+      <clipPath
+         id="id168">
+        <path
+           inkscape:connector-curvature="0"
+           id="path2024"
+           d="M 0,0 110,0 110,42 0,42 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text2026"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id168)"
+         font-size="12">
+        <tspan
+           id="tspan2028"
+           textLength="27.0"
+           y="13"
+           xml:space="preserve"
+           x="2">VPN:</tspan>        <tspan
+           id="tspan2030"
+           textLength="97.0"
+           y="27"
+           xml:space="preserve"
+           x="2">encripted payload</tspan>      </text>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path2032"
+     d="M 1045,875 921,830" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3"
+     inkscape:connector-curvature="0"
+     id="path2034"
+     d="M 1043.5,357.1 1123,584.8" />
+  <g
+     id="g2036"
+     transform="translate(1056,584.8)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 0,0 124,0 10,10 0,29 L 0,39 0,0 z"
+       id="id170" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       id="path2039"
+       d="m 124,0 10,10 -10,0 0,-10 z" />
+    <g
+       id="g2041"
+       transform="translate(5,0)">
+      <clipPath
+         id="id171">
+        <path
+           inkscape:connector-curvature="0"
+           id="path2044"
+           d="M 0,0 124,0 124,39 0,39 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text2046"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id171)"
+         font-size="12">
+        <tspan
+           id="tspan2048"
+           textLength="92.0"
+           y="13"
+           xml:space="preserve"
+           x="2">Displayed on the</tspan>        <tspan
+           id="tspan2050"
+           textLength="108.0"
+           y="27"
+           xml:space="preserve"
+           x="2">robot's touchscreen</tspan>      </text>
+    </g>
+  </g>
+</svg>

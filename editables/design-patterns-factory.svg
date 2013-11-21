@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg8978"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="design-patterns-servicelocator.svg">
+  <defs
+     id="defs8980">
+    <clipPath
+       id="id87">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1524"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id88">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1533"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id83">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1505"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id84">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1514"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id79">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1486"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id80">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1495"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id75">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1467"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id76">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1476"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id71">
+      <path
+         d="M 0,0 146,0 146,25 0,25 z"
+         id="path1448"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id72">
+      <path
+         d="M 0,0 136,0 136,1 0,1 z"
+         id="path1457"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id67">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1429"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id68">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1438"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id63">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1410"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id64">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1419"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id59">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1391"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id60">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1400"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id55">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1372"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id56">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1381"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id51">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1353"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id52">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1362"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id47">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1334"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id48">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1343"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id43">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1315"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id44">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1324"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id39">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1296"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id40">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1305"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id35">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1277"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id36">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1286"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id31">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1258"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id32">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1267"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id27">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1239"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id28">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1248"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id23">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1220"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id24">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1229"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id19">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1201"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id20">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1210"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id15">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1182"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id16">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1191"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id11">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1163"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id12">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1172"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id7">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1144"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id8">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1153"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id4">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1132"
+         d="m 0,0 212.94,0 0,25 L 0,25 z" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id12-3"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 14,7 0,14"
+         id="path61" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id11-5"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 14,7 0,14"
+         id="path58" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refX="0"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id9"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 14,0 0,7 14,14"
+         id="path52" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id10"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 14,7 0,14"
+         id="path55" />
+    </marker>
+    <clipPath
+       id="id8-1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path799"
+         d="M 0,0 120,0 120,40 0,40 z" />
+    </clipPath>
+    <clipPath
+       id="id5">
+      <path
+         inkscape:connector-curvature="0"
+         id="path787"
+         d="M 0,0 120,0 120,40 0,40 z" />
+    </clipPath>
+    <clipPath
+       id="id2">
+      <path
+         inkscape:connector-curvature="0"
+         id="path775"
+         d="M 0,0 120,0 120,40 0,40 z" />
+    </clipPath>
+    <clipPath
+       id="id42">
+      <path
+         inkscape:connector-curvature="0"
+         id="path961"
+         d="M 0,0 19,0 19,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id41">
+      <path
+         inkscape:connector-curvature="0"
+         id="path952"
+         d="M 0,0 19,0 19,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id40-0">
+      <path
+         inkscape:connector-curvature="0"
+         id="path943"
+         d="M 0,0 19,0 19,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id39-1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path934"
+         d="M 0,0 19,0 19,25 0,25 z" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id38"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 14,7 0,14 z"
+         id="path187" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id37"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 14,7 0,14 z"
+         id="path184" />
+    </marker>
+    <clipPath
+       id="id35-2">
+      <path
+         inkscape:connector-curvature="0"
+         id="path896"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id36-5">
+      <path
+         inkscape:connector-curvature="0"
+         id="path905"
+         d="M 0,0 110,0 110,96 0,96 z" />
+    </clipPath>
+    <clipPath
+       id="id29">
+      <path
+         inkscape:connector-curvature="0"
+         id="path870"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id30">
+      <path
+         inkscape:connector-curvature="0"
+         id="path879"
+         d="M 0,0 110,0 110,66 0,66 z" />
+    </clipPath>
+    <clipPath
+       id="id23-8">
+      <path
+         inkscape:connector-curvature="0"
+         id="path840"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id24-3">
+      <path
+         inkscape:connector-curvature="0"
+         id="path849"
+         d="M 0,0 110,0 110,66 0,66 z" />
+    </clipPath>
+    <clipPath
+       id="id17">
+      <path
+         inkscape:connector-curvature="0"
+         id="path818"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id18">
+      <path
+         inkscape:connector-curvature="0"
+         id="path827"
+         d="M 0,0 110,0 110,45 0,45 z" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id62"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 7,3.5 14,7 7,10.5"
+         id="path283" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refX="14"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id61"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 7,3.5 14,7 7,10.5"
+         id="path280" />
+    </marker>
+    <clipPath
+       id="id59-3">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1018"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id60-7">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1027"
+         d="M 0,0 110,0 110,45 0,45 z" />
+    </clipPath>
+    <clipPath
+       id="id53">
+      <path
+         inkscape:connector-curvature="0"
+         id="path996"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id54">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1005"
+         d="M 0,0 110,0 110,45 0,45 z" />
+    </clipPath>
+    <clipPath
+       id="id47-4">
+      <path
+         inkscape:connector-curvature="0"
+         id="path974"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id48-4">
+      <path
+         inkscape:connector-curvature="0"
+         id="path983"
+         d="M 0,0 110,0 110,45 0,45 z" />
+    </clipPath>
+    <marker
+       style="overflow:visible"
+       refX="0"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id82"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 7,3.5 0,7 7,10.5"
+         id="path379" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refX="0"
+       refY="7"
+       markerUnits="userSpaceOnUse"
+       orient="auto"
+       id="id81"
+       markerHeight="14"
+       viewBox="0 0 14.0 14.0"
+       preserveAspectRatio="xMidYMid meet"
+       markerWidth="14"
+       overflow="visible">
+      <path
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 14,0 0,7 14,14 z"
+         id="path376" />
+    </marker>
+    <clipPath
+       id="id79-6">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1088"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id80-8">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1097"
+         d="M 0,0 110,0 110,45 0,45 z" />
+    </clipPath>
+    <clipPath
+       id="id73">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1066"
+         d="m 0,0 139.5,0 0,25 L 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id74">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1075"
+         d="m 0,0 129.5,0 0,44.5 -129.5,0 z" />
+    </clipPath>
+    <clipPath
+       id="id67-3">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1044"
+         d="m 0,0 139.5,0 0,25 L 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id68-1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1053"
+         d="m 0,0 129.5,0 0,45 L 0,45 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="513"
+     inkscape:window-height="406"
+     inkscape:window-x="77"
+     inkscape:window-y="171"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata8983">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1037"
+       transform="translate(394.25,429.13718)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,0 139.5,0 0,25 L 0,25 0,0 z"
+         id="id64-1" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,25 139.5,0 0,55 L 0,80 0,25 z"
+         id="id66" />
+      <g
+         id="g1041">
+        <clipPath
+           id="clipPath4897">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4899"
+             d="m 0,0 139.5,0 0,25 L 0,25 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1046"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id67-3)"
+           font-size="12">
+          <tspan
+             id="tspan1048"
+             textLength="43.0"
+             y="16.5"
+             xml:space="preserve"
+             x="48">Creator</tspan>        </text>
+      </g>
+      <g
+         id="g1050"
+         transform="translate(5,30)">
+        <clipPath
+           id="clipPath4904">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4906"
+             d="m 0,0 129.5,0 0,45 L 0,45 z" />
+        </clipPath>
+        <text
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1055"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id68-1)"
+           font-size="10">
+          <tspan
+             id="tspan1057"
+             textLength="117.0"
+             y="12"
+             xml:space="preserve"
+             x="2">factoryMethod(): Product</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1059"
+       transform="translate(394.25,555.83718)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,0 139.5,0 0,25 L 0,25 0,0 z"
+         id="id70" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,25 139.5,0 0,54.5 L 0,79.5 0,25 z"
+         id="id72-3" />
+      <g
+         id="g1063">
+        <clipPath
+           id="clipPath4914">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4916"
+             d="m 0,0 139.5,0 0,25 L 0,25 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1068"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id73)"
+           font-size="12">
+          <tspan
+             id="tspan1070"
+             textLength="95.0"
+             y="16.5"
+             xml:space="preserve"
+             x="22">ConcreteCreator</tspan>        </text>
+      </g>
+      <g
+         id="g1072"
+         transform="translate(5,30)">
+        <clipPath
+           id="clipPath4921">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4923"
+             d="m 0,0 129.5,0 0,44.5 -129.5,0 z" />
+        </clipPath>
+        <text
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1077"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id74)"
+           font-size="10">
+          <tspan
+             id="tspan1079"
+             textLength="117.0"
+             y="12"
+             xml:space="preserve"
+             x="2">factoryMethod(): Product</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1081"
+       transform="translate(216.25,555.58718)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         id="id76-6" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,25 120,0 0,55 L 0,80 0,25 z"
+         id="id78" />
+      <g
+         id="g1085">
+        <clipPath
+           id="clipPath4931">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4933"
+             d="M 0,0 120,0 120,25 0,25 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1090"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id79-6)"
+           font-size="12">
+          <tspan
+             id="tspan1092"
+             textLength="45.0"
+             y="16.5"
+             xml:space="preserve"
+             x="37">Product</tspan>        </text>
+      </g>
+      <g
+         id="g1094"
+         transform="translate(5,30)">
+        <clipPath
+           id="clipPath4938">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4940"
+             d="M 0,0 110,0 110,45 0,45 z" />
+        </clipPath>
+        <text
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1099"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id80-8)"
+           font-size="10" />
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-start:url(#id81)"
+       inkscape:connector-curvature="0"
+       id="path1101"
+       d="m 464,509.13718 0,46.7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3;marker-start:url(#id82)"
+       inkscape:connector-curvature="0"
+       id="path1103"
+       d="m 336.25,595.58718 58,0" />
+  </g>
+</svg>

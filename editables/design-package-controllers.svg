@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg6768"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="design-package-services.svg">
+  <defs
+     id="defs6770">
+    <clipPath
+       id="id128">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1699"
+         d="m 0,0 148.09,0 0,25 L 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id131">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1711"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id134">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1723"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id137">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1735"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id140">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1747"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id143">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1759"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id148">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1774"
+         d="m 0,0 135.28,0 0,25 L 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id151">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1786"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id152">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1795"
+         d="m 0,0 110,0 0,0.75 -110,0 z" />
+    </clipPath>
+    <clipPath
+       id="id155">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1805"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+    <clipPath
+       id="id158">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1817"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="432.4785"
+     inkscape:cy="705.2582"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="513"
+     inkscape:window-height="406"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata6773">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1765"
+       transform="translate(309.71429,211.38004)">
+      <g
+         id="g1767">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           d="m 0,0 136.8,0 0,25 L 0,25 0,0 z"
+           id="id145" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           d="m 0,25 152,0 0,131.25 -152,0 L 0,25 z"
+           id="id147" />
+        <g
+           id="g1771">
+          <clipPath
+             id="clipPath7056">
+            <path
+               inkscape:connector-curvature="0"
+               id="path7058"
+               d="m 0,0 135.28,0 0,25 L 0,25 z" />
+          </clipPath>
+          <text
+             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+             id="text1776"
+             font-weight="bold"
+             font-style="normal"
+             text-decoration="none"
+             clip-path="url(#id148)"
+             font-size="12">
+            <tspan
+               id="tspan1778"
+               textLength="98.0"
+               y="16.5"
+               xml:space="preserve"
+               x="18">reemi.controllers</tspan>          </text>
+        </g>
+      </g>
+      <g
+         id="g1780"
+         transform="translate(16.5,40.5)">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           d="M 0,0 120,0 120,25 0,25 0,0 z"
+           id="id150" />
+        <g
+           id="g1783">
+          <clipPath
+             id="clipPath7065">
+            <path
+               inkscape:connector-curvature="0"
+               id="path7067"
+               d="M 0,0 120,0 120,25 0,25 z" />
+          </clipPath>
+          <text
+             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+             id="text1788"
+             font-weight="bold"
+             font-style="normal"
+             text-decoration="none"
+             clip-path="url(#id151)"
+             font-size="12">
+            <tspan
+               id="tspan1790"
+               textLength="56.0"
+               y="16.5"
+               xml:space="preserve"
+               x="32">ActionCtrl</tspan>          </text>
+        </g>
+        <g
+           id="g1792"
+           transform="translate(5,30)">
+          <clipPath
+             id="clipPath7072">
+            <path
+               inkscape:connector-curvature="0"
+               id="path7074"
+               d="m 0,0 110,0 0,0.75 -110,0 z" />
+          </clipPath>
+          <text
+             style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+             id="text1797"
+             font-weight="normal"
+             font-style="normal"
+             text-decoration="none"
+             clip-path="url(#id152)"
+             font-size="10" />
+        </g>
+      </g>
+      <g
+         id="g1799"
+         transform="translate(16.5,77.5)">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           d="M 0,0 120,0 120,25 0,25 0,0 z"
+           id="id154" />
+        <g
+           id="g1802">
+          <clipPath
+             id="clipPath7080">
+            <path
+               inkscape:connector-curvature="0"
+               id="path7082"
+               d="M 0,0 120,0 120,25 0,25 z" />
+          </clipPath>
+          <text
+             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+             id="text1807"
+             font-weight="bold"
+             font-style="normal"
+             text-decoration="none"
+             clip-path="url(#id155)"
+             font-size="12">
+            <tspan
+               id="tspan1809"
+               textLength="82.0"
+               y="16.5"
+               xml:space="preserve"
+               x="19">SubscreenCtrl</tspan>          </text>
+        </g>
+      </g>
+      <g
+         id="g1811"
+         transform="translate(16.5,114.5)">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           d="M 0,0 120,0 120,25 0,25 0,0 z"
+           id="id157" />
+        <g
+           id="g1814">
+          <clipPath
+             id="clipPath7089">
+            <path
+               inkscape:connector-curvature="0"
+               id="path7091"
+               d="M 0,0 120,0 120,25 0,25 z" />
+          </clipPath>
+          <text
+             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+             id="text1819"
+             font-weight="bold"
+             font-style="normal"
+             text-decoration="none"
+             clip-path="url(#id158)"
+             font-size="12">
+            <tspan
+               id="tspan1821"
+               textLength="82.0"
+               y="16.5"
+               xml:space="preserve"
+               x="19">ROSBridgeCtrl</tspan>          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

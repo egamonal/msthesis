@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg8978"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="New document 20">
+  <defs
+     id="defs8980">
+    <clipPath
+       id="id87">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1524"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id88">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1533"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id83">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1505"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id84">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1514"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id79">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1486"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id80">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1495"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id75">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1467"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id76">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1476"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id71">
+      <path
+         d="M 0,0 146,0 146,25 0,25 z"
+         id="path1448"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id72">
+      <path
+         d="M 0,0 136,0 136,1 0,1 z"
+         id="path1457"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id67">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1429"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id68">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1438"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id63">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1410"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id64">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1419"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id59">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1391"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id60">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1400"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id55">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1372"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id56">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1381"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id51">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1353"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id52">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1362"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id47">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1334"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id48">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1343"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id43">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1315"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id44">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1324"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id39">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1296"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id40">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1305"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id35">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1277"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id36">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1286"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id31">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1258"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id32">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1267"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id27">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1239"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id28">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1248"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id23">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1220"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id24">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1229"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id19">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1201"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id20">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1210"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id15">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1182"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id16">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1191"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id11">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1163"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id12">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1172"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id7">
+      <path
+         d="M 0,0 120,0 120,25 0,25 z"
+         id="path1144"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id8">
+      <path
+         d="M 0,0 110,0 110,1 0,1 z"
+         id="path1153"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="id4">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1132"
+         d="m 0,0 212.94,0 0,25 L 0,25 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="513"
+     inkscape:window-height="406"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata8983">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 79,428.11218 592,0 0,233.5 -592,0 z"
+       id="id3"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 79,403.11218 213.4,0 0,25 -213.4,0 0,-25 z"
+       id="id1" />
+    <g
+       id="g1129"
+       transform="translate(79,403.11218)">
+      <clipPath
+         id="clipPath8657">
+        <path
+           inkscape:connector-curvature="0"
+           id="path8659"
+           d="m 0,0 212.94,0 0,25 L 0,25 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1134"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id4)"
+         font-size="12">
+        <tspan
+           id="tspan1136"
+           textLength="114.0"
+           y="16.5"
+           xml:space="preserve"
+           x="49">reemi.theme.default</tspan>      </text>
+    </g>
+    <g
+       transform="translate(94,441.61218)"
+       id="g1138">
+      <path
+         id="id6"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1141">
+        <clipPath
+           id="clipPath8666">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8668"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id7)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1146"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="23"
+             xml:space="preserve"
+             y="16.5"
+             textLength="73.0"
+             id="tspan1148">flBackButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1150">
+        <clipPath
+           id="clipPath8673">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8675"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id8)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1155"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(240,441.61218)"
+       id="g1157">
+      <path
+         id="id10"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1160">
+        <clipPath
+           id="clipPath8681">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8683"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id11)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1165"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="14"
+             xml:space="preserve"
+             y="16.5"
+             textLength="91.0"
+             id="tspan1167">flForwardButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1169">
+        <clipPath
+           id="clipPath8688">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8690"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id12)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1174"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(385.33333,441.61218)"
+       id="g1176">
+      <path
+         id="id14"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1179">
+        <clipPath
+           id="clipPath8696">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8698"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id15)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1184"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="23"
+             xml:space="preserve"
+             y="16.5"
+             textLength="73.0"
+             id="tspan1186">flBaseButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1188">
+        <clipPath
+           id="clipPath8703">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8705"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id16)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1193"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(536,441.61218)"
+       id="g1195">
+      <path
+         id="id18"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1198">
+        <clipPath
+           id="clipPath8711">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8713"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id19)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1203"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="29"
+             xml:space="preserve"
+             y="16.5"
+             textLength="62.0"
+             id="tspan1205">flBigButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1207">
+        <clipPath
+           id="clipPath8718">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8720"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id20)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1212"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(238.60547,584.13952)"
+       id="g1214">
+      <path
+         id="id22"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1217">
+        <clipPath
+           id="clipPath8726">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8728"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id23)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1222"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="10"
+             xml:space="preserve"
+             y="16.5"
+             textLength="100.0"
+             id="tspan1224">flLanguageButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1226">
+        <clipPath
+           id="clipPath8733">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8735"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id24)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1231"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(94,477.61218)"
+       id="g1233">
+      <path
+         id="id26"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1236">
+        <clipPath
+           id="clipPath8741">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8743"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id27)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1241"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="20"
+             xml:space="preserve"
+             y="16.5"
+             textLength="80.0"
+             id="tspan1243">flConfigButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1245">
+        <clipPath
+           id="clipPath8748">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8750"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id28)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1250"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(240,477.61218)"
+       id="g1252">
+      <path
+         id="id30"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1255">
+        <clipPath
+           id="clipPath8756">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8758"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id31)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1260"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="21"
+             xml:space="preserve"
+             y="16.5"
+             textLength="77.0"
+             id="tspan1262">flHomeButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1264">
+        <clipPath
+           id="clipPath8763">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8765"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id32)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1269"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(385.33333,477.61218)"
+       id="g1271">
+      <path
+         id="id34"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1274">
+        <clipPath
+           id="clipPath8771">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8773"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id35)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1279"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="15"
+             xml:space="preserve"
+             y="16.5"
+             textLength="89.0"
+             id="tspan1281">flCameraButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1283">
+        <clipPath
+           id="clipPath8778">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8780"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id36)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1288"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(536,477.61218)"
+       id="g1290">
+      <path
+         id="id38"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1293">
+        <clipPath
+           id="clipPath8786">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8788"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id39)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1298"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="22"
+             xml:space="preserve"
+             y="16.5"
+             textLength="76.0"
+             id="tspan1300">flVideoButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1302">
+        <clipPath
+           id="clipPath8793">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8795"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id40)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1307"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(385.11328,584.13952)"
+       id="g1309">
+      <path
+         id="id42"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1312">
+        <clipPath
+           id="clipPath8801">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8803"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id43)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1317"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="27"
+             xml:space="preserve"
+             y="16.5"
+             textLength="65.0"
+             id="tspan1319">flInfoButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1321">
+        <clipPath
+           id="clipPath8808">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8810"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id44)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1326"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(94,513.61218)"
+       id="g1328">
+      <path
+         id="id46"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1331">
+        <clipPath
+           id="clipPath8816">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8818"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id47)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1336"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="21"
+             xml:space="preserve"
+             y="16.5"
+             textLength="77.0"
+             id="tspan1338">flReemButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1340">
+        <clipPath
+           id="clipPath8823">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8825"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id48)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1345"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(240,513.61218)"
+       id="g1347">
+      <path
+         id="id50"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1350">
+        <clipPath
+           id="clipPath8831">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8833"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id51)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1355"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="7"
+             xml:space="preserve"
+             y="16.5"
+             textLength="105.0"
+             id="tspan1357">flReemBodyButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1359">
+        <clipPath
+           id="clipPath8838">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8840"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id52)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1364"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(385.33333,513.61218)"
+       id="g1366">
+      <path
+         id="id54"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1369">
+        <clipPath
+           id="clipPath8846">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8848"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id55)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1374"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="27"
+             xml:space="preserve"
+             y="16.5"
+             textLength="65.0"
+             id="tspan1376">flListButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1378">
+        <clipPath
+           id="clipPath8853">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8855"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id56)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1383"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(536,513.61218)"
+       id="g1385">
+      <path
+         id="id58"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1388">
+        <clipPath
+           id="clipPath8861">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8863"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id59)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1393"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="25"
+             xml:space="preserve"
+             y="16.5"
+             textLength="70.0"
+             id="tspan1395">flNextButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1397">
+        <clipPath
+           id="clipPath8868">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8870"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id60)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1402"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(536.81641,584.13952)"
+       id="g1404">
+      <path
+         id="id62"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1407">
+        <clipPath
+           id="clipPath8876">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8878"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id63)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1412"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="13"
+             xml:space="preserve"
+             y="16.5"
+             textLength="94.0"
+             id="tspan1414">flPreviousButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1416">
+        <clipPath
+           id="clipPath8883">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8885"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id64)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1421"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(94,549.61218)"
+       id="g1423">
+      <path
+         id="id66"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1426">
+        <clipPath
+           id="clipPath8891">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8893"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id67)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1431"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="9"
+             xml:space="preserve"
+             y="16.5"
+             textLength="101.0"
+             id="tspan1433">flLeftArrowButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1435">
+        <clipPath
+           id="clipPath8898">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8900"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id68)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1440"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(94,625.61218)"
+       id="g1442">
+      <path
+         id="id70"
+         d="M 0,0 146,0 146,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1445">
+        <clipPath
+           id="clipPath8906">
+          <path
+             d="M 0,0 146,0 146,25 0,25 z"
+             id="path8908"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id71)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1450"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="19"
+             xml:space="preserve"
+             y="16.5"
+             textLength="108.0"
+             id="tspan1452">flRightArrowButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1454">
+        <clipPath
+           id="clipPath8913">
+          <path
+             d="M 0,0 136,0 136,1 0,1 z"
+             id="path8915"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id72)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1459"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(385.33333,549.61218)"
+       id="g1461">
+      <path
+         id="id74"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1464">
+        <clipPath
+           id="clipPath8921">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8923"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id75)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1469"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="19"
+             xml:space="preserve"
+             y="16.5"
+             textLength="81.0"
+             id="tspan1471">flArabicButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1473">
+        <clipPath
+           id="clipPath8928">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8930"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id76)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1478"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(536,549.61218)"
+       id="g1480">
+      <path
+         id="id78"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1483">
+        <clipPath
+           id="clipPath8936">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8938"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id79)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1488"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="17"
+             xml:space="preserve"
+             y="16.5"
+             textLength="85.0"
+             id="tspan1490">flEnglishButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1492">
+        <clipPath
+           id="clipPath8943">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8945"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id80)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1497"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(92.58594,584.13952)"
+       id="g1499">
+      <path
+         id="id82"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1502">
+        <clipPath
+           id="clipPath8951">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8953"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id83)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1507"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="17"
+             xml:space="preserve"
+             y="16.5"
+             textLength="85.0"
+             id="tspan1509">flKoreanButton</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1511">
+        <clipPath
+           id="clipPath8958">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8960"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id84)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1516"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+    <g
+       transform="translate(240,549.61218)"
+       id="g1518">
+      <path
+         id="id86"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g1521">
+        <clipPath
+           id="clipPath8966">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8968"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id87)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1526"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="44"
+             xml:space="preserve"
+             y="16.5"
+             textLength="31.0"
+             id="tspan1528">flLine</tspan>        </text>
+      </g>
+      <g
+         transform="translate(5,30)"
+         id="g1530">
+        <clipPath
+           id="clipPath8973">
+          <path
+             d="M 0,0 110,0 110,1 0,1 z"
+             id="path8975"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id88)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1535"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+      </g>
+    </g>
+  </g>
+</svg>
