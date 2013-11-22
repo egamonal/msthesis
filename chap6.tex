@@ -223,17 +223,18 @@ controllers "use services"
 
 \begin{figure}[htb]
     \centering
-    \includegraphics{figures/design-patterns-command-1.pdf}
-    \caption{design patterns command 1}
-    \label{fig:context-original}
+    \includegraphics{figures/design-patterns-mvc-1.pdf}
+    \caption{MVC overview}
+    \label{fig:mvc-overview}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics{figures/design-patterns-command-flango.pdf}
-    \caption{design patterns command flango}
-    \label{fig:context-original}
+    \includegraphics{figures/design-patterns-mvc-2.pdf}
+    \caption{MVC with observer pattern}
+    \label{fig:mvc-with-observer}
 \end{figure}
+
 
 \subsection{Common Patterns in the project}
 DI, inversion of dependency, reveal, factory, async, fowler... hints of the remote façade and SOA¿?
@@ -279,6 +280,8 @@ Thus, services can be injected in controllers and directives.
 Using the name and a service registry, the client class does not need to create an instance of the injected service. 
 A particular implementation of this principle is in the wrapper for roslibjs: the service palROSBridge in the application is made injectable and provides callbacks to allow a decoupled desing. FIXME LANGUAGE.
 
+
+
 \paragraph{Factory} Directives, controllers, services... are registered on modules. 
 The $module.directive$ \ac{API} registers them. 
 It takes a normalised name and a factory function that returns an object with the fields that can be exposed to classes that use it.
@@ -313,6 +316,19 @@ For example, there is no way to define the behaviour for a \texttt{UI Component 
 Only the contents application knows it.
 By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them CROSS REF listing 2
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-command-1.pdf}
+    \caption{design patterns command 1}
+    \label{fig:context-original}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-command-flango.pdf}
+    \caption{design patterns command flango}
+    \label{fig:context-original}
+\end{figure}
 
 \subsection{Orientation to Web Components}
 Web Components is a set of specifications that let web developers use \ac{HTML}, \ac{CSS} and JavaScript to build widgets that can be reused easily and reliably.
