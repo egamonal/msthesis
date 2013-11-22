@@ -235,7 +235,6 @@ controllers "use services"
     \label{fig:mvc-with-observer}
 \end{figure}
 
-
 \subsection{Common Patterns in the project}
 DI, inversion of dependency, reveal, factory, async, fowler... hints of the remote façade and SOA¿?
 
@@ -281,11 +280,28 @@ Using the name and a service registry, the client class does not need to create 
 A particular implementation of this principle is in the wrapper for roslibjs: the service palROSBridge in the application is made injectable and provides callbacks to allow a decoupled desing. FIXME LANGUAGE.
 
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-servicelocator.pdf}
+    \caption{Service Locator}
+    \label{fig:Service Locator}
+\end{figure}
+
 
 \paragraph{Factory} Directives, controllers, services... are registered on modules. 
 The $module.directive$ \ac{API} registers them. 
 It takes a normalised name and a factory function that returns an object with the fields that can be exposed to classes that use it.
 For example, a Directive Definition Object or a Service.
+
+
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-factory.pdf}
+    \caption{Factory}
+    \label{fig:factory}
+\end{figure}
+
 
 \paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having the units of code for a project separated.
 JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
@@ -357,6 +373,7 @@ Directives are custom elements: behaviour can be placed in a directive controlle
 Templates are usually \ac{HTML}, although it is not shadow \ac{DOM}.
 Units of code can be grouped in modules, services, etc and be reused.
 
+\FloatBarrier
 
 \section{Static View}
 the model, the view and the controllers. angualar modules, services, filters, controllers...
@@ -364,6 +381,104 @@ talk about the data model and \$rootScope ? talk about properties
 
 un diagrama:
 moduls, serveis, controladors, etc. 
+
+% ********** CLASS DIAGRAM ********
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-ui.pdf}
+    \caption{Class Diagram -- UI}
+    \label{fig:class-ui}
+\end{figure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design-class-uicomponent.pdf}
+    \caption{Class Diagram -- UI Component}
+    \label{fig:class-uicomponent}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design-class-themecomponents.pdf}
+    \caption{Class Diagram -- UI Theme Component}
+    \label{fig:class-themecomponent}
+\end{sidewaysfigure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-services.pdf}
+    \caption{Class Diagram -- UI services}
+    \label{fig:class-services}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-ngfactory.pdf}
+    \caption{Class Diagram -- angular factory}
+    \label{fig:class-ngfactory}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-controllers.pdf}
+    \caption{Class Diagram -- angular controllers}
+    \label{fig:class-controllers}
+\end{figure}
+
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-action.pdf}
+    \caption{Class Diagram -- ui action}
+    \label{fig:class-action}
+\end{figure}
+
+
+% ********** PACKAGE DIAGRAM ********
+\FloatBarrier
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-controllers.pdf}
+    \caption{Packages Diagram -- controllers}
+    \label{fig:pkg-controllers}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-reemi.pdf}
+    \caption{Packages Diagram -- application}
+    \label{fig:pkg-reemi}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-services.pdf}
+    \caption{Packages Diagram -- services}
+    \label{fig:pkg-services}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-uicomponents.pdf}
+    \caption{Packages Diagram -- UI components}
+    \label{fig:pkg-uicomponents}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-ui.pdf}
+    \caption{Packages Diagram -- UI}
+    \label{fig:pkg-ui}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-uithemecomponents.pdf}
+    \caption{Packages Diagram -- UI theme components}
+    \label{fig:pkg-themecomponents}
+\end{figure}
+
+\FloatBarrier
 
 \section{Dynamic view}
 the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
@@ -373,6 +488,46 @@ examples of using the properties, generating the settings, fetching things from 
 
 \section{Physical view}
 robots, backend.basestation, wi-fi, vpn...
+
+% ****** deployment *******
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-basestation.pdf}
+    \caption{Deployment Diagram -- basestation}
+    \label{fig:deploy-basestation}
+\end{figure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-browser.pdf}
+    \caption{Deployment Diagram -- browser}
+    \label{fig:deploy-browser}
+\end{sidewaysfigure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-mediacomputer.pdf}
+    \caption{Deployment Diagram -- media computer}
+    \label{fig:deploy-media}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-reem.pdf}
+    \caption{Deployment Diagram -- reem}
+    \label{fig:deploy-reem}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-webserver.pdf}
+    \caption{Deployment Diagram -- webserver}
+    \label{fig:deploy-webserver}
+\end{figure}
+
+\FloatBarrier
+
+% ****** maybe add network? *****
 
 \section{External view}
 there isn't! it's a backend app to create a frontend app.
