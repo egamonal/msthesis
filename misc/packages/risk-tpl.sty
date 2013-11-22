@@ -42,18 +42,11 @@
     \medskip
     \refstepcounter{sopcc}
     
-    \begin{table}[ht]
-    \begin{tabularx}{\linewidth}{| l | p{11.5cm} |}%{| X | X |}
-    \multicolumn{2}{X}{\textbf{Contract \arabic{riskc} #1}} \\ \hline
-    \multicolumn{2}{|p{14.5cm}|}{#2}\\ \hline % description
-    Preconditions & #3 \\ \hline
-    Postconditions & #4 \\
-    \hline
-    \end{tabularx}
-    \centering
-    \caption{#1}
-
-    \end{table}
+    \par \noindent \textbf{Contract \arabic{sopcc} #1} 
+    \par \noindent #2
+    \par \noindent \textbf{Preconditions} #3 
+    \par \noindent \textbf{Postconditions} #4
+    
 }
 {}
 
