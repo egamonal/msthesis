@@ -1,10 +1,6 @@
 \chapter{Design}
-coming from previous chapter: Code Restructuring; Data Restructuring; Forward Engineering
+coming from previous chapter: Code Restructuring; Data Restructuring; Forward Engineering !!!!!!
     
-    
-explain the internal design of the new application.
-internal design of the application. this should be the fun part.
-
 This chapter describes the internal wiring of the application and the reasons that lead to this design.
 It explains the programming languages, frameworks and most relevant libraries, 
 
@@ -292,7 +288,7 @@ FIXME: sure? Managing dependencies correctly is a good way of applying other pri
 One of the \ac{SOLID} principles, inversion of control, states that one should "Depend upon Abstractions. Do not depend upon concretions."
 Dependency Injection is one of the implementations of this principle.
 
-
+\cite{Fowler}
 
 In general there are 3 ways an object can use another one:
 \begin{enumerate}
@@ -300,6 +296,9 @@ In general there are 3 ways an object can use another one:
 	\item Using global variables
 	\item Pass in the dependency to where it is needed
 \end{enumerate}
+
+FIXME: take this code out and move it to the implementation chapter. let's use UML here.
+A --creates--> B, vs. A --> servicelocator --> B
 
 \lstinputlisting[language=javascript, caption={Hard-coded dependencies}]{src/design-di-1.js}
 
@@ -529,6 +528,46 @@ the flow: user creates an application, [robot sync], my app reads it and generat
 
 specific flow of an app. bootstrap, the compile-link phase, push classes, push styles, get url params, etc.
 examples of using the properties, generating the settings, fetching things from the server, rostopics...
+
+show patterns!
+
+This section contains a detailed description of the most relevant operations.
+They are grouped in XXX categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
+
+\subsection{Overview}
+compile-link-ctrl
+seq diagram: detecting a directive, etc. general example with "book" "fruit" etc
+
+\subsection{Boot-strap and Configuration}
+description -- bootup (register modules, fetch config, querystring, goto init, subscribe)
+
+seq diagram
+
+Some key operations are done during the boot-strap process of Angular, like registering modules, setting dependencies and the default routes (e.g. \texttt{http:// ... /app/index.html#/products-view/14/detail-view}.
+The Flango \cm also fetches de configuration from the backend and builds the local object that represents it.
+
+diagrams: bootstrap-1, 2 and 3 (general, config, run)
+
+\subsection{Properties management and transformation to \ac{HTML}}
+descr with example (transform a  book into...)
+
+interpretacio de tags. fl:ui type=.. --> fl {type} per separar
+
+herència de ui components (un basebutton s'implementa amb...)
+
+plantilles dels temes
+
+\subsection{Pop-Ups}
+description and use example
+
+\subsection{Internal Navigation}
+subscreens, fetching, etc
+
+\subsection{External Calls}
+motivation, rosbridge
+
+\subsection{Responding to requests from the robot}
+service, topic, rosbridge, etc
 
 \section{Physical view}
 robots, backend.basestation, wi-fi, vpn...

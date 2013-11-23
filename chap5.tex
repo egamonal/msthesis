@@ -784,6 +784,129 @@ FIXME: robot behaviour ja no cal!!
 \subsection{Unit Tests}
 high level description of the tests. specification by example
 
+\fref{fig:specification-conceptual-model} describes the real world and shows the relationship between elements that define the problem.
+Actors do not interact with most of the classes shown and contracts and sequence diagrams are intented to describe the system as a unit that provides some service to actors.
+One of the goals of this project is making it compatible with the current \ac{XML} that defines the contents applications.
+To meet this goal, it should be clearly specified how \ac{XML} are parsed.
+This project uses \ac{TDD} and has executable specifications for all parts of the system, including those (e.g. internal operations or parsing) that are not strictly eligible for other sections in this chapter.
+
+Tests are organised in test-suites for components.
+Each suite has several test cases.
+A test case has an starting situation, execution of the component that is being tested, and asserts.
+This section focuses on the \ac{XML} description.
+FIXME CROSS REF Chapter testing has a full list and examples of other test suites that refer directly to components of the software (FIXME CROSS REF  chapter 6)
+Tests challenge behaviour like reading text nodes in \ac{XML} tags, setting properties (i.e. mutating correctly an object in the system), reading order or inheritance of properties, fallback to default values and transformation to \ac{HTML} code.
+
+Unit testing UI directive
+\begin{itemize}
+	\item inline type property
+		\begin{itemize}
+			\item should have type defined
+		\end{itemize}
+	\item width, height, x, y, 
+		\begin{itemize}
+			\item should have the class hide
+			\item should set the property to 42 for the default (language-independent)
+			\item should set the property to 40 for Catalan and 42 for French
+			\item should set the property to 40 for Catalan, 42 for French and 20 for default
+			\item should not set any property
+			\item (inline) should set the property to 42 for the default (language-independent)
+			\item should set the property to 42 for default (language-independent) of pal-container
+			\item (inline) should set the property to 42 for default (language-independent) of pal-container 
+		\end{itemize}
+	\item src
+		\begin{itemize}
+			\item should have the class hide
+    		\item should set the property to "dummy string" for the default language
+    		\item should set the property to 40 for Catalan and 42 for French
+    		\item should set the property to 40 for Catalan, 42 for French and 20 for default
+    		\item should not set the property
+    		\item (inline) should set the property to 42 for the default language
+		\end{itemize}
+	\item style
+		\begin{itemize}
+			\item should have the class hide
+			\item should set scope.classes.ui to "whatever" and scope.classes.style to "nice"
+			\item (inline) should set scope.classes.ui to "whatever" and scope.classes.style to "nice"
+		\end{itemize}
+	\item flCaption
+		\begin{itemize}
+			\item should have the class hide
+			\item should write "dummy string" for default language (and nothing else)
+			\item should set English caption to "dummy string"
+		\end{itemize}
+	\item layover
+		\begin{itemize}
+			\item should have the class hide
+			\item should add the overlay property empty
+			\item should add the overlay property with width, height and src
+			\item should add the overlay property with inline width, height and src
+		\end{itemize}
+	\item goto
+		\begin{itemize}
+			\item should read the parameters
+		\end{itemize}
+	\item external call
+		\begin{itemize}
+			\item should read the parameters
+		\end{itemize}
+	\item set language
+		\begin{itemize}
+			\item should read the language
+		\end{itemize}
+	\item open popup
+		\begin{itemize}
+			\item should read the code of the popup
+		\end{itemize}
+	\item background
+		\begin{itemize}
+			\item should read the parameters
+			\item should read the inline parameters
+		\end{itemize}	
+	\item Unit testing UI directive -- ambiguity
+		\begin{itemize}
+			\item (width) should use inner value (20) instead of inline value (10)
+			\item (height) should use inner value (20) instead of inline (10)
+			\item (x) should use inner value (20) instead of inline (10)
+			\item (y) should use inner value (20) instead of inline (10)
+			\item (src) should use inner value ("dummy string") instead of inline ("smart string")
+			\item (palStyle) should give inner value ("nice") higher priority than inline ("ugly")
+			\item (palStyle) should give inner values ("big" and "red") higher priority than inline ("ugly")
+		\end{itemize}
+\end{itemize}
+
+Unit testing UI Components directives that do not need external libraries
+\begin{itemize}
+	\item subscreen
+	\begin{itemize}
+    	\item should always be transformed to $<fl:ui fl:subscreen>$
+   	 	\item should include a screen file (always uses filename screens/99.xml here) in the inner div
+    	\item should add a $<div>$ with at least the subscreen css class
+	\end{itemize}
+
+	\item img
+	\begin{itemize}
+    \item should be transformed to $<fl:ui fl:img>$
+    \item should be replaced with $<img>$
+    \item should set the ng-src attribute in $<img>$
+	\end{itemize}
+
+	\item button
+	\begin{itemize}
+    \item should be transformed to $<fl:ui fl:button>$
+    \item should be replaced with $<a><div class="fl-overlay"></div><div class="caption-container"></div></a>$
+	\end{itemize}
+
+	\item textarea
+	\begin{itemize}
+    \item should be transformed to $<fl:ui fl:textarea>$
+    \item should be replaced with $<div></div>$
+	\end{itemize}
+
+\end{itemize}
+
 
 \section{XML Representation}
 explain syntax here?
+
+at least the inheritance and themes. with code.
