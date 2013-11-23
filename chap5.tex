@@ -757,8 +757,33 @@ FIXME: robot behaviour ja no cal!!
 {aaaa}
 \end{sopcontract}
 
+\begin{sopcontract}{getScreens(appId: Integer)}
+{Obtains the screens of the contents application with id = $appId$}
+{$id$ is a well-formatted contents application identifier}
+{A list of all screens of application contents with id = $appId$ was returned}
+\end{sopcontract}
+
+\begin{sopcontract}{goTo(appId: Integer, uri: String)}
+{Displays the desired screen}
+{$id$ is a well-formatted contents application identifier \\ $uri$ is a well-formatted screen \ac{URI} in the contents application}
+{$Conf.currentScreen$ was set to $uri$}
+\end{sopcontract}
+
+\begin{sopcontract}{getConf(appId: Integer)}
+{Obtains the local configuration object for the application $appId$. This object is stable during the execution of the program. It does not need to be fetched again from the Backend.}
+{$id$ is a well-formatted contents application identifier}
+{The configuration $c$ was returned}
+\end{sopcontract}
+
+\begin{sopcontract}{setValue(c: Conf, key, value)}
+{Sets a field of the configuration object to the desired value. e.g. $setValue(c, 'currentLang', 'de')$}
+{$key$ is a valid field of the configuration object $c$ \\ $value$ is a valid value for $c[key]$}
+{$c[key]$ was set to $value$}
+\end{sopcontract}
+
 \subsection{Unit Tests}
 high level description of the tests. specification by example
+
 
 \section{XML Representation}
 explain syntax here?
