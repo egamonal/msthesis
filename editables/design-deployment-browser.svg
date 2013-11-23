@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg5863"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="New document 2">
+  <defs
+     id="defs5865">
+    <clipPath
+       id="id36">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1456"
+         d="m 0,0 127.5,0 0,24 L 0,24 z" />
+    </clipPath>
+    <clipPath
+       id="id33">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1434"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5559">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5561"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5563">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5565"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="id30">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1410"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5569">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5571"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5573">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5575"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="id27">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1386"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5579">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5581"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5583">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5585"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <filter
+       color-interpolation-filters="sRGB"
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id17"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur97" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset99" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer101">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR103" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG105" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB107" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA109" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge111">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode113" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode115" />
+      </feMerge>
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id18"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="1.5"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur118" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset120" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer122">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR124" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG126" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB128" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA130" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge132">
+        <feMergeNode
+           in="componentOffsetBlur"
+           id="feMergeNode134" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode136" />
+      </feMerge>
+    </filter>
+    <clipPath
+       id="id21">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1239"
+         d="m 0,0 588.75,0 0,455.1 -588.75,0 z" />
+    </clipPath>
+    <clipPath
+       id="id22">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1246"
+         d="m 0,0 599.25,0 0,33 L 0,33 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5613">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5615"
+         d="m 0,0 599.25,0 0,33 L 0,33 z" />
+    </clipPath>
+    <clipPath
+       id="id23">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1259"
+         d="m 0,0 315.25,0 0,387 L 0,387 z" />
+    </clipPath>
+    <clipPath
+       id="id24">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1318"
+         d="m 0,0 241.81063,0 0,379 L 0,379 z" />
+    </clipPath>
+    <clipPath
+       id="id16">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1213"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5623">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5625"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5627">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5629"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="id13">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1189"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5633">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5635"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5637">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5639"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="id10">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1169"
+         d="m 0,0 633.25,0 0,33 L 0,33 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5643">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5645"
+         d="m 0,0 633.25,0 0,33 L 0,33 z" />
+    </clipPath>
+    <clipPath
+       id="id9">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1152"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5649">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5651"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="clipPath5653">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5655"
+         d="M 0,0 169,0 169,60 0,60 z" />
+    </clipPath>
+    <clipPath
+       id="id6">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1138"
+         d="m 0,0 635,0 0,700.7 -635,0 z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="244.5339"
+     inkscape:cy="628.20943"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1375"
+     inkscape:window-height="873"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5868">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1130"
+       transform="translate(47.410714,24.242899)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 10,0 645,0 635,10 0,10 10,0 z"
+         id="id1" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 635,10 10,-10 0,700.7 -10,10 0,-700.7 z"
+         id="id3" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,10 635,0 0,700.7 -635,0 L 0,10 z"
+         id="id5" />
+      <g
+         id="g1135"
+         transform="translate(0,10)">
+        <clipPath
+           id="clipPath5664">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5666"
+             d="m 0,0 635,0 0,700.7 -635,0 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1140"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id6)"
+           font-size="12" />
+      </g>
+    </g>
+    <g
+       id="g1142"
+       transform="translate(61.910714,85.842899)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 169,0 169,60 0,60 0,0 z"
+         id="id8" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1145"
+         d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1147"
+         d="m 159,5 5,5 -5,0 0,-5 z" />
+      <g
+         id="g1149">
+        <clipPath
+           id="clipPath5674">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5676"
+             d="M 0,0 169,0 169,60 0,60 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1154"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id9)"
+           font-size="12">
+          <tspan
+             id="tspan1156"
+             textLength="50.0"
+             y="13"
+             xml:space="preserve"
+             x="59">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1158"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id9)"
+           font-size="12">
+          <tspan
+             id="tspan1160"
+             textLength="63.0"
+             y="27"
+             xml:space="preserve"
+             x="53">ROS Lib JS</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1162"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id9)"
+           font-size="12">
+          <tspan
+             id="tspan1164"
+             textLength="101.0"
+             y="55"
+             xml:space="preserve"
+             x="34">app/lib/rosbridge/*</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1166"
+       transform="translate(47.410714,38.142899)">
+      <clipPath
+         id="clipPath5685">
+        <path
+           inkscape:connector-curvature="0"
+           id="path5687"
+           d="m 0,0 633.25,0 0,33 L 0,33 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1171"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id10)"
+         font-size="12">
+        <tspan
+           id="tspan1173"
+           textLength="85.0"
+           y="13"
+           xml:space="preserve"
+           x="274">«web browser»</tspan>      </text>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1175"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id10)"
+         font-size="12">
+        <tspan
+           id="tspan1177"
+           textLength="78.0"
+           y="27"
+           xml:space="preserve"
+           x="277">:WebBrowser</tspan>      </text>
+    </g>
+    <g
+       id="g1179"
+       transform="translate(279.53571,85.842899)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 169,0 169,60 0,60 0,0 z"
+         id="id12" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1182"
+         d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1184"
+         d="m 159,5 5,5 -5,0 0,-5 z" />
+      <g
+         id="g1186">
+        <clipPath
+           id="clipPath5698">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5700"
+             d="M 0,0 169,0 169,60 0,60 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1191"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id13)"
+           font-size="12">
+          <tspan
+             id="tspan1193"
+             textLength="50.0"
+             y="13"
+             xml:space="preserve"
+             x="59">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1195"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id13)"
+           font-size="12">
+          <tspan
+             id="tspan1197"
+             textLength="123.0"
+             y="27"
+             xml:space="preserve"
+             x="23">MonoSpaced QRCode</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1199"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id13)"
+           font-size="12">
+          <tspan
+             id="tspan1201"
+             textLength="91.0"
+             y="55"
+             xml:space="preserve"
+             x="39">app/lib/qrcode.js</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1203"
+       transform="translate(489.6607,85.842899)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 169,0 169,60 0,60 0,0 z"
+         id="id15" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1206"
+         d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1208"
+         d="m 159,5 5,5 -5,0 0,-5 z" />
+      <g
+         id="g1210">
+        <clipPath
+           id="clipPath5713">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5715"
+             d="M 0,0 169,0 169,60 0,60 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1215"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id16)"
+           font-size="12">
+          <tspan
+             id="tspan1217"
+             textLength="50.0"
+             y="13"
+             xml:space="preserve"
+             x="59">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1219"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id16)"
+           font-size="12">
+          <tspan
+             id="tspan1221"
+             textLength="47.0"
+             y="27"
+             xml:space="preserve"
+             x="61">VideoJS</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1223"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id16)"
+           font-size="12">
+          <tspan
+             id="tspan1225"
+             textLength="87.0"
+             y="55"
+             xml:space="preserve"
+             x="41">app/lib/videojs/*</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1227"
+       transform="translate(47.410714,237.3429)">
+      <g
+         id="g1229"
+         transform="translate(12.5,0)">
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id17)"
+           inkscape:connector-curvature="0"
+           id="path1231"
+           d="m 10,0 588.75,0 -10,10 L 0,10 10,0 z" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id18)"
+           inkscape:connector-curvature="0"
+           id="path1233"
+           d="m 588.75,10 10,-10 0,455.1 -10,10 0,-455.1 z" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           d="m 0,10 588.75,0 0,455.1 L 0,465.1 0,10 z"
+           id="id20" />
+        <g
+           id="g1236"
+           transform="translate(0,10)">
+          <clipPath
+             id="clipPath5729">
+            <path
+               inkscape:connector-curvature="0"
+               id="path5731"
+               d="m 0,0 588.75,0 0,455.1 -588.75,0 z" />
+          </clipPath>
+          <text
+             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+             id="text1241"
+             font-weight="bold"
+             font-style="normal"
+             text-decoration="none"
+             clip-path="url(#id21)"
+             font-size="12" />
+        </g>
+      </g>
+      <g
+         id="g1243"
+         transform="translate(0,12.1)">
+        <clipPath
+           id="clipPath5735">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5737"
+             d="m 0,0 599.25,0 0,33 L 0,33 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1248"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id22)"
+           font-size="12">
+          <tspan
+             id="tspan1250"
+             textLength="50.0"
+             y="13"
+             xml:space="preserve"
+             x="274">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1252"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id22)"
+           font-size="12">
+          <tspan
+             id="tspan1254"
+             textLength="137.0"
+             y="27"
+             xml:space="preserve"
+             x="231">Flango Content Manager</tspan>        </text>
+      </g>
+      <g
+         id="g1256"
+         transform="translate(33,65.1)">
+        <clipPath
+           id="clipPath5744">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5746"
+             d="m 0,0 315.25,0 0,387 L 0,387 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'"
+           id="text1261"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id23)"
+           font-size="12">
+          <tspan
+             id="tspan1263"
+             textLength="49.0"
+             y="13"
+             xml:space="preserve"
+             x="2">├── css</tspan>          <tspan
+             id="tspan1265"
+             textLength="105.0"
+             y="27"
+             xml:space="preserve"
+             x="2">│   ├── app.css</tspan>          <tspan
+             id="tspan1267"
+             textLength="147.0"
+             y="41"
+             xml:space="preserve"
+             x="2">│   └── normalize.css</tspan>          <tspan
+             id="tspan1269"
+             textLength="154.0"
+             y="55"
+             xml:space="preserve"
+             x="2">├── flashCallback.html</tspan>          <tspan
+             id="tspan1271"
+             textLength="49.0"
+             y="69"
+             xml:space="preserve"
+             x="2">├── img</tspan>          <tspan
+             id="tspan1273"
+             textLength="98.0"
+             y="83"
+             xml:space="preserve"
+             x="2">├── index.html</tspan>          <tspan
+             id="tspan1275"
+             textLength="42.0"
+             y="97"
+             xml:space="preserve"
+             x="2">├── js</tspan>          <tspan
+             id="tspan1277"
+             textLength="98.0"
+             y="111"
+             xml:space="preserve"
+             x="2">│   ├── app.js</tspan>          <tspan
+             id="tspan1279"
+             textLength="154.0"
+             y="125"
+             xml:space="preserve"
+             x="2">│   ├── controllers.js</tspan>          <tspan
+             id="tspan1281"
+             textLength="126.0"
+             y="139"
+             xml:space="preserve"
+             x="2">│   ├── directives</tspan>          <tspan
+             id="tspan1283"
+             textLength="189.0"
+             y="153"
+             xml:space="preserve"
+             x="2">│   │   ├── reemi.entity.js</tspan>          <tspan
+             id="tspan1285"
+             textLength="189.0"
+             y="167"
+             xml:space="preserve"
+             x="2">│   │   ├── reemi.screen.js</tspan>          <tspan
+             id="tspan1287"
+             textLength="238.0"
+             y="181"
+             xml:space="preserve"
+             x="2">│   │   ├── reemi.theme.default.js</tspan>          <tspan
+             id="tspan1289"
+             textLength="231.0"
+             y="195"
+             xml:space="preserve"
+             x="2">│   │   ├── reemi.uicomponents.js</tspan>          <tspan
+             id="tspan1291"
+             textLength="161.0"
+             y="209"
+             xml:space="preserve"
+             x="2">│   │   ├── reemi.ui.js</tspan>          <tspan
+             id="tspan1293"
+             textLength="182.0"
+             y="223"
+             xml:space="preserve"
+             x="2">│   │   └── reemi.utils.js</tspan>          <tspan
+             id="tspan1295"
+             textLength="126.0"
+             y="237"
+             xml:space="preserve"
+             x="2">│   ├── filters.js</tspan>          <tspan
+             id="tspan1297"
+             textLength="112.0"
+             y="251"
+             xml:space="preserve"
+             x="2">│   └── services</tspan>          <tspan
+             id="tspan1299"
+             textLength="189.0"
+             y="265"
+             xml:space="preserve"
+             x="2">│       ├── palROSBridge.js</tspan>          <tspan
+             id="tspan1301"
+             textLength="189.0"
+             y="279"
+             xml:space="preserve"
+             x="2">│       ├── popupservice.js</tspan>          <tspan
+             id="tspan1303"
+             textLength="301.0"
+             y="293"
+             xml:space="preserve"
+             x="2">│       ├── reemi.services.palProperties.js</tspan>          <tspan
+             id="tspan1305"
+             textLength="287.0"
+             y="307"
+             xml:space="preserve"
+             x="2">│       ├── reemi.services.palSettings.js</tspan>          <tspan
+             id="tspan1307"
+             textLength="252.0"
+             y="321"
+             xml:space="preserve"
+             x="2">│       └── reemi.services.palUri.js</tspan>          <tspan
+             id="tspan1309"
+             textLength="49.0"
+             y="335"
+             xml:space="preserve"
+             x="2">├── lib</tspan>          <tspan
+             id="tspan1311"
+             textLength="77.0"
+             y="349"
+             xml:space="preserve"
+             x="2">├── screens</tspan>          <tspan
+             id="tspan1313"
+             textLength="133.0"
+             y="363"
+             xml:space="preserve"
+             x="2">│   ├── default.xml</tspan>        </text>
+      </g>
+      <g
+         id="g1315"
+         transform="translate(337,73.1)">
+        <clipPath
+           id="clipPath5776">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5778"
+             d="m 0,0 241.81063,0 0,379 L 0,379 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'"
+           id="text1320"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id24)"
+           font-size="12">
+          <tspan
+             id="tspan1322"
+             textLength="63.0"
+             y="13"
+             xml:space="preserve"
+             x="2">└── theme</tspan>          <tspan
+             id="tspan1324"
+             textLength="105.0"
+             y="27"
+             xml:space="preserve"
+             x="2">    └── default</tspan>          <tspan
+             id="tspan1326"
+             textLength="196.0"
+             y="41"
+             xml:space="preserve"
+             x="2">        ├── arabicButton.xml</tspan>          <tspan
+             id="tspan1328"
+             textLength="182.0"
+             y="55"
+             xml:space="preserve"
+             x="2">        ├── backButton.xml</tspan>          <tspan
+             id="tspan1330"
+             textLength="182.0"
+             y="69"
+             xml:space="preserve"
+             x="2">        ├── baseButton.xml</tspan>          <tspan
+             id="tspan1332"
+             textLength="175.0"
+             y="83"
+             xml:space="preserve"
+             x="2">        ├── bigButton.xml</tspan>          <tspan
+             id="tspan1334"
+             textLength="196.0"
+             y="97"
+             xml:space="preserve"
+             x="2">        ├── cameraButton.xml</tspan>          <tspan
+             id="tspan1336"
+             textLength="196.0"
+             y="111"
+             xml:space="preserve"
+             x="2">        ├── configButton.xml</tspan>          <tspan
+             id="tspan1338"
+             textLength="105.0"
+             y="125"
+             xml:space="preserve"
+             x="2">        ├── css</tspan>          <tspan
+             id="tspan1340"
+             textLength="140.0"
+             y="139"
+             xml:space="preserve"
+             x="2">        │   ├── scss</tspan>          <tspan
+             id="tspan1342"
+             textLength="196.0"
+             y="153"
+             xml:space="preserve"
+             x="2">        │   │   ├── main.css</tspan>          <tspan
+             id="tspan1344"
+             textLength="217.0"
+             y="167"
+             xml:space="preserve"
+             x="2">        │   └── ui-defaults.css</tspan>          <tspan
+             id="tspan1346"
+             textLength="203.0"
+             y="181"
+             xml:space="preserve"
+             x="2">        ├── englishButton.xml</tspan>          <tspan
+             id="tspan1348"
+             textLength="203.0"
+             y="195"
+             xml:space="preserve"
+             x="2">        ├── forwardButton.xml</tspan>          <tspan
+             id="tspan1350"
+             textLength="182.0"
+             y="209"
+             xml:space="preserve"
+             x="2">        ├── homeButton.xml</tspan>          <tspan
+             id="tspan1352"
+             textLength="105.0"
+             y="223"
+             xml:space="preserve"
+             x="2">        ├── img</tspan>          <tspan
+             id="tspan1354"
+             textLength="182.0"
+             y="237"
+             xml:space="preserve"
+             x="2">        ├── infoButton.xml</tspan>          <tspan
+             id="tspan1356"
+             textLength="196.0"
+             y="251"
+             xml:space="preserve"
+             x="2">        ├── koreanButton.xml</tspan>          <tspan
+             id="tspan1358"
+             textLength="210.0"
+             y="265"
+             xml:space="preserve"
+             x="2">        ├── languageButton.xml</tspan>          <tspan
+             id="tspan1360"
+             textLength="217.0"
+             y="279"
+             xml:space="preserve"
+             x="2">        ├── leftArrowButton.xml</tspan>          <tspan
+             id="tspan1362"
+             textLength="140.0"
+             y="293"
+             xml:space="preserve"
+             x="2">        ├── line.xml</tspan>          <tspan
+             id="tspan1364"
+             textLength="182.0"
+             y="307"
+             xml:space="preserve"
+             x="2">        ├── listButton.xml</tspan>          <tspan
+             id="tspan1366"
+             textLength="182.0"
+             y="321"
+             xml:space="preserve"
+             x="2">        ├── nextButton.xml</tspan>          <tspan
+             id="tspan1368"
+             textLength="210.0"
+             y="335"
+             xml:space="preserve"
+             x="2">        ├── reemBodyButton.xml</tspan>          <tspan
+             id="tspan1370"
+             textLength="182.0"
+             y="349"
+             xml:space="preserve"
+             x="2">        ├── reemButton.xml</tspan>          <tspan
+             id="tspan1372"
+             textLength="224.0"
+             y="363"
+             xml:space="preserve"
+             x="2">        ├── rightArrowButton.xml</tspan>          <tspan
+             id="tspan1374"
+             textLength="189.0"
+             y="377"
+             xml:space="preserve"
+             x="2">        └── videoButton.xml</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1376"
+       transform="translate(61.910714,157.8429)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 169,0 169,60 0,60 0,0 z"
+         id="id26" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1379"
+         d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1381"
+         d="m 159,5 5,5 -5,0 0,-5 z" />
+      <g
+         id="g1383">
+        <clipPath
+           id="clipPath5813">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5815"
+             d="M 0,0 169,0 169,60 0,60 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1388"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id27)"
+           font-size="12">
+          <tspan
+             id="tspan1390"
+             textLength="50.0"
+             y="13"
+             xml:space="preserve"
+             x="59">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1392"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id27)"
+           font-size="12">
+          <tspan
+             id="tspan1394"
+             textLength="59.0"
+             y="27"
+             xml:space="preserve"
+             x="55">AngularJS</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1396"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id27)"
+           font-size="12">
+          <tspan
+             id="tspan1398"
+             textLength="90.0"
+             y="55"
+             xml:space="preserve"
+             x="39">app/lib/angular/*</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1400"
+       transform="translate(279.53571,157.8429)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 169,0 169,60 0,60 0,0 z"
+         id="id29" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1403"
+         d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1405"
+         d="m 159,5 5,5 -5,0 0,-5 z" />
+      <g
+         id="g1407">
+        <clipPath
+           id="clipPath5828">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5830"
+             d="M 0,0 169,0 169,60 0,60 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1412"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id30)"
+           font-size="12">
+          <tspan
+             id="tspan1414"
+             textLength="50.0"
+             y="13"
+             xml:space="preserve"
+             x="59">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1416"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id30)"
+           font-size="12">
+          <tspan
+             id="tspan1418"
+             textLength="37.0"
+             y="27"
+             xml:space="preserve"
+             x="66">jQuery</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1420"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id30)"
+           font-size="12">
+          <tspan
+             id="tspan1422"
+             textLength="81.0"
+             y="55"
+             xml:space="preserve"
+             x="44">app/lib/jquery/*</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1424"
+       transform="translate(489.6607,157.8429)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 169,0 169,60 0,60 0,0 z"
+         id="id32" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1427"
+         d="m 149,5 10,0 5,5 0,15 -15,0 0,-20 z" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1429"
+         d="m 159,5 5,5 -5,0 0,-5 z" />
+      <g
+         id="g1431">
+        <clipPath
+           id="clipPath5843">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5845"
+             d="M 0,0 169,0 169,60 0,60 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1436"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id33)"
+           font-size="12">
+          <tspan
+             id="tspan1438"
+             textLength="50.0"
+             y="20"
+             xml:space="preserve"
+             x="59">«artifact»</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1440"
+           font-weight="bold"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id33)"
+           font-size="12">
+          <tspan
+             id="tspan1442"
+             textLength="63.0"
+             y="34"
+             xml:space="preserve"
+             x="53">SWFObject</tspan>        </text>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1444"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id33)"
+           font-size="12">
+          <tspan
+             id="tspan1446"
+             textLength="100.0"
+             y="48"
+             xml:space="preserve"
+             x="34">app/lib/swfobject/*</tspan>        </text>
+      </g>
+    </g>
+    <g
+       id="g1448"
+       transform="translate(543.1607,266.0929)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="m 0,0 127.5,0 10,10 0,14 L 0,24 0,0 z"
+         id="id35" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         id="path1451"
+         d="m 127.5,0 10,10 -10,0 0,-10 z" />
+      <g
+         id="g1453"
+         transform="translate(5,0)">
+        <clipPath
+           id="clipPath5857">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5859"
+             d="m 0,0 127.5,0 0,24 L 0,24 z" />
+        </clipPath>
+        <text
+           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text1458"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id36)"
+           font-size="12">
+          <tspan
+             id="tspan1460"
+             textLength="111.0"
+             y="13"
+             xml:space="preserve"
+             x="2">Project of this thesis</tspan>        </text>
+      </g>
+    </g>
+  </g>
+</svg>

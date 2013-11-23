@@ -32,6 +32,26 @@
 
 
 % ==============================================================================
+% Template for system operation contracts
+% ==============================================================================
+\newcounter{sopcc} % sys operation contract counter
+\setcounter{sopcc}{0}
+
+\newenvironment{sopcontract}[4]
+{
+    \medskip
+    \refstepcounter{sopcc}
+    
+    \par \noindent \textbf{Contract \arabic{sopcc} #1} 
+    \par \noindent #2
+    \par \noindent \textbf{Preconditions} #3 
+    \par \noindent \textbf{Postconditions} #4
+    
+}
+{}
+
+
+% ==============================================================================
 % Template for use cases
 % ==============================================================================
 \newcounter{succ}

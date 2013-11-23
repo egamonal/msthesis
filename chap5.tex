@@ -686,5 +686,79 @@ operations "
 
 up to date documentation: a common problem is that docs are hardly ever updated
 
+Contracts for operations define system behaviour and describe the outcome of executing system operations in terms of state changes to domain objects.
+This section contains the sequence diagrams and contracts of the most relevant operations in the system.
+However, the most complex part of this project is parsing and rendering the input \ac{XML} files.
+Users do not interact directly with them: they do not execute operations that result in state changes to the domain object.
+FIXME CROSS REF chapter design explains this problem and the solution in detail.
+
+\subsection{Sequence diagrams}
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/spec-seq-start-qtapp.pdf}
+    \caption{System Sequence Diagram - Start Robot Applications}
+    \label{fig:spec-start-qtapp}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/spec-seq-start-contents-app.pdf}
+    \caption{System Sequence Diagram - Start Contents Applications}
+    \label{fig:spec-start-ca}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/spec-seq-manage-screens-read.pdf}
+    \caption{System Sequence Diagram - Manage Screens (Read)}
+    \label{fig:spec-manage-screens-read}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/spec-seq-manage-conf-update.pdf}
+    \caption{System Sequence Diagram - Manage Configuration (Update)}
+    \label{fig:spec-manage-conf-create}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/spec-seq-manage-conf-create.pdf}
+    \caption{System Sequence Diagram - Manage Configuration (Create)}
+    \label{fig:spec-manage-conf-create}
+\end{figure}
+
+\subsection{Contracts}
+system operations
+
+\begin{sopcontract}{nameofopaaa}
+{description}
+{preconditions go here}
+{postconditions go here}
+\end{sopcontract}
+
+FIXME: robot behaviour ja no cal!!
+
+\begin{sopcontract}{getRobotApplications()}
+{FIXME: this is part of the contents of an XML file, like functions.xml. Maybe it should not be here. Retrieves a list of applications that can be launched from the Flango Content Manager, e.g. Qt applications like navigation or face recognition.}
+{RobotBehaviour is running}
+{A list $l$ of robot applications was returned}
+\end{sopcontract}
+
+\begin{sopcontract}{startRobotApplication(id:String)}
+{Starts the robot application with id $id$, e.g. 'face recognition'}
+{$id$ is a valid robot application identifier}
+{A request to start the robot application with id $id$ was sent}
+\end{sopcontract}
+
+\begin{sopcontract}{start(appId: Integer, confParams: HashMap)}
+{Starts the contents  application with id $appId$ and configuration parameters $confParam$ that can overwrite the fetched configuration from the backend}
+{$id$ is a well-formatted contents application identifier}
+{aaaa}
+\end{sopcontract}
+
+\subsection{Unit Tests}
+high level description of the tests. specification by example
+
 \section{XML Representation}
 explain syntax here?

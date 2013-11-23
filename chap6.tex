@@ -25,17 +25,60 @@ some hints. functional. scopes.
 language, jquery, qr, swf
 
 Object Literal Notation, constructors, closures, var scope, concept of classes
+notes:
 
+First thing you need to know is that JavaScript uses prototype-based inheritance. This means there is no distinction between classes and instances as in other OO languages (like Java). There are just objects. One implication of that is that differentiating between class and object diagrams does not make sense.
+
+Keep in mind that UML includes many types of diagrams, specifically a branch of behavior diagrams, including sequence and use case diagrams. Such diagrams specifically address your concern of modeling javascript as a behavior driven language.
+
+It is quite possible that a javascript system is not using object-oriented design. In such a case, class diagrams would probably not be appropriate, as you pointed out. However, since javascript does support object-oriented design, it is possible for class diagrams to effectively depict a system using javascript. It really depends on how the javascript is being used.
+
+JavaScript is an
+object-based
+language. Just as in C\#, you can create objects, call their
+methods, pass them as parameters, and so on. You could see this clearly when working
+with the DOM, where you manipulated the HTML document through the methods
+and properties of the implicit
+document
+object. However, JavaScript isn't generally
+considered a fully object-oriented language because it lacks support for some features
+that you'd
+fi
+nd in "real" OOP languages, or simply implements them differently.
+
+ What does "object-oriented programming" mean anyway? Basically, as the name
+suggests, OOP puts objects at the centre of the programming model. The
+object
+is
+probably the most important concept in the world of OOP—a self-contained entity
+that has
+state
+and
+behavior
+, just like a real-world object. Each object is an instance of a
+class
+(also called
+type
+), which de
+fi
+nes the behavior that is shared by all its objects
+
+
+******
+description of the language and big uses
+objects
+functions
+prototypal inheritance (vs classical model, new, etc)
 
 
 \subsection{AngularJS}
 about the framework. directives, services, 
-The framework enforces a very strict separation of responsibilities: DOM updates are abstracted away from model updates. 
-Directives act as the layer that keeps these two aspects loosely coupled. One one hand, directives translate data into user interfaces; and, on the other hand, directives translate user interactions back into \$scope behaviors. FIXME Reword this
+The framework enforces a very strict separation of responsibilities: \ac{DOM} updates are abstracted away from model updates. 
+Directives act as the layer that keeps these two aspects loosely coupled.
+One one hand, directives translate data into user interfaces and, on the other hand, directives translate user interactions back into \$scope behaviors. FIXME Reword this
 
 \paragraph{Overview} AngularJS is a framework for dynamic web applications.
-\ac{HTML} was created to declare static documents. 
-It needs libraries and frameworks to enable application development.
+\ac{HTML} was created to declare static documents and needs libraries and frameworks to enable application development.
 Angular lets developers use \ac{HTML} in the templates and extend the language syntax to express reusable components.
 It \textit{teaches the browser new syntax} through a construct called Directive.
 Features:
@@ -192,6 +235,20 @@ explain typical mvc app
 explain whats model, controllers and view in flango
 controllers "use services" 
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-mvc-1.pdf}
+    \caption{MVC overview}
+    \label{fig:mvc-overview}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-mvc-2.pdf}
+    \caption{MVC with observer pattern}
+    \label{fig:mvc-with-observer}
+\end{figure}
+
 \subsection{Common Patterns in the project}
 DI, inversion of dependency, reveal, factory, async, fowler... hints of the remote façade and SOA¿?
 
@@ -268,6 +325,13 @@ A particular implementation of this principle is in the wrapper for roslibjs: th
 With AngularJS, injectable components are created with a factory and are made available using a global injector.
 They can be injected just by using their name.
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-servicelocator.pdf}
+    \caption{Service Locator}
+    \label{fig:Service Locator}
+\end{figure}
+
 \lstinputlisting[language=javascript, caption={Injecting services in a controller}]{src/design-di-injection.js}
 
 They can be obtained manually with the \$injector
@@ -294,12 +358,66 @@ FIXME CROSS REF factory code example  + annotation "compare to writing the code 
 
 \paragraph{Remote Facade} FIXME: sure? do I have a remote facade in the app, in a controller?
 
-\paragraph{command pattern} cita el general i cita osmani \cite{Osmani:2012}
+\paragraph{Command} 
+Sometimes requests are issued to objects without knowing anything about the operation being requested or the receiver.
+The command pattern is a behavioural design pattern in which an object is used to represent all the information needed to call a method at a later time. 
+It lets objects make requests of unspecified application objects by turning the request itself into an object.
+This object can be stored and passed around like other objects \cite{GoF:1995}.
+Other names are Transaction or Action Pattern  
 
-FIXME posar diagrames per algun lloc 
+\fref{fig:design-command-general} shows the class diagram for a traditional object-oriented programming language.
+With JavaScript there are no abstract classes.
+The approach that Osmani proposes is having only concrete classes with a common $execute$ method \cite{Osmani:2012} CROSS REF CODE EXAMPLE
 
+FIXME include code design-command-1.js and design-command-2.js
+With a simple controller (CROSSREF listing 1) one would call the methods in the object.
+while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
+For example, there is no way to define the behaviour for a \texttt{UI Component :: Button} click handler.
+Only the contents application knows it.
+By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them CROSS REF listing 2
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-command-1.pdf}
+    \caption{design patterns command 1}
+    \label{fig:context-original}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-patterns-command-flango.pdf}
+    \caption{design patterns command flango}
+    \label{fig:context-original}
+\end{figure}
 
 \subsection{Orientation to Web Components}
+Web Components is a set of specifications that let web developers use \ac{HTML}, \ac{CSS} and JavaScript to build widgets that can be reused easily and reliably.
+A web component consists of five pieces\cite{W3CComponents:2013}:
+\begin{itemize}
+    \item \textbf{Templates} define chunks of mark-up that are inert but can be activated for use later.
+    \item \textbf{Decorators} apply templates based on CSS selectors to affect rich visual and behavioural changes to documents.
+    \item \textbf{Custom Elements} let authors define their own elements, with new tag names and new script interfaces.
+    \item \textbf{Shadow DOM}  encapsulates a DOM sub-tree for more reliable composition of user interface elements.
+    \item \textbf{Imports} defines how templates, decorators and custom elements are packaged and loaded as a resource.
+\end{itemize}
+
+At the time of developing this project, the specification of web components is still a work in progress.
+The technology, however, seems to fit in the needs of the project.
+There are 2 well-known initiatives that implement an approach to web components: Google Polymer and Google AngularJS.
+
+\paragraph{Polymer} Polymer is a framework that aims to use Web Components. 
+It's based on Custom Elements, i.e. everything is a component.
+With Polymer developers can compose and encapsulate bits of HTML that can be used in any other templating system or framework.
+It uses \ac{HTML} and the \ac{DOM} \acp{API} to separate the view (\ac{DOM}) from the model. 
+Updates to the model are reflected in the \ac{DOM} and user input in the view is immediately propagated to the model:: fast two-way data binding.
+
+Polymer is in pre-alpha stage and can not be used in a stable project.
+Angular, the framework of choice for this project, has features close to web components: it has declarative templates (in directives) that can be applied for elements, attributes, comments or classes (like Web Components decorators).
+Directives are custom elements: behaviour can be placed in a directive controller, in a compile or in a link function.
+Templates are usually \ac{HTML}, although it is not shadow \ac{DOM}.
+Units of code can be grouped in modules, services, etc and be reused.
+
+\FloatBarrier
 
 \section{Static View}
 the model, the view and the controllers. angualar modules, services, filters, controllers...
@@ -307,6 +425,104 @@ talk about the data model and \$rootScope ? talk about properties
 
 un diagrama:
 moduls, serveis, controladors, etc. 
+
+% ********** CLASS DIAGRAM ********
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-ui.pdf}
+    \caption{Class Diagram -- UI}
+    \label{fig:class-ui}
+\end{figure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design-class-uicomponent.pdf}
+    \caption{Class Diagram -- UI Component}
+    \label{fig:class-uicomponent}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design-class-themecomponents.pdf}
+    \caption{Class Diagram -- UI Theme Component}
+    \label{fig:class-themecomponent}
+\end{sidewaysfigure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-services.pdf}
+    \caption{Class Diagram -- UI services}
+    \label{fig:class-services}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-ngfactory.pdf}
+    \caption{Class Diagram -- angular factory}
+    \label{fig:class-ngfactory}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-controllers.pdf}
+    \caption{Class Diagram -- angular controllers}
+    \label{fig:class-controllers}
+\end{figure}
+
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-class-action.pdf}
+    \caption{Class Diagram -- ui action}
+    \label{fig:class-action}
+\end{figure}
+
+
+% ********** PACKAGE DIAGRAM ********
+\FloatBarrier
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-controllers.pdf}
+    \caption{Packages Diagram -- controllers}
+    \label{fig:pkg-controllers}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-reemi.pdf}
+    \caption{Packages Diagram -- application}
+    \label{fig:pkg-reemi}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-services.pdf}
+    \caption{Packages Diagram -- services}
+    \label{fig:pkg-services}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-uicomponents.pdf}
+    \caption{Packages Diagram -- UI components}
+    \label{fig:pkg-uicomponents}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-ui.pdf}
+    \caption{Packages Diagram -- UI}
+    \label{fig:pkg-ui}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-package-uithemecomponents.pdf}
+    \caption{Packages Diagram -- UI theme components}
+    \label{fig:pkg-themecomponents}
+\end{figure}
+
+\FloatBarrier
 
 \section{Dynamic view}
 the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
@@ -316,6 +532,46 @@ examples of using the properties, generating the settings, fetching things from 
 
 \section{Physical view}
 robots, backend.basestation, wi-fi, vpn...
+
+% ****** deployment *******
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-basestation.pdf}
+    \caption{Deployment Diagram -- basestation}
+    \label{fig:deploy-basestation}
+\end{figure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-browser.pdf}
+    \caption{Deployment Diagram -- browser}
+    \label{fig:deploy-browser}
+\end{sidewaysfigure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-mediacomputer.pdf}
+    \caption{Deployment Diagram -- media computer}
+    \label{fig:deploy-media}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-reem.pdf}
+    \caption{Deployment Diagram -- reem}
+    \label{fig:deploy-reem}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design-deployment-webserver.pdf}
+    \caption{Deployment Diagram -- webserver}
+    \label{fig:deploy-webserver}
+\end{figure}
+
+\FloatBarrier
+
+% ****** maybe add network? *****
 
 \section{External view}
 there isn't! it's a backend app to create a frontend app.
