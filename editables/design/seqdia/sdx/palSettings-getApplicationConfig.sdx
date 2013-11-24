@@ -2,18 +2,29 @@
 <diagram>
 <source><![CDATA[start:Start[e]
 s:palSettings
+h:$http
 
-start:>s.init(queryString)
-s:-- qs = queryString
-s:r=s.getConfig()
+start:s[j].getApplicationConfig(id)
+
+s:>h[srv].get(config.generic.api_endpoint + '/app/'+ id + '/config.json')
+[c:alt response code is 200 OK]
+h[srv]:s.applicationConfigCallback(response)
+s:-- config\.app = response\.data
 *1 s
- getConfig makes async calls but 
- returns a promise immediately.
- It will be resolved when async calls
- are completed.
+ overwrites the received parameters
+ with those in the query string in this.qs
 *1
-s:>start.return r
-]]></source>
+s:s.setApplicationInitialParams()
+*2 s
+ all information requried to get the structure
+ is now available
+*2
+(2)s[1]:s.getStructure(config.app.app_id, config.generic.api_endpoint)
+--else
+h[srv]:s.applicationConfigErrorCallback(response)
+s:s.defaultApplicationConfig()
+[/c]
+h[srv]:stop]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

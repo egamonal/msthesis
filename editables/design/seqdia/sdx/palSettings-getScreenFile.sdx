@@ -2,18 +2,47 @@
 <diagram>
 <source><![CDATA[start:Start[e]
 s:palSettings
+r:$route
 
-start:>s.init(queryString)
-s:-- qs = queryString
-s:r=s.getConfig()
-*1 s
- getConfig makes async calls but 
- returns a promise immediately.
- It will be resolved when async calls
- are completed.
-*1
+start:s[j].getScreenFile(path, depth)
+s:routes=r.getRoutes()
+[c:loop for all r in routes]
+[c:opt r.path is uri]
+[c:alt config.app.id is "auto" or "default"]
+s:r = config\.generic\.default_api_endpoint + 
+s:    + "/screens/"+ r\.screenId + '\.xml';
+s:>start. return r
+--else
+s:r = config\.generic\.api_endpoint + 
+s:      + "/app/" + config\.app\.id +"/screen/" +
+s:      + r\.screenId + '\.xml';
 s:>start.return r
-]]></source>
+[/c]
+[/c]
+
+[/c]
+
+.
+s:>h[srv].get(config.generic.default_api_endpoint + '/app/default/config.json')
+[c:alt response code is 200 OK]
+h[srv]:s.defaultApplicationConfigCallback(response)
+s:-- config\.app = response
+s:-- config\.app\.id = "default"
+s:s.getStructure(config.app.id, config.generic.default_api_endpoint)
+--else
+h[srv]:s.defaultApplicationConfigErrorCallback(response)
+*1 s
+ default application not available
+ last fallback: static app (shipped with this software,
+ not created with the Screens Editor)
+*1
+s:>h[ecb].get(config.generic.static_api_endpoint + '/app/config.json')
+h[ecb]:s.callback()
+s:-- config\.app = response\.data
+s:s.getStructure(config.app.id, config.generic.static_api_endpoint)
+s[1]:stop
+[/c]
+h[srv]:stop]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

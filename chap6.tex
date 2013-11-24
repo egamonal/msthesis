@@ -548,6 +548,12 @@ The Flango \cm also fetches de configuration from the backend and builds the loc
 
 diagrams: bootstrap-1, 2 and 3 (general, config, run)
 
+FIXME methods of palSettings are not defined yet here.
+The configuration is encapsulated in the \texttt{palSettings} angular service.
+This service is created with a factory: when a new instance of palSettings is to be created, it runs some code that prepares an object to return, the instance itself.
+Services are singletons.
+
+
 \subsection{Properties management and transformation to \ac{HTML}}
 descr with example (transform a  book into...)
 
@@ -556,6 +562,31 @@ interpretacio de tags. fl:ui type=.. --> fl {type} per separar
 herència de ui components (un basebutton s'implementa amb...)
 
 plantilles dels temes
+
+Browsers can only parse \ac{HTML} nodes.
+When the parser finds an \ac{XML} node, it prints the inner text node because \ac{HTML} also has text nodes.
+With Angular \ac{XML} nodes can have behaviour: it teaches the browser new syntax.
+For example, $<fl:ui fl:base-button fl:x="100" fl:width="90"></ui>$ triggers the directive $flBaseButton$, which encapsulates the behaviour to transform it to \ac{HTML}: $<a href="..."><div>text</div></a>$.
+Angular attaches an object \texttt{\$scope} to all directives.
+A scope can be isolated, prototypically inherited from the parent, or shared with other directives of the same type.
+Values exposed to the view are stored in the scope.
+This project uses the scope to encapsulate the properties extracted or inferred from the \ac{XML} node.
+Thus, any element \texttt{$<fl:ui>$} or concrete types \texttt{base-button}, \texttt{back-button}, etc has a \texttt{scope} object attached that contains all the necessary data to render an \ac{HTML} node.
+
+diagram with the sample xml and the properties object
+
+Flango \cm is designed to adapt to this syntax and to decouple and reuse elements as much as possible.
+Directives can be restricted to Element, Attribute, Class or coMment.
+All UI Components have the tag $<fl:ui>$ and an attribute $fl:type$ that defines the concrete type.
+Instead of having all behaviour in one directive \texttt{fl:ui} (restricted to Element), it uses \texttt{flUi} to rewrite the \ac{DOM}: $<fl:ui fl:type="base-button"></ui>$ becomes $<fl:ui base-button></ui>$, where \texttt{base-button} is an attribute of the element \texttt{fl:ui}.
+There is a directive \texttt{flBaseButton} (restricted to Attribute) that encapsulates the behaviour of this tag.
+Likewise, it initialises the properties object for this \texttt{ui} element and stores the type that will be later used as a value for the \texttt{class} attribute in the \ac{HTML} element.
+The stylesheet of the theme defines the inheritance of styles: a base-button is implemented with a button and, therefore, inherits all properties of the class $button$.
+
+$<fl:ui base-button></ui>$ eventually becomes $<div class="base-button" style="..."><div class="caption">Hello World</caption></div>$.
+Properties are exclusive for the UI Component they are attached to: they are interpreted as in-line \ac{CSS} in the \texttt{style} \ac{HTML} attribute.
+
+With this rewrite strategy the directive eventually writes real \ac{HTML} that defines the structure of the UI Component and uses the stylesheet
 
 \subsection{Pop-Ups}
 description and use example

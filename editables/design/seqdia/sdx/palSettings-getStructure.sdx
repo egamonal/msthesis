@@ -2,18 +2,25 @@
 <diagram>
 <source><![CDATA[start:Start[e]
 s:palSettings
+h:$http
 
-start:>s.init(queryString)
-s:-- qs = queryString
-s:r=s.getConfig()
+start:s[j].getStructure(id, api)
+
+s:>h[srv].get(api + '/app/' + id + '/structure.json')
+[c:alt response code is 200 OK]
+h[srv]:s.callback(response)
+s:-- config\.structure = response\.data
 *1 s
- getConfig makes async calls but 
- returns a promise immediately.
- It will be resolved when async calls
- are completed.
+ resolve the promise. The program can now use
+ the configuration object. It would stall
+ in the default screen otherwise.
 *1
-s:>start.return r
-]]></source>
+(1)s:-- deferred\.resolve()
+--else
+h[srv]:s.errorCallback(response)
+s:-- error
+[/c]
+h[srv]:stop]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>
