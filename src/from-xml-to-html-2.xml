@@ -1,0 +1,13 @@
+<fl:ui fl:id="3" class="ng-scope" fl:base-button="">
+    <fl:ui fl:id="base-button" class="ng-scope" fl:button="">
+        <a style="width:100px;height:100px;left:124px;top:123px;position:absolute;"
+           ng-class="lclass" target="_self" ng-href=""
+           ng-click="executeActions(clickchain)" ng-controller="ActionCtrl"
+           class="ng-scope fl-base-button">
+            <div style="width:100px;height:100px;left:124px;top:123px;position:absolute;display:none;" class="fl-overlay"></div>
+            <div class="caption-container">
+                <div ng-bind-html="caption" class="fl-caption ng-binding">ignite!</div>
+            </div>
+        </a>
+    </fl:ui>
+</fl:ui>

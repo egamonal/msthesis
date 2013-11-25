@@ -1,15 +1,35 @@
 \chapter{Design}
-FIXME coming from previous chapter: Code Restructuring; Data Restructuring; Forward Engineering !!!!!!
-
-FIXME  mention changes in the response format of the API and the XMLs. mention adaptation of robotBehaviour and rostopics.
-    
 This chapter describes the internal wiring of the application and the reasons that lead to this design.
 It explains the programming languages, frameworks and most relevant libraries, 
+
+\section{Overview}
+Reverse engineering the current project involves 3 activities related to technology and implementation details: \textbf{code restructuring}, \textbf{data restructuring} and\textbf{ forward engineering}.
+No modifications in the code of the old version of Flango \cm are scheduled: there is no code or data restructuring.
+However, there are some adaptations to be done in the \flangobe (\ac{API}), \ac{XML} and robotBehaviour:
+
+\paragraph{Changes in \flangobe} The \ac{API} is designed to return \ac{XML} in all cases.
+Most of the time this is desirable (e.g. requests to get screens) but in cases where normal exchange of information is done between the two systems, \ac{JSON} is a better option for the new technology.
+It is less verbose (minimise bandwidth) and has a straight-forward translation to JavaScript objects.
+
+\paragraph{Changes in \ac{XML}} The \ac{XML} syntax is designed to work isolated.
+The new version, however, can mix \ac{XML} with \ac{HTML} thanks to Angular.
+This leads to two problems:
+\begin{itemize}
+\item Some tags of the \ac{XML} vocabulary conflict with \ac{HTML}. For instance, \texttt{caption}. Solution: add a namespace \texttt{fl} to all tags. Thus, in the new version a \lstinline$<ui type="base-button"></ui>$ becomes \lstinline$<fl:ui fl:type="base-button"></fl:ui>$.
+\end{itemize}
+
+\paragraph{Changes in robotBehaviour} Current interoperation between Flango \cm and the robot is limited to robotBehaviour.
+This communication is done with JavaScript callbacks and \acp{URL}.
+To decouple the \cm as much as possible from the rest of the robot, the new system uses \ac{ROS} Topics and ROS Bridge
+
+\subsection{Forward Engineering} A program that depends on an dead browser plug-in with performance issues is not sustainable.
+A solution is completely  redesigning, recoding and retesting the program, even with a different technology that makes it more flexible, open to new developers and without performance problems.
+
 
 \section{Technology}
 angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's). tdd+jasmine
 
-The project of this thesis, Flango Content Manager, is designed to work client side in a web browser.
+The project of this thesis, Flango \cm, is designed to work client side in a web browser.
 The natural technology in this environment is JavaScript, HTML and CSS.
 It uses the Google AngularJS framework with jQuery.
 Angular \textit{teaches the browser new syntax}.
@@ -71,8 +91,6 @@ prototypal inheritance (vs classical model, new, etc)
 
 
 \subsection{AngularJS}
-FIXME: notes about the framework. directives, services, 
-
 The framework enforces a very strict separation of responsibilities: \ac{DOM} updates are abstracted away from model updates. 
 Directives act as the layer that keeps the two parts loosely coupled.
 On one hand, directives translate data into user interfaces and, on the other hand, directives translate user interactions back into \texttt{\$scope} behaviors. FIXME Reword this
@@ -87,29 +105,29 @@ Features:
     \item Tools to test: unit-testing, end-to-end testing, mocks.
 \end{itemize}
 
-Flango Content Manager reads \ac{XML} and renders it as \ac{HTML}.
+Flango \cm reads \ac{XML} and renders it as \ac{HTML}.
 There are two possible approaches: parsing the \ac{DOM} tree in the browser or teaching the browser new syntax.
 This project uses the second (FIXME language: the latter?): instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (AngularJS Directives) and includes the \ac{XML} files in the appropriate place in the \ac{DOM}. 
 The browser already traverses the tree to render the page and there is no need to do it manually.
-Normally a browser ignores an element that doesn't belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></ui>$)
+Normally a browser ignores an element that doesn't belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></fl:ui>$)
 With AngularJS, the browser runs the behaviour defined in the reusable component.
 
 \paragraph{Building Blocks} There are several key components in AngularJS to build the application.
 
 \begin{itemize}
-    \item Controller: a function that binds the view with the model. It typically assigns objects to the \$scope variable to expose them to the template.
-    \item Directive: a construct to extend HTML with custom attributes and elements. It defines the template of the reusable component, the behaviour, the attributes, etc. For instance, the directive \texttt{flBaseButton} states that the node \lstinline$<fl:ui fl:type="base-button">$ in the \ac{DOM} tree should be transformed into a simple \texttt{button} using the theme template \texttt{baseButton.xml}. 
-    \item Service: Singleton that encapsulates reusable business logic independent of views. For instance, a service to handle the configuration of the application. They can be injected in controllers, directives or other services.
-    \item Filter: a function that formats the value of an expression for display to the user. For instance, a filter to display a Number with currency format.
-    \item Module: These building blocks are grouped in Modules. They can have dependencies between them.
+    \item \textbf{Controller}: a function that binds the view with the model. It typically assigns objects to the \$scope variable to expose them to the template.
+    \item \textbf{Directive}: a construct to extend HTML with custom attributes and elements. It defines the template of the reusable component, the behaviour, the attributes, etc. For instance, the directive \texttt{flBaseButton} states that the node \lstinline$<fl:ui fl:type="base-button">$ in the \ac{DOM} tree should be transformed into a simple \texttt{button} using the theme template \texttt{baseButton.xml}. 
+    \item \textbf{Service}: Singleton that encapsulates reusable business logic independent of views. For instance, a service to handle the configuration of the application. They can be injected in controllers, directives or other services.
+    \item \textbf{Filter}: a function that formats the value of an expression for display to the user. For instance, a filter to display a Number with currency format.
+    \item \textbf{Module}: These building blocks are grouped in Modules. They can have dependencies between them.
 \end{itemize}
 
 The framework provides all the necessary tools to use unit and end-to-end testing from the very beginning of the project.
 Considering testing as equal in importance to application writing makes the code to be more robust, lowers the cost of maintenance and helps to have a better internal design.
 \begin{itemize}
-    \item Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other framework and does not require a \ac{DOM}. It provides a simple, self-descriptive (FIXME language!) syntax to write test suites.
-    \item Angular Mocks: there are stub objects ready to load in tests (e.g. \$httpBackend mocks \ac{HTTP} calls)
-    \item Karma is a test runner to automate the execution of the test suites. 
+    \item \textbf{Jasmine} is a behaviour-driven development framework for testing JavaScript code. It does not depend on any other framework and does not require a \ac{DOM}. It provides a simple, self-descriptive (FIXME language!) syntax to write test suites.
+    \item \textbf{Angular Mocks}: there are stub objects ready to load in tests (e.g. \texttt{\$httpBackend} mocks \ac{HTTP} calls)
+    \item \textbf{Karma} is a test runner to automate the execution of the test suites. 
 \end{itemize}
     
 \paragraph{Compile-Link} To make directives possible Angular has a compiler.
@@ -120,26 +138,18 @@ Secondly it binds the model to the view.
 The compiler allows developers to attach behaviour to any \ac{HTML} element or attribute and even create new HTML elements or attributes with custom behaviour.
 Angular calls these behaviour extensions directives.
 
-The order of execution is
+The order of execution is:
 
-<div directive1>
-  <div directive2>
-    <!-- ... -->
-  </div>
-</div>
+\lstinputlisting[language=xml, caption={Order of execution of directives}]{src/example-order-directives.xml}
 
-directive1: compile
-  directive2: compile
-directive1: controller
-directive1: pre-link
-  directive2: controller
-  directive2: pre-link
-  directive2: post-link
-directive1: post-link
+\lstinputlisting[language=bash, caption={Result of execution of directives}]{src/result-order-directives.text}
 
 The role of these functions is:
-lalalala
-
+\begin{itemize}
+\item \textbf{Directive Controller}: similar to regular controllers but accessible from other directives. 
+\item \textbf{Compile}: finds new directives and runs their compile function. Modifications to the \ac{DOM} before applying the template can be done here.
+\item \textbf{Link}: binds data to the view. Modifications to the final \ac{DOM} are safe to do here.
+\end{itemize}
 
 \paragraph{Directive} At a high level, directives are markers on a \ac{DOM} element (such as an attribute, element name, \ac{CSS} class or a comment) that tell Angular's \ac{HTML} compiler to attach a specified behaviour to it or even replace it with another element.
 The \ac{HTML} compiler finds elements that match directives. 
@@ -180,7 +190,7 @@ common patterns:
 dependency injection and angularJS (and literature: fowler)
 
 \subsection{Context}
-Flango Content Manager is a piece in the robot.
+Flango \cm is a piece in the robot.
 \ac{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster. 
 It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
 It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA}.
@@ -188,10 +198,15 @@ It has a loosely coupled architecture with nodes, messages, topics and services,
 DIAGRAM HERE: rosmaster (service registry), services, topics
 
 Nodes are processes that perform computation, a "software module". 
-Nodes communicate with Messages, strictly typed data structures . There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
-Nodes subscribe and publish to topics, identified by a name (string).
-Services are pairs of request/response messages offered in a node designed for simple synchronous transactions.
-FIXME add ActionServers???
+Nodes communicate with each other by publishing/subscribing with two protocols:
+\begin{itemize}
+\item Topics: asynchronous. message passing (publish/subscribe). Typed by a \ac{ROS} Message
+\item Services: synchronous. \ac{RPC} (pairs of request/response messages). Typed by a \ac{ROS} Service
+\end{itemize}
+
+Messages are strictly typed data structures . There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
+To find service in this peer-to-peer topology, there is a lookup mecanism: \emph{rosmaster} \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}.
+
 
 
 http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf
@@ -201,11 +216,24 @@ Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} work
 In Stacks there are Servers and ActionServers that provide Services.
 Flango is a component in this system that communicates with robotBehaviour using \ac{ROS} Topics and two types of messages.
 It is not designed strictly as a service to handle synchronous requests but it is able to use Topics to have asynchronous requests and provide feedback, like ActionServers.
-A typical use of a \ac{ROS} Topic is setting the language of the Content Manager or sending an action to robotBehaviour (e.g. shake hands, say a sentence).
+A typical use of a \ac{ROS} Topic is setting the language of the \cm or sending an action to robotBehaviour (e.g. shake hands, say a sentence).
 robotBehaviour is not a \ac{ROS} service and therefore it can not handle request/responses like other components in the system.
 Topics are the only way to communicate with it.
 
-OR MAYBE DIAGRAM HERE: rosmaster (service registry), services, topics, FLANGO
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design/ros-architecture-topics.pdf}
+    \caption{High-level view of the ROS Architecture (Topics)}
+    \label{fig:design-ros-topics}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design/ros-architecture-services.pdf}
+    \caption{High-level view of the ROS Architecture (Services)}
+    \label{fig:design-ros-services}
+\end{figure}
 
 FIXME diagrams ROS-flango-robot-robotbehaviour etc go here? in specs  just include the description of what the system does.
 
@@ -565,6 +593,7 @@ show patterns!
 
 This section contains a detailed description of the most relevant operations.
 They are grouped in XXX categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
+It always works the same way: writing the appropriate behaviour in directives (controller, compile and link functions) and injecting the required services following the flow that Angular needs.
 
 \subsection{Overview}
 compile-link-ctrl
@@ -667,28 +696,41 @@ plantilles dels temes
 Browsers can only parse \ac{HTML} nodes.
 When the parser finds an \ac{XML} node, it prints the inner text node because \ac{HTML} also has text nodes.
 With Angular \ac{XML} nodes can have behaviour: it teaches the browser new syntax.
-For example, $<fl:ui fl:base-button fl:x="100" fl:width="90"></ui>$ triggers the directive $flBaseButton$, which encapsulates the behaviour to transform it to \ac{HTML}: $<a href="..."><div>text</div></a>$.
+For example, \lstinline$<fl:ui fl:base-button fl:x="100" fl:width="90"></ui>$ triggers the directive \lstinline$flBaseButton$, which encapsulates the behaviour to transform it to \ac{HTML}: \lstinline$<a href="..."><div>text</div></a>$.
 
-To expose values to the view, Angular attaches an object \texttt{\$scope} to all directives.
+To expose values to the view, Angular attaches an object \texttt{\$scope} to all directives  \fref{fig:design-properties-management}.
 A scope can be \textbf{isolated}, \textbf{prototypically inherited} from the parent, or \textbf{shared} with other directives of the same type.
 This project uses the scope to encapsulate the properties extracted or inferred from the \ac{XML} node.
-Thus, any element \texttt{$<fl:ui>$} or concrete types \texttt{base-button}, \texttt{back-button}, etc has a \texttt{scope} object attached that contains all the necessary data to render an \ac{HTML} node \fref{fig:design-properties-management}.
+Thus, any element \lstinline$<fl:ui>$ or concrete types \lstinline$base-button$, \lstinline$back-button$, etc has a \texttt{scope} object attached that contains all the necessary data to render an \ac{HTML} node.
 Scopes are also watched to provide two-way data binding with controllers (see CROSS REF observer/mvc)
 
-\begin{figure}[htb]
+\begin{figure}[h]
     \centering
     \includegraphics{figures/design/properties-management.pdf}
     \caption{Scope object attached to a node}
     \label{fig:design-properties-management}
 \end{figure}
 
+\lstinputlisting[language=xml, caption={Original XML BaseButton}, label="design-real-xml-button"]{src/from-xml-to-html-1.xml}
+\lstinputlisting[language=JavaScript, caption={Properties object}, label="design-scope-properties"]{src/from-xml-to-html-properties.js}
+
+\begin{figure}
+    \centering
+    \includegraphics{figures/design/from-xml-to-html-3.pdf}
+    \caption{Transformation from XML to HTML and styles management}
+    \label{fig:design-xml-to-html-3}
+\end{figure}
+
+
 Directives can be \textbf{restricted} to \textbf{Element}, \textbf{Attribute}, \textbf{Class} or \textbf{coMment} \fref{fig:class-ngfactory}.
 Flango \cm is designed to adapt to this syntax and to decouple and reuse elements as much as possible.
-All UI Components have the tag $<fl:ui>$ and an attribute $fl:type$ that defines the concrete type.
-Instead of having all behaviour in one directive \texttt{fl:ui} (restricted to Element), it uses \texttt{flUi} to rewrite the \ac{DOM}: $<fl:ui fl:type="base-button"></ui>$ becomes $<fl:ui base-button></ui>$, where \texttt{base-button} is an attribute of the element \texttt{fl:ui} 
+All UI Components have the tag \lstinline$<fl:ui>$ and an attribute \lstinline$fl:type$ that defines the concrete type.
+Instead of having all behaviour in one directive \texttt{fl:ui} (restricted to Element), it uses \texttt{flUi} to rewrite the \ac{DOM}: \lstinline$<fl:ui fl:type="base-button"></ui>$ becomes \lstinline$<fl:ui base-button></ui>$, where \texttt{base-button} is an attribute of the element \texttt{fl:ui}.
 There is a directive \texttt{flBaseButton} (restricted to Attribute) that encapsulates the behaviour of this tag.
 Likewise, it initialises the properties object for this \texttt{ui} element and stores the type that will be later used as a value for the \texttt{class} attribute in the \ac{HTML} element.
 The stylesheet of the theme defines the inheritance of styles: a base-button is implemented with a button and, therefore, inherits all properties of the class \texttt{button}.
+
+Figure \fref{fig:design-xml-to-html-3} shows the implementation of the transformation the base button in the \ac{XML} screen (\ref{design-real-xml-button}) and the use of the properties object in the scope (\ref{fig:design-xml-to-html-3}).
 
 The algorithm to decide the properties for an object and draw it with \ac{HTML} goes with the flow of the framework:
 \begin{enumerate}
@@ -714,16 +756,16 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
 
 \begin{figure}[htb]
     \centering
-    \includegraphics{figures/design/seqdia/ui-link.pdf}
-    \caption{flUi::link}
-    \label{fig:design-seqdia-ui-link}
+    \includegraphics{figures/design/seqdia/width-link.pdf}
+    \caption{flWidth::link}
+    \label{fig:design-seqdia-width-link}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics{figures/design/seqdia/width-link.pdf}
-    \caption{flWidth::link}
-    \label{fig:design-seqdia-width-link}
+    \includegraphics{figures/design/seqdia/ui-link.pdf}
+    \caption{flUi::link}
+    \label{fig:design-seqdia-ui-link}
 \end{figure}
 
 \begin{figure}[htb]
@@ -734,15 +776,16 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
 \end{figure}
 
 \lstinline$<fl:ui base-button></ui>$ eventually becomes \lstinline$<div class="base-button" style="..."><div class="caption">Hello World</caption></div>$. 
-With this rewrite strategy the directive eventually outputs real \ac{HTML} that defines the structure of the UI Component and uses the stylesheet.
+With this rewrite strategy the directive eventually outputs real \ac{HTML} that defines the structure of the UI Component and uses the style sheet.
 
 All UI Components have an  \textbf{\ac{HTML} template} that defines their structure, a \textbf{\ac{CSS} class} that defines their style, \textbf{in-line \ac{CSS}} that defines their exclusive properties (e.g. position, size...) and they are binded to \textbf{\texttt{ActionCtrl}} to expose behaviour (e.g. on click).
 \FloatBarrier
 
-\paragraph{Inheritance and composition} FIXME: make sure this is not redundant:  UI Components can be composited: a \texttt{home-button} is implemented with a \texttt{base-button}, which in turn it is implemented with a \texttt{button}, that eventually becomes \ac{HTML}.
+\paragraph{Inheritance and composition} UI Components can be composited: a \texttt{home-button} is implemented with a \texttt{base-button}, which in turn it is implemented with a \texttt{button}, that eventually becomes \ac{HTML}.
 Each component can have defaults for properties.
 For instance, if \texttt{base-button} has a \texttt{width} of 100px in the template, and a component that is implemented with \texttt{base-button} (e.g. \texttt{home-button}) does not define a different with, it sets \texttt{with} to 100 in the properties object.
 This behaviour is achieved with the \texttt{compile} and \texttt{link} functions of directives.
+Language-specific properties are decided the same way: it attempts to use current language properties, if they are not defined, it falls back to the default language.
 
 \subsection{Actions execution}
 Buttons and other UI Components, like images or QR Codes, respond to clicks.
@@ -753,7 +796,7 @@ The controller ActionCtrl encapsulates the logic to process these commands.
 
 \lstinputlisting[language=html, caption={Result button (snippet)}]{src/example-result-button.html}
 
-To create the list of actions, when the component is clicked it runs \texttt{executeActions()}, which has a list of actions to execute as a parameter using the command pattern.
+To create the list of actions, when the component is clicked it runs \lstinline$executeActions()$, which has a list of actions to execute as a parameter using the command pattern.
 
 \begin{figure}[htb]
     \centering
@@ -777,11 +820,38 @@ To create the list of actions, when the component is clicked it runs \texttt{exe
     \label{fig:design-seqdia-actionCtrl-goto}
 \end{figure}
 
+\FloatBarrier
+
 \subsection{Pop-Ups}
 description and use example
 
 \subsection{Internal Navigation}
-subscreens, fetching, etc
+Angular has a navigation system based on the \acp{URL}.
+The \$route service has a map that relates \acp{URL} with screens, \ac{HTML} files with directives.
+On each location change, Angular looks up the destination \ac{URL} in the map to fetch the correct file.
+
+Flango \cm composites screens with subscreens and decides the contents to show using the \ac{URL} \fref{fig:design-internal-navigation}.
+e.g. the \ac{URL} \texttt{/main-view/animals-list} does not populate the subscreen \texttt{red-panda-details}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design/internal-navigation.pdf}
+    \caption{Screens and subscreens for internal navigation}
+    \label{fig:design-internal-navigation}
+\end{figure}
+
+The behaviour of subscreens is defined in the \texttt{subscreen} directive (\fref{fig:design-seqdia-subscreen-compile}).
+
+Only after properties of the UI Component Subscreen have been set (and the corresponding \ac{HTML} element created), Angular includes the file of the subscreen.
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design/seqdia/subscreen-compile.pdf}
+    \caption{Subscreen::compile}
+    \label{fig:design-seqdia-subscreen-compile}
+\end{sidewaysfigure}
+
+\FloatBarrier
 
 \subsection{External Calls}
 motivation, rosbridge
@@ -807,8 +877,8 @@ service, topic, rosbridge, etc
 
 \section{Physical view}
 This section presents a series of diagrams to illustrate the physical layout of the project: the nodes involved, the components in each node, and a clear separation of the Flango \cm and the environment.
-The application is assembled in a Debian package and deployed to basestation and the robot.
-The control scripts of this package perform rutinary tasks like copying the files to the correct place (e.g. the public html folder of the web server), initialise data in the backend, etc.
+The application is assembled in a Debian package and deployed to Basestation and the robot.
+The control scripts of this package perform tasks like copying the files to the correct place (e.g. the public html folder of the web server), initialise data in the backend, etc.
 The diagrams in this section show the system after the installation.
 
 % ****** deployment *******

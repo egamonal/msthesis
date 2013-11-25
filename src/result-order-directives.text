@@ -1,0 +1,8 @@
+directive1: compile
+  directive2: compile
+directive1: controller
+directive1: pre-link
+  directive2: controller
+  directive2: pre-link
+  directive2: post-link
+directive1: post-link

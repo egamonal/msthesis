@@ -1,0 +1,5 @@
+<div directive1>
+  <div directive2>
+    <!-- ... -->
+  </div>
+</div>

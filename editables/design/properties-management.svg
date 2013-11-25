@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="Nou document 1">
+   sodipodi:docname="properties-management.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,15 +26,26 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
      inkscape:cx="365.38884"
-     inkscape:cy="736.36899"
+     inkscape:cy="764.94042"
      inkscape:document-units="px"
      inkscape:current-layer="capa1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="991"
-     inkscape:window-x="1440"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="242.85714,928.57143"
+       id="guide3106" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="195.71429,869.28571"
+       id="guide3108" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -43,7 +54,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,105 +73,75 @@
          id="tspan2987"
          x="125.71429"
          y="138.07648"
-         style="font-size:12px">&lt;fl:ui fl:type=&quot;base-button&quot; fl:x=&quot;30&quot;&gt;</tspan><tspan
+         style="font-size:12px">&lt;<tspan
+   style="font-weight:bold"
+   id="tspan3074">fl:ui</tspan> fl:type=&quot;base-button&quot; fl:x=&quot;30&quot;&gt;</tspan><tspan
          sodipodi:role="line"
          x="125.71429"
          y="153.07648"
          style="font-size:12px"
-         id="tspan2989">    &lt;fl:width&gt;150&lt;/fl:width&gt;</tspan><tspan
+         id="tspan2995">    &lt;<tspan
+   style="font-weight:bold"
+   id="tspan3078">fl:width</tspan>&gt;150&lt;/<tspan
+   style="font-weight:bold"
+   id="tspan3080">fl:width</tspan>&gt;</tspan><tspan
          sodipodi:role="line"
          x="125.71429"
          y="168.07648"
          style="font-size:12px"
-         id="tspan2995">    &lt;fl:width lang=&quot;ca&quot;&gt;180&lt;/fl:width&gt;</tspan><tspan
+         id="tspan2993">    &lt;<tspan
+   style="font-weight:bold"
+   id="tspan3084">fl:caption</tspan>&gt;Hello World&lt;/<tspan
+   style="font-weight:bold"
+   id="tspan3082">fl:caption</tspan>&gt;</tspan><tspan
          sodipodi:role="line"
          x="125.71429"
          y="183.07648"
          style="font-size:12px"
-         id="tspan2991">    &lt;fl:caption&gt;Hello World&lt;/fl:caption&gt;</tspan><tspan
-         sodipodi:role="line"
-         x="125.71429"
-         y="198.07648"
-         style="font-size:12px"
-         id="tspan2993">    &lt;fl:caption lang=&quot;ca&quot;&gt;Hola món&lt;/fl:caption&gt;</tspan><tspan
-         sodipodi:role="line"
-         x="125.71429"
-         y="213.07648"
-         style="font-size:12px"
-         id="tspan2997">&lt;/fl:ui&gt;</tspan></text>
+         id="tspan2997">&lt;/<tspan
+   style="font-weight:bold"
+   id="tspan3086">fl:ui</tspan>&gt;</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;stroke-opacity:1"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="437.85718"
-       y="122.36218"
+       y="126.36218"
        id="text2999"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3001"
          x="437.85718"
-         y="122.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1">{</tspan><tspan
-         sodipodi:role="line"
-         x="437.85718"
-         y="137.36218"
-         id="tspan3003"
-         style="font-size:12px;stroke:none;stroke-opacity:1"><tspan
-   style="font-weight:bold;stroke:none;stroke-opacity:1"
-   id="tspan3031">ca</tspan>: {</tspan><tspan
-         sodipodi:role="line"
-         x="437.85718"
-         y="152.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1"
-         id="tspan3019">      width: 180,</tspan><tspan
-         sodipodi:role="line"
-         x="437.85718"
-         y="167.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1"
-         id="tspan3023">      caption: &quot;Hola món&quot;</tspan><tspan
-         sodipodi:role="line"
-         x="437.85718"
-         y="182.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1"
-         id="tspan3025">   }</tspan><tspan
-         sodipodi:role="line"
-         x="437.85718"
-         y="197.36218"
+         y="126.36218"
          id="tspan3009"
-         style="font-size:12px;stroke:none;stroke-opacity:1"><tspan
-   style="font-weight:bold;stroke:none;stroke-opacity:1"
+         style="font-size:12px;stroke:none"><tspan
+   style="font-weight:bold;stroke:none"
    id="tspan3033">en</tspan>: {</tspan><tspan
          sodipodi:role="line"
          x="437.85718"
-         y="212.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1"
+         y="141.36218"
+         style="font-size:12px;stroke:none"
          id="tspan3011">      width: 150,</tspan><tspan
          sodipodi:role="line"
          x="437.85718"
-         y="227.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1"
+         y="156.36218"
+         style="font-size:12px;stroke:none"
          id="tspan3015">      caption: &quot;Hello World&quot;,</tspan><tspan
          sodipodi:role="line"
          x="437.85718"
-         y="242.36218"
-         style="font-size:12px;stroke:none;stroke-opacity:1"
+         y="171.36218"
+         style="font-size:12px;stroke:none"
          id="tspan3017">      x: 30</tspan><tspan
          sodipodi:role="line"
          x="437.85718"
-         y="257.36218"
-         id="tspan3005"
-         style="font-size:12px;stroke:none;stroke-opacity:1">   }</tspan><tspan
-         sodipodi:role="line"
-         x="437.85718"
-         y="272.36218"
+         y="186.36218"
          id="tspan3007"
-         style="font-size:12px;stroke:none;stroke-opacity:1">}</tspan></text>
+         style="font-size:12px;stroke:none">   }</tspan></text>
     <rect
        style="fill:none;stroke:#555555;stroke-opacity:1"
        id="rect3803"
-       width="170.71428"
-       height="182.85715"
+       width="169.28571"
+       height="85.714287"
        x="432.85715"
-       y="101.6479" />
+       y="108.50504" />
     <rect
        y="123.79076"
        x="123.00001"
@@ -170,8 +151,9 @@
        style="fill:none;stroke:#555555;stroke-opacity:1" />
     <path
        style="fill:none;stroke:#555555;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 367.14286,131.6479 65,-15"
+       d="m 367.14286,131.6479 64.28571,19.28571"
        id="path3807"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

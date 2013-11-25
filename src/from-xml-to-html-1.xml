@@ -1,0 +1,14 @@
+  <fl:ui fl:id="3" fl:type="base-button">
+    <fl:x>124</fl:x>
+    <fl:y>123</fl:y>
+    <fl:width>100</fl:width>
+    <fl:height>100</fl:height>
+    <fl:onclick>
+      <fl:action type="goto">
+        <fl:param fl:name="uri" fl:value="details-view"/>
+      </fl:action>
+    <fl:caption fl:lang="ca">ignici&oacute;!</fl:caption>
+    <fl:caption fl:lang="en">ignite!</fl:caption>
+    <fl:caption fl:lang="fr">allez!</fl:caption>
+  </fl:ui>
+
