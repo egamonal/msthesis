@@ -1,0 +1,10 @@
+<fl:ui fl:id="english-button" fl:type="base-button">
+    <fl:layover fl:src="[...]/en.png" />
+    <fl:onclick>
+        <fl:action type="set-language">en</fl:action>
+        <fl:action type="external-call">
+            <param name="palEvent" value="setLanguage"/>
+            <param name="language" value="en_GB"/>
+        </fl:action>
+    </fl:onclick>
+</fl:ui>
