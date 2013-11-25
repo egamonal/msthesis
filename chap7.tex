@@ -1,8 +1,83 @@
 \chapter{Implementation}
 \cite{Stefanov} \cite{Crockford} \cite{Darwin} \cite{AngularJSGuide} 
+This chapter describes the environment to develop and run Flango \cm and the implementation of the key features.
 
 \section{Development environment set-up}
 webstorm, chrome+batarang, firefox+firebug, karma, qtwebkit, qt5 and qt4, linux, ssh to access the robots and basestation, python, virtual environments, svn, robot code, run levels (htmldialog, guiServer, statemachine (WARNING: CONFIDENTIAL?): motivation and benefits.
+
+The Flango \cm belongs to a bigger project.
+The development environment is adapted to this situation to ensure a correct integration.
+Moreover, the project uses tools to run unit tests, generate code, etc.
+
+\subsection{Integration}
+The files of Flango \cm live in the server as part of the \flangobe .
+The backend is developed with Django and requires a set of Python libraries that might not be available in the system.
+To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django, although Basestation uses Apache2 and the robot Lighttpd.
+All the code is in a subversion repository.
+
+\begin{lstlisting}[caption=lalala, label=virtual-env]
+$ mkvirtualenv local-flango
+$ workon local-flango
+$ pip install --upgrade -r requirements.txt
+\end{lstlisting}
+
+Virtual environments have pre and postactivate scripts to alter the default behaviour.
+Flango needs to modify environment variables to make \texttt{local-flango} live in the local copy of the repository, use a database, set aliases, etc.
+
+After the virtual environment is ready, it is easier to change between branches.
+Django is one of the packages available in the virtual environment and has a built-in web server to develop that runs on port 8000.
+
+\begin{lstlisting}[caption=Django web server, label=virtual-env-server]
+~/contentMgmtBranches/trunk/backend$ django runserver
+Validating models...
+
+modeltranslation: Registered 0 models for translation () [pid: 5286].
+0 errors found
+Django version 1.4.3, using settings 'flango.settings'
+Development server is running at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[25/Nov/2013 15:17:58] "GET /static/flangoh/flangoh/app/index.html HTTP/1.1" 200 2317
+\end{lstlisting}
+
+The file structure of the whole project is shown in listing \ref{impl-flango-files-layout}.
+Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts to build debian packages to deploy the software on the robot and basestation.
+\texttt{src} contains the \flangobe , which includes the \flangofe (and the \se).
+The project of this thesis, Flango \cm is in the \texttt{static} folder, that contains files served without any processing server-side.
+
+\begin{lstlisting}[caption=Flango files layout, label=impl-flango-files-layout]
+~/contentMgmtBranches/trunk/backend$ ls
+build  conf  packaging  requirements.txt  scripts  src  static
+\end{lstlisting}
+
+The browser can open any file in the \texttt{static} folder.
+Alternating between the new and the old version only requires to load \texttt{frontend/index.html} (\flash) or \texttt{flangoh/flangoh/app/index.html} (AngularJS).
+
+\begin{lstlisting}[caption=Flango files layout, label=impl-flango-files-layout]
+~/contentMgmtBranches/trunk/backend/static$ ls
+admin       fonts     lib
+css         frontend  media
+exports     img       vpnUsersStatus.xml
+flango-gui  imports   vpnUsers.xml
+flangoh     js        
+\end{lstlisting}
+
+The development computer also has a working copy of the code for the robot and Basestation to run simulations and test the new \cm  without using robot time, a scarce resource.
+
+There are 3 run levels:
+\begin{enumerate}
+\item \textbf{htmlDialog}. A basic Qt dialog with a QtWebKit widget
+\item \textbf{guiServer}. A version with more features enabled, like the sound server , navigation, etc.
+\item \textbf{stateMachine}. The complete suite with a testing state machine, Qt, sound server, etc.
+\end{enumerate}
+
+An \ac{XML} file defines the \ac{URL} to load.
+
+The first version of the new Flango \cm could run in any of these three levels.
+However, the final version runs in Google Chrome in the robot and there is no need to use this simulation.
+In this case, interoperability is tested with \ac{ROS} topics in localhost.
+
+\subsection{Tools}
 
 \section{Examples (application)}
 this is gonna be too big. should examples be included somewhere else?
@@ -10,3 +85,93 @@ this is gonna be too big. should examples be included somewhere else?
 include examples about: a service, a simple directive, a controller (and the execution flow?).
 
 include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
+
+\section{Integration with ROS}
+Flango \cm is built as a component in \ac{ROS} that can interoperate with the rest of the system using \ac{ROS} topics.
+
+Listing \ref{impl-ros-create-message} and \ref{impl-flango-ros-message} show the creation of a message for a ROS Topic in the software of the robot.
+
+
+\begin{lstlisting}[caption=Flango files layout, label=impl-ros-create-message]
+$ roscd pal_msgs
+~/svn/stacks/pal_msgs$ roscreate-pkg pal_rb_flango_msgs
+Created package directory /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs
+Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/Makefile
+Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/manifest.xml
+Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/CMakeLists.txt
+Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/mainpage.dox
+
+Please edit pal_rb_flango_msgs/manifest.xml and mainpage.dox to finish creating your package
+~/svn/stacks/pal_msgs$ mkdir pal_rb_flango_msgs/msg
+~/svn/stacks/pal_msgs$ vim pal_rb_flango_msgs/msg/rbFlango.msg
+# Edit CMake
+~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ diff  CMakeLists.txt.orig CMakeLists.txt
+20c20
+< #rosbuild_genmsg()
+---
+> rosbuild_genmsg()
+~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ ls
+CMakeLists.txt  CMakeLists.txt.orig  mainpage.dox  Makefile  manifest.xml  msg
+~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ rosmake
+[ rosmake ] rosmake starting...                                                                                                                                                                                     
+[ rosmake ] No package specified.  Building ['pal_rb_flango_msgs']                                                                                                                                                  
+[ rosmake ] Packages requested are: ['pal_rb_flango_msgs']                                                                                                                                                          
+[ rosmake ] Logging to directory /home/eduardgamonal/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                    
+[ rosmake ] Expanded args ['pal_rb_flango_msgs'] to:
+['pal_rb_flango_msgs']                                                                                                                                         
+[rosmake-0] Starting >>> pal_rb_flango_msgs [ make ]                                                                                                                                                                
+[rosmake-0] Finished <<< pal_rb_flango_msgs [PASS] [ 6.49 seconds ]                                                                                                                                                 
+[ rosmake ] Results:                                                                                                                                                                                                
+[ rosmake ] Built 1 packages with 0 failures.                                                                                                                                                                       
+[ rosmake ] Summary output to directory                                                                                                                                                                             
+[ rosmake ] /home/eduardgamonal/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                                         
+~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ 
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Message type from robotBehaviour to Flango CM (rbFlango.msg), label=impl-flango-ros-message]
+# message used by rb_flango
+string           name
+# Expected contents:
+#   goTo
+#   setLanguage
+string           arg
+
+\end{lstlisting}
+
+After compiling the new message becomes available to the system.
+ROS Bridge provides a \ac{JSON} interface to \ac{ROS}. Listing \ref{aaa} shows it running on port 9090
+
+\begin{lstlisting}[caption=ROS Bridge running, label=impl-flango-ros-rosbridge]
+~$ nohup roscore &
+~$ rosrun rosbridge_server rosbridge.py 
+[INFO] [WallTime: 1385407762.165122] Rosbridge server started on port 9090
+[INFO] [WallTime: 1385408718.553601] Client connected.  1 clients total.
+[INFO] [WallTime: 1385408718.559174] [Client 0] Subscribed to /web_gui_events
+
+\end{lstlisting}
+
+Flango \cm uses two topics: one for listening and one for publishing with different types of messages for convenience in the integration with robotBehaviour.
+It is feasible with only one topic.
+Topics are created the first time one publishes to them.
+The example of listing \ref{aaa} shows how a message is published.
+\begin{lstlisting}[caption=Publishing to a topic, label=impl-flango-ros-topic-pub]
+$ rostopic pub /web_gui_event pal_rb_flango_msgs/rbFlango "name: 'setLanguage'
+arg: 'de'" 
+publishing and latching message. Press ctrl-C to terminate
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Listening to a topic, label=impl-flango-ros-topic-echo]
+Listening to a topic
+~$ rostopic echo /web_gui_event
+name: setLanguage
+arg: de
+---
+\end{lstlisting}
+
+When Flango \cm loads in the browser, a connection is established with the ROS Bridge server using websockets.
+\begin{lstlisting}[caption=Listening to a topic (Browser), label=impl-flango-ros-topic-browser]
+Browser console: subscribing /web_gui_event pal_rb_flango_msgs/rbFlango
+Browser console: controller got web_gui_event Object { name="setLanguage", arg="en"}
+\end{lstlisting}
+
+FIXME add here parts of the code of the service
