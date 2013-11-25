@@ -1,6 +1,6 @@
 \chapter{Specification}
 The specification of the program defines what it does rather than how.
-This chapter presents the specification of the system taking into consideration general software engineering principles, like the models proposed by Larman (FIXME CITE??)(at least conceptual, use case and behaviour models) and Meyer's (FIXME CITE??) \ac{DbC}.
+This chapter presents the specification of the system taking into consideration general software engineering principles, the models proposed by Larman (FIXME CITE??)(at least conceptual, use case and behaviour models) and Meyer's (FIXME CITE??) \ac{DbC}.
 For the particular case of this thesis, the specification takes into account reengineering principles and procedures and \ac{TDD} as a tool to define what the system does as opposed to a simple testing technique.
 
 Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2): 
@@ -16,14 +16,14 @@ Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2):
 The outcome of these activities derives part of this specification.
 For example, use cases are extracted from the current system.
 The first three focus on what the system does and are used in this chapter, whereas the last three are tightly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
-This chapter starts by describing the current system: the software parts (inventory analysis) and what it does (reverse engineering to understand the system with special attention to context, interaction and interoperability).
-It is followed by a description of what the new system has to do: the specification comprises a conceptual model, a use case model and a behaviour model.
+This chapter starts by describing the \textbf{current system}: the software parts (\textbf{inventory analysis}) and what it does (\textbf{reverse engineering} to understand the system with special attention to \textbf{context}, \textbf{interaction} and \textbf{interoperability}).
+It is followed by a description of what the \textbf{new system} has to do: the \textbf{specification} comprises a \textbf{conceptual model}, a \textbf{use case model} and a \textbf{behaviour model}.
 Finally, it describes the \ac{XML} used to represent contents applications.
 
 \section{Inventory Analysis}
 A list of software in the organisation makes candidates for reengeneering appear.
-The scope of this thesis is reengineering Flango in the robot and it is a decision taken before starting this work.
-However, Flango uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
+The scope of this thesis is reengineering Flango \cm in the robot and it is a decision taken before starting this work.
+However, Flango \cm uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
 \begin{inventory}
 {name=Flango \cm (robot), 
@@ -102,8 +102,8 @@ bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 }
 \end{inventory}    
 
-When it was decided to reengeneer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and would not converge to a sustainable situation.
-Reengineering cost is lower than the cost to make changes plus the cost of maintenance.
+When it was decided to reengineer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and would not converge to a sustainable situation.
+Reengineering costs are lower than the cost to make changes plus the cost of maintenance.
 
 \section{Reverse Engineering}
 \label{sec:context}
@@ -186,7 +186,7 @@ The general boot steps are:
 
 Flango Content Manager interoperates with two systems: robotBehaviour and Flango Backend.
 
-\paragraph{robotBehaviour} Flango interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities, triggering a batch action (autopresentation, guide user to a certain place...).
+\paragraph{robotBehaviour} Flango \cm interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities, triggering a batch action (autopresentation, guide user to a certain place...).
 Likewise, robotBehaviour uses an \ac{API} in Flango \cm, e.g. to restart a session or to input information gathered with the robot's hardware.
 There is an interface defined for this to allow independent development in both ends.
 FIXME Notice that figures \fref{fig:interoperability-original} and \fref{fig:interoperability-new} do not show Basestation. See \fref{fig:context-original} and \fref{fig:context-new}.
@@ -268,7 +268,8 @@ However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friend
 
 
 \section{Conceptual Model}
-TODO FIXME subindex in captions
+TODO FIXME captions should be after the item
+
 \begin{sidewaysfigure}[htb]   
     \centering
     \includegraphics[width=\textwidth]{figures/specification-conceptual-model}
@@ -276,13 +277,13 @@ TODO FIXME subindex in captions
     \label{fig:specification-conceptual-model}
 \end{sidewaysfigure}
 
-The new Flango Content Manager has to be compatible with the current implementation of the Screens Editor (Flango Frontend).
-Otherwise, users would create contents applications with the Screens Editor that would look different when they are displayed in the robot.
+The new Flango \cm has to be compatible with the current implementation of the \se (\flangofe).
+Otherwise, users would create contents applications with the \se that would look different when they are displayed in the robot.
 To ensure compatibility, it is necessary a good understanding not only at system level, but at component level.
-It is required, then, that the new implementation renders consistently all of the \ac{UI} components that the Screens Editor can create exactly like it does with the old version. 
+It is required, then, that the new implementation renders consistently all of the \ac{UI} components that the \se can create exactly like it does with the old version. 
 Same applies to settings and use of "entities".
 
-There are 7 classes: ContentsApplication, ApplicationNode, Configuration, Theme, Screen, UI Components and Entity.
+There are 7 classes: \textbf{ContentsApplication}, \textbf{ApplicationNode}, \textbf{Configuration}, \textbf{Theme}, \textbf{Screen}, \textbf{UI Components} and \textbf{Entity}.
 
 \paragraph{ContentsApplication} A contents application with an internal identifier and a descriptive, human-friendly name.
 
@@ -412,8 +413,8 @@ A collection of the necessary attributes of the class that encapsulates the conf
 \subparagraph{Excluded elements} Some Configuration have names tightly coupled to technology (e.g. history, history\_current, etc). 
 The concept is included in the specification but not with this specific names to keep it technology agnostic.
 
-\paragraph{Entity} Entities are classes that represent classes in the Screens Editor. 
-FIXME LANGUAGE An example scenario: Alice is creating screens with the Screens Editor.
+\paragraph{Entity} Entities are classes that represent classes in the \se. 
+FIXME LANGUAGE An example scenario: Alice is creating screens with the \se.
 She rented the robot for a congress and wants to add information about job openings in her company.
 She can define, with Flango Frontend, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
 FIXME: note about excluding this from the project scope
