@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
-<source><![CDATA[start:Start[e]
+<source><![CDATA[start:s[e]
+r:ROSBridgeCtrl
 s:palSettings
-r:$route
+c:$compile
+ln:LinkFn
+rs:$rootScope
+sc:$scope
+l:$location
 
-start:s[j].getScreenFile(path, depth)
-s:routes=r.getRoutes()
-[c:loop for all r in routes]
-[c:opt r.path is uri]
-[c:alt config.app.id is "auto" or "default"]
-s:r = config\.generic\.default_api_endpoint + 
-s:    + "/screens/"+ r\.screenId + '\.xml';
-s:>start. return r
---else
-s:r = config\.generic\.api_endpoint + 
-s:      + "/app/" + config\.app\.id +"/screen/" +
-s:      + r\.screenId + '\.xml';
-s:>start.return r
+start:r.callback(data)
+[c:alt data.name == "setLanguage"]
+r:s.setCurrentLanguage(data.arg)
+*1 r
+ recompiles the highest 
+HTML node in the document
+*1
+(1)r:ln=c.compile('.hricanvas')
+r:newscope=rs.$new()
+r:ln.link(newscope)
+*2 r
+and tells angular that data
+was changed from outside
+*2
+(2)r:sc.$apply()
+--data.name == "goTo"
+r:l.path(data.arg)
+r:sc.$apply()
 [/c]
-[/c]
-[/c]]]></source>
+
+]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

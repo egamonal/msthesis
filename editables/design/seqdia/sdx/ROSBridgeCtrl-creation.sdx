@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
-<source><![CDATA[start:Start[e]
-s:palSettings
-r:$route
+<source><![CDATA[f:ngFactory
+/r:ROSBridgeCtrl
+rb:palROSBridge
 
-start:s[j].getScreenFile(path, depth)
-s:routes=r.getRoutes()
-[c:loop for all r in routes]
-[c:opt r.path is uri]
-[c:alt config.app.id is "auto" or "default"]
-s:r = config\.generic\.default_api_endpoint + 
-s:    + "/screens/"+ r\.screenId + '\.xml';
-s:>start. return r
---else
-s:r = config\.generic\.api_endpoint + 
-s:      + "/app/" + config\.app\.id +"/screen/" +
-s:      + r\.screenId + '\.xml';
-s:>start.return r
-[/c]
-[/c]
-[/c]]]></source>
+
+f:r.new
+*1 r
+ callback is the function that attends events
+ received in palROSBridge
+*1
+(1)r:rb[j].subscribe('/web_gui_event', 'pal_web_gui_msgs/webGui', callback)
+
+]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

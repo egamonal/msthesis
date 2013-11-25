@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
 <source><![CDATA[start:Start[e]
-s:palSettings
-r:$route
+b:flBaseButton
+p:palProperties
 
-start:s[j].getScreenFile(path, depth)
-s:routes=r.getRoutes()
-[c:loop for all r in routes]
-[c:opt r.path is uri]
-[c:alt config.app.id is "auto" or "default"]
-s:r = config\.generic\.default_api_endpoint + 
-s:    + "/screens/"+ r\.screenId + '\.xml';
-s:>start. return r
---else
-s:r = config\.generic\.api_endpoint + 
-s:      + "/app/" + config\.app\.id +"/screen/" +
-s:      + r\.screenId + '\.xml';
-s:>start.return r
+
+start:>b.link(scope, elem, attrs)
+b:caption=p.getProperty(scope, 'caption')
+b:.--- scope\.caption = caption
+b:style=p.toCSS(scope)
+b:--- scope\.style = style
+*1 b
+ overlay: images on top of the button
+*1
+(1)b:overlayStyle=p.toCSS(scope, 'overlay')
+b:.--- scope\.overlaystyle = overlaystyle
+*2 b
+ actions defined in the <action> tag
+*2
+(2)b:clickchain=p.getProperty(scope, 'clickchain')
+b:.--- scope\.clickchain = clickchain
+*3 b
+ classes are either "style" or "type"
+ * style: defined with the attribute 
+   fl:style in the XML
+ * type: derived from the type of component.
+   e.g. "fl-base-button"
+*3
+(3)b:lclass = scope\.classes\.style\.concat(
+b:  scope\.classes\.ui[0])
+b:.--- scope\.lclass = lclass
+[c:opt button href points to the current url]
+b:.--- scope\.lclass\.unshift('highlight')
 [/c]
-[/c]
-[/c]]]></source>
+]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

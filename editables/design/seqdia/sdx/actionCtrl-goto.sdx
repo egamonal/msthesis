@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
 <source><![CDATA[start:Start[e]
-s:palSettings
-r:$route
+c:ActionCtrl
+w:$window
+l:$location
 
-start:s[j].getScreenFile(path, depth)
-s:routes=r.getRoutes()
-[c:loop for all r in routes]
-[c:opt r.path is uri]
-[c:alt config.app.id is "auto" or "default"]
-s:r = config\.generic\.default_api_endpoint + 
-s:    + "/screens/"+ r\.screenId + '\.xml';
-s:>start. return r
---else
-s:r = config\.generic\.api_endpoint + 
-s:      + "/app/" + config\.app\.id +"/screen/" +
-s:      + r\.screenId + '\.xml';
-s:>start.return r
+start:c.goto(p)
+[c:alt p.uri == "back"]
+c:w.history.back()
+--p.uri == "forward"
+c:w.history.forward()
+--p.uri == "home"
+c:l.path(p.uri)
 [/c]
-[/c]
-[/c]]]></source>
+]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

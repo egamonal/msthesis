@@ -1,0 +1,198 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg 
+     version="1.1"
+     baseProfile="full"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ev="http://www.w3.org/2001/xml-events"
+     x="0px"
+     y="0px"
+     width="451px"
+     height="319px"
+     viewBox="0 0 451 319"
+     >
+<title></title>
+<desc>Creator: Quick Sequence Diagram Editor Producer: org.freehep.graphicsio.svg.SVGGraphics2D Revision: 12753  Source:  Date: diumenge, 24 / novembre / 2013 21:31:12 CET</desc>
+<g stroke-linejoin="miter" stroke-dashoffset="0" stroke-dasharray="none" stroke-width="1" stroke-miterlimit="10" stroke-linecap="square">
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#ffffff">
+  <path d="M 0 0 L 451 0 L 451 319 L 0 319 L 0 0 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-dasharray="1,2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 183.5 44.5 L 183.5 311.5"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-dasharray="1,2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 183.5 44.5 L 183.5 311.5"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#eeeeee">
+  <path d="M 179 74 L 187 74 L 187 311 L 179 311 L 179 74 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 179.5 74.5 L 187.5 74.5 L 187.5 311.5 L 179.5 311.5 L 179.5 74.5 z"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#eeeeee">
+  <path d="M 187 250 L 193 250 L 193 260 L 187 260 L 187 250 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 187.5 250.5 L 193.5 250.5 L 193.5 260.5 L 187.5 260.5 L 187.5 250.5 z"/>
+</g> <!-- drawing style -->
+<clipPath id="clip1">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip1)">
+<g transform="matrix(1, 0, 0, 1, 29, 71)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">executeActions(actions)</text>
+</g> <!-- transform -->
+</g> <!-- clip1 -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 23.5 74.5 L 179.5 74.5"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 179 74 L 173 68 L 173 80 z"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 23 74 C 23 75.65685424949238 21.65685424949238 77 20 77 C 18.34314575050762 77 17 75.65685424949238 17 74 C 17 72.34314575050762 18.34314575050762 71 20 71 C 21.65685424949238 71 23 72.34314575050762 23 74 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-dasharray="5,5" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 193.5 260.5 L 208.5 260.5 L 208.5 275.5 L 187.5 275.5"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 187 275 L 193 269 L 193 281 z"/>
+</g> <!-- drawing style -->
+<clipPath id="clip2">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip2)">
+<g transform="matrix(1, 0, 0, 1, 214, 250)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">execute(context, parameters)</text>
+</g> <!-- transform -->
+</g> <!-- clip2 -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 187.5 235.5 L 208.5 235.5 L 208.5 250.5 L 193.5 250.5"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#000000">
+  <path d="M 193 250 L 199 244 L 199 256 z"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#ffffff">
+  <path d="M 193 186 L 410 186 L 416 192 L 416 222 L 193 222 z"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#ffffff">
+  <path d="M 410 186 L 410 192 L 416 192 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 193 186 L 410 186 L 416 192 L 416 222 L 193 222 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 410 186 L 410 192 L 416 192 z"/>
+</g> <!-- drawing style -->
+<clipPath id="clip3">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip3)">
+<g transform="matrix(1, 0, 0, 1, 199, 216)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">&#x00a0;action to execute</text>
+</g> <!-- transform -->
+</g> <!-- clip3 -->
+<clipPath id="clip4">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip4)">
+<g transform="matrix(1, 0, 0, 1, 199, 201)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">&#x00a0;parameters include the name of the</text>
+</g> <!-- transform -->
+</g> <!-- clip4 -->
+<g stroke-linejoin="round" stroke-dasharray="1,2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 208.5 235.5 L 193.5 204.5"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#ffffff">
+  <path d="M 193 123 L 393 123 L 399 129 L 399 174 L 193 174 z"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="evenodd" stroke="none" fill="#ffffff">
+  <path d="M 393 123 L 393 129 L 399 129 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 193 123 L 393 123 L 399 129 L 399 174 L 193 174 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 393 123 L 393 129 L 399 129 z"/>
+</g> <!-- drawing style -->
+<clipPath id="clip5">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip5)">
+<g transform="matrix(1, 0, 0, 1, 199, 168)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">&#x00a0;the parameters</text>
+</g> <!-- transform -->
+</g> <!-- clip5 -->
+<clipPath id="clip6">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip6)">
+<g transform="matrix(1, 0, 0, 1, 199, 153)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">&#x00a0;using the name, the context and </text>
+</g> <!-- transform -->
+</g> <!-- clip6 -->
+<clipPath id="clip7">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip7)">
+<g transform="matrix(1, 0, 0, 1, 199, 138)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">&#x00a0;javascript calls the function </text>
+</g> <!-- transform -->
+</g> <!-- clip7 -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#000000">
+  <path d="M 134 7 L 238 7 L 238 44 L 134 44 L 134 7 z"/>
+</g> <!-- drawing style -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#ffffff">
+  <path d="M 132 5 L 234 5 L 234 40 L 132 40 L 132 5 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 132.5 5.5 L 234.5 5.5 L 234.5 40.5 L 132.5 40.5 L 132.5 5.5 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 151.5 24.5 L 216.5 24.5"/>
+</g> <!-- drawing style -->
+<clipPath id="clip8">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip8)">
+<g transform="matrix(1, 0, 0, 1, 151, 22)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="12" x="0" y="0">c:ActionCtrl</text>
+</g> <!-- transform -->
+</g> <!-- clip8 -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#ffffff">
+  <path d="M 177 82 L 218 82 L 218 100 L 177 100 L 177 82 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#666666">
+  <path d="M 177.5 82.5 L 440.5 82.5 L 440.5 285.5 L 177.5 285.5 L 177.5 82.5 z"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 177.5 100.5 L 217.5 100.5"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 217.5 100.5 L 219.5 96.5"/>
+</g> <!-- drawing style -->
+<g stroke-linejoin="round" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="1" fill="none" stroke-opacity="1" stroke="#000000">
+  <path d="M 219.5 96.5 L 219.5 82.5"/>
+</g> <!-- drawing style -->
+<clipPath id="clip9">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip9)">
+<g transform="matrix(1, 0, 0, 1, 180, 97)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="bold" stroke="none" fill="#000000" font-size="13" x="0" y="0">loop  </text>
+</g> <!-- transform -->
+</g> <!-- clip9 -->
+<g fill-opacity="1" fill-rule="nonzero" stroke="none" fill="#ffffff">
+  <path d="M 221 100 L 351 100 L 351 116 L 221 116 L 221 100 z"/>
+</g> <!-- drawing style -->
+<clipPath id="clip10">
+  <path d="M 0 0 L 0 319 L 451 319 L 451 0 z"/>
+</clipPath>
+<g clip-path="url(#clip10)">
+<g transform="matrix(1, 0, 0, 1, 221, 113)">
+<text fill-opacity="1" font-style="normal" font-family="Helvetica" font-weight="bold" stroke="none" fill="#000000" font-size="13" x="0" y="0">[for all a in actions]</text>
+</g> <!-- transform -->
+</g> <!-- clip10 -->
+</g> <!-- default stroke -->
+</svg> <!-- bounding box -->
