@@ -66,8 +66,7 @@
   commentstyle=\color{gray}\upshape
 }
  
-\lstdefinelanguage{XML}
-{
+\lstdefinelanguage{XML} {
   basicstyle=\ttfamily\color{darkblue}\bfseries,
   morestring=[b]",
   morestring=[s]{>}{<},
@@ -78,7 +77,7 @@
   morekeywords={xmlns,version,type, id, lang, src, caption, x, y, width, height}% list your attributes here
 }
 
-\lstdefinelanguage{JavaScript}{
+\lstdefinelanguage{JavaScript} {
   keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
   keywordstyle=\color{blue}\bfseries,
   ndkeywords={class, export, boolean, throw, implements, import, this},
@@ -92,6 +91,21 @@
   morestring=[b]',
   morestring=[b]"
 }
+
+ 
+\lstdefinelanguage{SASS} {
+  basicstyle=\ttfamily\color{black}\bfseries,
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={include, width, height, extend, size}% list your attributes here
+}
+
 
 %% This bit allows you to either specify only the files which you wish to
 %% process, or `all' to process all files which you \include.

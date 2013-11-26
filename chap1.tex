@@ -11,8 +11,8 @@ fix the abstract to include UPC (currently only FIB is shown)
 % possible quotations: welcome humans. goodwill. and we have a plan.
 This is a report for a master's thesis.
 This document is a stand alone presentation of the work done, which belongs to a bigger project: the Content Management System for the robots.
-More specifically, this thesis deals with the reengineering of Flango \cm, the part of the system in the robot that renders the screens on the touchscreen.
-Applying web technology to human-robot interaction is a novelty in the company that interoperates with non-reengineered parts of the system.
+More specifically, this thesis deals with the reengineering of Flango \cm with, the part of the system in the robot that renders the screens on the touchscreen, with web technology.
+Applying web technology to human-robot interaction and to a component that interoperates with non-reengineered parts of the system is a novelty in the company.
 It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same the old system generates.
 
 This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
@@ -26,25 +26,25 @@ This project targets \reem{H2} and H3, service robots with wheels.
 
 \subsection{Reem H2 and H3}
 \reem{H2} \fref{fig:reemh2} and H3 \fref{fig:reemh3} are humanoid service robots featuring a screen on their torso.
-They have an autonomous navigation system, speech recognition and synthetiser, they can find their way in different settings and help or entertain people in a friendly way.
+They have an autonomous navigation system, speech recognition and synthesiser, they can find their way in different settings and help or entertain people in a friendly way.
 They can be used in public places such as hotels, malls, airports or museums.
 
 \begin{figure}
    \centering
-   \begin{subfigure}[b]{0.3\textwidth}
-       \includegraphics[width=\textwidth]{figures/reemh2}
+   \begin{subfigure}[b]{0.5\textwidth}
+       \includegraphics{figures/reemh2}
        \caption{\reem{H2}}
        \label{fig:reemh2}
-       \end{subfigure}%
+    \end{subfigure}%
        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
          %(or a blank line to force the subfigure onto a new line)
-       \begin{subfigure}[b]{0.3\textwidth}
-           \includegraphics[width=\textwidth]{figures/reemh3}
+    \begin{subfigure}[b]{0.5\textwidth}
+           \includegraphics{figures/reemh3}
            \caption{\reem{H3}}
            \label{fig:tiger}
-       \end{subfigure}
-       \caption{\reem Series}
-       \label{fig:reemseries}
+    \end{subfigure}
+    \caption{\reem Series}
+    \label{fig:reemseries}
 \end{figure}
 
 \begin{table}[ht]
@@ -65,7 +65,6 @@ They can be used in public places such as hotels, malls, airports or museums.
     \label{tab:rh2}
 \end{table}
 
-
 \section{The Current System}
 The \reem{} series have big potential in human robot interaction. 
 These humanoid robots have a multi-modal interface: besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
@@ -78,9 +77,9 @@ These humanoid robots have a multi-modal interface: besides speech or joystick m
     \caption{Overview of the system (Hardware)}
 \end{figure}
 
-The Contents Management System comprises \flangofe and \flangobe (both in Basestation), and Flango \cm (in the robot).
+The Contents Management System comprises \emph{\flangofe} and \emph{\flangobe} (both in Basestation), and \emph{Flango \cm} (in the robot).
 The Basestation is an application server that hosts Flango, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
-Clients can create application contents with the \flangofe (\se), a tool built with \flash .
+Clients can create contents applications  with the \flangofe (\se), a tool built with \flash .
 When application contents are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
 
 \lstinputlisting[label=example-screen-xml,language=XML, caption={Example Screen XML}, breaklines=true]{src/example-screen.xml}
@@ -125,7 +124,7 @@ it was the time of animated graphics, browser plug-ins and JavaScript.
 More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
 
 For a decade, the \flash player plug-in has provided a platform to enable rich and interactive content in browsers.
-However, Adobe has made the updates exclusive to the Google Chrome\copyright browser \cite{FlashRoadmap}. 
+However, Adobe has made the updates exclusive to the Google Chrome\copyright \xspace browser \cite{FlashRoadmap}. 
 The browser in the robot application, QtWebBrowser, uses this plug-in but will not receive updates from Adobe and \company systems need to adapt to this new setting. 
 There are two solutions:
 \begin{itemize}
@@ -136,11 +135,11 @@ There are two solutions:
 The solution is rethinking the application to be a part of the robot's system and implement it with modern web technology.
 There is a number of technologies that could be used but the web allows the product to be easily portable, very extensible, open to many developers and sustainable as it does not depend on a single company.
 \ac{HTML5} is perhaps the best known forthcoming standard in the Web and is typically combined with JavaScript and \ac{CSS3}. 
-It has become such a popular combination that major browser vendors already provide an extensive support in a wide range of products.
+It has become such a popular combination that major browser vendors provide support for the latest drafts of the \ac{W3C}, like the audio \ac{API] for \ac{HTML5} or the video support.
 A big number of frameworks with JavaScript have appeared not only client-side (e.g. BackBone, jQuery, Ext JS, Google Web Toolkit, Yahoo User Interface Library...), but even server-side (e.g. NodeJS).
-Moreover, new HTML5 capabilities and APIs are an opportunity to add features to the project.
+Moreover, new \ac{HTML5} capabilities and \acp{API} are an opportunity to add features to this project.
 
-The project documented in this thesis uses Google AngularJS\copyright, a \ac{MVC} framework that lets developers teach the browser new syntax. 
+The project of this thesis uses Google AngularJS\copyright, a \ac{MVC} framework that lets developers \emph{teach the browser new syntax}. 
 Thus, the syntax of the \ac{XML} files coming from the \se can be interpreted natively in a browser. 
 This has some advantages over \flash \cite{Jobs:ThoughtsOnFlash}:
 \begin{itemize}
@@ -165,7 +164,7 @@ This has some advantages over \flash \cite{Jobs:ThoughtsOnFlash}:
 TODO: This section should probably be expanded
 
 This thesis is part of the specialisation of Software Engineering and Information Systems. 
-The goal is to develop an original high quality and fully functional software. 
+The goal is to reengineer the Flango \cm with web technology.
 More specifically, the author has to gather the requirements from an existing system, plan in terms of scope, time and cost, make the system specifications, design and implement it using modern web technologies, use quality assurance tools and deploy it successfully in a \reem{H3} robot.
 
 Regarding the project, the goals are:
@@ -182,6 +181,6 @@ It does not cover other software on the robots or in Basestation.
 
 % TODO check the easy to read phrase
 This project has been developed iteratively using a \ac{TDD} methodology. 
-This document presents the system in a chronological manner as if it had followed classical software life cycle in its development, hoping to offer an easier reading:
+This document presents the system in a chronological manner as if it had followed the classical software life cycle in its development, hoping to offer an easier reading:
 It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention to the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
 Readers will find an overview section at the beginning of each chapter to put them in context.

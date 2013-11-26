@@ -43,7 +43,7 @@ Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts to 
 \texttt{src} contains the \flangobe , which includes the \flangofe (and the \se).
 The project of this thesis, Flango \cm is in the \texttt{static} folder, that contains files served without any processing server-side.
 
-\begin{lstlisting}[caption=Flango files layout, label=impl-flango-files-layout]
+\begin{lstlisting}[columns=fixed,caption=Flango files layout, label=impl-flango-files-layout]
 ~/contentMgmtBranches/trunk/backend$ ls
 build  conf  packaging  requirements.txt  scripts  src  static
 \end{lstlisting}
@@ -51,7 +51,7 @@ build  conf  packaging  requirements.txt  scripts  src  static
 The browser can open any file in the \texttt{static} folder.
 Alternating between the new and the old version only requires to load \texttt{frontend/index.html} (\flash) or \texttt{flangoh/flangoh/app/index.html} (AngularJS).
 
-\begin{lstlisting}[caption=Flango files layout, label=impl-flango-files-layout]
+\begin{lstlisting}[columns=fixed,language=bash,caption=Flango files layout, label=impl-flango-files-layout]
 ~/contentMgmtBranches/trunk/backend/static$ ls
 admin       fonts     lib
 css         frontend  media
@@ -96,16 +96,17 @@ After this first stage, it was required to use a full browser: \textbf{Chrome} w
 \paragraph{SASS} \ac{SASS} is a scripting language that is interpreted into \ac{CSS}.
 It has variables, mixins, inheritance, logical nesting blocks, arithmetic operations and functions among other features, and the code can be separated in several files that are compiled into a single \ac{CSS}.
 It has two syntaxes: the original, and \ac{SCSS}, the newer one used in this project.
-Listing \ref{aaaaa} shows logical nesting and inheritance.
+Listing \ref{sass-example} shows logical nesting and inheritance.
 
-\lstinputlisting[language=xml, caption={SASS code example}]{src/sass-example.css}
+\lstinputlisting[label=sass-example,language=SASS, caption={SASS code example}]{src/sass-example.css}
 
 \paragraph{Connection with robots} Robots are essentially two Linux boxes with \ac{ssh} enabled.
-\reem{H3} has two computers, one in the torso (\texttt{media}) where Flango lives \ref{aaaa}, one in the lower half (\texttt{control}).
+\reem{H3} has two computers, one in the torso (\texttt{media}) where Flango lives \ref{impl-ssh}, one in the lower half (\texttt{control}).
 
-\begin{lstlisting}[caption=Connection with robots, label=impl-ssh]
+\begin{lstlisting}[columns=fixed,language=bash,caption=Connection with robots, label=impl-ssh]
 $ ssh pal@reemh3-1m
-Welcome to Ubuntu 12.04.1 LTS (GNU/Linux 3.2.0-29-generic-pae i686)
+Welcome to Ubuntu 12.04.1 LTS 
+ (GNU/Linux 3.2.0-29-generic-pae i686)
 ...
 
 pal@reemh3-1m:~$ ls /mnt_flash/srv/contents
@@ -118,14 +119,7 @@ flangoh     lib
 \end{lstlisting}
 
 
-\section{Examples (application)}
-this is gonna be too big. should examples be included somewhere else?
-
-include examples about: a service, a simple directive, a controller (and the execution flow?).
-
-include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
-
-\subsection{Directives and modules}
+\section{Directives and modules}
 Modules encapsulate directives.
 Namespacing in JavaScript can be misleading (e.g. services should have unique names application-wide, even if they are in separate modules and a client only uses one of them).
 To enforce isolation of components, this project puts all modules in separate closures \ref{impl-modules-closure}.
@@ -159,7 +153,7 @@ return {
 \end{lstlisting}
 
 
-\subsection{Services}
+\section{Services}
 Angular Services can be declared with the \texttt{service()} constructor, with a \texttt{factory()} or, for complex scenarios, with a \texttt{provider()}.
 
 \begin{lstlisting}[language=JavaScript,caption=Examples of services definition, label=impl-services-definition]
@@ -167,7 +161,7 @@ Angular Services can be declared with the \texttt{service()} constructor, with a
     palSettingsModule.factory('palSettings', function ($http, $q...) {});
 \end{lstlisting}
 
-\texttt{service()} returns an object, whereas \texttt{factory()} first creates it and then returns the instance \ref{aaa}
+\texttt{service()} \ref{impl-services-definition-service} returns an object, whereas \texttt{factory()} first creates it and then returns the instance \ref{impl-services-definition-factory}
 
 \begin{lstlisting}[language=JavaScript,caption=Examples of services definition (service()), label=impl-services-definition-service]
 palPropertiesModule.service('palProperties', function (...) {
@@ -194,34 +188,58 @@ palSettingsModule.factory('palSettings', function (...) {
 });
 \end{lstlisting}
 
-\subsection{Controllers}
+\section{Controllers}
 Controllers are key parts of any \ac{CRUD} application.
-However, because Flango \cm does not know about the objects of the specific domain  of the contents application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl})
+However, because Flango \cm does not know about the objects of the specific domain  of the contents application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
+\paragraph{Command Pattern} This controller implements the \textbf{command pattern} (\cite{Osmani:2012}) and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments.
 
 \lstinputlisting[label=impl-action-ctrl,language=JavaScript, caption={ActionCtrl implementation}]{src/impl-controllers.js}
 
 
-\subsection{Transformation to \ac{HTML}}
+\section{Dependency Injection in JavaScript}
+An instance of type \texttt{A} can create instances of type \texttt{B} (or use global variables). 
+Both options couple classes \texttt{A} and \texttt{B} (e.g. hard-coded dependencies in \ref{impl-hardcoded-deps}).
 
-The \texttt{flUi} directive makes decoupling and reusing directives possible \ref{aaa}.
-It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}).
+\lstinputlisting[label=impl-hardcoded-deps, language=javascript, caption={Hard-coded dependencies}]{src/design-di-1.js}
+
+\lstinputlisting[label=impl-nonhardcoded-deps,language=javascript, caption={Passing on the reference (without service locator)}]{src/design-di-handling-dependency-to-component.js}
+
+However, in listing \ref{impl-nonhardcoded-deps} \texttt{MasterGreater} is not concerned with locating the \texttt{greeter} dependency, it is simply handed the \texttt{greeter} at runtime.
+This is desirable, but it puts the responsibility of getting hold of the dependency on the code that constructs \texttt{MasterGreater}.
+
+Angular applies the \emph{Inversion of Control} principle intensively and has a service locator to find services and other dependencies.
+Injectable components are created with a factory and are made available using a global injector.
+They can be injected just by using their name.
+
+A particular implementation of this principle is in the wrapper for roslibjs: the service \texttt{palROSBridge} in the application is made injectable and provides callbacks to allow a decoupled design. FIXME LANGUAGE.
+
+\lstinputlisting[language=javascript, caption={Injecting services in a controller}]{src/design-di-injection.js}
+
+They can be obtained manually with the \texttt{\$injector}
+
+\lstinputlisting[language=javascript, caption={Manual injection (e.g. in a test)}]{src/design-di-manual-injection.js}
+
+\section{Transformation to \ac{HTML}}
+
+The \texttt{flUi} directive makes decoupling and reusing directives possible \ref{impl-directive-ui}.
+It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}) \ref{impl-directive-basebutton}.
 Dependencies are \textbf{injected} by using their name in the parameters of the function.
 The \texttt{controller} can be called from inner directives (e.g. flHeight in listing \ref{impl-ros-create-message}, the \texttt{compile} function manipulates the \ac{DOM} before it is replaced with anything and the \texttt{link} function reads in-line attributes (\texttt{flX}, \texttt{flY}...) in the last place, as the link function of inner elements is executed first.
 Finally, it adds a class to a vector that is used to set \ac{CSS} style to the \ac{HTML} element.
 
-\lstinputlisting[language=JavaScript, caption={Summary of the flUi directive}]{src/impl-directive-ui.js}
+\lstinputlisting[label=impl-directive-ui, language=JavaScript, caption={Summary of the flUi directive}]{src/impl-directive-ui.js}
 
 After compiling, Angular finds a new directive (e.g.  \lstinline$<fl:ui fl:base-button ...>$ (\texttt{fl:ui} only runs functions if there is a \texttt{type} attribute, which was removed, and \texttt{flBaseButton} does have code to run).
-flBaseButton (listing \ref{}) is a directive in the themes module.
-It only links to a file that contains the template \ref{}.
+flBaseButton (listing \ref{impl-directive-basebutton}) is a directive in the themes module.
+It only links to a file that contains the template \ref{impl-directive-basebutton-template}.
 It is merely a \texttt{button} (a basic UI Component) with certain style set with the \ac{CSS} class \texttt{fl-base-button}.
 
-\lstinputlisting[language=JavaScript, caption={flBaseButton directive}]{src/impl-directive-basebutton.js}
-\lstinputlisting[language=xml, caption={flBasebutton directive template}]{src/impl-directive-basebutton-template.xml}
+\lstinputlisting[label=impl-directive-basebutton,language=JavaScript, caption={flBaseButton directive}]{src/impl-directive-basebutton.js}
+\lstinputlisting[label=impl-directive-basebutton-template,language=xml, caption={flBasebutton directive template}]{src/impl-directive-basebutton-template.xml}
 
-After this template is compiled, Angular finds another directive, \texttt{flButton} \ref{aaa}, which has the logic to create an \ac{HTML} node for the actual button displayed on the screen.
+After this template is compiled, Angular finds another directive, \texttt{flButton} \ref{impl-directive-button}, which has the logic to create an \ac{HTML} node for the actual button displayed on the screen.
 
-\lstinputlisting[language=JavaScript, caption={flButton directive}]{src/impl-directive-button.js}
+\lstinputlisting[label=impl-directive-button,language=JavaScript, caption={flButton directive}]{src/impl-directive-button.js}
 
 At the end of the day, a button is rendered in the browser using a link and \texttt{div}s with the \ac{CSS} class \texttt{fl-base-button}.
 This style "includes" the style of a basic \texttt{button}.
@@ -285,7 +303,7 @@ string           arg
 \end{lstlisting}
 
 After compiling the new message becomes available to the system.
-ROS Bridge provides a \ac{JSON} interface to \ac{ROS}. Listing \ref{aaa} shows it running on port 9090
+ROS Bridge provides a \ac{JSON} interface to \ac{ROS}. Listing \ref{impl-flango-ros-rosbridge} shows it running on port 9090
 
 \begin{lstlisting}[caption=ROS Bridge running, label=impl-flango-ros-rosbridge]
 ~$ nohup roscore &
@@ -300,7 +318,8 @@ ROS Bridge provides a \ac{JSON} interface to \ac{ROS}. Listing \ref{aaa} shows i
 Flango \cm uses two topics: one for listening and one for publishing with different types of messages for convenience in the integration with robotBehaviour.
 It is feasible with only one topic.
 Topics are created the first time one publishes to them.
-The example of listing \ref{aaa} shows how a message is published.
+The example of listing \ref{impl-flango-ros-topic-pub} shows how a message is published.
+
 \begin{lstlisting}[caption=Publishing to a topic, label=impl-flango-ros-topic-pub]
 $ rostopic pub /web_gui_event pal_rb_flango_msgs/rbFlango 
 "name: 'setLanguage' arg: 'de'" 
@@ -314,7 +333,7 @@ arg: de
 ---
 \end{lstlisting}
 
-When Flango \cm loads in the browser, a connection is established with the ROS Bridge server using websockets.
+When Flango \cm loads in the browser, a connection is established with the ROS Bridge server using web sockets.
 \begin{lstlisting}[caption=Listening to a topic (Browser Console), label=impl-flango-ros-topic-browser]
 subscribing /web_gui_event pal_rb_flango_msgs/rbFlango
 controller got web_gui_event Object { name="setLanguage", arg="en"}
@@ -323,7 +342,7 @@ controller got web_gui_event Object { name="setLanguage", arg="en"}
 Flango \cm uses \texttt{roslibjs} to connect with ROS Bridge.
 This library uses its own events system and needs to be wrapped in a service to work in the framework.
 
-Essentially, roslibjs has 3 methods: connect, subscribe (and unsubscribe) and publish.
+Essentially, roslibjs has 3 methods: \texttt{connect(host, port)}, \texttt{subscribe(name, messageType, callback)} (and \texttt{unsubscribe(name, callback)}) and \texttt{publish(name, message)}.
 
 \begin{lstlisting}[caption=ROSLibJS connect method, label=impl-flango-ros-roslib-connect]
 ros = new ROSLIB.Ros({

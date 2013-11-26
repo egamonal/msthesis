@@ -337,37 +337,20 @@ Dependency Injection is one of the implementations of this principle.
 
 In general there are 3 ways an object can use another one:
 \begin{enumerate}
-	\item With a \texttt{new} operator
-	\item Using global variables
+	\item With a \texttt{new} operator (\texttt{A} creates \texttt{B})
+	\item Using global variables (\texttt{A} uses a global \texttt{B})
 	\item Pass in the dependency to where it is needed
 \end{enumerate}
 
 FIXME: take this code out and move it to the implementation chapter. let's use UML here.
 A --creates--> B, vs. A --> servicelocator --> B
 
-\lstinputlisting[language=javascript, caption={Hard-coded dependencies}]{src/design-di-1.js}
-
-\lstinputlisting[language=javascript, caption={Passing on the reference (without service locator)}]{src/design-di-handling-dependency-to-component.js}
-
-In LISTING 1 dependencies are hard-coded.
-In LISTING 2 MasterGreater is not concerned with locating the \texttt{greeter} dependency, it is simply handed the \texttt{greeter} at runtime.
-This is desirable, but it puts the responsibility of getting hold of the dependency on the code that constructs \texttt{MasterGreater}.
-
+FIXME placeholder! there used to be code here
 
 \textbf{Inversion of control} means that objects do not create other objects on which they rely to do their work.
 They get the dependencies from an outside source (e.g. an \ac{XML} configuration file).
 \textbf{Dependency Injection} means that this is done in a transparent way for the object.
 The dependency is supplied to the software component.
-
-The framework encourages the use of this pattern in all components. 
-More specifically, the framework uses a Service Locator \fref{fig:design-service-locator} (called \texttt{injector}) to manage the responsibility of dependency creation.
-Thus, services can be used in controllers and directives by their name.
-The client class does not need to know the concrete implementation of the service. 
-With this principle it is easy to mock classes for unit testing and change components in general.
-A particular implementation of this principle is in the wrapper for roslibjs: the service \texttt{palROSBridge} in the application is made injectable and provides callbacks to allow a decoupled desing. FIXME LANGUAGE.
-
-With AngularJS, injectable components are created with a factory and are made available using a global injector.
-They can be injected just by using their name.
 
 \begin{figure}[htb]
     \centering
@@ -376,11 +359,12 @@ They can be injected just by using their name.
     \label{fig:design-service-locator}
 \end{figure}
 
-\lstinputlisting[language=javascript, caption={Injecting services in a controller}]{src/design-di-injection.js}
+The framework encourages the use of this pattern in all components. 
+More specifically, the framework uses a Service Locator \fref{fig:design-service-locator} (called \texttt{injector}) to manage the responsibility of dependency creation.
+Thus, services can be used in controllers and directives by their name.
+The client class does not need to know the concrete implementation of the service. 
+With this principle it is easy to mock classes for unit testing and change components in general.
 
-They can be obtained manually with the \texttt{\$injector}
-
-\lstinputlisting[language=javascript, caption={Manual injection (e.g. in a test)}]{src/design-di-manual-injection.js}
 
 \paragraph{Factory} Directives, controllers, services... are registered on modules. 
 The \texttt{module.directive} \ac{API} registers them. 
@@ -395,9 +379,6 @@ For example, a Directive Definition Object or a Service.
 \end{figure}
 
 \lstinputlisting[language=javascript, caption={Example of Factory}]{src/design-di-factory.js}
-
-
-
 
 \paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having the units of code for a project separated.
 JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
