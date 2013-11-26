@@ -217,10 +217,10 @@ A similar problem occurred in early operating systems (e.g. MS-DOS), before proc
 Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on \ac{OS} processes. 
 Another way of isolating web applications is running them in a plug-in container. 
 
-The project of this thesis does the first phase with Qt WebKit, the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
+The project of this thesis does the first phase with QtWebKit, the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
 The second part uses Chrome to meet the technology requirements.
-Qt WebKit components comprise the WebCore and SquirrelFish Extreme, which compiles Javascript into native machine code. 
-It is compatible with Adoble Flash Player but because it will not receive more updates in the future, it will not be used any more.
+QtWebKit components comprise the WebCore and the javascript engine SquirrelFish Extreme, which compiles Javascript into native machine code. 
+It is compatible with \flash player but because it will not receive more updates in the future, it will not be used any more.
 The \flash plugin is a black box isolated from other elements in the \ac{DOM}.
 Isolation is not an issue in this project because there is only one application running at a time and, even in a normal use of a browser, with many websites running at once, isolation is not a blocking issue.
 FIXME MAYBE ADD CHROME V8 engine, ETC.
