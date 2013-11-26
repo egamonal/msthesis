@@ -39,18 +39,18 @@ Usually software has documentation that needs to be added to the inventory and, 
 After this, the reverse engineering process can start.
 
 \paragraph{Reverse Engineering}
-Three dimensions drive tasks in the reverse engineering activity (FIXME task in activity or the other way round?): abstraction level, completeness and directionality.
+\textbf{Three dimensions} drive tasks in the reverse engineering activity: \textbf{abstraction level}, \textbf{completeness} and \textbf{directionality}.
 To understand what the software does, abstraction should be as high as possible.
 This information can have many details or not (completeness) and can be created in one way (extracting it from the source code) or two-way (feed information to the reengineering tool).
 This project does not use any computer-assisted reengineering tool.
 
 \subparagraph{Understand current program}
-A program normally has input data, logic that processes it and a view:
+A program normally has \textbf{input data}, \textbf{logic} that processes it and a \textbf{view}:
 The first activity is understanding the processing.
-Code can be examined at several levels of abstraction: system, program, component, pattern, statement.
-Some key aspects include the interaction, interoperability or the context.
+Code can be examined at several \textbf{levels of abstraction}: \textbf{system}, \textbf{program}, \textbf{component}, \textbf{pattern}, \textbf{statement}.
+Some \textbf{key aspect}s include the \textbf{interaction}, \textbf{interoperability} or the \textbf{context}.
 Data structures, classes, schemas in databases, etc have to be identified and possibly redesigned in the next steps.
-Finally, the \ac{UI} has to be analised as well. 
+Finally, the \ac{UI} has to be analysed as well. 
 There are issues related to presentation of data, interaction, usability, etc that have to be identified.
 This project focuses on system and program levels of abstraction and on interoperability.
 The software does not have any views or databases to be reconsidered.
@@ -58,20 +58,20 @@ However, it does have some formats server-side (in the backend) that are candida
 
 \paragraph{Restructure code and data}
 Sometimes the solution is restructuring the current program.
-The project of this thesis skips this part because a new application is being developed using the output of the first activity (FIXME: activity?): understand the current program
+The project of this thesis skips this part because a new application is being developed using the output of the first task: understand the current program
 Restructuring the code might not be enough in most cases. 
 It can fix immediate issues but it is not a long-term solution.
 However, when doing so, \ac{TDD} is useful because tests breaks immediately and often, specially if they are running in the background or periodically.
 To improve the software design both data and architecture should be restructured.
 \ac{TDD} can provide robustness to this process: if there are tests available, the new design can be proven to work, at least, for the example cases. 
-If not, the solution can be built incrementally with tests that define the requirements of the system (extracted in the first activity (FIXME: activity?), thus using them as an specification.
+If not, the solution can be built incrementally with tests that define the requirements of the system (extracted in the first activity, thus using them as an specification.
 
 \paragraph{Forward engineering}
 There is a number of options when it comes to apply changes in the current program. 
 For example, apply patches, redesign parts of the software or completely redesign it.
 Depending on the circumstances, completely redesigning a software might be costly but, in the long-term, it might be a cost-effective solution.
-The project of this thesis is redesigning the software to incorporate new practices, new technology and, in the future (out of the scope of the thesis), additional requirements.
-The outcome of this process (FIXME process vs activity vs task) is a new software that replaces the current implementation.
+The project of this thesis redesigns the software to incorporate new practices, new technology and, in the future (out of the scope of the thesis), additional requirements.
+The outcome of this activity is a new software that replaces the current implementation.
 
 %introduction
 
@@ -117,9 +117,9 @@ After that, Netscape, Mozilla Firefox, Microsoft Internet Explorer, Google Chrom
 
 For many people the browser is the most used application in many devices. 
 The web creates opportunities and makes documents accessible like tax records, maps, banking information, phone directories or product catalogues.
-New business models, like new ways of promoting products, selling music or movies, are developed having the web as a core part.
+New business models, like new ways of promoting products, selling music or films, are developed having the web as a core part.
 Innovation goes beyond all these with experiments and products like FirefoxOS or ChromeOS to build an operating system where the web is the main development platform.
-Other companies, like Citrix or eyeOS, offer web applications or virtualisation tools that resemble an operating system %\cite{Gamonal:2011}.
+Other companies, like Citrix or eyeOS, offer web applications or virtualisation tools that resemble an operating system. %\cite{Gamonal:2011}.
 
 %goals: explain evolution of web tech, state of the art, and why it is better than flash.
 
@@ -146,16 +146,16 @@ Potentially, HyperText provides a single user-interface to many large classes of
 \end{quote} 
 
 When the \ac{WWW} was started in 1990 it was intended to be a document viewing platform.
-It has evolved in at least three phases \cite{Anttonen:2011} \cite{Taivalsaari:2008}:
+It has evolved in at least \textbf{three phases} \cite{Anttonen:2011} \cite{Taivalsaari:2008}:
 
-In the early days, websites were basically a few files with plain text, forms and page-structured artifacts, possibly static images and hyper-links (anchors) to provide navigation. 
+In the early days, websites were basically a few files with \textbf{plain text}, forms and page-structured artifacts, possibly static images and hyper-links (anchors) to provide navigation. 
 
-Later on, browsers added programming capabilities, plug-ins and allowed animated graphics. 
+Later on, browsers added \textbf{programming capabilities}, plug-ins and allowed animated graphics. 
 Web pages became interactive and client-server communication increased in complexity.
 \flash (at that time Macromedia Flash), ShockWave, Java, QuickTime and a few others allowed the inclusion of multimedia contents or even programs (e.g. Java Applets).
 Engineers could combine server-side and client-side technology to provide some more capabilities along with content.
 
-More recently, despite the fact that the web browser was not designed for running applications, since 2008 users have headed this way. 
+More recently, despite the fact that the web browser was not designed for \textbf{running applications}, since 2008 users have headed this way. 
 In this third phase, web pages are not just documents: they have complex user interaction capabilities, they do not require full page refresh and typical use cases have evolved. 
 A big part of applications is executed client-side, taking advantage of the computing capabilities of modern hardware and decreasing the load in servers. 
 In some cases, the application also needs huge server-side resources and uses strategies like cloud computing (e.g. Amazon EC2) to scale up.
@@ -179,22 +179,22 @@ Amongst others:
 \begin{itemize}
     \item The product
     \begin{itemize}
-        \item Content is the core.
-        \item Hyper-text: non-linearity is a main distinction to traditional software systems. There are many ways of landing on a certain page. This can lead to disorientation or cognitive overload for users.
-        \item Presentation aesthetics, usability and interaction are closer to a desktop application than to a web page
+        \item \textbf{Content} is the core.
+        \item \textbf{Hyper-text}: non-linearity is a main distinction to traditional software systems. There are many ways of landing on a certain page. This can lead to disorientation or cognitive overload for users.
+        \item \textbf{Presentation} aesthetics, usability and interaction are closer to a desktop application than to a web page
     \end{itemize}
     \item Use
     \begin{itemize}
-        \item Globality: Spontaneity and multiculturality of users. Web applications are publicly available.
-        \item Quality suffers from unknown network characteristics
-        \item Multiplaform delivery involves having different devices, browsers and degrees of functionality and performance
-        \item Intense network usage. Remote calls are minimised. The use of software patterns like remote facade, remote proxy, \ac{DTO} or \ac{RPC} is frequent
+        \item \textbf{Globality}: Spontaneity and multiculturality of users. Web applications are publicly available.
+        \item Quality suffers from\textbf{ unknown network} characteristics
+        \item \textbf{Multiplaform delivery} involves having different devices, browsers and degrees of functionality and performance
+        \item \textbf{Intense network usage}. Remote calls are minimised. The use of software patterns like remote facade, remote proxy, \ac{DTO} or \ac{RPC} is frequent
     \end{itemize}
     \item Evolution
     \begin{itemize}
-         \item Continuous change
-         \item Competitive pressure
-         \item Fast pace development
+         \item Continuous \textbf{change}
+         \item \textbf{Competitive pressure}
+         \item \textbf{Fast pace development}
     \end{itemize}   
 \end{itemize}
 
@@ -209,6 +209,7 @@ A typical scenario would be a fleet of robots in a conference: users from many d
 Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. 
 At the end of the day, a \ac{RIA} is a distributed software. 
 In the past the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with local storage, hardware-accelerated components, websockets and other advanced capabilites.
+This project uses some of them to, for instance, communicate a browser with the robot or decrease the system load using hardware-accelerated \ac{CSS} properties.
 
 In spite of the fact that \acp{RIA} have grown in complexity and now demand more resources, browsers architectures still do not provide sufficient isolation between concurrently executing programs.
 A similar problem occurred in early operating systems (e.g. MS-DOS), before processes appeared \cite{Reis:2009}. 
