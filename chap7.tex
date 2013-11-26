@@ -3,9 +3,7 @@
 This chapter describes the environment to develop and run Flango \cm and the implementation of the key features.
 
 \section{Development environment set-up}
-webstorm, chrome+batarang, firefox+firebug, karma, qtwebkit, qt5 and qt4, linux, ssh to access the robots and basestation, python, virtual environments, svn, robot code, run levels (htmldialog, guiServer, statemachine (WARNING: CONFIDENTIAL?): motivation and benefits.
-
-The Flango \cm belongs to a bigger project.
+Flango \cm belongs to a bigger project.
 The development environment is adapted to this situation to ensure a correct integration.
 Moreover, the project uses tools to run unit tests, generate code, etc.
 
@@ -37,7 +35,7 @@ Django version 1.4.3, using settings 'flango.settings'
 Development server is running at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
-[25/Nov/2013 15:17:58] "GET /static/flangoh/flangoh/app/index.html HTTP/1.1" 200 2317
+"GET /static/flangoh/flangoh/app/index.html HTTP/1.1" 200 2317
 \end{lstlisting}
 
 The file structure of the whole project is shown in listing \ref{impl-flango-files-layout}.
@@ -78,6 +76,47 @@ However, the final version runs in Google Chrome in the robot and there is no ne
 In this case, interoperability is tested with \ac{ROS} topics in localhost.
 
 \subsection{Tools}
+The development of this project uses a number of tools to automate tasks and control de quality of the code to build a robust product.
+
+\paragraph{\ac{IDE}} WebStorm is an \ac{IDE} based on IntelliJ IDEA designed to develop \acp{RIA}.
+It provides integration with major frameworks, supports files with multiple languages (e.g. HTML with embedded \ac{CSS} or JavaScript), provides tools for refactoring and on-the-fly code analysis (e.g. with JSHint/JSLint)
+
+\paragraph{Karma Runner and Jasmine} Angular mixes very well with \ac{TDD}. 
+It provides a framework (Jasmine) to write unit tests and a tool to automate them: Karma.
+Tests can be executed in the background every time the code changes to make them fail early.
+They run in a new instance of a browser and can be integrated in the \ac{IDE} to debug easily.
+Additionally, it can be integrated with continuous integration systems, like Jenkins (used for the rest of the software in the robot).
+
+\paragraph{Browsers and debugging} The first part of the project used a browser with \textbf{QtWebkit} both in karma and to launch the application.
+There was one installation of Qt 4.8 and one of Qt 5.0.x, as Qt 5 was still experimental in the robot and had better support for \ac{CSS3} and \ac{HTML5}.
+After this first stage, it was required to use a full browser: \textbf{Chrome} with Batarang and \textbf{Firefox} with Firebug.
+\textbf{Batarang} is an extension for Chrome developed by the Angular Team to display the scope of elements, dependencies, etc.
+\textbf{Firebug} is a widely-used extension for Firefox to debug web applications, modify \ac{HTML}, \ac{CSS} or \ac{JS} on the fly, set breakpoints, or even profiling.
+
+\paragraph{SASS} \ac{SASS} is a scripting language that is interpreted into \ac{CSS}.
+It has variables, mixins, inheritance, logical nesting blocks, arithmetic operations and functions among other features, and the code can be separated in several files that are compiled into a single \ac{CSS}.
+It has two syntaxes: the original, and \ac{SCSS}, the newer one used in this project.
+Listing \ref{aaaaa} shows logical nesting and inheritance.
+
+\lstinputlisting[language=xml, caption={SASS code example}]{src/sass-example.css}
+
+\paragraph{Connection with robots} Robots are essentially two Linux boxes with \ac{ssh} enabled.
+\reem{H3} has two computers, one in the torso (\texttt{media}) where Flango lives \ref{aaaa}, one in the lower half (\texttt{control}).
+
+\begin{lstlisting}[caption=Connection with robots, label=impl-ssh]
+$ ssh pal@reemh3-1m
+Welcome to Ubuntu 12.04.1 LTS (GNU/Linux 3.2.0-29-generic-pae i686)
+...
+
+pal@reemh3-1m:~$ ls /mnt_flash/srv/contents
+admin       fonts      media
+css         frontend   vpnUsersStatus.xml     
+exports     img        vpnUsers.xml
+flango.db   imports    
+flango-gui  js         
+flangoh     lib
+\end{lstlisting}
+
 
 \section{Examples (application)}
 this is gonna be too big. should examples be included somewhere else?
@@ -86,37 +125,144 @@ include examples about: a service, a simple directive, a controller (and the exe
 
 include directive examples: normal (back-button), with isolated components (subscreen), and entities (data and loop)
 
+\subsection{Directives and modules}
+Modules encapsulate directives.
+Namespacing in JavaScript can be misleading (e.g. services should have unique names application-wide, even if they are in separate modules and a client only uses one of them).
+To enforce isolation of components, this project puts all modules in separate closures \ref{impl-modules-closure}.
+
+\begin{lstlisting}[language=JavaScript, caption=Closures to isolate modules, label=impl-modules-closure]
+(function () {
+    "use strict";
+    /* Directives */
+    var uicomponentsModule = angular.module('reemi.uicomponents');
+    
+    uicomponentsModule.directive('name1', function(...) {...});
+    uicomponentsModule.directive('name2', function(...) {...});s
+}());
+\end{lstlisting}
+
+Directives are the core of Flango \cm .
+A simple directive that only does background logic (reading the \texttt{height} tag) is shown in \ref{impl-directive-height-example}.
+It is restricted to elements (i.e. \lstinline$<fl:height>100</fl:height>$ triggers it but \lstinline$<fl:ui fl:height="100">$ does not)
+\texttt{palProperties} is a service \textbf{injected} in directive.
+
+\begin{lstlisting}[language=JavaScript,caption=flHeight Directive, label=impl-directive-height-example]
+uiModule.directive('flHeight', function (palProperties) {
+return {
+        restrict: 'E',
+        require: '^?flUi',
+        link: function (scope, element, attrs, uiCtrl) {
+           /* part of the behaviour */
+        }
+    };
+});
+\end{lstlisting}
+
+
+\subsection{Services}
+Angular Services can be declared with the \texttt{service()} constructor, with a \texttt{factory()} or, for complex scenarios, with a \texttt{provider()}.
+
+\begin{lstlisting}[language=JavaScript,caption=Examples of services definition, label=impl-services-definition]
+    palPropertiesModule.service('palProperties', function (palSettings) {});
+    palSettingsModule.factory('palSettings', function ($http, $q...) {});
+\end{lstlisting}
+
+\texttt{service()} returns an object, whereas \texttt{factory()} first creates it and then returns the instance \ref{aaa}
+
+\begin{lstlisting}[language=JavaScript,caption=Examples of services definition (service()), label=impl-services-definition-service]
+palPropertiesModule.service('palProperties', function (...) {
+    this.toCSS = function (scope, p) { ... };
+    this.getProperty = function (scope, property, lang) { ... };
+});
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript,caption=Examples of services definition (factory()), label=impl-services-definition-factory]
+palSettingsModule.factory('palSettings', function (...) {
+     var config, qs;
+     var deferred = $q.defer();
+     
+     config = {generic: {}, app: {}, structure: {}, routes: {}};
+     
+     var getConfig = function () {...};
+     var getGenericConfig = function () {...};
+     ...
+     
+     return {
+        'init': init,
+        ...
+     };
+});
+\end{lstlisting}
+
+\subsection{Controllers}
+Controllers are key parts of any \ac{CRUD} application.
+However, because Flango \cm does not know about the objects of the specific domain  of the contents application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl})
+
+\lstinputlisting[label=impl-action-ctrl,language=JavaScript, caption={ActionCtrl implementation}]{src/impl-controllers.js}
+
+
+\subsection{Transformation to \ac{HTML}}
+
+The \texttt{flUi} directive makes decoupling and reusing directives possible \ref{aaa}.
+It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}).
+Dependencies are \textbf{injected} by using their name in the parameters of the function.
+The \texttt{controller} can be called from inner directives (e.g. flHeight in listing \ref{impl-ros-create-message}, the \texttt{compile} function manipulates the \ac{DOM} before it is replaced with anything and the \texttt{link} function reads in-line attributes (\texttt{flX}, \texttt{flY}...) in the last place, as the link function of inner elements is executed first.
+Finally, it adds a class to a vector that is used to set \ac{CSS} style to the \ac{HTML} element.
+
+\lstinputlisting[language=JavaScript, caption={Summary of the flUi directive}]{src/impl-directive-ui.js}
+
+After compiling, Angular finds a new directive (e.g.  \lstinline$<fl:ui fl:base-button ...>$ (\texttt{fl:ui} only runs functions if there is a \texttt{type} attribute, which was removed, and \texttt{flBaseButton} does have code to run).
+flBaseButton (listing \ref{}) is a directive in the themes module.
+It only links to a file that contains the template \ref{}.
+It is merely a \texttt{button} (a basic UI Component) with certain style set with the \ac{CSS} class \texttt{fl-base-button}.
+
+\lstinputlisting[language=JavaScript, caption={flBaseButton directive}]{src/impl-directive-basebutton.js}
+\lstinputlisting[language=xml, caption={flBasebutton directive template}]{src/impl-directive-basebutton-template.xml}
+
+After this template is compiled, Angular finds another directive, \texttt{flButton} \ref{aaa}, which has the logic to create an \ac{HTML} node for the actual button displayed on the screen.
+
+\lstinputlisting[language=JavaScript, caption={flButton directive}]{src/impl-directive-button.js}
+
+At the end of the day, a button is rendered in the browser using a link and \texttt{div}s with the \ac{CSS} class \texttt{fl-base-button}.
+This style "includes" the style of a basic \texttt{button}.
+Exclusive properties (like the position or size) are transformed to \ac{CSS} and added as in-line style in the element.
+
+The result is a button like the one in the old version, one of the goals of the project.
+
+
 \section{Integration with ROS}
 Flango \cm is built as a component in \ac{ROS} that can interoperate with the rest of the system using \ac{ROS} topics.
-
 Listing \ref{impl-ros-create-message} and \ref{impl-flango-ros-message} show the creation of a message for a ROS Topic in the software of the robot.
-
 
 \begin{lstlisting}[caption=Flango files layout, label=impl-ros-create-message]
 $ roscd pal_msgs
 ~/svn/stacks/pal_msgs$ roscreate-pkg pal_rb_flango_msgs
-Created package directory /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs
-Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/Makefile
-Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/manifest.xml
-Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/CMakeLists.txt
-Created package file /home/eduardgamonal/svn/stacks/pal_msgs/pal_rb_flango_msgs/mainpage.dox
+Created package directory ~/svn/stacks/pal_msgs/pal_rb_flango_msgs
+Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/Makefile
+Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/manifest.xml
+Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/CMakeLists.txt
+Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/mainpage.dox
 
-Please edit pal_rb_flango_msgs/manifest.xml and mainpage.dox to finish creating your package
+Please edit pal_rb_flango_msgs/manifest.xml and mainpage.dox 
+to finish creating your package
 ~/svn/stacks/pal_msgs$ mkdir pal_rb_flango_msgs/msg
 ~/svn/stacks/pal_msgs$ vim pal_rb_flango_msgs/msg/rbFlango.msg
 # Edit CMake
+
 ~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ diff  CMakeLists.txt.orig CMakeLists.txt
 20c20
 < #rosbuild_genmsg()
 ---
 > rosbuild_genmsg()
+
 ~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ ls
 CMakeLists.txt  CMakeLists.txt.orig  mainpage.dox  Makefile  manifest.xml  msg
+
 ~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ rosmake
 [ rosmake ] rosmake starting...                                                                                                                                                                                     
 [ rosmake ] No package specified.  Building ['pal_rb_flango_msgs']                                                                                                                                                  
 [ rosmake ] Packages requested are: ['pal_rb_flango_msgs']                                                                                                                                                          
-[ rosmake ] Logging to directory /home/eduardgamonal/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                    
+[ rosmake ] Logging to directory ~/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                    
 [ rosmake ] Expanded args ['pal_rb_flango_msgs'] to:
 ['pal_rb_flango_msgs']                                                                                                                                         
 [rosmake-0] Starting >>> pal_rb_flango_msgs [ make ]                                                                                                                                                                
@@ -124,7 +270,7 @@ CMakeLists.txt  CMakeLists.txt.orig  mainpage.dox  Makefile  manifest.xml  msg
 [ rosmake ] Results:                                                                                                                                                                                                
 [ rosmake ] Built 1 packages with 0 failures.                                                                                                                                                                       
 [ rosmake ] Summary output to directory                                                                                                                                                                             
-[ rosmake ] /home/eduardgamonal/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                                         
+[ rosmake ] ~/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                                         
 ~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ 
 \end{lstlisting}
 
@@ -143,10 +289,11 @@ ROS Bridge provides a \ac{JSON} interface to \ac{ROS}. Listing \ref{aaa} shows i
 
 \begin{lstlisting}[caption=ROS Bridge running, label=impl-flango-ros-rosbridge]
 ~$ nohup roscore &
+
 ~$ rosrun rosbridge_server rosbridge.py 
-[INFO] [WallTime: 1385407762.165122] Rosbridge server started on port 9090
-[INFO] [WallTime: 1385408718.553601] Client connected.  1 clients total.
-[INFO] [WallTime: 1385408718.559174] [Client 0] Subscribed to /web_gui_events
+[INFO] [WallTime: 1385407762] Rosbridge server started on port 9090
+[INFO] [WallTime: 1385408718] Client connected.  1 clients total.
+[INFO] [WallTime: 1385408718] [Client 0] Subscribed to /web_gui_events
 
 \end{lstlisting}
 
@@ -155,13 +302,12 @@ It is feasible with only one topic.
 Topics are created the first time one publishes to them.
 The example of listing \ref{aaa} shows how a message is published.
 \begin{lstlisting}[caption=Publishing to a topic, label=impl-flango-ros-topic-pub]
-$ rostopic pub /web_gui_event pal_rb_flango_msgs/rbFlango "name: 'setLanguage'
-arg: 'de'" 
+$ rostopic pub /web_gui_event pal_rb_flango_msgs/rbFlango 
+"name: 'setLanguage' arg: 'de'" 
 publishing and latching message. Press ctrl-C to terminate
 \end{lstlisting}
 
 \begin{lstlisting}[caption=Listening to a topic, label=impl-flango-ros-topic-echo]
-Listening to a topic
 ~$ rostopic echo /web_gui_event
 name: setLanguage
 arg: de
@@ -169,9 +315,75 @@ arg: de
 \end{lstlisting}
 
 When Flango \cm loads in the browser, a connection is established with the ROS Bridge server using websockets.
-\begin{lstlisting}[caption=Listening to a topic (Browser), label=impl-flango-ros-topic-browser]
-Browser console: subscribing /web_gui_event pal_rb_flango_msgs/rbFlango
-Browser console: controller got web_gui_event Object { name="setLanguage", arg="en"}
+\begin{lstlisting}[caption=Listening to a topic (Browser Console), label=impl-flango-ros-topic-browser]
+subscribing /web_gui_event pal_rb_flango_msgs/rbFlango
+controller got web_gui_event Object { name="setLanguage", arg="en"}
 \end{lstlisting}
 
-FIXME add here parts of the code of the service
+Flango \cm uses \texttt{roslibjs} to connect with ROS Bridge.
+This library uses its own events system and needs to be wrapped in a service to work in the framework.
+
+Essentially, roslibjs has 3 methods: connect, subscribe (and unsubscribe) and publish.
+
+\begin{lstlisting}[caption=ROSLibJS connect method, label=impl-flango-ros-roslib-connect]
+ros = new ROSLIB.Ros({
+    url : 'ws://hostname:port'
+});
+\end{lstlisting}
+
+Clients can subscribe to topics providing the name of the topic and the name of the type.
+\texttt{ROSLIB.Topic} returns a listener that can wait for events.
+
+\begin{lstlisting}[caption=ROSLibJS subscribe method, label=impl-flango-ros-roslib-subscribe]
+var listener = new ROSLIB.Topic({
+    ros : ros,
+    name : '/topic_name',
+    messageType : 'std_msgs/String'
+});
+
+listener.subscribe(function(message) { /* callback */ } );
+\end{lstlisting}
+
+\paragraph{Inversion of control} palROSBridge service interfaces to ROSLib.
+Services can be injected and add logic specific for Flango \cm .
+To make the subscribe callback available to the client instance, one of the parameters of palROSLib::subscribe() is a function:
+
+\begin{lstlisting}[language=JavaScript, caption=palROSLib subscribe method, label=impl-flango-ros-palroslib-subscribe]
+var listeners = {};
+var subscribe = function (name, messageType, callback) {
+    listeners[name] = new ROSLIB.Topic({...});
+    
+    listeners[name].subscribe(function(message) {
+        callback(message);
+    });
+};
+\end{lstlisting}
+
+\paragraph{Reveal Pattern} This pattern allows for a clearer way of writing JavaScript modules.
+Private methods are in a private closure and only a few are exposed in the returned object as a public \ac{API} with pointers to the internal operation.
+
+\begin{lstlisting}[language=JavaScript, caption=Reveal Pattern in palROSBridge, label=impl-flango-ros-palroslib-reveal]
+palROSBridgeModule.factory('palROSBridge', function () {
+    /* init logic*/
+    var ros, listeners = {};
+    var connect = function(host, port) {...};
+
+    // ROSLIB.Topic.subscribe creates a list of subscribers.
+    // this is just delegating the task
+    var subscribe = function (name, messageType, callback) {...};
+
+    var unsubscribe = function (name, callback) {...};
+
+    // Reveal methods as a public API
+    var service = {
+        'connect': connect,
+        'subscribe': subscribe,
+        'unsubscribe': unsubscribe
+   };
+   
+   return service;
+});
+\end{lstlisting}
+
+
+FIXME ADD PUBLISH METHOD

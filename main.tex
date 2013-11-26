@@ -38,7 +38,8 @@
 \usepackage{graphicx}
 \usepackage{xspace} 
 \usepackage[gen]{eurosym}
-\usepackage{listings, color}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}
 %\usepackage[backend=bibtex,url=true]{biblatex} 
 \usepackage{misc/packages/risk-tpl}
 \usepackage{xkeyval}
@@ -50,6 +51,7 @@
 
 \definecolor{gray}{rgb}{0.4,0.4,0.4}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{darkgreen}{RGB}{0,102,51}
 \definecolor{cyan}{rgb}{0.0,0.6,0.6}
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
@@ -73,7 +75,7 @@
   stringstyle=\color{black},
   identifierstyle=\color{darkblue},
   keywordstyle=\color{cyan},
-  morekeywords={xmlns,version,type, id, lang, src, caption, x, y, width, height, loop, loopy, loopx, scrolly, scrollx, scroll}% list your attributes here
+  morekeywords={xmlns,version,type, id, lang, src, caption, x, y, width, height}% list your attributes here
 }
 
 \lstdefinelanguage{JavaScript}{
@@ -86,7 +88,7 @@
   comment=[l]{//},
   morecomment=[s]{/*}{*/},
   commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
+  stringstyle=\color{darkgreen}\ttfamily,
   morestring=[b]',
   morestring=[b]"
 }

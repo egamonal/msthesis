@@ -1,0 +1,22 @@
+.fl-button {
+    @include size(100px,100px);
+    ...
+    &.active, &:active {
+       color: #555;
+    }
+
+    // Disabled state
+    &.disabled, &[disabled] {
+        ...
+    }
+...
+}
+
+.fl-base-button {
+    ...
+    $width: 90px;
+    $height: 90px;
+    @extend .fl-button;
+    @include size($height,$width);
+    ...
+}
