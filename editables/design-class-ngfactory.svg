@@ -14,7 +14,7 @@
    id="svg8916"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="design-class-uicomponent.svg">
+   sodipodi:docname="design-class-ngfactory.svg">
   <defs
      id="defs3">
     <marker
@@ -2081,9 +2081,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="463.62044"
-     inkscape:cy="475.28572"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="494.57728"
+     inkscape:cy="725.63399"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1042"
@@ -2099,7 +2099,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2109,7 +2109,7 @@
      id="layer1">
     <g
        id="g3472"
-       transform="translate(305.15492,66.927352)">
+       transform="translate(305.15492,94.927352)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -2118,8 +2118,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 120,0 0,55 L 0,80 0,25 z"
-         id="id3" />
+         d="m 0,25 120,0 0,39 -120,0 z"
+         id="id3"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g3476">
         <clipPath
@@ -2181,8 +2182,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 120,0 0,55 L 0,80 0,25 z"
-         id="id9" />
+         d="m 0,25 120,0 0,31 -120,0 z"
+         id="id9"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g3498">
         <clipPath
@@ -2244,8 +2246,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 120,0 0,55 L 0,80 0,25 z"
-         id="id171" />
+         d="m 0,25 120,0 0,31 -120,0 z"
+         id="id171"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g4083">
         <clipPath
@@ -2307,8 +2310,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 120,0 0,55 L 0,80 0,25 z"
-         id="id177" />
+         d="m 0,25 120,0 0,31 -120,0 z"
+         id="id177"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g4105">
         <clipPath
@@ -2363,20 +2367,23 @@
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-start:url(#id180)"
        inkscape:connector-curvature="0"
        id="path4123"
-       d="m 365.15492,146.92735 0,25.5 -153,0 0,25.5" />
+       d="m 365.15492,158.92735 0,25.5 -153,0 0,13.5"
+       sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-start:url(#id181)"
        inkscape:connector-curvature="0"
        id="path4125"
-       d="m 365.15492,146.92735 0,51" />
+       d="m 365.15492,158.92735 0,39"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-start:url(#id182)"
        inkscape:connector-curvature="0"
        id="path4127"
-       d="m 365.15492,146.92735 0,25.5 157,0 0,25.5" />
+       d="m 365.15492,158.92735 0,25.5 157,0 0,13.5"
+       sodipodi:nodetypes="cccc" />
     <g
        id="g4218"
-       transform="translate(139.15492,330.67735)">
+       transform="translate(139.15492,286.67735)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -2524,7 +2531,7 @@
     </g>
     <g
        id="g4272"
-       transform="translate(468.15492,63.927352)">
+       transform="translate(468.15492,91.927352)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -2533,8 +2540,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 120,0 0,61 L 0,86 0,25 z"
-         id="id204" />
+         d="m 0,25 120,0 0,61 -120,0 z"
+         id="id204"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g4276">
         <clipPath
@@ -2607,7 +2615,7 @@
     </g>
     <g
        id="g4461"
-       transform="translate(305.15492,330.67735)">
+       transform="translate(305.15492,286.67735)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -2621,8 +2629,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,60 120,0 0,60 -120,0 0,-60 z"
-         id="id246" />
+         d="m 0,58 120,0 0,32 -120,0 z"
+         id="id246"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g4466">
         <clipPath
@@ -2700,7 +2709,7 @@
     </g>
     <g
        id="g4951"
-       transform="translate(153.70296,68.280292)">
+       transform="translate(153.70296,96.280292)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -2709,8 +2718,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 120,0 0,55 L 0,80 0,25 z"
-         id="id346" />
+         d="m 0,25 120,0 0,39 -120,0 z"
+         id="id346"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g4955">
         <clipPath
@@ -2768,7 +2778,7 @@
     </g>
     <g
        id="g5021"
-       transform="translate(462.15492,327.42735)">
+       transform="translate(462.15492,283.42735)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -2782,8 +2792,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,60 120,0 0,60 -120,0 0,-60 z"
-         id="id364" />
+         d="m 0,58 120,0 0,32 -120,0 z"
+         id="id364"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g5026">
         <clipPath
@@ -2863,46 +2874,52 @@
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id368)"
        inkscape:connector-curvature="0"
        id="path5053"
-       d="m 212.15492,586.17735 0,-35" />
+       d="m 212.15492,530.17735 0,-23"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-start:url(#id369)"
        inkscape:connector-curvature="0"
        id="path5055"
-       d="m 365.15492,450.67735 0,44.6699" />
+       d="m 365.15492,376.67735 0,32.6699"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-start:url(#id370)"
        inkscape:connector-curvature="0"
        id="path5057"
-       d="m 522.15492,447.42735 0,37.75" />
+       d="m 522.15492,373.42735 0,25.75"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3"
        inkscape:connector-curvature="0"
        id="path5059"
-       d="m 174.15492,585.17735 76.02631,0" />
+       d="m 174.15492,529.17735 76.02631,0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3"
        inkscape:connector-curvature="0"
        id="path5061"
-       d="m 327.14176,494.67735 76.02632,0" />
+       d="m 327.14176,408.67735 76.02632,0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3, 3"
        inkscape:connector-curvature="0"
        id="path5063"
-       d="m 483.14176,485.17735 76.02632,0" />
+       d="m 483.14176,399.17735 76.02632,0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id371)"
        inkscape:connector-curvature="0"
        id="path5065"
-       d="m 212.15492,277.92735 0,52.75" />
+       d="m 212.15492,253.92735 0,32.75"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id372)"
        inkscape:connector-curvature="0"
        id="path5067"
-       d="m 365.15492,277.92735 0,52.75" />
+       d="m 365.15492,253.92735 0,32.75"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round;marker-end:url(#id373)"
        inkscape:connector-curvature="0"
        id="path5069"
-       d="m 522.15492,277.92735 0,49.5" />
+       d="m 522.15492,253.92735 0,29.5"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

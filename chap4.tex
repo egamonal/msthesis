@@ -3,9 +3,6 @@ Requirements can be gathered using interviews with customers, users and stakehol
 In this project requirements are obtained mainly from the current implementation of the software (\fref{sec:reengineering}) and from interviews with the developer of the old version.
 Some features, either deprecated or with low priority, are left out of the requirements list due to time constraints. 
 
-\section{Stakeholders}
-maybe this subsection is not needed
-
 \section{Functional requirements}
 
 \subsection{Ready-made solutions}
@@ -27,7 +24,7 @@ TODO: Add description or a few more details (?)
         \item jQuery and plug-ins: Bigvideo.js, jQuery-ui, jquery-mobile , jquery-kinetic  
         \item Hammer.js, jGestures , iScroll, swipe.js
     \end{itemize} 
-    \item \ac{CSS} Tools: LessCSS, SASS, Bootstrap
+    \item \ac{CSS} Tools: LessCSS, SASS
 \end{enumerate}
 
 \subsection{Glossary}
@@ -71,10 +68,10 @@ FIXME: add measurable stuff
     \item \textbf{Robustness}: the software has to be reliable and has to be delivered with a comprehensive test suite. It should be compatible with Jenkins and continuous integration.
     \item \textbf{Hardware}: the software has to perform smoothly in Reem H3 and a multitouch screen.
     \item \textbf{\ac{UX}}: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. Rendered components should be aesthetically pleasant.
-    \item \textbf{Interoperability}: it has to interoperate with:
+    \item \textbf{Interoperability}: it has to interoperate at least with:
     \begin{itemize}
         \item \textbf{Backend}: there is an \ac{API} in a Django backend that provides settings and serves the contents
-        \item \textbf{RobotBehaviour}: the Qt program that runs in the robot and governs the behaviour. Sometimes the touchscreen displays dialogs from Qt, sometimes it displays the application contents. 
+        \item \textbf{RobotBehaviour}: the Qt program that runs in the robot and governs the behaviour. Sometimes the touchscreen displays Qt windows, sometimes it displays the application contents. 
     \end{itemize}
 \end{enumerate}
 

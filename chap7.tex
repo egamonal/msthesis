@@ -1,5 +1,5 @@
 \chapter{Implementation}
-\cite{Stefanov} \cite{Crockford} \cite{Darwin} \cite{AngularJSGuide} 
+\label{chap:implementation}
 This chapter describes the environment to develop and run Flango \cm and the implementation of the key features.
 
 \section{Development environment set-up}
@@ -161,7 +161,10 @@ Angular Services can be declared with the \texttt{service()} constructor, with a
     palSettingsModule.factory('palSettings', function ($http, $q...) {});
 \end{lstlisting}
 
-\texttt{service()} \ref{impl-services-definition-service} returns an object, whereas \texttt{factory()} first creates it and then returns the instance \ref{impl-services-definition-factory}
+\lstinputlisting[label=impl-factory-reveal, language=javascript, caption={Example of Factory and Reveal Module Pattern}]{src/design-di-factory.js}
+
+
+\texttt{service()} \ref{impl-services-definition-service} returns an object, whereas \texttt{factory()} first creates it and then returns the instance \ref{impl-services-definition-factory} and \ref{impl-factory-reveal}
 
 \begin{lstlisting}[language=JavaScript,caption=Examples of services definition (service()), label=impl-services-definition-service]
 palPropertiesModule.service('palProperties', function (...) {

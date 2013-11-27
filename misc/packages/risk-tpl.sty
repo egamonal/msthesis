@@ -7,26 +7,12 @@
 
 \newenvironment{risk}[4]
 {
-    \medskip
     \refstepcounter{riskc}
-
-    %\noindent \textbf{\arabic{riskc} #1}
-    %\par \noindent #2
-    %\par \noindent \textbf{Mitigation Plan} 
-    %\par \noindent \textbf{Action Plan} 
-    
-    \begin{table}[ht]
-    \begin{tabularx}{\linewidth}{| l | p{11.5cm} |}%{| X | X |}
-    \multicolumn{2}{X}{\textbf{\arabic{riskc} #1}} \\ \hline
-    \multicolumn{2}{|p{14.5cm}|}{#2}\\ \hline 
-    Mitigation Plan & #3 \\ \hline
-    Action Plan & #4 \\
-    \hline
-    \end{tabularx}
-    \centering
-    \caption{#1}
-
-    \end{table}
+    \bigskip
+    \par \noindent \textbf{\arabic{riskc} #1}
+    \par \noindent {#2}
+    \par \noindent \textbf{Mitigation Plan} #3
+    \par \noindent \textbf{Action Plan} #4 
 }
 {}
 
@@ -112,6 +98,7 @@
 \define@key{inventory}{operCost}[none]{ \def \inventory@operCost{#1} }
 \define@key{inventory}{bizVal}[none]{ \def \inventory@bizVal{#1} }
 \define@key{inventory}{bizCrit}[none]{ \def \inventory@bizCrit{#1} }
+\define@key{inventory}{lbl}[none]{ \def \inventory@lbl{#1} }
 
 
 \newenvironment{inventory}[1]{%
@@ -144,8 +131,9 @@
     \hline
     \end{tabularx}
     \centering
-    \caption{asdv}
-
+    
+    \caption{Software Inventory: \inventory@name}
+    \label{\inventory@lbl}
     \end{table}
   }
 {}

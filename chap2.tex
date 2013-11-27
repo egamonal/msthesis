@@ -22,6 +22,7 @@ You'll need to rebuild it.
 You'll create a product with added functionality, better performance and reliability, and improved maintainability.
 That's what we call reengineering. \cite{Pressman:2007}
 \end{quote}
+
 Unlike other products, software does not degrade with time due to external factors such as the inclemencies of the weather, power outages or intense use.
 Software packages are adapted, corrected, extended and improved constantly.
 That can lead to unstable applications or unexpected side effects, even if the original product had been designed with the best practices at that time.
@@ -115,11 +116,11 @@ The \ac{WWW} plays a central role in many people's lives.
 The first drafts date back to the 1980s, the first web browser prototype by Tim Berners-Lee was built in December 1990 and the Mosaic browser was completed in 1993.
 After that, Netscape, Mozilla Firefox, Microsoft Internet Explorer, Google Chrome, Safari, Opera, Konqueror and many other browsers appeared, along with some nowadays popular websites (e.g. Amazon, 1995).
 
-For many people the browser is the most used application in many devices. 
-The web creates opportunities and makes documents accessible like tax records, maps, banking information, phone directories or product catalogues.
-New business models, like new ways of promoting products, selling music or films, are developed having the web as a core part.
+The browser has become the most used application in many devices. 
+The web makes documents like tax records, maps, banking information, phone directories or product catalogues accessible.
+New business models, like new ways of promoting products, selling music or films, are developed having the Web as a core part.
 Innovation goes beyond all these with experiments and products like FirefoxOS or ChromeOS to build an operating system where the web is the main development platform.
-Other companies, like Citrix or eyeOS, offer web applications or virtualisation tools that resemble an operating system. %\cite{Gamonal:2011}.
+%Other companies, like Citrix or eyeOS, offer web applications or virtualisation tools that resemble an operating system. %\cite{Gamonal:2011}.
 
 %goals: explain evolution of web tech, state of the art, and why it is better than flash.
 
@@ -173,7 +174,7 @@ Typically one designs them as single page websites.
 
 % FIXME language
 Web applications differ between them. 
-They can be document-centered, workflow-based, portal-oriented, collaborative, social, etc. 
+They can be document-centric, workflow-based, portal-oriented, collaborative, social, etc. 
 They all have some common characteristics. 
 Amongst others:
 \begin{itemize}
@@ -186,9 +187,9 @@ Amongst others:
     \item Use
     \begin{itemize}
         \item \textbf{Globality}: Spontaneity and multiculturality of users. Web applications are publicly available.
-        \item Quality suffers from\textbf{ unknown network} characteristics
-        \item \textbf{Multiplaform delivery} involves having different devices, browsers and degrees of functionality and performance
-        \item \textbf{Intense network usage}. Remote calls are minimised. The use of software patterns like remote facade, remote proxy, \ac{DTO} or \ac{RPC} is frequent
+        \item Quality suffers from \textbf{unknown network} characteristics
+        \item \textbf{Multiplatform delivery} involves having different devices, browsers and degrees of functionality and performance
+        \item \textbf{Intense network usage}. Remote calls are minimised. The use of software patterns like remote fa\c{c}ade, remote proxy, \ac{DTO} or \ac{RPC} is frequent
     \end{itemize}
     \item Evolution
     \begin{itemize}
@@ -217,7 +218,7 @@ A similar problem occurred in early operating systems (e.g. MS-DOS), before proc
 Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on \ac{OS} processes. 
 Another way of isolating web applications is running them in a plug-in container. 
 
-The project of this thesis does the first phase with QtWebKit, the port of WebKit on top of Qt, to display the application in a Qt dialog and communicate with the hardware. 
+The project of this thesis does the first phase with QtWebKit, the port of WebKit on top of Qt, to display the application in a Qt window and communicate with the hardware. 
 The second part uses Chrome to meet the technology requirements.
 QtWebKit components comprise the WebCore and the javascript engine SquirrelFish Extreme, which compiles Javascript into native machine code. 
 It is compatible with \flash player but because it will not receive more updates in the future, it will not be used any more.
@@ -236,7 +237,7 @@ FIXME MAYBE ADD CHROME V8 engine, ETC.
 \section{Test-Driven Development}
 The software written for this thesis is executed in a complex environment.
 Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
-Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the system (e.g. displaying a Qt dialog different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the system (e.g. displaying a Qt window different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
 
 Reengineering this system has, at least, two sources of potential errors: 
 undocumented features in the original application (unknown, documented wrongly, partially documented or not described at all) and integration of the new software in the current system.
@@ -259,7 +260,7 @@ Testing earlier and heavily has benefits over the classical approach:
 \textbf{Efficiency} Defects (and their causes) are identified earlier.
 
 \textbf{Robustness} The system is more reliable and stable. 
-The \ac{QA} process is easier to maintain and much more strict.
+The \ac{QA} process is easier to maintain and stricter.
 
 \textbf{Maintainability} Small fixes can introduce new errors in the system. 
 Testing continuously and producing the minimum amount of code to implement a feature reduces this.

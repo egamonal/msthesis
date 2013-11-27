@@ -1,12 +1,12 @@
 \chapter{Specification}
-The specification of the program defines what it does rather than how.
-This chapter presents the specification of the system taking into consideration general software engineering principles, the models proposed by Larman (FIXME CITE??)(at least conceptual, use case and behaviour models) and Meyer's (FIXME CITE??) \ac{DbC}.
+The specification of the program defines \textbf{what it does} rather than how.
+This chapter presents the specification of the system taking into consideration general software engineering principles, the models proposed by Larman  in \cite{Larman:2004} (at least conceptual, use case and behaviour models) and Meyer's (FIXME CITE??) \ac{DbC}.
 For the particular case of this thesis, the specification takes into account reengineering principles and procedures and \ac{TDD} as a tool to define what the system does as opposed to a simple testing technique.
 
-Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2): 
+Reengineering software comprises 6 activities (\fref{sec:reengineering}): 
 \begin{enumerate}
     \item Inventory Analysis
-    \item Documentation reestructure (FIXME Language)
+    \item Documentation Restructuring
     \item Reverse Engineering
     \item Code Restructuring
     \item Data Restructuring
@@ -15,18 +15,18 @@ Reengeneering software comprises 6 activities (TODO Maybe cross ref chapter 2):
    
 The outcome of these activities derives part of this specification.
 For example, use cases are extracted from the current system.
-The first three focus on what the system does and are used in this chapter, whereas the last three are tightly coupled to technology and are expanded in chapter design (FIXME cross ref chapter 6?).
+The first three focus on what the system does and are used in this chapter, whereas the last three are tightly coupled to technology and are expanded in \fref{chap:design}.
+
 This chapter starts by describing the \textbf{current system}: the software parts (\textbf{inventory analysis}) and what it does (\textbf{reverse engineering} to understand the system with special attention to \textbf{context}, \textbf{interaction} and \textbf{interoperability}).
 It is followed by a description of what the \textbf{new system} has to do: the \textbf{specification} comprises a \textbf{conceptual model}, a \textbf{use case model} and a \textbf{behaviour model}.
 Finally, it describes the \ac{XML} used to represent contents applications.
 
 \section{Inventory Analysis}
-A list of software in the organisation makes candidates for reengeneering appear.
+A list of software in the organisation makes candidates for reengineering appear.
 The scope of this thesis is reengineering Flango \cm in the robot and it is a decision taken before starting this work.
-However, Flango \cm uses other software that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
-
 \begin{inventory}
-{name=Flango \cm (robot), 
+{name=Flango \cm (robot),
+lbl=inventory-flango-cm, 
 year=May 2011,
 nchanges=5 big milestones,
 lastchange=August 2013,
@@ -49,10 +49,10 @@ bizVal=high (no revenue generated yet but it can be sold without the robot),
 bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 }
 \end{inventory}
-
 \begin{inventory}
 {
 name=\flangofe -- \se , 
+lbl=inventory-flango-se, 
 year=December 2012,
 nchanges=4 (first version; some new features; bug fixing),
 lastchange=August 2013,
@@ -75,10 +75,10 @@ bizVal=high (no revenue generated yet but it can be sold without the robot),
 bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 }
 \end{inventory}
-
 \begin{inventory}
 {
 name=\flangobe , 
+lbl=inventory-flango-be, 
 year=October 2012,
 nchanges=3 (first version; statistics; new features),
 lastchange=August 2013,
@@ -100,7 +100,8 @@ operCost=no exclusive cost,
 bizVal=high (no revenue generated yet but it can be sold without the robot),
 bizCrit=very high (contents have big impact: they belong to the \ac{UI})
 }
-\end{inventory}    
+\end{inventory} 
+However, Flango \cm uses other software (\ref{inventory-flango-se} and \ref{inventory-flango-be} ) that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
 When it was decided to reengineer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and would not converge to a sustainable situation.
 Reengineering costs are lower than the cost to make changes plus the cost of maintenance.
@@ -115,7 +116,7 @@ Other levels of abstraction do not apply here to keep this specification technol
 This section focuses on what the current version of the software does and what the new version has to do.
 It offers some technology-dependant details to understand the steps to reach the goal and the operations that Basestation exposes.
 
-Details of how this software does the same with a new technology are in chapter 6 FIXME CROSS REF INTERNAL DESIGN
+Details of how this software does the same with a new technology are in \fref{chap:design} and \fref{chap:implementation}
 
 \subsection{Context}
 \begin{figure}[htb]
@@ -132,8 +133,8 @@ Details of how this software does the same with a new technology are in chapter 
     \label{fig:context-new}
 \end{figure}
 
-\reem{H3} has about 600MB of specialised code and uses up to 13GB to store the operating system, libraries and other tools.
-The program that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, a Qt program.
+\reem{H3} has about 600MB of specialised code.
+The program that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, developed with Qt.
 A window in this program contains a QtWebKit widget, the embedded web browser that loads the contents for the touchscreen.
 Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\fref{fig:context-original}).
 The \flangobe has an \ac{API} to serve the contents applications to the robots.
@@ -462,7 +463,7 @@ When the \ac{GUI} is ready, a new actor (Contents Application User) and new use 
 There is a number of use cases of the software determined by examining the current implementation at a program level.
 The use cases that are implemented in this project are shown in \fref{fig:specification-sucs}.
 
-A contents application user can see the rendered screens and update some parameters (e.g. change the language) or start applications in the robot (e.g. a Qt dialog with a map).
+A contents application user can see the rendered screens and update some parameters (e.g. change the language) or start applications in the robot (e.g. a Qt window with a map).
 %Normally one would group use cases in "manage \ac{UC}" that include at least the \ac{CRUD} \ac{UC} FIXME plurals.
 %This document does not group them because different actors
 %For example: the user touches a button that makes Reem say a sentence aloud (notice that the application is sending a message to robotBehaviour).
@@ -644,8 +645,6 @@ The requested screen is shown
 \FloatBarrier
 
 \section{Behaviour Model}
-seq diagrams of system operations
-
 This thesis combines \ac{DbC} and \ac{TDD}, two techniques that are not mutually exclusive.
 Basically, tests define the behaviour for specific cases and \ac{DbC} defines the general behaviour. 
 Thus, there are no tests for edge cases or negative behaviours because contracts, and more specifically preconditions, protect the component.
@@ -654,8 +653,7 @@ They become tests only after having implemented all the functionality being test
 Before this, there is nothing to actually test and these artifacts are rather executable specifications, but not tests.
 Tests (specifications) are written before the code and define the behaviour of components.
 
-Additionally, they are used as documentation of the software but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be achieved using formal specifications,
-e.g. using Meyer's \ac{DbC} \cite{Baumeister:2004}.
+Additionally, they are used as documentation of the software but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be achieved using formal specifications, e.g. using Meyer's \ac{DbC} \cite{Baumeister:2004}.
 
 In this thesis, tests are implemented with Jasmine and AngularJS but this chapter focuses on what the tests describe rather than how they are executed and controlled.
 
@@ -674,24 +672,24 @@ With formal specifications (\ac{DbC}):
 \end{itemize}
 
 
-Larman: system sequence diagram + Meyer: contracts of system operations
-"System Sequence Diagrams:
-–
-Identify system events and system operations
-–
-Identify system events and system operations
-– Document sequence of interactions
-• Contracts:
-– Define the pre- and post-conditions for system
-operations "
+%Larman: system sequence diagram + Meyer: contracts of system operations
+%"System Sequence Diagrams:
+%–
+%Identify system events and system operations
+%–
+%Identify system events and system operations
+%– Document sequence of interactions
+%• Contracts:
+%– Define the pre- and post-conditions for system
+%operations "
 
-up to date documentation: a common problem is that docs are hardly ever updated
+%up to date documentation: a common problem is that docs are hardly ever updated
 
-Contracts for operations define system behaviour and describe the outcome of executing system operations in terms of state changes to domain objects.
+Contracts of operations define system behaviour and describe the outcome of executing system operations in terms of state changes to domain objects.
 This section contains the sequence diagrams and contracts of the most relevant operations in the system.
 However, the most complex part of this project is parsing and rendering the input \ac{XML} files.
 Users do not interact directly with them: they do not execute operations that result in state changes to the domain object.
-FIXME CROSS REF chapter design explains this problem and the solution in detail.
+\fref{chap:design} explains this problem and the solution in detail.
 
 \subsection{Sequence diagrams}
 \begin{figure}[htb]

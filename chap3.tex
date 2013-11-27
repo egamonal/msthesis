@@ -14,10 +14,10 @@ The system has three parts: the \flangobe, the \flangofe (with the \se) both at 
 \end{figure}
 
 This project reengineers the robot's \cm with web technologies but not the back-end and front-end, that remain in Django and \flash.
-The new \cm accepts a contents application as input, generated with the \se, and outputs the screen rendered with web elements.
+The input of the new \cm are contents applications, generated with the \se . The output is the screen rendered with web elements.
 Contents applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
-This project can read the configuration files and set up the front-end.
-This project accepts valid syntax generated with the \se for a comprehensive set of components (back-button, base-button, image, video...) and their properties (width, x, y, background...), and generates \ac{HTML5} that renders them as defined.
+This project can read and use the configuration files.
+This project accepts valid syntax generated with the \se for a comprehensive set of components (\texttt{back-button}, \texttt{base-button}, \texttt{image}, \texttt{video}...) and their properties (\texttt{width}, \texttt{x}, \texttt{y}, \texttt{background}...), and generates \ac{HTML5} that renders them as defined.
 
 Developing an intense testing strategy is part of this project.
 The final artifact is this master thesis that describes the system and the rationale that guides all decisions.
@@ -128,7 +128,7 @@ tech risks: A) design, implementation, interface,verification,maintenance proble
 \begin{risk}
 {Resources: deviation}
 {The engineer might have to dedicate resources to other tasks in the company non-related to this project.}
-{Coordinate action monthly with the managers and track deviations and progress weekly. Avoid dedicating less than 50PERCENT of time to this project.}
+{Coordinate action monthly with the managers and track deviations and progress weekly. Avoid dedicating less than 50\% of time to this project.}
 {Limit scope and extend deadlines to have the expected number of hours dedicated to this project.}
 \end{risk}
 
@@ -176,21 +176,22 @@ tech risks: A) design, implementation, interface,verification,maintenance proble
 
 \begin{risk}
 {Inadequate technology}
-{The chosen technology is inadequate: it doesn't allow a complete reengineering of the application (100PERCENT of chosen use cases), performance is more than 10PERCENT lower, it is not reliable and fails in more than 3PERCENT of action executions}
+{The chosen technology is inadequate: it doesn't allow a complete reengineering of the application (100\% of chosen use cases), performance is more than 10\% lower, it is not reliable and fails in more than 3\% of action executions}
 {Assess at least 2 solutions before implementing a prototype. Implement a prototype with basic cases of at least each critical feature.}
 {sdnsdgndf}
 \end{risk}
 
 \begin{risk}
-{Tool: Flango or Screens Editor do not perform as advertised}
-{The current implementation of the backend or the screens editor might have bugs. Some undocumented features or \ac{XML} elements might be misleading (e.g. The normal behaviour for the QR component is generating a QR code. "ui type="qr" src="path" does not generate a QR code, but embeds an image that already exists instead.) }
+{Tool: Flango or \se do not perform as advertised}
+{The current implementation of the backend or the screens editor might have bugs.
+Some undocumented features or \ac{XML} elements might be misleading (e.g. The normal behaviour for the QR component is generating a QR code. \lstinline$<ui type="qr" src="path">$ does not generate a QR code, but embeds an image that already exists instead.) }
 {Contact the application expert before implementing the feature.}
 {Fix the backend (python) or ask/hire the application expert to fix the screens editor (Adobe Flash)}
 \end{risk}
 
 \begin{risk}
-{AngularJS or dependencies do not perform as advertised}
-{The chosen framework and libraries have young maturity and might contain bugs, be subject to rapid changing cycles and new versions might break older versions (FOOTNOTE: THIS RISK WAS ADDED AFTER SPECS}
+{AngularJS or dependencies do not perform as advertised \footnote{Added after specifications were defined}}
+{The chosen framework and libraries have young maturity and might contain bugs, be subject to rapid changing cycles and new versions might break older versions}
 {Use stable versions}
 {Investigate the bug, isolate it, create a minimal full working example and, if possible, open a pull request with a fix in Github or notify the error to the project managers.}
 \end{risk}

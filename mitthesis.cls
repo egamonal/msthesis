@@ -456,7 +456,7 @@ by\par
 \@prevdegrees
 \par
 \choosecase{Submitted to the} \choosecase{\@department} \\
-\choosecase{in partial fulfillment of the requirements for the}
+\choosecase{in partial fulfilment of the requirements for the}
 \choosecase{\@degreeword} 
 \choosecase{of}
 \par
@@ -465,18 +465,35 @@ by\par
 at the
 \par\UPC\par
 \@degreemonth\ \@degreeyear
+
+%\par
+%\vskip 3\baselineskip
+%\signature{Author}{\@department \\ \@thesisdate}
+%\par
+\medskip
+\noindent\begin{minipage}{\textwidth}
+\begin{minipage}[t][2 cm][b]{0.5\textwidth}  
+    \begin{flushleft}
+    N\'{u}ria Castell Ari\~{n}o \\
+    Thesis Supervisor
+    \end{flushleft}
+\end{minipage} 
+\hfill
+\begin{minipage}[t][2 cm][b]{0.5\textwidth} 
+    \begin{flushright}
+    Daniel Pinyol \\
+    CTO at \company
+    \end{flushright}
+\end{minipage} 
+\end{minipage}
+\vfill
 \par
 \@copyrightnotice
-\par
-\vskip 3\baselineskip
-\signature{Author}{\@department \\ \@thesisdate}
-\par
-\vfill
-\unvbox\@titlesupervisor
-\par
-\vfill
-\signature{Accepted by}{\@chairmanname \\ \@chairmantitle}
-\vfill
+%\unvbox\@titlesupervisor
+%\par
+%\vfill
+%\signature{Accepted by}{\@chairmanname \\ \@chairmantitle}
+%\vfill
 \end{titlepage}}
 
 % this environment should probably be called abstract,

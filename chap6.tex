@@ -1,4 +1,5 @@
 \chapter{Design}
+\label{chap:design}
 This chapter describes the internal wiring of the application and the reasons that lead to this design.
 It explains the programming languages, frameworks and most relevant libraries, 
 
@@ -378,7 +379,6 @@ For example, a Directive Definition Object or a Service.
     \label{fig:design-patterns-factory0}
 \end{figure}
 
-\lstinputlisting[language=javascript, caption={Example of Factory}]{src/design-di-factory.js}
 
 \paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having the units of code for a project separated.
 JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
@@ -400,30 +400,30 @@ It lets objects make requests of unspecified application objects by turning the 
 This object can be stored and passed around like other objects \cite{GoF:1995}.
 Other names are \textbf{Transaction} or \textbf{Action Pattern}  
 
-\fref{fig:design-command-general} shows the class diagram for a traditional object-oriented programming language.
+\fref{fig:design-command-general} shows the class diagram of this pattern in the context a traditional object-oriented programming language.
 With JavaScript there are no abstract classes.
 The approach that Osmani proposes is having only concrete classes with a common \texttt{execute()} method \cite{Osmani:2012} CROSS REF CODE EXAMPLE
 
 FIXME include code design-command-1.js and design-command-2.js
 
-With a simple controller (CROSSREF listing 1) one would call the methods in the object.
+With a simple controller (\fref{fig:design-command-general}) one would call the methods in the object.
 while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
 For example, there is no way to define the behaviour for a \texttt{UI Component :: Button} click handler.
 Only the contents application knows it.
-By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them CROSS REF listing 2
+By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them (\fref{fig:design-command-flango}).
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-command-1.pdf}
     \caption{design patterns command 1}
-    \label{fig:context-original}
+    \label{fig:design-command-general}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-command-flango.pdf}
     \caption{design patterns command flango}
-    \label{fig:context-original}
+    \label{fig:design-command-flango}
 \end{figure}
 
 \subsection{Orientation to Web Components}
