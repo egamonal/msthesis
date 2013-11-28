@@ -121,14 +121,14 @@ Details of how this software does the same with a new technology are in \fref{ch
 \subsection{Context}
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{figures/context-original}
+    \includegraphics{figures/context-original.pdf}
     \caption{Current context}
     \label{fig:context-original}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=\textwidth]{figures/context-new}
+    \includegraphics{figures/context-new.pdf}
     \caption{New context}
     \label{fig:context-new}
 \end{figure}
@@ -136,26 +136,45 @@ Details of how this software does the same with a new technology are in \fref{ch
 \reem{H3} has about 600MB of specialised code.
 The program that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, developed with Qt.
 A window in this program contains a QtWebKit widget, the embedded web browser that loads the contents for the touchscreen.
-Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\fref{fig:context-original}).
+Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\ref{fig:context-original} on \pageref{fig:context-original}).
 The \flangobe has an \ac{API} to serve the contents applications to the robots.
 The project of this thesis is reengineering the Flango \cm , in the robot (\fref{fig:context-new}).
 
 \FloatBarrier
 
-\subsection{Interaction}
+\subsection{Interaction} 
 \begin{figure}[htb]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/interaction-original}
-    \caption{Current interaction}
+   \centering
+   \includegraphics{figures/interaction-original.pdf}
+   \caption{Current interaction}
     \label{fig:interaction-original}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/interaction-new}
+    \includegraphics{figures/interaction-new.pdf}
     \caption{New interaction}
     \label{fig:interaction-new}
 \end{figure}
+
+%\begin{figure}[ht]
+%    \begin{subfigure}[b]
+%        \includegraphics{figures/interaction-original.pdf}
+%        \caption{Current interaction}
+%        \label{subfig:interaction-original}
+%    \end{subfigure}
+%    
+%    \hfill
+%
+%    \begin{subfigure}[b]
+%        \includegraphics{figures/interaction-new.pdf}
+%        \caption{New interaction}
+%        \label{subfig:interaction-new}
+%    \end{subfigure}
+%    
+%    \caption{dfgntymnrty}
+%    \label{fig:smith}
+%\end{figure}
 
 The content manager's input is \ac{XML} code and the output is an \ac{HTML} single page application (\fref{fig:interaction-original} and \fref{fig:interaction-new}).
 The general boot steps are:
@@ -172,25 +191,28 @@ The general boot steps are:
 
 \subsection{Interoperability}
 \begin{figure}[htb]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/interoperability-original}
-    \caption{Current interoperability (in robot)}
-    \label{fig:interoperability-original}
+  \begin{minipage}{0.5\linewidth} 
+      \centering
+      \includegraphics{figures/interoperability-original.pdf}
+      \caption{Current interoperability \\ (in robot)}
+      \label{fig:interoperability-original}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}{0.5\linewidth} 
+      \centering
+      \includegraphics{figures/interoperability-new.pdf}
+      \caption{New interoperability \\ (in robot)}
+      \label{fig:interoperability-new}
+  \end{minipage}
 \end{figure}
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/interoperability-new}
-    \caption{New interoperability (in robot)}
-    \label{fig:interoperability-new}
-\end{figure}
 
-Flango Content Manager interoperates with two systems: robotBehaviour and Flango Backend.
+Flango \cm interoperates with two systems: robotBehaviour and \flangobe (See figures \ref{fig:interoperability-original} and \ref{fig:interoperability-new} on \pageref{fig:interoperability-original}).
 
-\paragraph{robotBehaviour} Flango \cm interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities, triggering a batch action (autopresentation, guide user to a certain place...).
+\paragraph{robotBehaviour} Flango \cm interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities or triggering a batch action (autopresentation, guide user to a certain place...).
 Likewise, robotBehaviour uses an \ac{API} in Flango \cm, e.g. to restart a session or to input information gathered with the robot's hardware.
 There is an interface defined for this to allow independent development in both ends.
-FIXME Notice that figures \fref{fig:interoperability-original} and \fref{fig:interoperability-new} do not show Basestation. See \fref{fig:context-original} and \fref{fig:context-new}.
+
 The current system to exchange messages between the \flash container and robotBehaviour is based on JavaScript global functions.
 
 To send a message to robotBehaviour:
@@ -211,7 +233,7 @@ Despite the fact that this specification should be technology agnostic, to integ
 In any case, it is clear that there has to be an interface between robotBehaviour and the browser, as they run in separate processes (as opposed to sharing at least one parent process in the current implementation).
 
 \paragraph{BaseStation (\flangobe \ac{API})} The \cm has to fetch data from Basestation in order to load the correct contents.
-Flango Backend (TODO EPIC FIXME. fix the diagrams and everything. BS has backend and frontend) has an API for this (\fref{tab:flango-api}):
+The \flangobe has an \ac{API} for this (\fref{tab:flango-api}):
 
 \begin{table}[ht]
     \centering
@@ -269,8 +291,6 @@ However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friend
 
 
 \section{Conceptual Model}
-TODO FIXME captions should be after the item
-
 \begin{sidewaysfigure}[htb]   
     \centering
     \includegraphics[width=\textwidth]{figures/specification-conceptual-model}
@@ -302,12 +322,12 @@ It encapsulates data that define it (e.g. the name, etc). FIXME etc is too short
 \paragraph{Screen} A screen is the container for elements that the user can interact with.
 Screens contain \ac{UI} Components and can be reused in different Application Node of the same Contents Application. FIXME: verify this
 
-\paragraph{UI Components} A UI Component is an element of the \ac{UI}, for example a Button or an Image.
+\paragraph{UI Components} A UI Component is an element of the \ac{UI}, for example a \texttt{Button} or an \texttt{Image}.
 Users drag and drop them to a canvas in the Screens Editor to create the contents. 
 All UI Components have an \ac{XML} code.
 Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model} is created from the current implementation.
 To support theming, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
-All UI Theme Component are eventually implemented with a basic UI Component.
+All UI Theme Components are eventually implemented with a basic UI Component.
 
 \begin{lstlisting}[caption=Basic UI Components, label=uicomponents-list]
 ButtonComponent.as
@@ -401,13 +421,12 @@ zone:String
 
 \end{lstlisting}
 
-\ref{uicomponents-list} and \ref{uithemecomponents-list} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
+Listings \ref{uicomponents-list} and \ref{uithemecomponents-list} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
 Notice that all files in \ref{uicomponents-list} have the corresponding class in the conceptual model if they have to be implemented.
 The elements of \ref{uithemecomponents-list} are in fact folders but they can be considered classes in this specification as they are part of the domain of the problem.
 However, some elements are not to be implemented because they are deprecated and some other components are to be implemented in future releases, but not in the software of this thesis.
 
 \subparagraph{Excluded elements} UI Components: GroupButtonComponent, GroupComponent, ScrollComponent. UI Theme Components: call\_to\_action\_screen, main\_menu, smartphone\_menu, synchronizing\_screen.
-
 
 \paragraph{Configuration} The state of the application is defined with a configuration object sent from the server.
 A collection of the necessary attributes of the class that encapsulates the configuration is in \ref{uithemecomponents-list} and has been extracted from the current implementation as well.
@@ -418,7 +437,7 @@ The concept is included in the specification but not with this specific names to
 FIXME LANGUAGE An example scenario: Alice is creating screens with the \se.
 She rented the robot for a congress and wants to add information about job openings in her company.
 She can define, with Flango Frontend, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
-FIXME: note about excluding this from the project scope
+The implementation of Entities is incomplete and does not belong to the scope of this project.
 
 \paragraph{Themes} A Contents Application can have themes.
 There is a default theme that defines the look and feel and default actions on click an on load of all UI Theme Components.
@@ -427,7 +446,7 @@ Basic UI Components look always the same way.
 
 TODO explain XML here (NO. section ahead)? explain theming here (nothing to explain)? fallbacks ( belongs to behaviour model)? ambiguity (belongs to behaviour model r xml representation)?
 
-For instance, the \ac{XML} code of a Button UI Component in \fref{chap:specification-button-example-1}
+Listing \fref{chap:specification-button-example-1} shows an example of the \ac{XML} definition of a Button UI Component.
 
 \lstinputlisting[language=XML, caption={Basic UI Component Button XML}]{src/specification-button-example-1.xml}
 
@@ -452,7 +471,6 @@ When the \ac{GUI} is ready, a new actor (Contents Application User) and new use 
 
 
 \subsection{System Use Cases}
-
 \begin{figure}[htb]  
     \centering
     \includegraphics[width=\linewidth]{figures/specification-sucs}
@@ -469,7 +487,7 @@ A contents application user can see the rendered screens and update some paramet
 %For example: the user touches a button that makes Reem say a sentence aloud (notice that the application is sending a message to robotBehaviour).
 The software system that controls the robot, robotBehaviour, can also trigger actions in the contents application (for example, it can start it).
 Amongst others, it can manage the screensaver and sessions and some special settings (including: show the cursor, enable debug mode, enable start of robot's applications, contents application ID, etc). 
-Use cases Manage ScreenSaver and Manage Sessions do not belong to the scope of this project but are shown in the diagram to offer the big picture of the Flango Content Manager.
+%Use cases Manage ScreenSaver and Manage Sessions do not belong to the scope of this project but are shown in the diagram to offer the big picture of the Flango Content Manager.
 
 \begin{suc}
 {title of the use case}
@@ -664,7 +682,7 @@ With \ac{TDD}:
     \item Drive design decisions from tests (i.e. from the specification)
 \end{itemize}
 
-With formal specifications (\ac{DbC}):
+\noindent With formal specifications (\ac{DbC}):
 \begin{itemize}
     \item Higher code quality
     \item Less checks (preconditions)
@@ -739,49 +757,59 @@ system operations
 FIXME: robot behaviour ja no cal!!
 
 \begin{sopcontract}{getRobotApplications()}
-{FIXME: this is part of the contents of an XML file, like functions.xml. Maybe it should not be here. Retrieves a list of applications that can be launched from the Flango Content Manager, e.g. Qt applications like navigation or face recognition.}
+{FIXME: this is part of the contents of an XML file, like functions.xml. Maybe it should not be here. Retrieves a list of applications that can be launched from the Flango \cm , e.g. Qt applications like navigation or face recognition.}
 {RobotBehaviour is running}
-{A list $l$ of robot applications was returned}
+{A list \texttt{l} of robot applications was returned}
 \end{sopcontract}
 
 \begin{sopcontract}{startRobotApplication(id:String)}
-{Starts the robot application with id $id$, e.g. 'face recognition'}
-{$id$ is a valid robot application identifier}
-{A request to start the robot application with id $id$ was sent}
+{Starts the robot application with id \texttt{id}, e.g. 'face recognition'}
+{\texttt{id} is a valid robot application identifier}
+{A request to start the robot application with id \texttt{id} was sent}
 \end{sopcontract}
 
 \begin{sopcontract}{start(appId: Integer, confParams: HashMap)}
-{Starts the contents  application with id $appId$ and configuration parameters $confParam$ that can overwrite the fetched configuration from the backend}
-{$id$ is a well-formatted contents application identifier}
-{aaaa}
+{Starts the contents  application with id \texttt{appId} and configuration parameters \texttt{confParam} that can overwrite the fetched configuration from the backend}
+{\texttt{id} is a well-formatted contents application identifier}
+{FIXME aaaa}
 \end{sopcontract}
 
 \begin{sopcontract}{getScreens(appId: Integer)}
-{Obtains the screens of the contents application with id = $appId$}
-{$id$ is a well-formatted contents application identifier}
-{A list of all screens of application contents with id = $appId$ was returned}
+{Obtains the screens of the contents application with id = \texttt{appId}}
+{\texttt{id} is a well-formatted contents application identifier}
+{A list of all screens of application contents with id = \texttt{appId} was returned}
 \end{sopcontract}
 
 \begin{sopcontract}{goTo(appId: Integer, uri: String)}
 {Displays the desired screen}
-{$id$ is a well-formatted contents application identifier \\ $uri$ is a well-formatted screen \ac{URI} in the contents application}
-{$Conf.currentScreen$ was set to $uri$}
+{
+\begin{enumerate}
+    \item \texttt{id} is a well-formatted contents application identifier 
+    \item \texttt{uri} is a well-formatted screen \ac{URI} in the contents application
+\end{enumerate}
+}
+{\texttt{Conf.currentScreen} was set to \texttt{uri}}
 \end{sopcontract}
 
 \begin{sopcontract}{getConf(appId: Integer)}
-{Obtains the local configuration object for the application $appId$. This object is stable during the execution of the program. It does not need to be fetched again from the Backend.}
-{$id$ is a well-formatted contents application identifier}
-{The configuration $c$ was returned}
+{Obtains the local configuration object for the application \texttt{appId}. This object is stable during the execution of the program. It does not need to be fetched again from the Backend.}
+{\texttt{id} is a well-formatted contents application identifier}
+{The configuration \texttt{c} was returned}
 \end{sopcontract}
 
 \begin{sopcontract}{setValue(c: Conf, key, value)}
-{Sets a field of the configuration object to the desired value. e.g. $setValue(c, 'currentLang', 'de')$}
-{$key$ is a valid field of the configuration object $c$ \\ $value$ is a valid value for $c[key]$}
-{$c[key]$ was set to $value$}
+{Sets a field of the configuration object to the desired value.\\ e.g. \lstinline$setValue(c, 'currentLang', 'de')$}
+{
+\begin{enumerate}
+    \item \texttt{key} is a valid field of the configuration object \texttt{c}
+    \item \texttt{value} is a valid value for \lstinline$c[key]$
+\end{enumerate}
+}
+{\lstinline$c[key]$ was set to \texttt{value}}
 \end{sopcontract}
 
 \subsection{Unit Tests}
-high level description of the tests. specification by example
+FIXME NOTE: high level description of the tests. specification by example
 
 \fref{fig:specification-conceptual-model} describes the real world and shows the relationship between elements that define the problem.
 Actors do not interact with most of the classes shown and contracts and sequence diagrams are intented to describe the system as a unit that provides some service to actors.
@@ -793,7 +821,7 @@ Tests are organised in test-suites for components.
 Each suite has several test cases.
 A test case has an starting situation, execution of the component that is being tested, and asserts.
 This section focuses on the \ac{XML} description.
-FIXME CROSS REF Chapter testing has a full list and examples of other test suites that refer directly to components of the software (FIXME CROSS REF  chapter 6)
+Chapter \fref{chap:testing} has a full list and examples of other test suites that refer directly to components of the software (described in \fref{chap:design})
 Tests challenge behaviour like reading text nodes in \ac{XML} tags, setting properties (i.e. mutating correctly an object in the system), reading order or inheritance of properties, fallback to default values and transformation to \ac{HTML} code.
 
 Unit testing UI directive
@@ -828,7 +856,7 @@ Unit testing UI directive
 			\item should set scope.classes.ui to "whatever" and scope.classes.style to "nice"
 			\item (inline) should set scope.classes.ui to "whatever" and scope.classes.style to "nice"
 		\end{itemize}
-	\item flCaption
+	\item caption
 		\begin{itemize}
 			\item should have the class hide
 			\item should write "dummy string" for default language (and nothing else)
@@ -878,28 +906,28 @@ Unit testing UI Components directives that do not need external libraries
 \begin{itemize}
 	\item subscreen
 	\begin{itemize}
-    	\item should always be transformed to $<fl:ui fl:subscreen>$
-   	 	\item should include a screen file (always uses filename screens/99.xml here) in the inner div
-    	\item should add a $<div>$ with at least the subscreen css class
+    	\item should always be transformed to \lstinline$<fl:ui fl:subscreen>$
+   	 	\item should include a screen file (always uses filename \texttt{screens/99.xml} here) in the inner div
+    	\item should add a \lstinline$<div>$ with at least the subscreen css class
 	\end{itemize}
 
 	\item img
 	\begin{itemize}
-    \item should be transformed to $<fl:ui fl:img>$
-    \item should be replaced with $<img>$
-    \item should set the ng-src attribute in $<img>$
+    \item should be transformed to \lstinline$<fl:ui fl:img>$
+    \item should be replaced with \lstinline$<img>$
+    \item should set the ng-src attribute in \lstinline$<img>$
 	\end{itemize}
 
 	\item button
 	\begin{itemize}
-    \item should be transformed to $<fl:ui fl:button>$
-    \item should be replaced with $<a><div class="fl-overlay"></div><div class="caption-container"></div></a>$
+    \item should be transformed to \lstinline$<fl:ui fl:button>$
+    \item should be replaced with \\ \lstinline$<a><div class="fl-overlay"></div><div class="caption-container"></div></a>$
 	\end{itemize}
 
 	\item textarea
 	\begin{itemize}
-    \item should be transformed to $<fl:ui fl:textarea>$
-    \item should be replaced with $<div></div>$
+    \item should be transformed to \lstinline$<fl:ui fl:textarea>$
+    \item should be replaced with \lstinline$<div></div>$
 	\end{itemize}
 
 \end{itemize}
