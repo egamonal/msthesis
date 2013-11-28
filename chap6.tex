@@ -16,14 +16,14 @@ It is less verbose (minimise bandwidth) and has a straight-forward translation t
 The new version, however, can mix \ac{XML} with \ac{HTML} thanks to Angular.
 This leads to two problems:
 \begin{itemize}
-\item Some tags of the \ac{XML} vocabulary conflict with \ac{HTML}. For instance, \texttt{caption}. Solution: add a namespace \texttt{fl} to all tags. Thus, in the new version a \lstinline$<ui type="base-button"></ui>$ becomes \lstinline$<fl:ui fl:type="base-button"></fl:ui>$.
+\item Some tags of the \ac{XML} vocabulary conflict with \ac{HTML}. For instance, \texttt{caption}. Solution: add a namespace \texttt{fl} to all tags. Thus, in the new version a \\ \lstinline$<ui type="base-button"></ui>$  becomes\\ \lstinline$<fl:ui fl:type="base-button"></fl:ui>$ .
 \end{itemize}
 
 \paragraph{Changes in robotBehaviour} Current interoperation between Flango \cm and the robot is limited to robotBehaviour.
 This communication is done with JavaScript callbacks and \acp{URL}.
 To decouple the \cm as much as possible from the rest of the robot, the new system uses \ac{ROS} Topics and ROS Bridge
 
-\subsection{Forward Engineering} A program that depends on an dead browser plug-in with performance issues is not sustainable.
+\subsection{Forward Engineering} A program that depends on a dead browser plug-in with performance issues is not sustainable.
 A solution is completely  redesigning, recoding and retesting the program, even with a different technology that makes it more flexible, open to new developers and without performance problems.
 
 
@@ -35,7 +35,7 @@ The natural technology in this environment is JavaScript, HTML and CSS.
 It uses the Google AngularJS framework with jQuery.
 Angular \textit{teaches the browser new syntax}.
 That is, instead of parsing the \ac{DOM} tree and building the \ac{GUI}, it defines the behaviour of new tags in \ac{HTML} documents that can be treated as regular \ac{HTML} nodes in the \ac{DOM}.
-It interoperates with other systems built with a different technology: components in the robot use \ac{ROS} and the \flangobe has an \ac{API}. FIXME CROSS REF PHYISICAL DESIGN or CONTEXT
+It interoperates with other systems built with a different technology: components in the robot use \ac{ROS} and the \flangobe has an \ac{API} (see sections \ref{sec:context}, \ref{sec:interaction} and \ref{sec:interoperability} on page \pageref{sec:context}).
 
 \subsection{JavaScript}
 THIS SUBSECTION  IS NOT WRITTEN.
