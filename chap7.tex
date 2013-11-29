@@ -223,12 +223,12 @@ palSettingsModule.factory('palSettings', function (...) {
 \end{lstlisting}
 
 \section{Controllers}
+\label{sec:controllers}
 Controllers are key parts of any \ac{CRUD} application.
 However, because Flango \cm does not know about the objects of the specific domain  of the contents application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
 \paragraph{Command Pattern} This controller implements the \textbf{command pattern} (\cite{Osmani:2012}) and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments.
 
 \lstinputlisting[label=impl-action-ctrl,language=JavaScript, caption={ActionCtrl implementation}]{src/impl-controllers.js}
-
 
 \section{Dependency Injection in JavaScript}
 An instance of type \texttt{A} can create instances of type \texttt{B} (or use global variables). 

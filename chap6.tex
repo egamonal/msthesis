@@ -190,13 +190,11 @@ MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks
 common patterns:
 dependency injection and angularJS (and literature: fowler)
 
-\subsection{Context}
+\subsection{Robot Operating System}
 Flango \cm is a piece in the robot.
 \ac{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster. 
 It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
-It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA}.
-
-DIAGRAM HERE: rosmaster (service registry), services, topics
+It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA} \cite{ROS:2008}.
 
 Nodes are processes that perform computation, a "software module". 
 Nodes communicate with each other by publishing/subscribing with two protocols:
@@ -208,19 +206,14 @@ Nodes communicate with each other by publishing/subscribing with two protocols:
 Messages are strictly typed data structures . There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
 To find service in this peer-to-peer topology, there is a lookup mecanism: \emph{rosmaster} \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}.
 
-
-
-http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf
-
 The robot has two parts: robotBehaviour and Stacks.
 Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} workflow but still uses Topics to communicate with the Stacks, the part of the project that does use \ac{ROS}.
 In Stacks there are Servers and ActionServers that provide Services.
-Flango is a component in this system that communicates with robotBehaviour using \ac{ROS} Topics and two types of messages.
+Flango \cm is a component in this system that communicates with robotBehaviour using \ac{ROS} Topics and two types of messages.
 It is not designed strictly as a service to handle synchronous requests but it is able to use Topics to have asynchronous requests and provide feedback, like ActionServers.
 A typical use of a \ac{ROS} Topic is setting the language of the \cm or sending an action to robotBehaviour (e.g. shake hands, say a sentence).
 robotBehaviour is not a \ac{ROS} service and therefore it can not handle request/responses like other components in the system.
 Topics are the only way to communicate with it.
-
 
 \begin{figure}[htb]
     \centering
@@ -343,11 +336,6 @@ In general there are 3 ways an object can use another one:
 	\item Pass in the dependency to where it is needed
 \end{enumerate}
 
-FIXME: take this code out and move it to the implementation chapter. let's use UML here.
-A --creates--> B, vs. A --> servicelocator --> B
-
-FIXME placeholder! there used to be code here
-
 \textbf{Inversion of control} means that objects do not create other objects on which they rely to do their work.
 They get the dependencies from an outside source (e.g. an \ac{XML} configuration file).
 \textbf{Dependency Injection} means that this is done in a transparent way for the object.
@@ -402,13 +390,14 @@ Other names are \textbf{Transaction} or \textbf{Action Pattern}
 
 \fref{fig:design-command-general} shows the class diagram of this pattern in the context a traditional object-oriented programming language.
 With JavaScript there are no abstract classes.
-The approach that Osmani proposes is having only concrete classes with a common \texttt{execute()} method \cite{Osmani:2012} CROSS REF CODE EXAMPLE
+The approach that Osmani (\cite{Osmani:2012} proposes is having only concrete classes with a common \texttt{execute()} method.
+\fref{sec:controllers} contains a description of the implementation in JavaScript of this pattern.
 
-FIXME include code design-command-1.js and design-command-2.js
+%design-command-1.js (and 2) are not used anymore
 
 With a simple controller (\fref{fig:design-command-general}) one would call the methods in the object.
 while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
-For example, there is no way to define the behaviour for a \texttt{UI Component :: Button} click handler.
+For example, there is no way to define the behaviour for a \texttt{UI Component::Button} click handler.
 Only the contents application knows it.
 By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them (\fref{fig:design-command-flango}).
 
@@ -462,8 +451,14 @@ talk about the data model and \$rootScope ? talk about properties
 un diagrama:
 moduls, serveis, controladors, etc. 
 
+This section contains a comprehensive description of the objects in the system and their relationships taking into account the technology that it uses: JavaScript and AngularJS client-side, Django in the backend, \ac{ROS} Topics to interoperate with the rest of the system.
+There are two subsections: a class diagram and a packages diagram.
+
 \subsection{Class Diagram}
-Explanation about JS not having classes but just instances...
+JavaScript is an object-oriented language but it is not class-based.
+It is prototype-based instead.
+It can be used as a class-based language using constructors but this project does not need to do this: it does not create objects of any domain-specific class but, instead, uses the Angular constructs to instantiate services, controllers and directives, the building blocks of the application.
+Most of boxes in these diagrams are not strictly classes but objects that are instantiated automatically by Angular.
 
 % ********** CLASS DIAGRAM ********
 \begin{figure}[htb]
