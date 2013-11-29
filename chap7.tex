@@ -39,19 +39,20 @@ Quit the server with CONTROL-C.
 \end{lstlisting}
 
 The file structure of the whole project is shown in listing \ref{impl-flango-files-layout}.
-Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts to build debian packages to deploy the software on the robot and basestation.
+Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts to build Debian packages to deploy the software on the robot and basestation.
 \texttt{src} contains the \flangobe , which includes the \flangofe (and the \se).
-The project of this thesis, Flango \cm is in the \texttt{static} folder, that contains files served without any processing server-side.
+The project of this thesis, Flango \cm is in the \texttt{static} folder (\ref{impl-flango-static-files-layout}), that contains files served without any processing server-side.
 
 \begin{lstlisting}[columns=fixed,caption=Flango files layout, label=impl-flango-files-layout]
 ~/contentMgmtBranches/trunk/backend$ ls
-build  conf  packaging  requirements.txt  scripts  src  static
+build  conf  packaging  requirements.txt  scripts
+src    static
 \end{lstlisting}
 
 The browser can open any file in the \texttt{static} folder.
 Alternating between the new and the old version only requires to load \texttt{frontend/index.html} (\flash) or \texttt{flangoh/flangoh/app/index.html} (AngularJS).
 
-\begin{lstlisting}[columns=fixed,language=bash,caption=Flango files layout, label=impl-flango-files-layout]
+\begin{lstlisting}[columns=fixed,language=bash,caption=Flango static files layout, label=impl-flango-static-files-layout]
 ~/contentMgmtBranches/trunk/backend/static$ ls
 admin       fonts     lib
 css         frontend  media
@@ -62,18 +63,46 @@ flangoh     js
 
 The development computer also has a working copy of the code for the robot and Basestation to run simulations and test the new \cm  without using robot time, a scarce resource.
 
-There are 3 run levels:
+There are 3 run levels (each with a matching executable file):
 \begin{enumerate}
-\item \textbf{htmlDialog}. A basic Qt dialog with a QtWebKit widget
+\item \textbf{htmlDialog}. A basic Qt dialog with a QtWebKit widget.
 \item \textbf{guiServer}. A version with more features enabled, like the sound server , navigation, etc.
 \item \textbf{stateMachine}. The complete suite with a testing state machine, Qt, sound server, etc.
 \end{enumerate}
 
-An \ac{XML} file defines the \ac{URL} to load.
+An \ac{XML} file (\texttt{robot/sources/etc/reemh3/robot.xml}) defines the \ac{URL} to load.
+Listing \ref{impl-robot-xml} shows a part of the configuration file.
+In this case, the robot (or the simulation) loads the old version, an \ac{HTML} file in \texttt{http://localhost/static/frontend/index.html} that only contains a full-screen \flash object, the Flango \cm .
+\begin{lstlisting}[language=xml,caption=Robot configuration file, label=impl-robot-xml]
+<controller type="Gui" implementation="" debug="1">
+    <guiController>
+    <theme>barcelona</theme>
+    <timeout>45</timeout>
+    <fullHtml>1</fullHtml><!--  full screen  -->
+    <views>
+        ...
+        <view
+            task="welcome" 
+            args="http://localhost/static/frontend/index.html" 
+            title="" 
+            runMeetPeople="1"  
+            activateASR="root/pal/reem-functions" />
+...    
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash,caption=Run robot simulation, label=impl-robot-run-simulation]
+$ nohup roscore &
+cd $PAL_ROBOT_DIR/local
+$ output/bin/htmlDialog "http://localhost/..."
+$ output/bin/guiServer --silent --noNavigation [--basestationFlash]
+$ ../sources/bin/testStateMachine.sh --noNavigation
+\end{lstlisting}
+
+\ref{impl-robot-run-simulation} shows how these binaries are run.
 
 The first version of the new Flango \cm could run in any of these three levels.
 However, the final version runs in Google Chrome in the robot and there is no need to use this simulation.
-In this case, interoperability is tested with \ac{ROS} topics in localhost.
+In this case, interoperability is tested with \ac{ROS} topics in localhost and Google Chrome.
 
 \subsection{Tools}
 The development of this project uses a number of tools to automate tasks and control de quality of the code to build a robust product.
@@ -118,6 +147,8 @@ flango-gui  js
 flangoh     lib
 \end{lstlisting}
 
+\subsection{Flango and Robot Branches}
+The Flango project (Backend, Frontend and \cm) have to be compatible with the robot software.
 
 \section{Directives and modules}
 Modules encapsulate directives.
@@ -222,8 +253,74 @@ They can be obtained manually with the \texttt{\$injector}
 
 \lstinputlisting[language=javascript, caption={Manual injection (e.g. in a test)}]{src/design-di-manual-injection.js}
 
-\section{Transformation to \ac{HTML}}
+Another example of inversion of control is implemented in \fref{sec:integration-with-ROS}.
 
+\paragraph{A note about optimisation} To improve JavaScript performance and reduce network usage, the code can be minified before deployment.
+This process reduces names of symbols, removes spaces, etc.
+Dependency injection depends on the name of components. 
+Angular provides a protection for minification: annotations.
+\begin{lstlisting}[caption=Annotations to protect injection, language=javascript, label=impl-injection-annotation]
+moduleA.run(['palSettings', '$location', '$rootScope', 'palROSBridge', 
+    function (palSettings, $location, $rootScope, palROSBridge) {...} 
+]);
+
+\end{lstlisting}
+Components can be injected as shown in listing \ref{impl-injection-annotation}.
+The names are values of an array which, obviously, are not altered.
+
+\section{Promises and deferred objects}
+Remote calls in JavaScript are executed asynchronously.
+The program in listing \ref{impl-async} generates the output shown in listing \ref{impl-async-out}.
+
+\lstinputlisting[label=impl-async,language=javascript, caption={JavaScript Asynchronous calls}]{src/impl-async.js}
+\lstinputlisting[label=impl-async-out,language=javascript, caption={JavaScript Asynchronous calls (output)}]{src/impl-async-out.js}
+
+Asynchronous calls are normally handled with callbacks following the \ac{CPS}: control is passed explicitly in the form of continuation.
+
+\lstinputlisting[label=impl-promises-call,language=javascript, caption={JavaScript async calls}]{src/impl-promises-call.js}
+
+\lstinputlisting[label=impl-promises-1,language=javascript, caption={JavaScript Callbacks}]{src/impl-promises-1.js}
+
+Listing \ref{impl-promises-1} (called as in listing \ref{impl-promises-call}) shows a first approach\footnote{This is a simplification that might not cover all cases} to callbacks \texttt{\$http.get()} takes two parameters, the \texttt{success} and the \texttt{error} functions. 
+They are executed after \texttt{\$http.get} has computed the return value, which is passed to the callbacks.
+However, when there are nested or concurrent asynchronous calls, like the case of fetching the configuration from the \flangobe , callbacks become hard to maintain and readability of the code is dramatically affected.
+
+\lstinputlisting[label=impl-promises-2,language=javascript, caption={JavaScript Callbacks (separate declaration)}]{src/impl-promises-2.js}
+
+A better approach consists on extracting the body of the callback functions and use only pointers to these functions (see listing \ref{impl-promises-2}).
+This still does not resolve the problem of concurrency: the result of \texttt{a()} is not complete until \texttt{b()} and \texttt{c()} have completed (e.g. if the returned value of each function had to be aggregated into a \lstinline$var result = {a: [], b: []}$. 
+
+\lstinputlisting[label=impl-promises-3,language=javascript, caption={Angular Promises}]{src/impl-promises-3.js}
+
+Listing \ref{impl-promises-3} shows a real example from this project: a successful retrieval of the configuration parts for the application.
+Angular's \texttt{\$q} service is an implementation of promises/deferred based on Kris Kowal's Q\footnote{\url{https://github.com/kriskowal/q}}.
+A promise is \emph{resolved} only after all data has been fetched correctly from the \flangobe .
+Promises can also be \emph{rejected} if necessary.
+The code shows how control is passed: 
+\begin{eqnarray}
+init \rightarrow getConfig \rightarrow getGenericConfig \rightarrow getApplicationConfig \rightarrow getStructure \nonumber
+\end{eqnarray}
+The latest two operations could run concurrently but if \texttt{getApplicationConfig} failed, \texttt{getStructure} would have to be called again with \texttt{appId = "default"}
+
+This promise is used to block the loading of the application contents until the palSettings service is correctly initialised.
+Settings include security parameters like \texttt{perform\_callbacks} or \texttt{security\_level}, routes, \ac{URI} of the home screen, default language... that must not be undefined to guarantee a consistent boot strap of the application.
+
+\paragraph{A note about security} Web or distributed systems normally have two levels of security: one client side, one server side.
+Validation client-side simply helps filter or reduce the amount of remote calls (e.g. if the data of a form is not well-formatted, it should not be sent to the server because the client node already knows that it will fail).
+Because JavaScript code client-side can be easily altered, the server side must not trust any input.
+However, in this project safe input is assumed even server side because the code runs in a controlled embedded system and the \ac{UI} blocks access to the code.
+Thus, if users modify the code client-side, changes do not affect any other user in the system either directly (e.g. a user gaining admin privileges) or indirectly (a user retrieving sensitive data).
+Only engineers in the company have the ability to alter client-side code.
+For example: an application runs with \lstinline$security_level = 1$ (user) because it should not be allowed to move the arms or make Reem say sentences aloud.
+If client-side code is altered and \lstinline$security_level$ is set to \lstinline$2$ (admin), it will send the command to Qt (or publish it to a \ac{ROS} Topic, depending on the version of this project) and arms will move.
+robotBehaviour assumes safe input from Flango \cm because the code can not be altered except by engineers in the company.
+
+
+\section{Prototypical inheritance}
+TODO
+
+
+\section{Transformation to \ac{HTML}}
 The \texttt{flUi} directive makes decoupling and reusing directives possible \ref{impl-directive-ui}.
 It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}) \ref{impl-directive-basebutton}.
 Dependencies are \textbf{injected} by using their name in the parameters of the function.
@@ -252,38 +349,43 @@ The result is a button like the one in the old version, one of the goals of the 
 
 
 \section{Integration with ROS}
+\label{sec:integration-with-ROS}
 Flango \cm is built as a component in \ac{ROS} that can interoperate with the rest of the system using \ac{ROS} topics.
 Listing \ref{impl-ros-create-message} and \ref{impl-flango-ros-message} show the creation of a message for a ROS Topic in the software of the robot.
 
-\begin{lstlisting}[caption=Flango files layout, label=impl-ros-create-message]
+\begin{lstlisting}[caption=Creation of a ROS Message, label=impl-ros-create-message]
 $ roscd pal_msgs
 ~/svn/stacks/pal_msgs$ roscreate-pkg pal_rb_flango_msgs
-Created package directory ~/svn/stacks/pal_msgs/pal_rb_flango_msgs
-Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/Makefile
-Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/manifest.xml
-Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/CMakeLists.txt
-Created package file ~/svn/stacks/pal_msgs/pal_rb_flango_msgs/mainpage.dox
+Created package directory pal_rb_flango_msgs
+Created package file pal_rb_flango_msgs/Makefile
+Created package file pal_rb_flango_msgs/manifest.xml
+Created package file pal_rb_flango_msgs/CMakeLists.txt
+Created package file pal_rb_flango_msgs/mainpage.dox
 
 Please edit pal_rb_flango_msgs/manifest.xml and mainpage.dox 
 to finish creating your package
+
 ~/svn/stacks/pal_msgs$ mkdir pal_rb_flango_msgs/msg
+
 ~/svn/stacks/pal_msgs$ vim pal_rb_flango_msgs/msg/rbFlango.msg
 # Edit CMake
 
-~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ diff  CMakeLists.txt.orig CMakeLists.txt
+~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ diff \
+  CMakeLists.txt.orig CMakeLists.txt
 20c20
 < #rosbuild_genmsg()
 ---
 > rosbuild_genmsg()
 
 ~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ ls
-CMakeLists.txt  CMakeLists.txt.orig  mainpage.dox  Makefile  manifest.xml  msg
+CMakeLists.txt  CMakeLists.txt.orig  mainpage.dox  Makefile  
+manifest.xml    msg
 
 ~/svn/stacks/pal_msgs/pal_rb_flango_msgs$ rosmake
 [ rosmake ] rosmake starting...                                                                                                                                                                                     
 [ rosmake ] No package specified.  Building ['pal_rb_flango_msgs']                                                                                                                                                  
 [ rosmake ] Packages requested are: ['pal_rb_flango_msgs']                                                                                                                                                          
-[ rosmake ] Logging to directory ~/.ros/rosmake/rosmake_output-20131125-202327                                                                                                                    
+[ rosmake ] Logging to directory ~/.ros/rosmake/rosmake_output-2013...
 [ rosmake ] Expanded args ['pal_rb_flango_msgs'] to:
 ['pal_rb_flango_msgs']                                                                                                                                         
 [rosmake-0] Starting >>> pal_rb_flango_msgs [ make ]                                                                                                                                                                

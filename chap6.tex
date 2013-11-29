@@ -610,14 +610,29 @@ Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-
 
 The configuration is encapsulated in the \texttt{palSettings} angular service which, like all services in Angular, is a singleton.
 This service is created with a factory: when a new instance of palSettings is to be created, it runs some code that prepares an object to return, the instance itself.
-It is instantiated and initialiased the first time it is called.
+It is instantiated and initialised the first time it is called.
 The configuration object is created during the bootstrap.
-It calls $palSettings.init(queryString)$ \fref{fig:design-seqdia-palSettings-init}.
+It calls \lstinline$palSettings.init(queryString)$ \fref{fig:design-seqdia-palSettings-init}.
 This method fetches the configuration from the backend using an asynchronous call (\fref{fig:design-seqdia-palSettings-getConfig}) which, in turn, delegates to other internal operations.
-To avoid errors, the system uses \emph{deferred promises}: the \texttt{init} method returns an object of this type immediately and it receives a notification when all asynchronous calls have been completed, that is, when the configuration object is ready to be used in the application.
+To avoid errors, the system uses \emph{deferred promises}: the \texttt{init} method returns an object immediately and it receives a notification when all asynchronous calls have been completed, that is, when the configuration object is ready to be used in the application.
 
 The configuration object has three parts: the generic configuration (paths, \ac{API} endpoint, etc) \fref{fig:design-seqdia-palSettings-getGenericConfig}, the application specific configuration {fig:design-seqdia-palSettings-getApplicationConfig} (available languages, available themes, default language, etc) and the structure \fref{fig:design-seqdia-palSettings-getStructure} (a graph that matches screens with \ac{URI}.
 It degrades gradually: it first tries to fetch the real application, if it fails attempts to fetch the default application \fref{fig:design-seqdia-palSettings-defaultApplicationConfig}, if this is not possible, it obtains the static application shipped with the program (See \texttt{errorCallback} in \fref{fig:design-seqdia-palSettings-defaultApplicationConfig}).
+
+\paragraph{Promises and deferred objects} Futures, promises and delays are constructs for synchronising in a programming language.
+\textit{Promises} were introduced by Daniel P. Friedman and David Wise in 1977, \textit{futures} in 1977 by Henry Baker and Carl Hewitt.
+The term promise was coined by Liskov and Shrira (\cite{Liskov:1988}) in 1988.
+
+The three words are often used interchangeably although they have some differences:
+\begin{itemize}
+\item Future: read-only placeholder view of a variable
+\item Promise: writeable, single assignment container that sets the value of the future.
+\end{itemize}
+Essentially, promises represent the result of a task that might have not been completed, something very common in JavaScript.
+Asynchronous calls are normally handled with callbacks (FIXME see chapter 7 for impl).
+However, when there are nested or concurrent asynchronous calls, like the case of fetching the configuration from the \flangobe , callbacks become hard to maintain.
+A solution is defining a promise at the beginning and \emph{resolving} it when all calls are completed (or \emph{rejecting} it when a sufficient number of calls have failed).
+This way functions can be decoupled and testing is easier. 
 
 \begin{figure}[htb]
     \centering
@@ -625,7 +640,6 @@ It degrades gradually: it first tries to fetch the real application, if it fails
     \caption{init()}
     \label{fig:design-seqdia-palSettings-init}
 \end{figure}
-
 
 \begin{figure}[htb]
     \centering
