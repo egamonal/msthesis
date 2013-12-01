@@ -1,8 +1,4 @@
 \chapter{Testing}
-i'm gonna enjoy myself here.
-TDD, karma, unit tests, specification with tests, safe refactoring, integration of karma in webstorm, tweak karma to run in Qt...
-quality factors of a webapp: kappel
-
 \section{Overview}
 This chapter contains a description of how \ac{TDD} is applied to this project.
 \ac{TDD} is explained in \fref{sec:testdrivendev}.
@@ -15,7 +11,7 @@ Each test has commands (e.g. "click on button with $id = 3$") and expectations (
 Unit tests are created before the code itself is written (i.e. they first specify the behaviour of the software and then test the implementation).
 Each test focuses on an individual and small part of the code: given an initial situation, the unit testing framework runs the operation being tested and finally asserts the result.
 
-This project only uses unit testing to specify and test directives, services and controllers.
+This project only uses unit testing to define the specification of the software and to test directives, services and controllers.
 It is not possible to conduct \ac{E2E} testing because the \ac{UI} is built in run-time.
 this testing strategy fits well with normal \ac{CRUD} applications, when developers know about the use cases of the software.
 The software of this thesis only deals with rendering contents applications, which can be of any nature.
@@ -57,7 +53,7 @@ No modifications in the real component are needed.
 In the \texttt{beforeEach} clause it stores a reference to the injected element to a local variable.
 Whenever a test calls an operation of the injected service, it will use the mock.
 
-\begin{lstlisting}[label=test-mocks,language=javascript, caption={Mocks}]
+\begin{lstlisting}[label=test-mocks,language=javascript, caption=Mocks]
 var m = angular.module('reemi.mocks.palProperties', []);
 
 m.service('palProperties', function () {
@@ -70,10 +66,31 @@ m.service('palProperties', function () {
 Mocks are components declared with the same name but in a different module (\ref{test-mocks}).
 They are excluded from deployment to the robot.
 
-\paragraph{Relevant tests}
-annex
-
+\Fref{chap:app-unittests} contains a list of most of the relevant tests.
 
 \section{Test Automation}
-config
-run
+\emph{Fail early, fail often}: karma runner is a process watching the project. 
+It runs all tests on every change without disturbing the development and in less than two seconds.
+Karma is a \textit{spectacular test runner for JavaScript} that can run tests in real browsers like Chrome or a program with QtWebKit and that can be integrated with WebStorm or launched from the console ()
+
+\begin{lstlisting}[label=test-launch-karma,language=bash, caption=Launching Karma Runner]
+$ ./scripts/test.sh
+INFO [karma]: Karma server started at http://localhost:9876/
+INFO [launcher]: Starting browser Chrome
+INFO [Chrome 28.0 (Linux)]: Connected on socket 
+     id DxbVJNX0jIoe1CbaWf9V
+Chrome 28.0 (Linux): Executed 143 of 143 SUCCESS 
+(0.843 secs / 0.432 secs)
+\end{lstlisting}
+
+It can be installed with \ac{npm} and configured with a file.
+The configuration for this thesis (\ref{} ) includes jQuery, mocks and configures the browser to suit the needs of  the environment.
+In the first phase of the project, it used a browser based on QtWebKit instead of Chrome (\ref{test-qtwebkit}).
+
+\begin{lstlisting}[label=test-qtwebkit,language=javascript, caption=Configuration to use QtWebkit browser]
+browsers: ['/opt/Qt5.0.2/5.0.2/gcc/
+   examples/webkitwidgets/browser/browser']
+\end{lstlisting}
+
+The goal is to automate the testing in an environment as close to the real one as possible.  
+With this automation, refactoring is easier and more robust, and regressions are avoided.

@@ -11,13 +11,13 @@ fix the abstract to include UPC (currently only FIB is shown)
 \chapter{Introduction}
 % possible quotations: welcome humans. goodwill. and we have a plan.
 This is a report for a master's thesis.
-This document is a stand alone presentation of the work done, which belongs to a bigger project: the Content Management System for the robots.
-More specifically, this thesis deals with the reengineering of Flango \cm with, the part of the system in the robot that renders the screens on the touchscreen, with web technology.
-Applying web technology to human-robot interaction and to a component that interoperates with non-reengineered parts of the system is a novelty in the company.
+This document is a stand alone presentation of the work done, which belongs to a bigger project: the Content Management System (codename \textit{Flango}) for the robots.
+More specifically, this thesis deals with the reengineering of Flango \cm , the part of the system deployed in the robot that renders the screens on the touchscreen, with web technology.
+Using web technology in a component of the robot is a novelty in the company.
 It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same the old system generates.
 
 This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
-It is done to develop a sustainable product based on open standards (as opposed to the current implementation with Adobe Flash \copyright) that can be extended and reused for other robotic components that might be designed in the future.
+It is done to develop a sustainable product based on open standards (as opposed to the current implementation with \flash) that can be extended and reused for other robotic products that might be designed in the future.
 
 \section{\company}
 \company is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
@@ -32,19 +32,17 @@ They can be used in public places such as hotels, malls, airports or museums.
 
 \begin{figure}
    \centering
-   \begin{subfigure}[b]{0.5\textwidth}
+   \begin{subfigure}[b]{0.4\linewidth}
        \includegraphics{figures/reemh2}
        \caption{\reem{H2}}
        \label{fig:reemh2}
-    \end{subfigure}%
-       ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
-         %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.5\textwidth}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
            \includegraphics{figures/reemh3}
            \caption{\reem{H3}}
-           \label{fig:tiger}
+           \label{fig:reemh3}
     \end{subfigure}
-    \caption{\reem Series}
+    \caption{\reem{H} Series}
     \label{fig:reemseries}
 \end{figure}
 
@@ -67,15 +65,16 @@ They can be used in public places such as hotels, malls, airports or museums.
 \end{table}
 
 \section{The Current System}
-The \reem{} series have big potential in human robot interaction. 
+The \reem{H} series have big potential in human robot interaction. 
 These humanoid robots have a multi-modal interface: besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
-\reem{} can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
+\reem{H} can display multimedia contents like corporate videos, information about the client, capabilities of the robot, language settings, etc.
 
 \begin{figure}[htb]
-    \label{fig:intro-system-overview}
+    
     \centering
     \includegraphics[width=14cm]{figures/intro-system-overview}
-    \caption{Overview of the system (Hardware)}
+    \caption{Overview of the system}
+    \label{fig:intro-system-overview}
 \end{figure}
 
 The Contents Management System comprises \emph{\flangofe} and \emph{\flangobe} (both in Basestation), and \emph{Flango \cm} (in the robot).
@@ -85,7 +84,7 @@ When application contents are ready, clients can associate $1$ application with 
 
 \lstinputlisting[label=example-screen-xml,language=XML, caption={Example Screen XML}, breaklines=true]{src/example-screen.xml}
 
-The components of a contents application (screens and entities) have an \ac{XML} representation (\ref{example-screen-xml} ), an approach similar to popular projects (e.g. Android, NetBeans) and even, in a sense, all \acp{RIA} made with \ac{HTML}.
+The elements of a contents application (screens and entities) have an \ac{XML} representation (\ref{example-screen-xml}), an approach similar to popular projects (e.g. Android, NetBeans) and even, in a sense, all \acp{RIA} made with \ac{HTML}.
 
 A contents application is essentially a set of screens, navigation multimedia contents that users can manage with the media library, and entities. 
 FIXME LANGUAGE The last are domain objects that can be instantiated and represented in a view. 
@@ -111,10 +110,10 @@ Initially, this software has no \ac{GUI} or direct interaction with a person.
     \label{fig:xml-flango-view}
     \centering
     \includegraphics[width=\textwidth]{figures/xml-flango-screenshot}
-    \caption{Sequence of action: from \ac{XML} to the \ac{GUI}}
+    \caption{From \ac{XML} to the \ac{GUI}}
 \end{figure}
 
-This thesis documents the project to re-engineer the \cm , in the robot, to use modern web technologies instead of \flash.
+This thesis documents the project to \textbf{re-engineer the \cm , in the robot, to use modern web technologies instead of \flash}.
 
 \section{The New System}
 The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
@@ -122,10 +121,10 @@ First the web consisted of simple pages that contained structured text and some 
 Navigation was done using simple links between pages. 
 In a second phase, web sites became interactive: 
 it was the time of animated graphics, browser plug-ins and JavaScript. 
-More recently web sites have adopted features from traditional desktop software in \acp{RIA}. \cite{Anttonen:2011}.
+More recently web sites have adopted features from traditional desktop software in \acp{RIA} \cite{Anttonen:2011}.
 
 For a decade, the \flash player plug-in has provided a platform to enable rich and interactive content in browsers.
-However, Adobe has made the updates exclusive to the Google Chrome\copyright \xspace browser \cite{FlashRoadmap}. 
+However, Adobe has made the updates exclusive to the Google Chrome\textsuperscript{\textcopyright}\xspace browser \cite{FlashRoadmap}. 
 The browser in the robot application, QtWebBrowser, uses this plug-in but will not receive updates from Adobe and \company systems need to adapt to this new setting. 
 There are two solutions:
 \begin{itemize}

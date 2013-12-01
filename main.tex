@@ -46,6 +46,7 @@
 \usepackage{rotating}
 \usepackage{placeins}
 \usepackage{xspace}
+\usepackage{textcomp}
 
 \pagestyle{plain}
 
@@ -109,6 +110,7 @@
   morekeywords={include, width, height, extend, size}% list your attributes here
 }
 
+\pdfminorversion=4
 
 %% This bit allows you to either specify only the files which you wish to
 %% process, or `all' to process all files which you \include.
@@ -142,7 +144,7 @@
 \include{chap9} % future work, conclusions
 
 \appendix
-%\include{appa}
+\include{app-tests-report}
 %\include{appb}
 \include{biblio}
 \end{document}

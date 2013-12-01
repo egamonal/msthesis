@@ -1,0 +1,237 @@
+\chapter{Unit Tests}
+\label{chap:app-unittests}
+\begin{singlespace}
+
+\section{Unit testing UI directive}
+\begin{enumerate}
+\item     inline type property: should have type defined
+\item     width
+\begin{enumerate}
+\item         should have the class hide
+\item         should set the property to 42 for the default (language-independent)
+\item         should set the property to 40 for Catalan and 42 for French
+\item         should set the property to 40 for Catalan, 42 for French and 20 for default
+\item         should not set any property
+\item         (inline) should set the property to 42 for the default (language-independent)
+\item         should set the property to 42 for default (language-independent) of pal-container
+\item         (inline) should set the property to 42 for default (language-independent) of pal-container
+\end{enumerate}
+\item     height
+\begin{enumerate}
+\item         should have the class hide
+\item         should set the property to 42 for the default (language-independent)
+\item         should set the property to 40 for Catalan and 42 for French
+\item         should set the property to 40 for Catalan, 42 for French and 20 for default
+\item         should not set the property
+\item         (inline) should set the property to 42 for the default language
+\item         should set the property to 42 for the default language of pal-container
+\item         (inline) should set the property to 42 for the default language of pal-container
+\end{enumerate}
+\item     x
+\begin{enumerate}
+\item         should have the class hide
+\item         should set the property to 42 for the default language
+\item         should set the property to 40 for Catalan and 42 for French
+\item         should set the property to 40 for Catalan, 42 for French and 20 for default
+\item         should not set the property
+\item         (inline) should set the property to 42 for the default language
+\item         should write 42.0 in scope.properties.x in pal-container
+\item         (inline) should write 42 in scope.properties.x in pal-container
+\end{enumerate}
+\item     y
+\begin{enumerate}
+\item         should have the class hide
+\item         should set the property to 42 for the default language
+\item         should set the property to 40 for Catalan and 42 for French
+\item         should set the property to 40 for Catalan, 42 for French and 20 for default
+\item         should not set the property
+\item         (inline) should set the property to 42 for the default language
+\item         should write 42.0 in scope.properties.y in pal-container
+\item         (inline) should write 42 in scope.properties.y in pal-container
+\end{enumerate}
+\item     src
+\begin{enumerate}
+\item         should have the class hide
+\item         should set the property to "dummy string" for the default language
+\item         should set the property to 40 for Catalan and 42 for French
+\item         should set the property to 40 for Catalan, 42 for French and 20 for default
+\item         should not set the property
+\item         (inline) should set the property to 42 for the default language
+\end{enumerate}
+\item     style
+\begin{enumerate}
+\item         should have the class hide
+\item         should set scope.classes.ui to "whatever" and scope.classes.style to "nice"
+\item         (inline) should set scope.classes.ui to "whatever" and scope.classes.style to "nice"
+\end{enumerate}
+\item     flCaption
+\begin{enumerate}
+\item         should have the class hide
+\item         should write "dummy string" for default language (and nothing else)
+\item         should set English caption to "dummy string"
+\end{enumerate}
+\item     layover
+\begin{enumerate}
+\item         should have the class hide
+\item         should add the overlay property empty
+\item         should add the overlay property with width, height and src
+\item         should add the overlay property with inline width, height and src
+\end{enumerate}
+\item     goto: should read the parameters
+\item     external call: should read the parameters
+\item     set language: should read the language
+\item     open popup: should read the code of the popup
+\item     background
+\begin{enumerate}
+\item         should read the parameters
+\item         should read the inline parameters
+\end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+\item Unit testing UI directive -- ambiguity
+\item     (width) should use inner value (20) instead of inline value (10)
+\item     (height) should use inner value (20) instead of inline (10)
+\item     (x) should use inner value (20) instead of inline (10)
+\item     (y) should use inner value (20) instead of inline (10)
+\item     (src) should use inner value ("dummy string") instead of inline ("smart string")
+\item     (palStyle) should give inner value ("nice") higher priority than inline ("ugly")
+\item     (palStyle) should give inner values ("big" and "red") higher priority than inline ("ugly")
+\end{enumerate}
+
+\section{Unit testing UI Components directives}
+\begin{enumerate}
+\item     subscreen
+\begin{enumerate}
+\item         should always be transformed to <fl:ui fl:subscreen>
+\item         should include a screen file (always uses filename screens/99.xml here) in the inner div
+\item         should add a <div> with at least the subscreen css class
+\end{enumerate}
+\item     img
+\begin{enumerate}
+\item         should be transformed to <fl:ui fl:img>
+\item         should be replaced with <img>
+\item         should set the ng-src attribute in <img>
+\end{enumerate}
+\item     button
+\begin{enumerate}
+\item         should be transformed to <fl:ui fl:button>
+\item         should be replaced with <a><div class="fl-overlay"></div><div class="caption-container"></div></a>
+\end{enumerate}
+\item     textarea
+\begin{enumerate}
+\item         should be transformed to <fl:ui fl:textarea>
+\item         should be replaced with <div></div>
+\end{enumerate}
+\item     video: should be transformed to <fl:ui video>
+\item     container
+\begin{enumerate}
+\item         should add a <div> with the necessary css classes
+\item         should add nothing if pal-container is empty
+\item         should add a <div> with css classes to loop vertically (loopy=auto)
+\item         should add a <div> with classes to loop vertically and inline style to repeated elements (loopy=200)
+\item         should add a <div> with css classes to loop
+\item         should add a <div> with css classes to loop horizontally (loopx=auto)
+\item         should add a <div> with css classes to loop horizontally and inline style to repeated elements(loopx=200)
+\item         should add a <div> with css classes to scroll horizontally
+\item         should add a <div> with css classes to scroll vertically
+\end{enumerate}
+\end{enumerate}
+
+\section{Unit testing UI subscreen with real palSettings}
+\begin{enumerate}
+\item     should include the file for route /root/pal/reem-video (98.xml) in the inner div
+\end{enumerate}
+
+\section{Unit testing: Testing modules and dependencies}
+\begin{enumerate}
+\item     Reemi Module:
+\begin{enumerate}
+\item         should be registered
+\item         Dependencies:
+\begin{enumerate}
+\item             should have reemi.ui as a dependency
+\item             should have reemi.uicomponents as a dependency
+\item             should have reemi.utils as a dependency
+\item             should have reemi.theme.default as a dependency
+\item             should have reemi.services.palSettings as a dependency
+\item             should have reemi.services.palProperties as a dependency
+\item             should have reemi.services.palUri as a dependency
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\section{palProperties service}
+\begin{enumerate}
+\item         should return a sanitized number
+\item         should return a sanitized string
+\item         should have transformed a set of flango properties to CSS
+\item         should create a data structure to store properties
+\item         should set a property in the specified language
+\item         should set a language-independent property
+\item         should get a property in the current language, or fallback to the language-independent property
+\end{enumerate}
+
+\section{palSettings}
+\begin{enumerate}
+\item     generic configuration method
+\begin{enumerate}
+\item         getShowCursor() should return true
+\item         getPerformCallbacks() should return false
+\item         getReportStats() should return true
+\item         getSecurityLevel() should return 2
+\item         getDebugLevel() should return "ALL"
+\item         getDebugMode() should return true
+\item         getScreenTransitions() should return false
+\item         getSessionTimeout() should return 999999999
+\item         getPerformanceMonitor() should return false
+\item         getApiEndpoint() should return "/flango-api-0.1"
+\item         getDefaultApiEndpoint() should return "/static/frontend/content"
+\item         getStaticApiEndpoint() should return "content"
+\item         getThemesPath() should return "/static/frontend/themes"
+\item         getStaticThemesPath() should return "themes"
+\item         getMediaPath() should return "/static/media"
+\item         getStaticMediaPath() should return "content/assets"
+\end{enumerate}
+\item     app configuration method
+\begin{enumerate}
+\item         getAppId() should return 13
+\item         getAppName() should return Barcelona
+\item         getAppLanguages() should return array of languages
+\item         getAppDefaultLanguage() should return "en"
+\item         getAppInitialNode() should return "/root/main-menu"
+\item         getAppHomeNode() should return "/root/main-menu"
+\item         getAppThemes() should return array of themes
+\item         getAppDefaultTheme() should return the name of the default theme
+\end{enumerate}
+\item     routes
+\begin{enumerate}
+\item         should set 24 routes
+\item         should define at least the routes declared in the response json file
+\item         should define a default route
+\end{enumerate}
+\item     other methods
+\begin{enumerate}
+\item         getCurrentLanguage() should return the default language
+\item         setCurrentLanguage(ca) should set current language to ca
+\item         getScreenFile should find the correct file (using the api endpoint)
+\item         getScreenFile should find the correct file (with url params)
+\end{enumerate}
+\item     initialization
+\begin{enumerate}
+\item         should load the configuration and structure for appid 13 (exists)
+\item         should load the default contents when app\_id is wrong
+\end{enumerate}
+\end{enumerate}
+
+\section{palUri}
+\begin{enumerate}
+\item     should get the root when trying to make an external call without params
+\item     should form the url for an external call, with params
+\item     should open the external call url in a new tab
+\item     should not open the external call url in a new tab (permission to perform callbacks not granted)
+\item     should not open the external call url in a new tab (security level is lower than the one set in the configuration)
+\item     should open the external call url in a new tab (security level is greater or equal than the one set in the configuration)
+\end{enumerate}
+
+\end{singlespace}
