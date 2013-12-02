@@ -15,7 +15,7 @@
    id="svg5863"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 2">
+   sodipodi:docname="design-deployment-browser.svg">
   <defs
      id="defs5865">
     <clipPath
@@ -321,17 +321,24 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="244.5339"
-     inkscape:cy="628.20943"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="168.43843"
+     inkscape:cy="889.64958"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1375"
      inkscape:window-height="873"
      inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0" />
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="-140,1062.8571"
+       id="guide4094" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5868">
     <rdf:RDF>
@@ -340,7 +347,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -348,52 +355,52 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       id="id1"
+       d="m 57.410714,24.242899 514.999996,0 -10,10 -514.999996,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="id3"
+       d="m 562.41071,34.242899 10,-10 0,684.700001 -10,10 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="id5"
+       d="m 47.410714,34.242899 514.999996,0 0,684.700001 -514.999996,0 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       sodipodi:nodetypes="ccccc" />
     <g
-       id="g1130"
-       transform="translate(47.410714,24.242899)">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-         inkscape:connector-curvature="0"
-         d="M 10,0 645,0 635,10 0,10 10,0 z"
-         id="id1" />
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-         inkscape:connector-curvature="0"
-         d="m 635,10 10,-10 0,700.7 -10,10 0,-700.7 z"
-         id="id3" />
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-         inkscape:connector-curvature="0"
-         d="m 0,10 635,0 0,700.7 -635,0 L 0,10 z"
-         id="id5" />
-      <g
-         id="g1135"
-         transform="translate(0,10)">
-        <clipPath
-           id="clipPath5664">
-          <path
-             inkscape:connector-curvature="0"
-             id="path5666"
-             d="m 0,0 635,0 0,700.7 -635,0 z" />
-        </clipPath>
-        <text
-           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-           id="text1140"
-           font-weight="bold"
-           font-style="normal"
-           text-decoration="none"
-           clip-path="url(#id6)"
-           font-size="12" />
-      </g>
+       transform="translate(47.410714,34.242899)"
+       id="g1135">
+      <clipPath
+         id="clipPath5664">
+        <path
+           d="m 0,0 635,0 0,700.7 -635,0 z"
+           id="path5666"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         font-size="12"
+         clip-path="url(#id6)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="bold"
+         id="text1140"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
     </g>
     <g
        id="g1142"
-       transform="translate(61.910714,85.842899)">
+       transform="translate(39.285714,85.842899)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="M 0,0 169,0 169,60 0,60 0,0 z"
-         id="id8" />
+         d="m 20,0 149,0 0,60 -149,0 z"
+         id="id8"
+         sodipodi:nodetypes="ccccc" />
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -405,7 +412,8 @@
          id="path1147"
          d="m 159,5 5,5 -5,0 0,-5 z" />
       <g
-         id="g1149">
+         id="g1149"
+         transform="translate(12.092773,0)">
         <clipPath
            id="clipPath5674">
           <path
@@ -459,7 +467,7 @@
     </g>
     <g
        id="g1166"
-       transform="translate(47.410714,38.142899)">
+       transform="translate(-9.7855771,38.142899)">
       <clipPath
          id="clipPath5685">
         <path
@@ -498,12 +506,13 @@
     </g>
     <g
        id="g1179"
-       transform="translate(279.53571,85.842899)">
+       transform="translate(204.83036,85.842899)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="M 0,0 169,0 169,60 0,60 0,0 z"
-         id="id12" />
+         d="m 20,0 149,0 0,60 -149,0 z"
+         id="id12"
+         sodipodi:nodetypes="ccccc" />
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -515,7 +524,8 @@
          id="path1184"
          d="m 159,5 5,5 -5,0 0,-5 z" />
       <g
-         id="g1186">
+         id="g1186"
+         transform="translate(8.2539063,0)">
         <clipPath
            id="clipPath5698">
           <path
@@ -569,12 +579,13 @@
     </g>
     <g
        id="g1203"
-       transform="translate(489.6607,85.842899)">
+       transform="translate(370.37501,85.842899)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="M 0,0 169,0 169,60 0,60 0,0 z"
-         id="id15" />
+         d="m 20,0 149,0 0,60 -149,0 z"
+         id="id15"
+         sodipodi:nodetypes="ccccc" />
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -586,7 +597,8 @@
          id="path1208"
          d="m 159,5 5,5 -5,0 0,-5 z" />
       <g
-         id="g1210">
+         id="g1210"
+         transform="translate(11.444336,0)">
         <clipPath
            id="clipPath5713">
           <path
@@ -638,400 +650,384 @@
              x="41">app/lib/videojs/*</tspan>        </text>
       </g>
     </g>
+    <path
+       sodipodi:nodetypes="ccccc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 59.910714,247.3429 468.749996,0 0,455.1 -468.749996,0 z"
+       id="id20" />
     <g
-       id="g1227"
-       transform="translate(47.410714,237.3429)">
-      <g
-         id="g1229"
-         transform="translate(12.5,0)">
+       id="g1236"
+       transform="translate(59.910714,247.3429)">
+      <clipPath
+         id="clipPath5729">
         <path
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id17)"
            inkscape:connector-curvature="0"
-           id="path1231"
-           d="m 10,0 588.75,0 -10,10 L 0,10 10,0 z" />
+           id="path5731"
+           d="m 0,0 588.75,0 0,455.1 -588.75,0 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1241"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id21)"
+         font-size="12" />
+    </g>
+    <g
+       transform="translate(-12.589286,249.4429)"
+       id="g1243">
+      <clipPath
+         id="clipPath5735">
         <path
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id18)"
-           inkscape:connector-curvature="0"
-           id="path1233"
-           d="m 588.75,10 10,-10 0,455.1 -10,10 0,-455.1 z" />
+           d="m 0,0 599.25,0 0,33 L 0,33 z"
+           id="path5737"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         font-size="12"
+         clip-path="url(#id22)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="normal"
+         id="text1248"
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+        <tspan
+           x="274"
+           xml:space="preserve"
+           y="13"
+           textLength="50.0"
+           id="tspan1250">«artifact»</tspan>      </text>
+      <text
+         font-size="12"
+         clip-path="url(#id22)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="bold"
+         id="text1252"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+        <tspan
+           x="231"
+           xml:space="preserve"
+           y="27"
+           textLength="137.0"
+           id="tspan1254">Flango Content Manager</tspan>      </text>
+    </g>
+    <g
+       transform="translate(80.410714,302.4429)"
+       id="g1256">
+      <clipPath
+         id="clipPath5744">
         <path
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-           inkscape:connector-curvature="0"
-           d="m 0,10 588.75,0 0,455.1 L 0,465.1 0,10 z"
-           id="id20" />
-        <g
-           id="g1236"
-           transform="translate(0,10)">
-          <clipPath
-             id="clipPath5729">
-            <path
-               inkscape:connector-curvature="0"
-               id="path5731"
-               d="m 0,0 588.75,0 0,455.1 -588.75,0 z" />
-          </clipPath>
-          <text
-             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-             id="text1241"
-             font-weight="bold"
-             font-style="normal"
-             text-decoration="none"
-             clip-path="url(#id21)"
-             font-size="12" />
-        </g>
-      </g>
-      <g
-         id="g1243"
-         transform="translate(0,12.1)">
-        <clipPath
-           id="clipPath5735">
-          <path
-             inkscape:connector-curvature="0"
-             id="path5737"
-             d="m 0,0 599.25,0 0,33 L 0,33 z" />
-        </clipPath>
-        <text
-           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-           id="text1248"
-           font-weight="normal"
-           font-style="normal"
-           text-decoration="none"
-           clip-path="url(#id22)"
-           font-size="12">
-          <tspan
-             id="tspan1250"
-             textLength="50.0"
-             y="13"
-             xml:space="preserve"
-             x="274">«artifact»</tspan>        </text>
-        <text
-           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-           id="text1252"
-           font-weight="bold"
-           font-style="normal"
-           text-decoration="none"
-           clip-path="url(#id22)"
-           font-size="12">
-          <tspan
-             id="tspan1254"
-             textLength="137.0"
-             y="27"
-             xml:space="preserve"
-             x="231">Flango Content Manager</tspan>        </text>
-      </g>
-      <g
-         id="g1256"
-         transform="translate(33,65.1)">
-        <clipPath
-           id="clipPath5744">
-          <path
-             inkscape:connector-curvature="0"
-             id="path5746"
-             d="m 0,0 315.25,0 0,387 L 0,387 z" />
-        </clipPath>
-        <text
-           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'"
-           id="text1261"
-           font-weight="normal"
-           font-style="normal"
-           text-decoration="none"
-           clip-path="url(#id23)"
-           font-size="12">
-          <tspan
-             id="tspan1263"
-             textLength="49.0"
-             y="13"
-             xml:space="preserve"
-             x="2">├── css</tspan>          <tspan
-             id="tspan1265"
-             textLength="105.0"
-             y="27"
-             xml:space="preserve"
-             x="2">│   ├── app.css</tspan>          <tspan
-             id="tspan1267"
-             textLength="147.0"
-             y="41"
-             xml:space="preserve"
-             x="2">│   └── normalize.css</tspan>          <tspan
-             id="tspan1269"
-             textLength="154.0"
-             y="55"
-             xml:space="preserve"
-             x="2">├── flashCallback.html</tspan>          <tspan
-             id="tspan1271"
-             textLength="49.0"
-             y="69"
-             xml:space="preserve"
-             x="2">├── img</tspan>          <tspan
-             id="tspan1273"
-             textLength="98.0"
-             y="83"
-             xml:space="preserve"
-             x="2">├── index.html</tspan>          <tspan
-             id="tspan1275"
-             textLength="42.0"
-             y="97"
-             xml:space="preserve"
-             x="2">├── js</tspan>          <tspan
-             id="tspan1277"
-             textLength="98.0"
-             y="111"
-             xml:space="preserve"
-             x="2">│   ├── app.js</tspan>          <tspan
-             id="tspan1279"
-             textLength="154.0"
-             y="125"
-             xml:space="preserve"
-             x="2">│   ├── controllers.js</tspan>          <tspan
-             id="tspan1281"
-             textLength="126.0"
-             y="139"
-             xml:space="preserve"
-             x="2">│   ├── directives</tspan>          <tspan
-             id="tspan1283"
-             textLength="189.0"
-             y="153"
-             xml:space="preserve"
-             x="2">│   │   ├── reemi.entity.js</tspan>          <tspan
-             id="tspan1285"
-             textLength="189.0"
-             y="167"
-             xml:space="preserve"
-             x="2">│   │   ├── reemi.screen.js</tspan>          <tspan
-             id="tspan1287"
-             textLength="238.0"
-             y="181"
-             xml:space="preserve"
-             x="2">│   │   ├── reemi.theme.default.js</tspan>          <tspan
-             id="tspan1289"
-             textLength="231.0"
-             y="195"
-             xml:space="preserve"
-             x="2">│   │   ├── reemi.uicomponents.js</tspan>          <tspan
-             id="tspan1291"
-             textLength="161.0"
-             y="209"
-             xml:space="preserve"
-             x="2">│   │   ├── reemi.ui.js</tspan>          <tspan
-             id="tspan1293"
-             textLength="182.0"
-             y="223"
-             xml:space="preserve"
-             x="2">│   │   └── reemi.utils.js</tspan>          <tspan
-             id="tspan1295"
-             textLength="126.0"
-             y="237"
-             xml:space="preserve"
-             x="2">│   ├── filters.js</tspan>          <tspan
-             id="tspan1297"
-             textLength="112.0"
-             y="251"
-             xml:space="preserve"
-             x="2">│   └── services</tspan>          <tspan
-             id="tspan1299"
-             textLength="189.0"
-             y="265"
-             xml:space="preserve"
-             x="2">│       ├── palROSBridge.js</tspan>          <tspan
-             id="tspan1301"
-             textLength="189.0"
-             y="279"
-             xml:space="preserve"
-             x="2">│       ├── popupservice.js</tspan>          <tspan
-             id="tspan1303"
-             textLength="301.0"
-             y="293"
-             xml:space="preserve"
-             x="2">│       ├── reemi.services.palProperties.js</tspan>          <tspan
-             id="tspan1305"
-             textLength="287.0"
-             y="307"
-             xml:space="preserve"
-             x="2">│       ├── reemi.services.palSettings.js</tspan>          <tspan
-             id="tspan1307"
-             textLength="252.0"
-             y="321"
-             xml:space="preserve"
-             x="2">│       └── reemi.services.palUri.js</tspan>          <tspan
-             id="tspan1309"
-             textLength="49.0"
-             y="335"
-             xml:space="preserve"
-             x="2">├── lib</tspan>          <tspan
-             id="tspan1311"
-             textLength="77.0"
-             y="349"
-             xml:space="preserve"
-             x="2">├── screens</tspan>          <tspan
-             id="tspan1313"
-             textLength="133.0"
-             y="363"
-             xml:space="preserve"
-             x="2">│   ├── default.xml</tspan>        </text>
-      </g>
-      <g
-         id="g1315"
-         transform="translate(337,73.1)">
-        <clipPath
-           id="clipPath5776">
-          <path
-             inkscape:connector-curvature="0"
-             id="path5778"
-             d="m 0,0 241.81063,0 0,379 L 0,379 z" />
-        </clipPath>
-        <text
-           style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'"
-           id="text1320"
-           font-weight="normal"
-           font-style="normal"
-           text-decoration="none"
-           clip-path="url(#id24)"
-           font-size="12">
-          <tspan
-             id="tspan1322"
-             textLength="63.0"
-             y="13"
-             xml:space="preserve"
-             x="2">└── theme</tspan>          <tspan
-             id="tspan1324"
-             textLength="105.0"
-             y="27"
-             xml:space="preserve"
-             x="2">    └── default</tspan>          <tspan
-             id="tspan1326"
-             textLength="196.0"
-             y="41"
-             xml:space="preserve"
-             x="2">        ├── arabicButton.xml</tspan>          <tspan
-             id="tspan1328"
-             textLength="182.0"
-             y="55"
-             xml:space="preserve"
-             x="2">        ├── backButton.xml</tspan>          <tspan
-             id="tspan1330"
-             textLength="182.0"
-             y="69"
-             xml:space="preserve"
-             x="2">        ├── baseButton.xml</tspan>          <tspan
-             id="tspan1332"
-             textLength="175.0"
-             y="83"
-             xml:space="preserve"
-             x="2">        ├── bigButton.xml</tspan>          <tspan
-             id="tspan1334"
-             textLength="196.0"
-             y="97"
-             xml:space="preserve"
-             x="2">        ├── cameraButton.xml</tspan>          <tspan
-             id="tspan1336"
-             textLength="196.0"
-             y="111"
-             xml:space="preserve"
-             x="2">        ├── configButton.xml</tspan>          <tspan
-             id="tspan1338"
-             textLength="105.0"
-             y="125"
-             xml:space="preserve"
-             x="2">        ├── css</tspan>          <tspan
-             id="tspan1340"
-             textLength="140.0"
-             y="139"
-             xml:space="preserve"
-             x="2">        │   ├── scss</tspan>          <tspan
-             id="tspan1342"
-             textLength="196.0"
-             y="153"
-             xml:space="preserve"
-             x="2">        │   │   ├── main.css</tspan>          <tspan
-             id="tspan1344"
-             textLength="217.0"
-             y="167"
-             xml:space="preserve"
-             x="2">        │   └── ui-defaults.css</tspan>          <tspan
-             id="tspan1346"
-             textLength="203.0"
-             y="181"
-             xml:space="preserve"
-             x="2">        ├── englishButton.xml</tspan>          <tspan
-             id="tspan1348"
-             textLength="203.0"
-             y="195"
-             xml:space="preserve"
-             x="2">        ├── forwardButton.xml</tspan>          <tspan
-             id="tspan1350"
-             textLength="182.0"
-             y="209"
-             xml:space="preserve"
-             x="2">        ├── homeButton.xml</tspan>          <tspan
-             id="tspan1352"
-             textLength="105.0"
-             y="223"
-             xml:space="preserve"
-             x="2">        ├── img</tspan>          <tspan
-             id="tspan1354"
-             textLength="182.0"
-             y="237"
-             xml:space="preserve"
-             x="2">        ├── infoButton.xml</tspan>          <tspan
-             id="tspan1356"
-             textLength="196.0"
-             y="251"
-             xml:space="preserve"
-             x="2">        ├── koreanButton.xml</tspan>          <tspan
-             id="tspan1358"
-             textLength="210.0"
-             y="265"
-             xml:space="preserve"
-             x="2">        ├── languageButton.xml</tspan>          <tspan
-             id="tspan1360"
-             textLength="217.0"
-             y="279"
-             xml:space="preserve"
-             x="2">        ├── leftArrowButton.xml</tspan>          <tspan
-             id="tspan1362"
-             textLength="140.0"
-             y="293"
-             xml:space="preserve"
-             x="2">        ├── line.xml</tspan>          <tspan
-             id="tspan1364"
-             textLength="182.0"
-             y="307"
-             xml:space="preserve"
-             x="2">        ├── listButton.xml</tspan>          <tspan
-             id="tspan1366"
-             textLength="182.0"
-             y="321"
-             xml:space="preserve"
-             x="2">        ├── nextButton.xml</tspan>          <tspan
-             id="tspan1368"
-             textLength="210.0"
-             y="335"
-             xml:space="preserve"
-             x="2">        ├── reemBodyButton.xml</tspan>          <tspan
-             id="tspan1370"
-             textLength="182.0"
-             y="349"
-             xml:space="preserve"
-             x="2">        ├── reemButton.xml</tspan>          <tspan
-             id="tspan1372"
-             textLength="224.0"
-             y="363"
-             xml:space="preserve"
-             x="2">        ├── rightArrowButton.xml</tspan>          <tspan
-             id="tspan1374"
-             textLength="189.0"
-             y="377"
-             xml:space="preserve"
-             x="2">        └── videoButton.xml</tspan>        </text>
-      </g>
+           d="m 0,0 315.25,0 0,387 L 0,387 z"
+           id="path5746"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         font-size="12"
+         clip-path="url(#id23)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="normal"
+         id="text1261"
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'">
+        <tspan
+           x="2"
+           xml:space="preserve"
+           y="13"
+           textLength="49.0"
+           id="tspan1263">├── css</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="27"
+           textLength="105.0"
+           id="tspan1265">│   ├── app.css</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="41"
+           textLength="147.0"
+           id="tspan1267">│   └── normalize.css</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="55"
+           textLength="154.0"
+           id="tspan1269">├── flashCallback.html</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="69"
+           textLength="49.0"
+           id="tspan1271">├── img</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="83"
+           textLength="98.0"
+           id="tspan1273">├── index.html</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="97"
+           textLength="42.0"
+           id="tspan1275">├── js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="111"
+           textLength="98.0"
+           id="tspan1277">│   ├── app.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="125"
+           textLength="154.0"
+           id="tspan1279">│   ├── controllers.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="139"
+           textLength="126.0"
+           id="tspan1281">│   ├── directives</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="153"
+           textLength="189.0"
+           id="tspan1283">│   │   ├── reemi.entity.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="167"
+           textLength="189.0"
+           id="tspan1285">│   │   ├── reemi.screen.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="181"
+           textLength="238.0"
+           id="tspan1287">│   │   ├── reemi.theme.default.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="195"
+           textLength="231.0"
+           id="tspan1289">│   │   ├── reemi.uicomponents.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="209"
+           textLength="161.0"
+           id="tspan1291">│   │   ├── reemi.ui.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="223"
+           textLength="182.0"
+           id="tspan1293">│   │   └── reemi.utils.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="237"
+           textLength="126.0"
+           id="tspan1295">│   ├── filters.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="251"
+           textLength="112.0"
+           id="tspan1297">│   └── services</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="265"
+           textLength="189.0"
+           id="tspan1299">│       ├── palROSBridge.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="279"
+           textLength="189.0"
+           id="tspan1301">│       ├── popupservice.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="293"
+           textLength="301.0"
+           id="tspan1303">│       ├── reemi.services.palProperties.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="307"
+           textLength="287.0"
+           id="tspan1305">│       ├── reemi.services.palSettings.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="321"
+           textLength="252.0"
+           id="tspan1307">│       └── reemi.services.palUri.js</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="335"
+           textLength="49.0"
+           id="tspan1309">├── lib</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="349"
+           textLength="77.0"
+           id="tspan1311">├── screens</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="363"
+           textLength="133.0"
+           id="tspan1313">│   ├── default.xml</tspan>      </text>
+    </g>
+    <g
+       transform="translate(322.41071,310.4429)"
+       id="g1315">
+      <clipPath
+         id="clipPath5776">
+        <path
+           d="m 0,0 241.81063,0 0,379 L 0,379 z"
+           id="path5778"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         font-size="12"
+         clip-path="url(#id24)"
+         text-decoration="none"
+         font-style="normal"
+         font-weight="normal"
+         id="text1320"
+         style="font-size:12px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Andale Mono\',\'Andale Mono'">
+        <tspan
+           x="2"
+           xml:space="preserve"
+           y="13"
+           textLength="63.0"
+           id="tspan1322">└── theme</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="27"
+           textLength="105.0"
+           id="tspan1324">    └── default</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="41"
+           textLength="196.0"
+           id="tspan1326">        ├── arabicButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="55"
+           textLength="182.0"
+           id="tspan1328">        ├── backButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="69"
+           textLength="182.0"
+           id="tspan1330">        ├── baseButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="83"
+           textLength="175.0"
+           id="tspan1332">        ├── bigButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="97"
+           textLength="196.0"
+           id="tspan1334">        ├── cameraButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="111"
+           textLength="196.0"
+           id="tspan1336">        ├── configButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="125"
+           textLength="105.0"
+           id="tspan1338">        ├── css</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="139"
+           textLength="140.0"
+           id="tspan1340">        │   ├── scss</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="153"
+           textLength="196.0"
+           id="tspan1342">        │   │   ├── main.css</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="167"
+           textLength="217.0"
+           id="tspan1344">        │   └── ui-defaults.css</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="181"
+           textLength="203.0"
+           id="tspan1346">        ├── englishButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="195"
+           textLength="203.0"
+           id="tspan1348">        ├── forwardButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="209"
+           textLength="182.0"
+           id="tspan1350">        ├── homeButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="223"
+           textLength="105.0"
+           id="tspan1352">        ├── img</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="237"
+           textLength="182.0"
+           id="tspan1354">        ├── infoButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="251"
+           textLength="196.0"
+           id="tspan1356">        ├── koreanButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="265"
+           textLength="210.0"
+           id="tspan1358">        ├── languageButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="279"
+           textLength="217.0"
+           id="tspan1360">        ├── leftArrowButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="293"
+           textLength="140.0"
+           id="tspan1362">        ├── line.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="307"
+           textLength="182.0"
+           id="tspan1364">        ├── listButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="321"
+           textLength="182.0"
+           id="tspan1366">        ├── nextButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="335"
+           textLength="210.0"
+           id="tspan1368">        ├── reemBodyButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="349"
+           textLength="182.0"
+           id="tspan1370">        ├── reemButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="363"
+           textLength="224.0"
+           id="tspan1372">        ├── rightArrowButton.xml</tspan>        <tspan
+           x="2"
+           xml:space="preserve"
+           y="377"
+           textLength="189.0"
+           id="tspan1374">        └── videoButton.xml</tspan>      </text>
     </g>
     <g
        id="g1376"
-       transform="translate(61.910714,157.8429)">
+       transform="translate(39.285714,159.12861)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="M 0,0 169,0 169,60 0,60 0,0 z"
-         id="id26" />
+         d="m 20,0 149,0 0,60 -149,0 z"
+         id="id26"
+         sodipodi:nodetypes="ccccc" />
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -1043,7 +1039,8 @@
          id="path1381"
          d="m 159,5 5,5 -5,0 0,-5 z" />
       <g
-         id="g1383">
+         id="g1383"
+         transform="translate(12.09668,0)">
         <clipPath
            id="clipPath5813">
           <path
@@ -1097,12 +1094,13 @@
     </g>
     <g
        id="g1400"
-       transform="translate(279.53571,157.8429)">
+       transform="translate(204.83036,159.12861)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="M 0,0 169,0 169,60 0,60 0,0 z"
-         id="id29" />
+         d="m 20,0 149,0 0,60 -149,0 z"
+         id="id29"
+         sodipodi:nodetypes="ccccc" />
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -1114,7 +1112,8 @@
          id="path1405"
          d="m 159,5 5,5 -5,0 0,-5 z" />
       <g
-         id="g1407">
+         id="g1407"
+         transform="translate(10.776367,0)">
         <clipPath
            id="clipPath5828">
           <path
@@ -1168,12 +1167,13 @@
     </g>
     <g
        id="g1424"
-       transform="translate(489.6607,157.8429)">
+       transform="translate(370.37501,159.12861)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="M 0,0 169,0 169,60 0,60 0,0 z"
-         id="id32" />
+         d="m 20,0 149,0 0,60 -149,0 z"
+         id="id32"
+         sodipodi:nodetypes="ccccc" />
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -1185,7 +1185,8 @@
          id="path1429"
          d="m 159,5 5,5 -5,0 0,-5 z" />
       <g
-         id="g1431">
+         id="g1431"
+         transform="translate(12.116211,0)">
         <clipPath
            id="clipPath5843">
           <path
@@ -1239,7 +1240,7 @@
     </g>
     <g
        id="g1448"
-       transform="translate(543.1607,266.0929)">
+       transform="translate(383.1607,256.0929)">
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
@@ -1276,5 +1277,16 @@
              x="2">Project of this thesis</tspan>        </text>
       </g>
     </g>
+    <path
+       style="fill:#3effff;fill-opacity:0;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-opacity:1"
+       inkscape:connector-curvature="0"
+       id="path1231"
+       d="m 69.91071,237.3429 468.75,0 -10,10 -468.75,0 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#3effff;fill-opacity:0;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-opacity:1"
+       inkscape:connector-curvature="0"
+       id="path1233"
+       d="m 528.66071,247.3429 10,-10 0,455.1 -10,10 0,-455.1 z" />
   </g>
 </svg>

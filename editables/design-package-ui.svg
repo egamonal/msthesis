@@ -14,7 +14,7 @@
    id="svg6768"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="design-package-uicomponents.svg">
+   sodipodi:docname="design-package-ui.svg">
   <defs
      id="defs6770">
     <clipPath
@@ -325,6 +325,13 @@
          id="path1853"
          d="M 0,0 110,0 110,5 0,5 z" />
     </clipPath>
+    <clipPath
+       id="clipPath3189">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3191"
+         d="M 0,0 120,0 120,25 0,25 z" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -333,16 +340,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="430.68473"
-     inkscape:cy="711.44217"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="307.96805"
+     inkscape:cy="881.25469"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="513"
-     inkscape:window-height="406"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-width="1266"
+     inkscape:window-height="680"
+     inkscape:window-x="190"
+     inkscape:window-y="131"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata6773">
@@ -352,7 +359,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -360,109 +367,333 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 75.07143,122.18361 132.3,0 0,25 -132.3,0 0,-25 z"
+       id="id160" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 75.07143,147.18361 545,0 0,132.5 -545,0 z"
+       id="id162" />
     <g
-       id="g1823"
-       transform="translate(135.07143,122.18361)">
+       id="g1829"
+       transform="translate(75.07143,122.18361)">
+      <clipPath
+         id="clipPath8063">
+        <path
+           inkscape:connector-curvature="0"
+           id="path8065"
+           d="m 0,0 130.83,0 0,25 L 0,25 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text1834"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id163)"
+         font-size="12">
+        <tspan
+           id="tspan1836"
+           textLength="46.0"
+           y="16.5"
+           xml:space="preserve"
+           x="42">reemi.ui</tspan>      </text>
+    </g>
+    <g
+       transform="translate(88.07143,159.68361)"
+       id="g1838">
+      <path
+         id="id165"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
       <g
-         id="g1825">
-        <path
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-           inkscape:connector-curvature="0"
-           d="m 0,0 132.3,0 0,25 L 0,25 0,0 z"
-           id="id160" />
-        <path
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-           inkscape:connector-curvature="0"
-           d="m 0,25 147,0 0,52.5 L 0,77.5 0,25 z"
-           id="id162" />
-        <g
-           id="g1829">
-          <clipPath
-             id="clipPath8063">
-            <path
-               inkscape:connector-curvature="0"
-               id="path8065"
-               d="m 0,0 130.83,0 0,25 L 0,25 z" />
-          </clipPath>
-          <text
-             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-             id="text1834"
-             font-weight="bold"
-             font-style="normal"
-             text-decoration="none"
-             clip-path="url(#id163)"
-             font-size="12">
-            <tspan
-               id="tspan1836"
-               textLength="46.0"
-               y="16.5"
-               xml:space="preserve"
-               x="42">reemi.ui</tspan>          </text>
-        </g>
+         id="g1841">
+        <clipPath
+           id="clipPath8072">
+          <path
+             d="M 0,0 120,0 120,25 0,25 z"
+             id="path8074"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="12"
+           clip-path="url(#id166)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="bold"
+           id="text1846"
+           style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+          <tspan
+             x="51"
+             xml:space="preserve"
+             y="16.5"
+             textLength="18.0"
+             id="tspan1848">flUi</tspan>        </text>
       </g>
       <g
-         id="g1838"
-         transform="translate(13,37.5)">
-        <path
-           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-           inkscape:connector-curvature="0"
-           d="M 0,0 120,0 120,25 0,25 0,0 z"
-           id="id165" />
-        <g
-           id="g1841">
-          <clipPath
-             id="clipPath8072">
-            <path
-               inkscape:connector-curvature="0"
-               id="path8074"
-               d="M 0,0 120,0 120,25 0,25 z" />
-          </clipPath>
-          <text
-             style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-             id="text1846"
-             font-weight="bold"
-             font-style="normal"
-             text-decoration="none"
-             clip-path="url(#id166)"
-             font-size="12">
-            <tspan
-               id="tspan1848"
-               textLength="18.0"
-               y="16.5"
-               xml:space="preserve"
-               x="51">flUi</tspan>          </text>
-        </g>
-        <g
-           id="g1850"
-           transform="translate(5,30)">
-          <clipPath
-             id="clipPath8079">
-            <path
-               inkscape:connector-curvature="0"
-               id="path8081"
-               d="M 0,0 110,0 110,5 0,5 z" />
-          </clipPath>
-          <text
-             style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
-             id="text1855"
-             font-weight="normal"
-             font-style="normal"
-             text-decoration="none"
-             clip-path="url(#id167)"
-             font-size="10" />
-        </g>
+         transform="translate(5,30)"
+         id="g1850">
+        <clipPath
+           id="clipPath8079">
+          <path
+             d="M 0,0 110,0 110,5 0,5 z"
+             id="path8081"
+             inkscape:connector-curvature="0" />
+        </clipPath>
+        <text
+           font-size="10"
+           clip-path="url(#id167)"
+           text-decoration="none"
+           font-style="normal"
+           font-weight="normal"
+           id="text1855"
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
       </g>
     </g>
+    <g
+       id="g3111"
+       transform="translate(88.07143,199.68361)">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         inkscape:connector-curvature="0"
+         d="M 0,0 120,0 120,25 0,25 0,0 z"
+         id="path3113" />
+      <g
+         id="g3115">
+        <clipPath
+           id="clipPath3117">
+          <path
+             inkscape:connector-curvature="0"
+             id="path3119"
+             d="M 0,0 120,0 120,25 0,25 z" />
+        </clipPath>
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+           x="50.946423"
+           y="16.428579"
+           id="text3133"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3135"
+             x="50.946423"
+             y="16.428579"
+             style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold">flX</tspan></text>
+      </g>
+      <g
+         id="g3125"
+         transform="translate(5,30)">
+        <clipPath
+           id="clipPath3127">
+          <path
+             inkscape:connector-curvature="0"
+             id="path3129"
+             d="M 0,0 110,0 110,5 0,5 z" />
+        </clipPath>
+        <text
+           style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+           id="text3131"
+           font-weight="normal"
+           font-style="normal"
+           text-decoration="none"
+           clip-path="url(#id167)"
+           font-size="10" />
+      </g>
+    </g>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 222.07143,199.68361 120,0 0,25 -120,0 0,-25 z"
+       id="path3139" />
+    <g
+       id="g3141"
+       transform="translate(222.07143,199.68361)">
+      <clipPath
+         id="clipPath3143">
+        <path
+           inkscape:connector-curvature="0"
+           id="path3145"
+           d="M 0,0 120,0 120,25 0,25 z" />
+      </clipPath>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="50.946423"
+         y="16.428579"
+         id="text3147"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3149"
+           x="50.946423"
+           y="16.428579"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold">flY</tspan></text>
+    </g>
+    <g
+       id="g3151"
+       transform="translate(293.07143,229.68361)">
+      <clipPath
+         id="clipPath3153">
+        <path
+           inkscape:connector-curvature="0"
+           id="path3155"
+           d="M 0,0 110,0 110,5 0,5 z" />
+      </clipPath>
+      <text
+         style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text3157"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id167)"
+         font-size="10" />
+    </g>
+    <path
+       id="path3159"
+       d="m 354.07143,199.68361 120,0 0,25 -120,0 0,-25 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <g
+       transform="translate(343.42391,199.68361)"
+       id="g3161">
+      <clipPath
+         id="clipPath3163">
+        <path
+           d="M 0,0 120,0 120,25 0,25 z"
+           id="path3165"
+           inkscape:connector-curvature="0" />
+      </clipPath>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3167"
+         y="16.428579"
+         x="50.946423"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold"
+           y="16.428579"
+           x="50.946423"
+           id="tspan3169"
+           sodipodi:role="line">flWidth</tspan></text>
+    </g>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 486.07143,199.68361 120,0 0,25 -120,0 0,-25 z"
+       id="path3171" />
+    <g
+       id="g3173"
+       transform="translate(473.4186,199.68361)">
+      <clipPath
+         id="clipPath3175">
+        <path
+           inkscape:connector-curvature="0"
+           id="path3177"
+           d="M 0,0 120,0 120,25 0,25 z" />
+      </clipPath>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="50.946423"
+         y="16.428579"
+         id="text3179"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3181"
+           x="50.946423"
+           y="16.428579"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold">flHeight</tspan></text>
+    </g>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 88.07143,239.68361 120,0 0,25 -120,0 0,-25 z"
+       id="path3185" />
+    <path
+       id="path3205"
+       d="m 222.07143,239.68361 120,0 0,25 -120,0 0,-25 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3193"
+       y="256.11218"
+       x="123.0083"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold"
+         y="256.11218"
+         x="123.0083"
+         id="tspan3195"
+         sodipodi:role="line">flCaption</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="325.71429"
-       y="183.79076"
-       id="text8141"
+       x="264.43509"
+       y="256.11218"
+       id="text3207"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan8143"
-         x="325.71429"
-         y="183.79076">add width, x, etc</tspan></text>
+         id="tspan3209"
+         x="264.43509"
+         y="256.11218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold">flStyle</tspan></text>
+    <g
+       id="g3197"
+       transform="translate(153.07143,269.68361)">
+      <clipPath
+         id="clipPath3199">
+        <path
+           inkscape:connector-curvature="0"
+           id="path3201"
+           d="M 0,0 110,0 110,5 0,5 z" />
+      </clipPath>
+      <text
+         style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text3203"
+         font-weight="normal"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id167)"
+         font-size="10" />
+    </g>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 354.07143,239.68361 120,0 0,25 -120,0 0,-25 z"
+       id="path3217" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3219"
+       y="256.11218"
+       x="401.10544"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold"
+         y="256.11218"
+         x="401.10544"
+         id="tspan3221"
+         sodipodi:role="line">flSrc</tspan></text>
+    <path
+       id="path3223"
+       d="m 486.07143,239.68361 120,0 0,25 -120,0 0,-25 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="508.25256"
+       y="256.11218"
+       id="text3225"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3227"
+         x="508.25256"
+         y="256.11218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans Bold">flBackground</tspan></text>
   </g>
 </svg>
