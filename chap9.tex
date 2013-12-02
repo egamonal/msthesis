@@ -1,7 +1,48 @@
 \chapter{Conclusion}
 \section{Contributions}
 This thesis is emintently a practical work with a clear goal: reengineer Flango \cm with web technology.
-It 
+The new version of the software works and is ready for production.
+It covers 80\% of the most common features and can substitute safely the old \flash system.
+
+%The project is unique and new in the company and solves a need.
+
+This thesis was conceived to apply the principles and techniques acquired not only in this master's course but in the BSc degree as well.
+
+Initially, the project was planned in terms of scope, schedule and budget.
+Secondly, requirements were gathered from exploring the old version and discussing about the system with the previous developer.
+
+After this, the specification of the system was made combining \ac{TDD} and design by contract for the behaviour model, and a class diagram for the conceptual model.
+This part was kept as technology agnostic as possible and emphasised the first three steps in a reengineering process: inventory analysis, documentation restructuring and reverse engineering.
+
+Then, the system was designed internally taking into account software engineering principles (\ac{GRASP} and \ac{SOLID}).
+It described the architecture of the software (\ac{MVC}), the patterns (dependency injection, command, factory, revealing module AND FIXME REMOTE FACADE), the strategy to interoperate with the robot's system and with the back-end.
+Several diagrams for a static and a dynamic views were made: class and packages diagrams, sequence diagrams of relevant operations and deployment diagrams.
+
+Finally, the software was implemented with Angular (JavaScript), HTML, SASS and ROSLibJS, and minor changes were made in the backend (python).
+
+The testing strategy had \ac{TDD} at the core all throughout the development of the project.
+Unit tests were used as executable specifications and helped design better components that are less coupled and more cohesive.
+
+Despite the fact that this thesis sorts chapters as if it had been developed using the waterfall method, the software was designed in small iterations and milestones.
+
+FIXME and now a paragraph about what I learnt in the master's to impress everybody
+
+\section{Challenges}
+ FIXME MAYBE NOT NECESSARY
+challenges: tech unkown, soa, fitting xml for flash in web
+
+The project had challenges of diverse nature that were overcome succesfully with patience, attention to details, creativity and logic.
+
+One of the biggest challenges was that the old technology and product were unknown and not documented at the beginning.
+Understanding the role of the application in the system was crucial to develop a successful new product.
+Only in the last weeks of development it was noticed that the application could have been built as a service to make interoperation with ROS easier.
+However, the internal design was flexible enough to adapt to changes and take advantage of the framework.
+
+Another big challenge was to adapt to \ac{XML} and a back-end designed for an ActionScript application.
+Choosing the technology correctly was critical to minimise the work.
+
+
+
 
 \section{Future Work}
 

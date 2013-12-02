@@ -11,10 +11,10 @@ fix the abstract to include UPC (currently only FIB is shown)
 \chapter{Introduction}
 % possible quotations: welcome humans. goodwill. and we have a plan.
 This is a report for a master's thesis.
-This document is a stand alone presentation of the work done, which belongs to a bigger project: the Content Management System (codename \textit{Flango}) for the robots.
+This document is a stand alone presentation of the work done, which belongs to a larger project: the Content Management System (codenamed \textit{Flango}) for the robots.
 More specifically, this thesis deals with the reengineering of Flango \cm , the part of the system deployed in the robot that renders the screens on the touchscreen, with web technology.
 Using web technology in a component of the robot is a novelty in the company.
-It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same the old system generates.
+It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same that the old system generates.
 
 This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
 It is done to develop a sustainable product based on open standards (as opposed to the current implementation with \flash) that can be extended and reused for other robotic products that might be designed in the future.
@@ -27,8 +27,8 @@ This project targets \reem{H2} and H3, service robots with wheels.
 
 \subsection{Reem H2 and H3}
 \reem{H2} \fref{fig:reemh2} and H3 \fref{fig:reemh3} are humanoid service robots featuring a screen on their torso.
-They have an autonomous navigation system, speech recognition and synthesiser, they can find their way in different settings and help or entertain people in a friendly way.
-They can be used in public places such as hotels, malls, airports or museums.
+They have an autonomous navigation system, speech recognition and voice synthesiser, they can find their way in different settings and help or entertain people in a friendly way.
+They are intended for use in public places such as hotels, malls, airports or museums.
 
 \begin{figure}
    \centering
@@ -184,3 +184,35 @@ This project has been developed iteratively using a \ac{TDD} methodology.
 This document presents the system in a chronological manner as if it had followed the classical software life cycle in its development, hoping to offer an easier reading:
 It first analyses the state of the art and includes some background knowledge required to understand the decisions taken during the development, then the planning and the requirements, the specification of the system, the internal design (with special attention to the framework and the specific technology of both the hardware and the software), some examples of the implementation and the testing strategy.
 Readers will find an overview section at the beginning of each chapter to put them in context.
+
+This document describes the project as follows:
+\begin{description}
+\item[Related Work] Provides a general overview of topics surrounding those of this thesis, enabling for a deeper understanding of the material at hand.
+It starts with a description of the reengineering process, followed by a section about web technology and finally, a description of the methodology of the project (\ac{TDD}).
+
+\item[Project Management] Contains information about the project from the point of view of management. 
+Detailing on schedule, budget and risk analisys. Contains an assesment of the execution.
+
+\item[Requirements] States the functional and non-functional minimum requirements, the constraints and and weights the use of off-the-shelf solutions.
+
+\item[Specification] Defines what the application does in the context of a reengineering process. 
+It offers the first three steps: a software inventory, [documentation restructuring] and a description of the current system (with special attention to context, interoperability and interaction).
+Contains the specification of the new system: a conceptual model, use cases and the behaviour model, with sequence diagrams and contracts of system operations. 
+
+\item[Design] Describes the internal design of the software in the context of a reengineering process. 
+It contains the last three steps: code restructuring, data restructuring and forward engineering.
+Detailing about the system architecture and the context and the patterns used.
+Contains a static view (class and packages diagram), a dynamic view (sequence diagrams) with examples of the most relevant operations and a physical view (deployment diagrams)
+
+\item[Implementation] Holds technical details about the environment, the set-up, the integration in the robot and a larger system and meaningful examples of the technology used. 
+Emphasises the implementation of the patterns described in previous chapters.
+
+\item[Testing] Describes the implementation of the testing strategy, the goals and the integration in the robot system.
+
+\item[Conclusion] Presents the conclusions from technical, academic and personal point of view. 
+Includes challenges faced during developments and future work. FIXME
+
+
+\item[Appendix A] Lists unit tests that define the behaviour of most components of this system.
+
+\end{description}
