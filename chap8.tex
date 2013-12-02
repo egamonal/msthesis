@@ -1,8 +1,16 @@
 \chapter{Testing}
-\section{Overview}
 This chapter contains a description of how \ac{TDD} is applied to this project.
+
+\section{Overview}
+Considering testing as equal in importance to application writing makes the code to be more robust, lowers the cost of maintenance and helps to have a better internal design.
+\begin{description}
+    \item[Jasmine]\footnote{\url{http://pivotal.github.io/jasmine/}} A behaviour-driven development framework for testing JavaScript code.
+    It provides a simple and self-descriptive syntax to write test suites.
+    \item[Angular Mocks] there are stub objects ready to load in tests (e.g. \texttt{\$httpBackend} mocks \ac{HTTP} calls)
+    \item[Karma] is a test runner to automate the execution of the test suites. 
+\end{description}
+
 \ac{TDD} is explained in \fref{sec:testdrivendev}.
-Angular ships with Jasmine, a framework to do \ac{TDD}, to make \ac{E2E} and unit tests.
 
 \ac{E2E} simulate user interaction by writing scenario tests.
 They describe the expected behaviour of the application given a state and an interaction.
@@ -18,9 +26,8 @@ The software of this thesis only deals with rendering contents applications, whi
 If this thesis had focuses on reengineering one of the contents applications, \ac{E2E} would have been a useful tool.
 
 \section{Tests Definition}
-Tests are written using Jasmine, "a behaviour driven development framework for testing JavaScript code" \footnote{\url{http://pivotal.github.io/jasmine/}}.
-Tests are grouped in test suites.
-Test suites are \texttt{describe} blocks that contain tests in \texttt{it} blocks.
+Tests are written with Jasmine and are grouped in test suites.
+These are \texttt{describe} blocks that contain tests in \texttt{it} blocks.
 
 \lstinputlisting[label=test-example-generic,language=javascript, caption={Structure of a test suite}]{src/test-example-generic.js}
 

@@ -19,7 +19,7 @@ The first three focus on what the system does and are used in this chapter, wher
 
 This chapter starts by describing the \textbf{current system}: the software parts (\textbf{inventory analysis}) and what it does (\textbf{reverse engineering} to understand the system with special attention to \textbf{context}, \textbf{interaction} and \textbf{interoperability}).
 It is followed by a description of what the \textbf{new system} has to do: the \textbf{specification} comprises a \textbf{conceptual model}, a \textbf{use case model} and a \textbf{behaviour model}.
-Finally, it describes the \ac{XML} used to represent contents applications.
+FIXME Finally, it describes the \ac{XML} used to represent contents applications.
 
 \section{Inventory Analysis}
 A list of software in the organisation makes candidates for reengineering appear.
@@ -33,22 +33,12 @@ lastchange=August 2013,
 sysresides=Reem H2 and H3,
 appinterfaces=Flango Backend; robotBehaviour,
 dbs=SQLite in the robot (exclusive use),
-errors=not tracked,
-nusers=all employees (+40) and business leads (at least one per week),
-ninstallations=3 (one per dev robot in the office),
-complexityArch=Simple (MVC),
-complexityCode=Medium (custom \ac{XML} parser),
-complexityDocs=No documentation,
-qualityDocs=N/A,
-overallMainten=One software engineer full-time (extension and maintenance),
 projLongevity=Until September 2013,
 projNchanges36=0,
-maintenCost=1 software engineer full-time,
-operCost=no exclusive cost,
-bizVal=high (no revenue generated yet but it can be sold without the robot),
-bizCrit=very high (contents have big impact: they belong to the \ac{UI})
+maintenCost=1 software engineer full-time
 }
 \end{inventory}
+
 \begin{inventory}
 {
 name=\flangofe -- \se , 
@@ -59,22 +49,12 @@ lastchange=August 2013,
 sysresides=Basestation,
 appinterfaces=Flango Frontend (robot); Flango Backend,
 dbs=flango (postgresql through the Backend),
-errors=not tracked,
-nusers=business department (+5 people) and a some software engineers (+7),
-ninstallations=2,
-complexityArch=Simple (MVC),
-complexityCode=Medium (large ActionScript codebase and custom \ac{XML} parser),
-complexityDocs=No documentation,
-qualityDocs=N/A,
-overallMainten=1 software engineer full-time,
 projLongevity=At least until January 2015,
 projNchanges36=Bug fixing,
-maintenCost=1 software engineer full-time,
-operCost=no exclusive cost,
-bizVal=high (no revenue generated yet but it can be sold without the robot),
-bizCrit=very high (contents have big impact: they belong to the \ac{UI})
+maintenCost=1 software engineer full-time
 }
 \end{inventory}
+
 \begin{inventory}
 {
 name=\flangobe , 
@@ -85,30 +65,20 @@ lastchange=August 2013,
 sysresides=Basestation,
 appinterfaces=Flango Frontend (robot); Flango Screens Editor,
 dbs=flango (postgresql),
-errors=not tracked,
-nusers=business department (+5 people) and a some software engineers (+7),
-ninstallations=2,
-complexityArch=Simple ("MVC"),
-complexityCode=Medium (large Django codebase),
-complexityDocs=Simple for this project,
-qualityDocs=Very high for Django; Poor for Flango Backend,
-overallMainten=1 software engineer full-time,
 projLongevity=At least until January 2015,
 projNchanges36=Unspecified number of new features and bug fixing,
-maintenCost=1 software engineer full-time,
-operCost=no exclusive cost,
-bizVal=high (no revenue generated yet but it can be sold without the robot),
-bizCrit=very high (contents have big impact: they belong to the \ac{UI})
+maintenCost=1 software engineer full-time
 }
 \end{inventory} 
+
 However, Flango \cm uses other software (\ref{inventory-flango-se} and \ref{inventory-flango-be} ) that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
 
-When it was decided to reengineer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and would not converge to a sustainable situation.
+When it was decided to reengineer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and that would not converge to a sustainable situation.
 Reengineering costs are lower than the cost to make changes plus the cost of maintenance.
 
 \section{Reverse Engineering}
-\label{sec:context}
-Reengineering a software involves reverse engineering, understanding what the system does.
+\label{sec:reverse-eng}
+Reengineering a software involves reverse engineering, \textbf{understanding what the system does}.
 
 There are 3 key issues in understanding the current system: \textbf{abstraction level}, \textbf{completeness} and \textbf{direction}.
 This specification uses a system-level abstraction, only takes into account interaction with external elements, and is one-way (from current system to the specification of the new system).
@@ -119,6 +89,8 @@ It offers some technology-dependant details to understand the steps to reach the
 Details of how this software does the same with a new technology are in \fref{chap:design} and \fref{chap:implementation}
 
 \subsection{Context}
+\label{sec:context}
+
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/context-original.pdf}
@@ -158,32 +130,13 @@ The project of this thesis is reengineering the Flango \cm , in the robot (\fref
     \label{fig:interaction-new}
 \end{figure}
 
-%\begin{figure}[ht]
-%    \begin{subfigure}[b]
-%        \includegraphics{figures/interaction-original.pdf}
-%        \caption{Current interaction}
-%        \label{subfig:interaction-original}
-%    \end{subfigure}
-%    
-%    \hfill
-%
-%    \begin{subfigure}[b]
-%        \includegraphics{figures/interaction-new.pdf}
-%        \caption{New interaction}
-%        \label{subfig:interaction-new}
-%    \end{subfigure}
-%    
-%    \caption{dfgntymnrty}
-%    \label{fig:smith}
-%\end{figure}
-
-The content manager's input is \ac{XML} code and the output is an \ac{HTML} single page application (\fref{fig:interaction-original} and \fref{fig:interaction-new}).
-The general boot steps are:
+The \cm 's input is \ac{XML} code and the output is an \ac{HTML} single page application (\fref{fig:interaction-original} and \fref{fig:interaction-new}).
+The general boot sequence is:
 
 \begin{enumerate}
     \item The robot boots
     \item robotBehaviour fetches generic settings (\ac{XML}) from Basestation
-    \item The \cm uses the settings to decide which application to load, the language, the theme, etc), it requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the \flangobe .
+    \item The \cm uses the settings to decide which application to load, the language, the theme, etc. It requests application-specific settings and the application structure. After this, it requests the screens (the \ac{XML} files) to the \flangobe .
     \item Basestation serves all the screens
     \item The \cm renders the screens. If during this process it finds an "entity", it fetches the data from Basestation.
 \end{enumerate}
@@ -208,11 +161,10 @@ The general boot steps are:
   \end{minipage}
 \end{figure}
 
-
 Flango \cm interoperates with two systems: robotBehaviour and \flangobe (See figures \ref{fig:interoperability-original} and \ref{fig:interoperability-new} on \pageref{fig:interoperability-original}).
 
 \paragraph{robotBehaviour} Flango \cm interoperates with the software of the robot through robotBehaviour, e.g. using text-to-speech capabilities or triggering a batch action (autopresentation, guide user to a certain place...).
-Likewise, robotBehaviour uses an \ac{API} in Flango \cm, e.g. to restart a session or to input information gathered with the robot's hardware.
+Likewise, robotBehaviour uses an \ac{API} in Flango \cm , e.g. to restart a session or to display a screen.
 There is an interface defined for this to allow independent development in both ends.
 
 The current system to exchange messages between the \flash container and robotBehaviour is based on JavaScript global functions.
@@ -282,15 +234,14 @@ The \flangobe has an \ac{API} for this (\fref{tab:flango-api}):
         & app/top/\textless robotID\textgreater/\textless duration\textgreater/<data\textgreater \\
         & app/toptable/\textless page\textgreater \\
         & application/\textless screen\textgreater \\
-        & <name> \\
+        & \textless name\textgreater \\
     \hline
     \end{tabularx}
-    \caption{Flango Backend API}
+    \caption{Flango Backend \ac{API}}
     \label{tab:flango-api}
 \end{table}
 Both current and new implementation use this.
 However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friendly: it has less overhead and it is easier to deserialise.
-
 
 \section{Conceptual Model}
 \begin{sidewaysfigure}[htb]   
@@ -303,128 +254,31 @@ However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friend
 The new Flango \cm has to be compatible with the current implementation of the \se (\flangofe).
 Otherwise, users would create contents applications with the \se that would look different when they are displayed in the robot.
 To ensure compatibility, it is necessary a good understanding not only at system level, but at component level.
-It is required, then, that the new implementation renders consistently all of the \ac{UI} components that the \se can create exactly like it does with the old version. 
-Same applies to settings and use of "entities".
+It is required, then, that the new implementation displays consistently all of the \ac{UI} components that the \se can create exactly like it does with the old version. 
+Same applies to settings and use of entities.
 
 There are 7 classes: \textbf{ContentsApplication}, \textbf{ApplicationNode}, \textbf{Configuration}, \textbf{Theme}, \textbf{Screen}, \textbf{UI Components} and \textbf{Entity}.
 
-\paragraph{ContentsApplication} A contents application with an internal identifier and a descriptive, human-friendly name.
-
-\paragraph{ApplicationNode} An application has nodes that match the \ac{URI} with a screen.
-
-\paragraph{Configuration} A contents application has a configuration object that can be mutated during the execution.
-It represents the state of the application, the permissions, the paths to be used, etc.
-
-\paragraph{Theme} Themes are the look and feel and default behaviour of \ac{UI} components.
+\begin{description}
+\item[ContentsApplication] A contents application with an internal identifier and a descriptive, human-friendly name.
+\item[ApplicationNode] An application has nodes that match the \ac{URI} with a screen.
+\item[Configuration] A contents application has a configuration object that can be mutated during the execution.
+It represents the state of the application, the permissions, paths, etc.
+\item[Theme] Themes are the look and feel and default behaviour of \ac{UI} components.
 The current implementation only has one (default) theme.
 However, a contents application can have many themes available.
 The active theme has to belong to the set of available themes. 
-It encapsulates data that define it (e.g. the name, etc). FIXME etc is too short
-
-\paragraph{Screen} A screen is the container for elements that the user can interact with.
-Screens contain \ac{UI} Components and can be reused in different Application Node of the same Contents Application. FIXME: verify this
-
-\paragraph{UI Components} A UI Component is an element of the \ac{UI}, for example a \texttt{Button} or an \texttt{Image}.
-Users drag and drop them to a canvas in the Screens Editor to create the contents. 
-All UI Components have an \ac{XML} code.
+It encapsulates data that define it (e.g. the name, etc).
+\item[Screen] The container for UI Components.
+\item[UI Components] A UI Component is an element of the \ac{UI}, for example a \texttt{Button} or an \texttt{Image}, that has an \ac{XML} code associated.
+Users drag and drop them to a canvas in the \se to create the contents. 
 Because the domain of the problem and the classes are shared between the original and the new implementation, the model in \fref{fig:specification-conceptual-model} is created from the current implementation.
-To support theming, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
+To support themes, there are two types of UI Components: basic (UI Component) and theme (UI Theme Component).
 All UI Theme Components are eventually implemented with a basic UI Component.
+\end{description}
 
-\begin{lstlisting}[caption=Basic UI Components, label=uicomponents-list]
-ButtonComponent.as
-GroupButtonComponent.as
-GroupComponent.as
-ImageComponent.as
-MenuComponent.as
-QRComponent.as
-ScreenComponent.as
-ScrollComponent.as
-ShowReelComponent.as
-SubscreenComponent.as
-SWFComponent.as
-TextareaComponent.as
-UIComponent.as
-VideoComponent.as
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Theme UI Components, label=uithemecomponents-list]
-arabic_button
-back_button
-base_button
-big_button
-call_to_action_screen
-camera_button
-config_button
-english_button
-forward_button
-home_button
-info_button
-korean_button
-language_button
-left_arrow_button
-line
-list_button
-main_menu
-next_button
-reem_body_button
-reem_button
-right_arrow_button
-smartphone_menu
-synchronizing_screen
-video_button
-wide_button
-\end{lstlisting}
-
-\begin{lstlisting}[caption=Application State (Settings class), label=config-list]
-api_endpoint:String
-app_id:String
-app_name:String
-current_node:String
-debug_level:String
-debug_mode:Boolean
-default_api_endpoint:String
-def_lang:String
-def_theme:String
-enable_stats_bkp:Boolean
-enable_stats:Boolean
-history:Array
-history_current:int
-history_limit:int
-home_node:String
-initial_node:String
-lang_list:Object
-lang:String
-log:String
-media_path:String
-performance_monitor:Boolean
-perform_callbacks_bkp:Boolean
-perform_callbacks:Boolean
-redirects:Array
-report_stats:Boolean
-robot_id:String
-scale_factor:Number
-screensaver_node:String
-screens:Object
-screen_transitions:Boolean
-security_level:int
-session_fadeout:int
-session_timeout:int
-show_cursor:Boolean
-static_api_endpoint:String
-static_media_path:String
-static_themes_path:String
-structure:XML
-theme_list:Object
-themes_path:String
-theme:String
-themes:XMLList
-zone:String
-
-\end{lstlisting}
-
-Listings \ref{uicomponents-list} and \ref{uithemecomponents-list} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
-Notice that all files in \ref{uicomponents-list} have the corresponding class in the conceptual model if they have to be implemented.
+Listings \ref{uicomponents-list} and \ref{uithemecomponents-list} in \fref{chap:app-uicomponents} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
+All files in \ref{uicomponents-list} have the corresponding class in the conceptual model if they have to be implemented.
 The elements of \ref{uithemecomponents-list} are in fact folders but they can be considered classes in this specification as they are part of the domain of the problem.
 However, some elements are not to be implemented because they are deprecated and some other components are to be implemented in future releases, but not in the software of this thesis.
 
@@ -435,10 +289,10 @@ A collection of the necessary attributes of the class that encapsulates the conf
 \subparagraph{Excluded elements} Some Configuration have names tightly coupled to technology (e.g. history, history\_current, etc). 
 The concept is included in the specification but not with this specific names to keep it technology agnostic.
 
-\paragraph{Entity} Entities are classes that represent classes in the \se. 
-FIXME LANGUAGE An example scenario: Alice is creating screens with the \se.
+\paragraph{Entity} Entities are classes that represent classes in the \se . 
+An example scenario: Alice is creating screens with the \se .
 She rented the robot for a congress and wants to add information about job openings in her company.
-She can define, with Flango Frontend, an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
+She can define, with \flangofe , an entity named "Job" and use it in the screens editor to show the list of all instances of Job.
 The implementation of Entities is incomplete and does not belong to the scope of this project.
 
 \paragraph{Themes} A Contents Application can have themes.
@@ -446,15 +300,10 @@ There is a default theme that defines the look and feel and default actions on c
 All themes have the same UI Theme Components to guarantee that themes can be changed safely.
 Basic UI Components look always the same way.
 
-TODO explain XML here (NO. section ahead)? explain theming here (nothing to explain)? fallbacks ( belongs to behaviour model)? ambiguity (belongs to behaviour model r xml representation)?
-
 Listing \fref{chap:specification-button-example-1} shows an example of the \ac{XML} definition of a Button UI Component.
 
 \lstinputlisting[language=XML, caption={Basic UI Component Button XML}]{src/specification-button-example-1.xml}
 
-DIAGRAM HERE
-
-constraints?
 \FloatBarrier
 
 \section{Use Case Model}
@@ -463,14 +312,13 @@ This section describes the services of the system as sequences of events trigger
 \subsection{Actors}
 The actors who use the system are:
 \begin{itemize}
-	\item robotBehaviour: the software that governs the \ac{GUI} of the touchscreen. It can load application contents, bring them to the front, sent them to the back, load other \ac{GUI} etc.
+	\item robotBehaviour: the software that governs the \ac{GUI} of the touchscreen. It can load application contents, bring them to the front, sent them to the back, load other \acp{GUI} etc.
 	\item Contents Application User: a person (or any other agent that can use a touchscreen) who interacts with the loaded contents application. Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
-For example: the program renders a screen with one button whose action is to make Reem say "hi, my name is Reem".
+For example: the program displays a screen with one button whose action is to make Reem say "hi, my name is Reem".
 The input is an \ac{XML} file, the output is a \ac{GUI} ready to be used.
 Humans can now touch the button that sends events to robotBehaviour so, essentially, the \ac{GUI} of the program and not only the output is built as a function of the input.
 When the \ac{GUI} is ready, a new actor (Contents Application User) and new use cases appear.
 \end{itemize}
-
 
 \subsection{System Use Cases}
 \begin{figure}[htb]  
@@ -484,27 +332,8 @@ There is a number of use cases of the software determined by examining the curre
 The use cases that are implemented in this project are shown in \fref{fig:specification-sucs}.
 
 A contents application user can see the rendered screens and update some parameters (e.g. change the language) or start applications in the robot (e.g. a Qt window with a map).
-%Normally one would group use cases in "manage \ac{UC}" that include at least the \ac{CRUD} \ac{UC} FIXME plurals.
-%This document does not group them because different actors
-%For example: the user touches a button that makes Reem say a sentence aloud (notice that the application is sending a message to robotBehaviour).
 The software system that controls the robot, robotBehaviour, can also trigger actions in the contents application (for example, it can start it).
-Amongst others, it can manage the screensaver and sessions and some special settings (including: show the cursor, enable debug mode, enable start of robot's applications, contents application ID, etc). 
-%Use cases Manage ScreenSaver and Manage Sessions do not belong to the scope of this project but are shown in the diagram to offer the big picture of the Flango Content Manager.
-
-\begin{suc}
-{title of the use case}
-{a description}
-{actors}
-{preconditions}
-{postconditions}
-{main scenario
-    \begin{enumerate}
-        \item first step
-        \item second step
-    \end{enumerate}
-}
-{extensions}
-\end{suc}
+Amongst others, it can manage some special settings (including: show the cursor, enable debug mode, etc). 
 
 \begin{suc}
 {Start Robot's Applications}
@@ -566,7 +395,7 @@ The initial screen of the contents application is shown
         \item The application has been synchronised with the robot
     \end{enumerate}}
 {
-The configuration object is created
+The configuration object is created\footnote{Delete and read configuration are internal operations}
 }
 {
     \begin{enumerate}
@@ -625,9 +454,6 @@ The configuration object is mutated
 }
 \end{suc}
 
-FIXME note: delete and retrieve are not exposed to the user. just for internal use.
-
-
 
 \begin{suc}
 {Retrieve Screen}
@@ -666,14 +492,14 @@ The requested screen is shown
 
 \section{Behaviour Model}
 This thesis combines \ac{DbC} and \ac{TDD}, two techniques that are not mutually exclusive.
-Basically, tests define the behaviour for specific cases and \ac{DbC} defines the general behaviour. 
+Basically, \textbf{tests define the behaviour for specific cases and \ac{DbC} defines the general behaviour}. 
 Thus, there are no tests for edge cases or negative behaviours because contracts, and more specifically preconditions, protect the component.
 In spite of the name, \ac{TDD} tests are executable specifications.
 They become tests only after having implemented all the functionality being test-driven.
 Before this, there is nothing to actually test and these artifacts are rather executable specifications, but not tests.
-Tests (specifications) are written before the code and define the behaviour of components.
+\textbf{Tests (specifications) are written before the code and define the behaviour of component}s.
 
-Additionally, they are used as documentation of the software but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be achieved using formal specifications, e.g. using Meyer's \ac{DbC} \cite{Baumeister:2004}.
+Additionally, they are used as documentation of the software but they are not sufficient to completely define the behaviour because they only assert properties by example instead of stating general properties (e.g. "it should return 5" vs "return value $1 \leq x \leq 10$"). The latter can be described with formal specifications, e.g. using Meyer's \ac{DbC} \cite{Baumeister:2004}.
 
 In this thesis, tests are implemented with Jasmine and AngularJS but this chapter focuses on what the tests describe rather than how they are executed and controlled.
 
@@ -692,24 +518,11 @@ With \ac{TDD}:
 \end{itemize}
 
 
-%Larman: system sequence diagram + Meyer: contracts of system operations
-%"System Sequence Diagrams:
-%–
-%Identify system events and system operations
-%–
-%Identify system events and system operations
-%– Document sequence of interactions
-%• Contracts:
-%– Define the pre- and post-conditions for system
-%operations "
-
-%up to date documentation: a common problem is that docs are hardly ever updated
-
-Contracts of operations define system behaviour and describe the outcome of executing system operations in terms of state changes to domain objects.
+\textbf{Contracts of operations} define system behaviour and describe the outcome of executing system operations in terms of state changes to domain objects.
 This section contains the sequence diagrams and contracts of the most relevant operations in the system.
 However, the most complex part of this project is parsing and rendering the input \ac{XML} files.
 Users do not interact directly with them: they do not execute operations that result in state changes to the domain object.
-\fref{chap:design} explains this problem and the solution in detail.
+\Fref{chap:design} explains this problem and the solution in detail.
 
 \subsection{Sequence diagrams}
 \begin{figure}[htb]
@@ -748,13 +561,6 @@ Users do not interact directly with them: they do not execute operations that re
 \end{figure}
 
 \subsection{Contracts}
-system operations
-
-\begin{sopcontract}{nameofopaaa}
-{description}
-{preconditions go here}
-{postconditions go here}
-\end{sopcontract}
 
 FIXME: robot behaviour ja no cal!!
 
@@ -811,10 +617,8 @@ FIXME: robot behaviour ja no cal!!
 \end{sopcontract}
 
 \subsection{Unit Tests}
-FIXME NOTE: high level description of the tests. specification by example
-
-\fref{fig:specification-conceptual-model} describes the real world and shows the relationship between elements that define the problem.
-Actors do not interact with most of the classes shown and contracts and sequence diagrams are intented to describe the system as a unit that provides some service to actors.
+The conceptual model in \fref{fig:specification-conceptual-model} describes the real world and shows the relationship between elements that define the problem.
+Actors do not interact with most of the classes shown and contracts and sequence diagrams are intended to describe the system as a unit that provides some service to actors.
 One of the goals of this project is making it compatible with the current \ac{XML} that defines the contents applications.
 To meet this goal, it should be clearly specified how \ac{XML} are parsed.
 This project uses \ac{TDD} and has executable specifications for all parts of the system, including those (e.g. internal operations or parsing) that are not strictly eligible for other sections in this chapter.
@@ -825,28 +629,22 @@ This section focuses on the \ac{XML} description.
 \Fref{chap:testing} has a full list and examples of other test suites that refer directly to components of the software (described in \fref{chap:design})
 Tests challenge behaviour like reading text nodes in \ac{XML} tags, setting properties (i.e. mutating correctly an object in the system), reading order or inheritance of properties, fallback to default values and transformation to \ac{HTML} code.
 
-An example of specifications by example:
-
-Unit testing UI directive
+An example of specifications by example of  the UI directive:
 \begin{enumerate}
 	\item inline type property: should have type defined
 	\item width, height, x, y, 
 		\begin{enumerate}
-			\item should have the class hide
 			\item should set the property to 42 for the default (language-independent)
 			\item should set the property to 40 for Catalan and 42 for French
 			\item should set the property to 40 for Catalan, 42 for French and 20 for default
 			\item should not set any property
 			\item (inline) should set the property to 42 for the default (language-independent)
-			\item should set the property to 42 for default (language-independent) of pal-container
-			\item (inline) should set the property to 42 for default (language-independent) of pal-container 
 		\end{enumerate}
 \end{enumerate}
 
 \textbf{A comprehensive list is available in \fref{chap:app-unittests}}.
 
-
 \section{XML Representation}
-explain syntax here?
+FIXME explain syntax here?
 
 at least the inheritance and themes. with code.

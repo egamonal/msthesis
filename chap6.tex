@@ -30,7 +30,7 @@ A solution is completely  redesigning, recoding and retesting the program, even 
 \section{Technology}
 The project of this thesis, Flango \cm, is designed to work client side in a web browser.
 The natural technology in this environment is JavaScript, \ac{HTML} and \ac{CSS}.
-It uses the Google AngularJS framework with jQuery.
+It uses the Google Angular framework with jQuery.
 Angular \textit{teaches the browser new syntax}.
 That is, instead of parsing the \ac{DOM} tree and building the \ac{GUI}, it defines the behaviour of new tags in \ac{HTML} documents that can be treated as regular \ac{HTML} nodes in the \ac{DOM}.
 It interoperates with other systems built with a different technology: components in the robot use \ac{ROS} and the \flangobe has an \ac{API} (see sections \ref{sec:context}, \ref{sec:interaction} and \ref{sec:interoperability} on page \pageref{sec:context}).
@@ -39,9 +39,9 @@ It interoperates with other systems built with a different technology: component
 JavaScript is probably the most misunderstood and at the same time popular language of all times.
 It is the language of the web browser and works closely with the \ac{DOM}, the \ac{API} of the browser.
 
-Some good and key ideas in the language include functions, loose typing, dynamic objects and an expressive object literal notations.
+Some good and key ideas in the language include functions, \textbf{loose typing}, \textbf{dynamic objects} and an expressive \textbf{object literal notations}.
 On the other side, the programming model is based on global variables (although the language has tools to mitigate this) \cite{Crockford}.
-Functions are first class objects and can be passed as arguments or returned from functions, just like any other object.
+\textbf{Functions are first class objects} and can be passed as arguments or returned from functions, just like any other object.
 This allows the language to have function scope and lexical scoping: \\
 \textbf{Function scope} means that variables defined in a function are visible in the entire function, an approach different from block scope in languages like C or Java.\\
 \textbf{Lexical scoping} defines how names are resolved in nested functions: the scope of an inner function contains the scope of the parent function, even if the parent has returned.
@@ -51,14 +51,16 @@ JavaScript is an \textbf{object-oriented prototype-based language}, not a class-
 It has a class-free object system in which objects inherit properties directly from other objects.
 Behaviour reuse (inheritance) is achieved by cloning existing objects (the prototypes).
 Crockford explains the prototypal inheritance mechanism \cite{Crockford:proto}:
-\quote{So instead of creating classes, you make prototype objects, and then use the object function to make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects}
+\begin{quote}
+So instead of creating classes, you make prototype objects, and then use the object function to make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects
+\end{quote}
 
 \subsection{AngularJS}
 The framework enforces a very strict separation of responsibilities: \ac{DOM} updates are abstracted away from model updates. 
 Directives act as the layer that keeps the two parts loosely coupled.
 On one hand, directives translate data into user interfaces and, on the other hand, directives translate user interactions back into \texttt{\$scope} behaviors. FIXME Reword this
 
-\paragraph{Overview} AngularJS is a framework for dynamic web applications.
+\paragraph{Overview} Angular is a framework for dynamic web applications.
 \ac{HTML} was created to declare static documents and needs libraries and frameworks to enable application development.
 Angular lets developers use \ac{HTML} in the templates and extend the language syntax to express reusable components.
 It \textit{teaches the browser new syntax} through a construct called Directive.
@@ -70,28 +72,23 @@ Features:
 
 Flango \cm reads \ac{XML} and renders it as \ac{HTML}.
 There are two possible approaches: parsing the \ac{DOM} tree in the browser or teaching the browser new syntax.
-This project uses the second (FIXME language: the latter?): instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (AngularJS Directives) and includes the \ac{XML} files in the appropriate place in the \ac{DOM}. 
+This project uses the second (FIXME language: the latter?): instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (Angular Directives) and includes the \ac{XML} files in the appropriate place in the \ac{DOM}. 
 The browser already traverses the tree to render the page and there is no need to do it manually.
 Normally a browser ignores an element that doesn't belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></fl:ui>$)
-With AngularJS, the browser runs the behaviour defined in the reusable component.
+With Angular, the browser runs the behaviour defined in the reusable component.
 
-\paragraph{Building Blocks} There are several key components in AngularJS to build the application.
+\paragraph{Building Blocks} There are several key components in Angular to build the application.
 
-\begin{itemize}
-    \item \textbf{Controller}: a function that binds the view with the model. It typically assigns objects to the \$scope variable to expose them to the template.
-    \item \textbf{Directive}: a construct to extend HTML with custom attributes and elements. It defines the template of the reusable component, the behaviour, the attributes, etc. For instance, the directive \texttt{flBaseButton} states that the node \lstinline$<fl:ui fl:type="base-button">$ in the \ac{DOM} tree should be transformed into a simple \texttt{button} using the theme template \texttt{baseButton.xml}. 
-    \item \textbf{Service}: Singleton that encapsulates reusable business logic independent of views. For instance, a service to handle the configuration of the application. They can be injected in controllers, directives or other services.
-    \item \textbf{Filter}: a function that formats the value of an expression for display to the user. For instance, a filter to display a Number with currency format.
-    \item \textbf{Module}: These building blocks are grouped in Modules. They can have dependencies between them.
-\end{itemize}
+\begin{description}
+    \item[Controller] A function that binds the view with the model. It typically assigns objects to the \$scope variable to expose them to the template.
+    \item[Directive] A construct to extend HTML with custom attributes and elements. It defines the template of the reusable component, the behaviour, the attributes, etc. For instance, the directive \texttt{flBaseButton} states that the node \lstinline$<fl:ui fl:type="base-button">$ in the \ac{DOM} tree should be transformed into a simple \texttt{button} using the theme template \texttt{baseButton.xml}. 
+    \item[Service] Singleton that encapsulates reusable business logic independent of views. For instance, a service to handle the configuration of the application. They can be injected in controllers, directives or other services.
+    \item[Filter] A function that formats the value of an expression for display to the user. For instance, a filter to display a Number with currency format.
+    \item[Module] These building blocks are grouped in Modules. They can have dependencies between them.
+\end{description}
 
-The framework provides all the necessary tools to use unit and end-to-end testing from the very beginning of the project.
-Considering testing as equal in importance to application writing makes the code to be more robust, lowers the cost of maintenance and helps to have a better internal design.
-\begin{itemize}
-    \item \textbf{Jasmine} is a behaviour-driven development framework for testing JavaScript code. It does not depend on any other framework and does not require a \ac{DOM}. It provides a simple, self-descriptive (FIXME language!) syntax to write test suites.
-    \item \textbf{Angular Mocks}: there are stub objects ready to load in tests (e.g. \texttt{\$httpBackend} mocks \ac{HTTP} calls)
-    \item \textbf{Karma} is a test runner to automate the execution of the test suites. 
-\end{itemize}
+The framework provides all the necessary tools to use unit and \ac{E2E} testing from the very beginning of the project. 
+\Fref{chap:testing} explains them in depth.
     
 \paragraph{Compile-Link} To make directives possible Angular has a compiler.
 In this context, compiling means attaching event listeners to the \ac{HTML} to make it interactive.
@@ -101,36 +98,37 @@ Secondly it binds the model to the view.
 The compiler allows developers to attach behaviour to any \ac{HTML} element or attribute and even create new HTML elements or attributes with custom behaviour.
 Angular calls these behaviour extensions directives.
 
-The order of execution is:
+Listings \ref{design-order-of-exec-1} and \ref{design-order-of-exec-2} illustrate the order of execution.
 
-\lstinputlisting[language=xml, caption={Order of execution of directives}]{src/example-order-directives.xml}
+\lstinputlisting[label=design-order-of-exec-1,language=xml, caption={Order of execution of directives}]{src/example-order-directives.xml}
 
-\lstinputlisting[language=bash, caption={Result of execution of directives}]{src/result-order-directives.text}
+\lstinputlisting[label=design-order-of-exec-2,language=bash, caption={Result of execution of directives}]{src/result-order-directives.text}
 
 The role of these functions is:
 \begin{itemize}
 \item \textbf{Directive Controller}: similar to regular controllers but accessible from other directives. 
-\item \textbf{Compile}: finds new directives and runs their compile function. Modifications to the \ac{DOM} before applying the template can be done here.
+\item \textbf{Compile} finds new directives and runs their compile function. Modifications to the \ac{DOM} before applying the template can be done here.
 \item \textbf{Link}: binds data to the view. Modifications to the final \ac{DOM} are safe to do here.
 \end{itemize}
 
 \paragraph{Directive} At a high level, directives are markers on a \ac{DOM} element (such as an attribute, element name, \ac{CSS} class or a comment) that tell Angular's \ac{HTML} compiler to attach a specified behaviour to it or even replace it with another element.
 The \ac{HTML} compiler finds elements that match directives. 
 For example, for \lstinline$<div ng-controller="myCtrl">$, the element \texttt{div} matches the directive \texttt{ngController}.
-An example in Flango Content Manager: when the browser finds \lstinline$<fl:width>150</fl:width>$ in the \ac{DOM}, the element \texttt{width} matches the directive \texttt{flWidth}.
+An example in Flango \cm : when the browser finds \lstinline$<fl:width>150</fl:width>$ in the \ac{DOM}, the element \texttt{width} matches the directive \texttt{flWidth}.
 The \texttt{flWidth} directive is restricted to elements (it matches \lstinline$<fl:width>150</fl:width>$ but not \lstinline$<div fl:width>150</div>$ because it is an attribute), and it has a custom \texttt{link} function that performs some computation.
 
     
 \subsection{HTML5}
-maybe not useful. maybe just html
+FIXME maybe not useful. maybe just html
 
 \subsection{SASS}
 Writing plain \ac{CSS} can be tedious and error-prone.
-SASS stands for Syntactically Awesome CSS and is a pre-processor with syntax advancements that add features to \ac{CSS}.
-Sass is an extension of \ac{CSS}3, adding nested rules, variables, mixins, selector inheritance, and more.
-It is then translated into well-formated, standard \ac{CSS} using the command line tool.
+SASS stands for Syntactically Awesome \ac{CSS} and is a pre-processor with syntax advancements that add features to \ac{CSS}.
+SASS is an extension of \ac{CSS3}, adding nested rules, variables, mixins, selector inheritance, and more.
+SASS code is translated into well-formated, standard \ac{CSS} using the command line tool.
 This makes reusing and extending \ac{CSS} easier.
-SASS has two syntaxes. This project uses the newest one, known as \ac{SCSS} (Sassy CSS).
+SASS has two syntaxes.
+This project uses the newest, known as \ac{SCSS} (Sassy CSS).
 
 A key feature in this project is the \lstinline$@extend$ directive: it tells \ac{SASS} that one selector should inherit styles of another selector.
 Example: the style \texttt{base-button} has a grey background. The style \texttt{button} sets the size of the element to $100 x 50 px$.
@@ -138,32 +136,29 @@ Because all \texttt{base-button}s are \texttt{button}s, the first should inherit
 With \ac{HTML} this would be written \lstinline$<div class="base-button button" />$.
 With SASS one can write \lstinline$.base-button { @extend .button }$ and keep \ac{HTML} cleaner: \lstinline$<div class="base-button" />$
 
-SASS variables and mixins make it easier to scaffold (FIXME LANGUAGE!) themes for Flango Content Manager and have consistency in the visual design (e.g. all themes can have palettes of the same size).
+SASS variables and mixins make it easier to create themes for Flango \cm and have consistency in the visual design (e.g. all themes can have palettes of the same size).
 
 \subsection{Robot Web Tools}
 Robot Web Tools is a collection of open-source modules and tools for building web-based robot applications.
 It provides 3 core libraries to communicate with \ac{ROS} on the robot over rosbridge's WebSocket server: roslibjs, ros2js, and ros3djs.
-This project uses roslibjs to subscribe and publish to Topics.
+This project uses roslibjs\footnote{\url{https://github.com/RobotWebTools/roslibjs}} to subscribe and publish to ROS Topics.
 
 \section{Architecture}
-context: comm with rob behaviour and rostopics (SOA).
-MVC. client-side. JSON to talk to an API. xml files as angularjs partials, hacks to make it work (routes defined manually, one controller for all of them, dirty entities). scopes and their specific use here (compare to regular use). what about MVVM?
-
-common patterns:
-dependency injection and angularJS (and literature: fowler)
+This section contains details about the architecture of the system (ROS) and the project of this thesis (Flango \cm ). 
+Flango \cm is a piece in \ac{ROS}, which is simmilar to a \ac{SOA} system, and interoperates with it using its message system.
+The following pages have a high-level description of the system architecture and the patterns used.
 
 \subsection{Robot Operating System}
-Flango \cm is a piece in the robot.
 \ac{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster. 
 It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
 It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA} \cite{ROS:2009}.
 
 Nodes are processes that perform computation, a "software module". 
 Nodes communicate with each other by publishing/subscribing with two protocols:
-\begin{itemize}
-\item Topics: asynchronous. message passing (publish/subscribe). Typed by a \ac{ROS} Message
-\item Services: synchronous. \ac{RPC} (pairs of request/response messages). Typed by a \ac{ROS} Service
-\end{itemize}
+\begin{description}
+\item[Topics] asynchronous. message passing (publish/subscribe). Typed by a \ac{ROS} Message
+\item[Services] synchronous. \ac{RPC} (pairs of request/response messages). Typed by a \ac{ROS} Service
+\end{description}
 
 Messages are strictly typed data structures . There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
 To find service in this peer-to-peer topology, there is a lookup mecanism: \emph{rosmaster} \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}.
@@ -171,6 +166,7 @@ To find service in this peer-to-peer topology, there is a lookup mecanism: \emph
 The robot has two parts: robotBehaviour and Stacks.
 Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} workflow but still uses Topics to communicate with the Stacks, the part of the project that does use \ac{ROS}.
 In Stacks there are Servers and ActionServers that provide Services.
+
 Flango \cm is a component in this system that communicates with robotBehaviour using \ac{ROS} Topics and two types of messages.
 It is not designed strictly as a service to handle synchronous requests but it is able to use Topics to have asynchronous requests and provide feedback, like ActionServers.
 A typical use of a \ac{ROS} Topic is setting the language of the \cm or sending an action to robotBehaviour (e.g. shake hands, say a sentence).
@@ -191,21 +187,13 @@ Topics are the only way to communicate with it.
     \label{fig:design-ros-services}
 \end{figure}
 
-FIXME diagrams ROS-flango-robot-robotbehaviour etc go here? in specs  just include the description of what the system does.
-
-ROS i SOA.
-robotbehaviour
-flango as a (bad) service.
-
-
-
 \subsection{MVC}
 \ac{MVC} is a decoupled architecture with a strong separation of responsibilities (\fref{fig:mvc-overview}).
-\begin{itemize}
-    \item \textbf{Model} (application state). Maintains application state and notifies dependent views and controllers when changes occur (with the observer pattern)
-    \item \textbf{View} (output) queries the model to print [parts of] it, listens for changes in the model
-    \item \textbf{Controller} (input) Listens for input and tells the model or the view to change accordingly
-\end{itemize}
+\begin{description}
+    \item[Model] (application state). Maintains application state and notifies dependent views and controllers when changes occur (with the observer pattern)
+    \item[View] (output) queries the model to print [parts of] it, listens for changes in the model
+    \item[Controller] (input) Listens for input and tells the model or the view to change accordingly
+\end{description}
 
 It is possible to have multiple views and controllers for the same model and they can be reused for other models.
 
@@ -217,8 +205,7 @@ A typical use case in a \ac{MVC} application might be:
     \item Controller: logic that decides to fetch two pieces of fruit
 \end{itemize}
 
-Flango \cm does not have a \ac{GUI} or a set of predefined and stable use cases.
-This changes for every contents application.
+Flango \cm does not have a \ac{GUI} or a set of predefined and stable use cases: this changes for every contents application.
 The system only knows the use cases after loading the contents application.
 There can not be controllers for application-specific use cases and the view is created dynamically from the model.
 
@@ -231,7 +218,7 @@ There can not be controllers for application-specific use cases and the view is 
 Angular uses an \ac{MVC} pattern with two-way data binding \fref{fig:mvc-with-observer}: changes in the view are reflected to the model immediately and viceversa in order to use the model as a single source of truth.
 Controllers use the \texttt{\$scope} to expose values and behaviour to the view: they update the object that is used in the view.
 The \texttt{scope} is an object that refers to the application model.
-Informally, it is the glue between the controller and the view.
+FIXME LANGUAGE Informally, it is the glue between the controller and the view.
 FIXME: SURE? Controllers are completely separated from the view and unaware of it: they just expose values but do not manipulate the \ac{DOM} or read it in any way to make testing easier.
 
 \begin{figure}[htb]
@@ -248,48 +235,14 @@ FIXME: SURE? Controllers are completely separated from the view and unaware of i
     \label{fig:mvc-with-observer}
 \end{figure}
 
-\subsection{Common Patterns in the project}
-DI, inversion of dependency, reveal, factory, async, fowler... hints of the remote façade and SOA¿?
-
-This subsection is a high-level description of the most relevant software patterns in the project.
-
-\paragraph{Constraints}
-FIXME this section sucks 
-%Flango Content Manager has  been designed taking into account the guidelines of \ac{GRASP} and the five basic principles of \ac{SOLID}.
-The project follows object-oriented design adapted to the constraints induced by the technology and the requirements of the project.
-
-FIXME improve this:
-\begin{itemize}
-    \item The \textbf{Angular Framework} is an approach to Web Components but components are not fully reusable. Moreover, most of the cl
-    \item  Legacy \ac{XML}. The contents application uses \ac{XML} to define screens, templates, components, etc. The vocabulary and grammar of this \ac{XML} was designed having Adobe Flash and imperative programming in mind. While imperative programming is great for business logic, Angular prefers declarative programming for the view. 
-%    \item This project is not a traditional \ac{CRUD} application. The model is a set of screens and 
-\end{itemize}
-
- FIXME these are horrible paragraphs:
-\paragraph{\ac{GRASP}} The patterns used in \ac{GRASP} are: Controller, Creator, Indirection, Information Expert, High Cohesion, Low Coupling, Polymorphism, Protected Variations, and Pure Fabrication. 
-Angular enforces a strict separation of concerns between components and together with \ac{TDD} and unit testing, it helps keeping components loosely coupled.
-The framework provides an easy way to create Controllers, non-user interface objects responsible for receiving and handling events.
-They are mediators between the model and the view (indirection pattern). 
-For example, $ActionCtrl$ for buttons receive events from the \ac{UI} and delegate the action to the corresponding class.
-New elements of the framework, like Services or Directives, are created using a factory function.
-FIXME However, the model are the screens and instead of creating an object from an \ac{XML} file the system just appends it to the \ac{DOM} and defines the behaviour in Directives, the software hardly ever has to create instances of objects explicitly.
-FIXME should this be here?: The model is stable during the execution of the application. That is, new instances of classes of the model can not be created. 
-New instances of classes are hardly ever created because the model is stable during the execution of the application. 
-Changes are not made persistent. 
-The application retrieves the model, renders it and lets the user interact with the contents in the touchscreen.
-
-\paragraph{\ac{SOLID}} Five basic principles in software design are present in this project.
-Classes have a single responsibility (e.g. Configuration for the \texttt{palSettings}, or managing properties of \ac{UI} elements with \texttt{palProperties}). 
-FIXME: This principle works well with unit testing.
-
+\subsection{Software Patterns}
+This subsection is a high-level description of the most relevant software patterns in the project: dependency injection and service locator, factory method, module and revealing module, command and FIXME Remote facade.
 
 \paragraph{Dependency Injection and Service Locator} 
 After applying the Creator Pattern (\ac{GRASP}) class \texttt{A} creates objects of dependant class \texttt{B}.
 FIXME: sure? Managing dependencies correctly is a good way of applying other principles, like the Open-Closed.
 One of the \ac{SOLID} principles, inversion of control, states that one should "Depend upon Abstractions. Do not depend upon concretions."
-Dependency Injection is one of the implementations of this principle.
-
-\cite{Fowler}
+Dependency Injection is one of the implementations of this principle \cite{Fowler}.
 
 In general there are 3 ways an object can use another one:
 \begin{enumerate}
@@ -311,8 +264,8 @@ The dependency is supplied to the software component.
 \end{figure}
 
 The framework encourages the use of this pattern in all components. 
-More specifically, the framework uses a Service Locator \fref{fig:design-service-locator} (called \texttt{injector}) to manage the responsibility of dependency creation.
-Thus, services can be used in controllers and directives by their name.
+More specifically, the framework uses a Service Locator (\fref{fig:design-service-locator}) called \texttt{injector} that manages the dependency creation.
+This allows services to be used in controllers and directives by their name.
 The client class does not need to know the concrete implementation of the service. 
 With this principle it is easy to mock classes for unit testing and change components in general.
 
@@ -326,20 +279,19 @@ For example, a Directive Definition Object or a Service.
     \centering
     \includegraphics{figures/design-patterns-factory.pdf}
     \caption{Factory Method}
-    \label{fig:design-patterns-factory0}
+    \label{fig:design-patterns-factory}
 \end{figure}
 
 
-\paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having the units of code for a project separated.
+\paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having separated the units of code for a project.
 JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
 The $new$ keyword used in a call to a constructor function makes JavaScript instantiate the new object with members defined by that function.
 Modules are a way to emulate the concept of classes.
-There are several options to implement them. 
-This project uses object literal notation (CROSS REF JAVASCRIPT)
-The module pattern encapsulates privacy, state and organisation using closures (CROSS REF JAVASCRIPT)
+There are several options to implement them.
+The \textbf{module pattern} encapsulates privacy, state and organisation using closures.
 Only a public \ac{API} is returned, keeping everything else hidden within the closure private.
-With the Revealing Module Pattern the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
-FIXME CROSS REF factory code example  + annotation "compare to writing the code of the function right there"
+With the \textbf{Revealing Module Pattern} the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
+An implementation is shown in listing \ref{impl-factory-reveal} on page \pageref{impl-factory-reveal}.
 
 \paragraph{Remote Facade} FIXME: sure? do I have a remote facade in the app, in a controller? rosbridgectrl?
 
@@ -349,19 +301,6 @@ The command pattern is a behavioural design pattern in which an object is used t
 It lets objects make requests of unspecified application objects by turning the request itself into an object.
 This object can be stored and passed around like other objects \cite{GoF:1995}.
 Other names are \textbf{Transaction} or \textbf{Action Pattern}  
-
-\fref{fig:design-command-general} shows the class diagram of this pattern in the context a traditional object-oriented programming language.
-With JavaScript there are no abstract classes.
-The approach that Osmani (\cite{Osmani:2012} proposes is having only concrete classes with a common \texttt{execute()} method.
-\fref{sec:controllers} contains a description of the implementation in JavaScript of this pattern.
-
-%design-command-1.js (and 2) are not used anymore
-
-With a simple controller (\fref{fig:design-command-general}) one would call the methods in the object.
-while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
-For example, there is no way to define the behaviour for a \texttt{UI Component::Button} click handler.
-Only the contents application knows it.
-By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them (\fref{fig:design-command-flango}).
 
 \begin{figure}[htb]
     \centering
@@ -377,29 +316,40 @@ By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI 
     \label{fig:design-command-flango}
 \end{figure}
 
+\Fref{fig:design-command-general} shows the class diagram of this pattern in the context a traditional object-oriented programming language.
+With JavaScript there are no abstract classes.
+Osmani (\cite{Osmani:2012} proposes having only concrete classes with a common \texttt{execute()} method.
+\fref{sec:controllers} contains a description of the implementation in JavaScript of this pattern.
+
+With a simple controller (\fref{fig:design-command-general}) one would call the methods in the object.
+while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
+For example, there is no way to define the behaviour for a \texttt{UI Component::Button} click handler.
+Only the contents application knows it.
+By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them (\fref{fig:design-command-flango}).
+
 \subsection{Orientation to Web Components}
 Web Components is a set of specifications that let web developers use \ac{HTML}, \ac{CSS} and JavaScript to build widgets that can be reused easily and reliably.
 A web component consists of five pieces\cite{W3CComponents:2013}:
-\begin{itemize}
-    \item \textbf{Templates} define chunks of mark-up that are inert but can be activated for use later.
-    \item \textbf{Decorators} apply templates based on CSS selectors to affect rich visual and behavioural changes to documents.
-    \item \textbf{Custom Elements} let authors define their own elements, with new tag names and new script interfaces.
-    \item \textbf{Shadow DOM}  encapsulates a DOM sub-tree for more reliable composition of user interface elements.
-    \item \textbf{Imports} defines how templates, decorators and custom elements are packaged and loaded as a resource.
-\end{itemize}
+\begin{description}
+    \item[Templates] define chunks of mark-up that are inert but can be activated for use later.
+    \item[Decorators] apply templates based on CSS selectors to affect rich visual and behavioural changes to documents.
+    \item[Custom Elements] let authors define their own elements, with new tag names and new script interfaces.
+    \item[Shadow DOM]  encapsulates a DOM sub-tree for more reliable composition of user interface elements.
+    \item[Imports] defines how templates, decorators and custom elements are packaged and loaded as a resource.
+\end{description}
 
 At the time of developing this project, the specification of web components is still a work in progress.
 The technology, however, seems to fit in the needs of the project.
-There are 2 well-known initiatives that implement an approach to web components: \textbf{Google Polymer} and \textbf{Google AngularJS}.
+There are 2 well-known initiatives that implement an approach to web components: \textbf{Google Polymer} and \textbf{Google Angular}.
 
 \paragraph{Polymer} Polymer is a framework that aims to use Web Components. 
-It's based on Custom Elements, i.e. everything is a component.
+It is based on Custom Elements, i.e. everything is a component.
 With Polymer developers can compose and encapsulate bits of HTML that can be used in any other templating system or framework.
 It uses \ac{HTML} and the \ac{DOM} \acp{API} to separate the view (\ac{DOM}) from the model. 
 Updates to the model are reflected in the \ac{DOM} and user input in the view is immediately propagated to the model:: fast two-way data binding.
+However, this framework is in pre-alpha stage and can not be used in a stable project.
 
-Polymer is in pre-alpha stage and can not be used in a stable project.
-Angular, the framework of choice for this project, has features close to web components: it has declarative templates (in directives) that can be applied for elements, attributes, comments or classes (like Web Components decorators).
+\paragraph{Angular} The framework of choice for this project has features close to web components: it has declarative templates (in directives) that can be applied for elements, attributes, comments or classes (like Web Components decorators).
 Directives are custom elements: behaviour can be placed in a directive controller, in a compile or in a link function.
 Templates are usually \ac{HTML}, although it is not shadow \ac{DOM}.
 Units of code can be grouped in modules, services, etc and be reused.
@@ -407,20 +357,14 @@ Units of code can be grouped in modules, services, etc and be reused.
 \FloatBarrier
 
 \section{Static View}
-the model, the view and the controllers. angualar modules, services, filters, controllers...
-talk about the data model and \$rootScope ? talk about properties
-
-un diagrama:
-moduls, serveis, controladors, etc. 
-
-This section contains a comprehensive description of the objects in the system and their relationships taking into account the technology that it uses: JavaScript and AngularJS client-side, Django in the backend, \ac{ROS} Topics to interoperate with the rest of the system.
+This section contains a comprehensive description of the objects in the system and their relationships taking into account the technology that it uses: JavaScript and Angular client-side, Django in the backend, \ac{ROS} Topics to interoperate with the rest of the system.
 There are two subsections: a class diagram and a packages diagram.
 
 \subsection{Class Diagram}
 JavaScript is an object-oriented language but it is not class-based.
 It is prototype-based instead.
 It can be used as a class-based language using constructors but this project does not need to do this: it does not create objects of any domain-specific class but, instead, uses the Angular constructs to instantiate services, controllers and directives, the building blocks of the application.
-Most of boxes in these diagrams are not strictly classes but objects that are instantiated automatically by Angular.
+Most of boxes in these diagrams are not strictly classes but objects that the framework instantiates using the provided definitions.
 
 % ********** CLASS DIAGRAM ********
 \begin{figure}[htb]
@@ -476,6 +420,7 @@ Most of boxes in these diagrams are not strictly classes but objects that are in
 % ********** PACKAGE DIAGRAM ********
 \FloatBarrier
 \subsection{Packages Diagrams}
+The notion of package is implemented with Angular modules.
 
 \begin{figure}[htb]
     \centering
@@ -522,25 +467,13 @@ Most of boxes in these diagrams are not strictly classes but objects that are in
 \FloatBarrier
 
 \section{Dynamic view}
-the flow: user creates an application, [robot sync], my app reads it and generates HTML output.
-
-specific flow of an app. bootstrap, the compile-link phase, push classes, push styles, get url params, etc.
-examples of using the properties, generating the settings, fetching things from the server, rostopics...
-
-show patterns!
-
+\subsection{Overview}
 This section contains a detailed description of the most relevant operations.
-They are grouped in XXX categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
+They are grouped in 7 FIXME categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
 It always works the same way: writing the appropriate behaviour in directives (controller, compile and link functions) and injecting the required services following the flow that Angular needs.
 
-\subsection{Overview}
-compile-link-ctrl
-seq diagram: detecting a directive, etc. general example with "book" "fruit" etc
-
 \subsection{Boot-strap and Configuration}
-FIXME Notes: description -- bootup (register modules, fetch config, querystring, goto init, subscribe)
-
-Some key operations are done during the boot-strap process of Angular, like registering modules, setting dependencies and the default routes (e.g. \texttt{http:// ... /app/index.html\#/products-view/14/detail-view}.
+During the boot-strap process of Angular, the system performs some key operations, like registering modules, setting dependencies and the default routes (e.g. \texttt{http:// ... /app/index.html\#/products-view/14/detail-view}.
 The Flango \cm also fetches de configuration from the backend and builds the local object that represents it.
 Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-2} and \fref{fig:design-seqdia-bootstrap-3}, show the bootstrap of the program.
 
@@ -566,10 +499,8 @@ Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-
 \end{figure}
 
 The configuration is encapsulated in the \texttt{palSettings} angular service which, like all services in Angular, is a singleton.
-This service is created with a factory: when a new instance of palSettings is to be created, it runs some code that prepares an object to return, the instance itself.
-It is instantiated and initialised the first time it is called.
-The configuration object is created during the bootstrap.
-It calls \lstinline$palSettings.init(queryString)$ \fref{fig:design-seqdia-palSettings-init}.
+It is created with a factory: when a new instance of \texttt{palSettings} is to be created, it runs some code that prepares an object to return, the instance itself.
+The bootstrap process, there is a call \lstinline$palSettings.init(queryString)$ \fref{fig:design-seqdia-palSettings-init}.
 This method fetches the configuration from the backend using an asynchronous call (\fref{fig:design-seqdia-palSettings-getConfig}) which, in turn, delegates to other internal operations.
 To avoid errors, the system uses \emph{deferred promises}: the \texttt{init} method returns an object immediately and it receives a notification when all asynchronous calls have been completed, that is, when the configuration object is ready to be used in the application.
 
@@ -578,7 +509,7 @@ It degrades gradually: it first tries to fetch the real application, if it fails
 
 \paragraph{Promises and deferred objects} Futures, promises and delays are constructs for synchronising in a programming language.
 \textit{Promises} were introduced by Daniel P. Friedman and David Wise in 1977, \textit{futures} in 1977 by Henry Baker and Carl Hewitt.
-The term promise was coined by Liskov and Shrira (\cite{Liskov:1988}) in 1988.
+The term promise was coined by Liskov and Shrira \cite{Liskov:1988} in 1988.
 
 The three words are often used interchangeably although they have some differences:
 \begin{itemize}
@@ -627,24 +558,16 @@ This way functions can be decoupled and testing is easier.
     \label{fig:design-seqdia-palSettings-getStructure}
 \end{figure}
 
-\begin{sidewaysfigure}[htb]
+\begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-defaultApplicationConfig.pdf}
     \caption{defaultApplicationConfig()}
     \label{fig:design-seqdia-palSettings-defaultApplicationConfig}
-\end{sidewaysfigure}
+\end{figure}
 
 \FloatBarrier
 
 \subsection{Properties management and transformation to \ac{HTML}}
-descr with example (transform a  book into...)
-
-interpretacio de tags. fl:ui type=.. --> fl {type} per separar
-
-herència de ui components (un basebutton s'implementa amb...)
-
-plantilles dels temes
-
 Browsers can only parse \ac{HTML} nodes.
 When the parser finds an \ac{XML} node, it prints the inner text node because \ac{HTML} also has text nodes.
 With Angular \ac{XML} nodes can have behaviour: it teaches the browser new syntax.
@@ -706,19 +629,19 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
     \label{fig:design-seqdia-ui-controller}
 \end{figure}
 
-\begin{sidewaysfigure}[htb]
-    \centering
-    \includegraphics{figures/design/seqdia/width-link.pdf}
-    \caption{flWidth::link}
-    \label{fig:design-seqdia-width-link}
-\end{sidewaysfigure}
-
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/ui-link.pdf}
     \caption{flUi::link}
     \label{fig:design-seqdia-ui-link}
 \end{figure}
+
+\begin{sidewaysfigure}[htb]
+    \centering
+    \includegraphics{figures/design/seqdia/width-link.pdf}
+    \caption{flWidth::link}
+    \label{fig:design-seqdia-width-link}
+\end{sidewaysfigure}
 
 \begin{figure}[htb]
     \centering
@@ -746,7 +669,7 @@ The controller ActionCtrl encapsulates the logic to process these commands.
 
 \lstinputlisting[language=xml, caption={A list of actions}]{src/example-actions.xml}
 
-\lstinputlisting[language=html, caption={Result button (snippet)}]{src/example-result-button.html}
+\lstinputlisting[language=xml, caption={Result button (snippet)}]{src/example-result-button-action.html}
 
 To create the list of actions, when the component is clicked it runs \lstinline$executeActions()$, which has a list of actions to execute as a parameter using the command pattern.
 
@@ -763,7 +686,6 @@ To create the list of actions, when the component is clicked it runs \lstinline$
     \caption{ActionCtrl::execute}
     \label{fig:design-seqdia-actionCtrl-execute}
 \end{figure}
-
 
 \begin{figure}[htb]
     \centering

@@ -1,2 +1,1391 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg contentScriptType="text/ecmascript" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify" contentStyleType="text/css" viewBox="173.0 -7.849999999999994 683.0 345.70000000000005" xmlns:cacoo="http://cacoo.com/" preserveAspectRatio="xMidYMin meet" xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter xlink:actuate="onLoad" xlink:type="simple" id="id0" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id2" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id6" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id8" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id10" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id12" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id14" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id17" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id20" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id23" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id26" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id29" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id31" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id33" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id35" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id37" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter><filter xlink:actuate="onLoad" xlink:type="simple" id="id40" xlink:show="other" filterUnits="userSpaceOnUse" xmlns:xlink="http://www.w3.org/1999/xlink"><feGaussianBlur stdDeviation="3.0" result="blur" in="SourceAlpha"/><feOffset dx="4.0" dy="4.0" result="offsetBlur" in="blur"/><feComponentTransfer result="componentOffsetBlur" in="offsetBlur"><feFuncR type="linear" intercept="0.0" slope="0"/><feFuncG type="linear" intercept="0.0" slope="0"/><feFuncB type="linear" intercept="0.0" slope="0"/><feFuncA type="linear" intercept="0" slope="0.4"/></feComponentTransfer></filter></defs><g><g transform="translate(303.0 7.150000000000006)"><use xlink:href="#id1" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id0)"/><use xlink:href="#id3" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id2)"/></g><g transform="translate(188.0 130.05)"><use xlink:href="#id7" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id6)"/><use xlink:href="#id9" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id8)"/><use xlink:href="#id11" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id10)"/><use xlink:href="#id13" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id12)"/><use xlink:href="#id15" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id14)"/></g><g transform="translate(338.0 135.05)"><use xlink:href="#id18" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id17)"/></g><g transform="translate(338.0 44.5)"><use xlink:href="#id21" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id20)"/></g><g transform="translate(530.0 44.5)"><use xlink:href="#id24" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id23)"/></g><g transform="translate(338.0 228.0)"><use xlink:href="#id27" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id26)"/></g><g transform="translate(741.0 79.5)"><use xlink:href="#id30" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id29)"/><use xlink:href="#id32" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id31)"/><use xlink:href="#id34" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id33)"/><use xlink:href="#id36" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id35)"/><use xlink:href="#id38" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id37)"/></g><g transform="translate(530.0 135.05)"><use xlink:href="#id41" xlink:actuate="onLoad" xlink:type="simple" xlink:show="embed" xmlns:xlink="http://www.w3.org/1999/xlink" filter="url(#id40)"/></g></g><g><g transform="translate(303.0 7.150000000000006)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id1" d="M0.0 0.0 L418.0 0.0 L418.0 25.0 L0.0 25.0 L0.0 0.0z" stroke="#000000" stroke-width="1.0"/><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id3" d="M0.0 25.0 L418.0 25.0 L418.0 315.70000000000005 L0.0 315.70000000000005 L0.0 25.0z" stroke="#000000" stroke-width="1.0"/><g transform="translate(0.0 0.0)"><clipPath id="id4"><path d="M0 0 L418.0 0 L418.0 25.0 L0 25.0z"/></clipPath><text font-size="12" clip-path="url(#id4)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="187.0" xml:space="preserve" y="16.5" textLength="44.0">System</tspan></text></g><g transform="translate(5.0 30.0)"><clipPath id="id5"><path d="M0 0 L408.0 0 L408.0 280.70000000000005 L0 280.70000000000005z"/></clipPath><text font-size="10" clip-path="url(#id5)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="normal"/></g></g><g transform="translate(188.0 130.05)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id7" d="M60.0 10.0 Q60.0 11.98912367379658 59.23879532511287 13.826834323650898 Q58.477590650225736 15.664544973505215 57.071067811865476 17.071067811865476 Q55.664544973505215 18.477590650225736 53.8268343236509 19.238795325112868 Q51.989123673796584 20.0 50.0 20.0 Q48.010876326203416 20.0 46.1731656763491 19.238795325112868 Q44.335455026494785 18.477590650225736 42.928932188134524 17.071067811865476 Q41.522409349774264 15.664544973505215 40.76120467488713 13.8268343236509 Q40.0 11.98912367379658 40.0 10.000000000000002 Q40.0 8.010876326203423 40.76120467488713 6.173165676349104 Q41.522409349774264 4.335455026494786 42.928932188134524 2.9289321881345254 Q44.335455026494785 1.522409349774268 46.1731656763491 0.7612046748871357 Q48.010876326203416 0.0 50.0 0.0 Q51.989123673796584 0.0 53.8268343236509 0.761204674887134 Q55.664544973505215 1.522409349774266 57.071067811865476 2.9289321881345227 Q58.47759065022573 4.335455026494781 59.23879532511286 6.173165676349096 Q60.0 8.010876326203416 60.0 10.0z" stroke="#000000" stroke-width="1.0"/><path fill="none" id="id9" d="M50.0 20.0 L50.0 40.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" id="id11" d="M35.0 30.0 L65.0 30.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" id="id13" d="M50.0 40.0 L35.0 60.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" id="id15" d="M50.0 40.0 L65.0 60.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><g transform="translate(0.0 60.0)"><clipPath id="id16"><path d="M0 0 L100.0 0 L100.0 30.0 L0 30.0z"/></clipPath><text font-size="12" clip-path="url(#id16)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="28.0" xml:space="preserve" y="12.0" textLength="47.0">Content </tspan><tspan x="3.0" xml:space="preserve" y="26.0" textLength="93.0">Application User</tspan></text></g></g><g transform="translate(338.0 135.05)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id18" d="M150.0 40.0 Q150.0 47.95649469518632 144.29096493834652 55.30733729460359 Q138.581929876693 62.65817989402086 128.03300858899107 68.2842712474619 Q117.48408730128914 73.91036260090294 103.70125742738172 76.95518130045147 Q89.91842755347434 80.0 75.0 80.0 Q60.081572446525655 80.0 46.298742572618266 76.95518130045147 Q32.515912698710885 73.91036260090294 21.96699141100894 68.2842712474619 Q11.418070123307004 62.65817989402087 5.709035061653495 55.3073372946036 Q0.0 47.95649469518632 0.0 40.00000000000001 Q-1.4210854715202004E-14 32.04350530481369 5.709035061653481 24.692662705396415 Q11.418070123307004 17.341820105979142 21.966991411008927 11.715728752538102 Q32.515912698710885 6.089637399097057 46.298742572618224 3.044818699548543 Q60.081572446525605 7.105427357601002E-15 74.99999999999999 0.0 Q89.91842755347436 -1.4210854715202004E-14 103.70125742738176 3.044818699548536 Q117.48408730128912 6.08963739909705 128.03300858899104 11.71572875253809 Q138.58192987669298 17.34182010597912 144.2909649383465 24.692662705396383 Q150.0 32.04350530481367 150.0 40.0z" stroke="#000000" stroke-width="1.0"/><g transform="translate(0.0 0.0)"><clipPath id="id19"><path d="M0 0 L150.0 0 L150.0 80.0 L0 80.0z"/></clipPath><text font-size="12" clip-path="url(#id19)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="39.0" xml:space="preserve" y="37.0" textLength="74.0">Start robot&apos;s </tspan><tspan x="40.0" xml:space="preserve" y="51.0" textLength="69.0">applications</tspan></text></g></g><g transform="translate(338.0 44.5)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id21" d="M150.0 40.0 Q150.0 47.95649469518632 144.29096493834652 55.30733729460359 Q138.581929876693 62.65817989402086 128.03300858899107 68.2842712474619 Q117.48408730128914 73.91036260090294 103.70125742738172 76.95518130045147 Q89.91842755347434 80.0 75.0 80.0 Q60.081572446525655 80.0 46.298742572618266 76.95518130045147 Q32.515912698710885 73.91036260090294 21.96699141100894 68.2842712474619 Q11.418070123307004 62.65817989402087 5.709035061653495 55.3073372946036 Q0.0 47.95649469518632 0.0 40.00000000000001 Q-1.4210854715202004E-14 32.04350530481369 5.709035061653481 24.692662705396415 Q11.418070123307004 17.341820105979142 21.966991411008927 11.715728752538102 Q32.515912698710885 6.089637399097057 46.298742572618224 3.044818699548543 Q60.081572446525605 7.105427357601002E-15 74.99999999999999 0.0 Q89.91842755347436 -1.4210854715202004E-14 103.70125742738176 3.044818699548536 Q117.48408730128912 6.08963739909705 128.03300858899104 11.71572875253809 Q138.58192987669298 17.34182010597912 144.2909649383465 24.692662705396383 Q150.0 32.04350530481367 150.0 40.0z" stroke="#000000" stroke-width="1.0"/><g transform="translate(0.0 0.0)"><clipPath id="id22"><path d="M0 0 L150.0 0 L150.0 80.0 L0 80.0z"/></clipPath><text font-size="12" clip-path="url(#id22)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="25.0" xml:space="preserve" y="44.0" textLength="99.0">Retrieve Screens</tspan></text></g></g><g transform="translate(530.0 44.5)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id24" d="M150.0 40.0 Q150.0 47.95649469518632 144.29096493834652 55.30733729460359 Q138.581929876693 62.65817989402086 128.03300858899107 68.2842712474619 Q117.48408730128914 73.91036260090294 103.70125742738172 76.95518130045147 Q89.91842755347434 80.0 75.0 80.0 Q60.081572446525655 80.0 46.298742572618266 76.95518130045147 Q32.515912698710885 73.91036260090294 21.96699141100894 68.2842712474619 Q11.418070123307004 62.65817989402087 5.709035061653495 55.3073372946036 Q0.0 47.95649469518632 0.0 40.00000000000001 Q-1.4210854715202004E-14 32.04350530481369 5.709035061653481 24.692662705396415 Q11.418070123307004 17.341820105979142 21.966991411008927 11.715728752538102 Q32.515912698710885 6.089637399097057 46.298742572618224 3.044818699548543 Q60.081572446525605 7.105427357601002E-15 74.99999999999999 0.0 Q89.91842755347436 -1.4210854715202004E-14 103.70125742738176 3.044818699548536 Q117.48408730128912 6.08963739909705 128.03300858899104 11.71572875253809 Q138.58192987669298 17.34182010597912 144.2909649383465 24.692662705396383 Q150.0 32.04350530481367 150.0 40.0z" stroke="#000000" stroke-width="1.0"/><g transform="translate(0.0 0.0)"><clipPath id="id25"><path d="M0 0 L150.0 0 L150.0 80.0 L0 80.0z"/></clipPath><text font-size="12" clip-path="url(#id25)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="61.0" xml:space="preserve" y="37.0" textLength="28.0">Start</tspan><tspan x="16.0" xml:space="preserve" y="51.0" textLength="117.0">Contents Application</tspan></text></g></g><g transform="translate(338.0 228.0)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id27" d="M150.0 40.0 Q150.0 47.95649469518632 144.29096493834652 55.30733729460359 Q138.581929876693 62.65817989402086 128.03300858899107 68.2842712474619 Q117.48408730128914 73.91036260090294 103.70125742738172 76.95518130045147 Q89.91842755347434 80.0 75.0 80.0 Q60.081572446525655 80.0 46.298742572618266 76.95518130045147 Q32.515912698710885 73.91036260090294 21.96699141100894 68.2842712474619 Q11.418070123307004 62.65817989402087 5.709035061653495 55.3073372946036 Q0.0 47.95649469518632 0.0 40.00000000000001 Q-1.4210854715202004E-14 32.04350530481369 5.709035061653481 24.692662705396415 Q11.418070123307004 17.341820105979142 21.966991411008927 11.715728752538102 Q32.515912698710885 6.089637399097057 46.298742572618224 3.044818699548543 Q60.081572446525605 7.105427357601002E-15 74.99999999999999 0.0 Q89.91842755347436 -1.4210854715202004E-14 103.70125742738176 3.044818699548536 Q117.48408730128912 6.08963739909705 128.03300858899104 11.71572875253809 Q138.58192987669298 17.34182010597912 144.2909649383465 24.692662705396383 Q150.0 32.04350530481367 150.0 40.0z" stroke="#000000" stroke-width="1.0"/><g transform="translate(0.0 0.0)"><clipPath id="id28"><path d="M0 0 L150.0 0 L150.0 80.0 L0 80.0z"/></clipPath><text font-size="12" clip-path="url(#id28)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="15.0" xml:space="preserve" y="44.0" textLength="119.0">Update Configuration</tspan></text></g></g><g transform="translate(741.0 79.5)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id30" d="M60.0 10.0 Q60.0 11.98912367379658 59.23879532511287 13.826834323650898 Q58.477590650225736 15.664544973505215 57.071067811865476 17.071067811865476 Q55.664544973505215 18.477590650225736 53.8268343236509 19.238795325112868 Q51.989123673796584 20.0 50.0 20.0 Q48.010876326203416 20.0 46.1731656763491 19.238795325112868 Q44.335455026494785 18.477590650225736 42.928932188134524 17.071067811865476 Q41.522409349774264 15.664544973505215 40.76120467488713 13.8268343236509 Q40.0 11.98912367379658 40.0 10.000000000000002 Q40.0 8.010876326203423 40.76120467488713 6.173165676349104 Q41.522409349774264 4.335455026494786 42.928932188134524 2.9289321881345254 Q44.335455026494785 1.522409349774268 46.1731656763491 0.7612046748871357 Q48.010876326203416 0.0 50.0 0.0 Q51.989123673796584 0.0 53.8268343236509 0.761204674887134 Q55.664544973505215 1.522409349774266 57.071067811865476 2.9289321881345227 Q58.47759065022573 4.335455026494781 59.23879532511286 6.173165676349096 Q60.0 8.010876326203416 60.0 10.0z" stroke="#000000" stroke-width="1.0"/><path fill="none" id="id32" d="M50.0 20.0 L50.0 40.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" id="id34" d="M35.0 30.0 L65.0 30.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" id="id36" d="M50.0 40.0 L35.0 60.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" id="id38" d="M50.0 40.0 L65.0 60.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><g transform="translate(0.0 60.0)"><clipPath id="id39"><path d="M0 0 L100.0 0 L100.0 30.0 L0 30.0z"/></clipPath><text font-size="12" clip-path="url(#id39)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="6.0" xml:space="preserve" y="19.0" textLength="87.0">robotBehaviour</tspan></text></g></g><path fill="none" d="M288.0 175.05 L338.0 84.5" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" d="M288.0 175.05 L338.0 175.05" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" d="M288.0 175.05 L338.0 268.0" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><path fill="none" d="M741.0 124.5 L680.0 84.5" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/><g transform="translate(530.0 135.05)"><path fill-opacity="1.0" fill="#ffffff" stroke-linejoin="round" id="id41" d="M150.0 40.0 Q150.0 47.95649469518632 144.29096493834652 55.30733729460359 Q138.581929876693 62.65817989402086 128.03300858899107 68.2842712474619 Q117.48408730128914 73.91036260090294 103.70125742738172 76.95518130045147 Q89.91842755347434 80.0 75.0 80.0 Q60.081572446525655 80.0 46.298742572618266 76.95518130045147 Q32.515912698710885 73.91036260090294 21.96699141100894 68.2842712474619 Q11.418070123307004 62.65817989402087 5.709035061653495 55.3073372946036 Q0.0 47.95649469518632 0.0 40.00000000000001 Q-1.4210854715202004E-14 32.04350530481369 5.709035061653481 24.692662705396415 Q11.418070123307004 17.341820105979142 21.966991411008927 11.715728752538102 Q32.515912698710885 6.089637399097057 46.298742572618224 3.044818699548543 Q60.081572446525605 7.105427357601002E-15 74.99999999999999 0.0 Q89.91842755347436 -1.4210854715202004E-14 103.70125742738176 3.044818699548536 Q117.48408730128912 6.08963739909705 128.03300858899104 11.71572875253809 Q138.58192987669298 17.34182010597912 144.2909649383465 24.692662705396383 Q150.0 32.04350530481367 150.0 40.0z" stroke="#000000" stroke-width="1.0"/><g transform="translate(0.0 0.0)"><clipPath id="id42"><path d="M0 0 L150.0 0 L150.0 80.0 L0 80.0z"/></clipPath><text font-size="12" clip-path="url(#id42)" text-decoration="none" fill="#000000" font-family="Arial,Arial" font-style="normal" font-weight="bold"><tspan x="16.0" xml:space="preserve" y="44.0" textLength="117.0">Create Configuration</tspan></text></g></g><path fill="none" d="M741.0 124.5 L680.0 175.05" stroke-width="1.0" stroke-linejoin="round" stroke="#000000"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   contentScriptType="text/ecmascript"
+   zoomAndPan="magnify"
+   contentStyleType="text/css"
+   viewBox="173.0 -7.849999999999994 683.0 345.70000000000005"
+   preserveAspectRatio="xMidYMin meet"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.48.3.1 r9886"
+   width="100%"
+   height="100%"
+   sodipodi:docname="specification-uc.svg">
+  <metadata
+     id="metadata445">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
+     id="namedview443"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="1.8506589"
+     inkscape:cx="250.26476"
+     inkscape:cy="177.47352"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <sodipodi:guide
+       orientation="1,0"
+       position="167.50791,182.63766"
+       id="guide3653" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="310.15981,191.82358"
+       id="guide3655" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="550.07437,195.60601"
+       id="guide3657" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id0"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur7" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset9" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer11">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR13" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG15" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB17" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA19" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id2"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur22" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset24" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer26">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR28" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG30" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB32" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA34" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id6"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur37" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset39" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer41">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR43" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG45" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB47" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA49" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id8"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur52" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset54" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer56">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR58" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG60" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB62" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA64" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id10"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur67" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset69" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer71">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR73" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG75" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB77" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA79" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id12"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur82" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset84" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer86">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR88" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG90" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB92" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA94" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id14"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur97" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset99" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer101">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR103" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG105" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB107" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA109" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id17"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur112" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset114" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer116">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR118" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG120" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB122" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA124" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id20"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur127" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset129" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer131">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR133" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG135" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB137" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA139" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id23"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur142" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset144" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer146">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR148" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG150" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB152" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA154" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id26"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur157" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset159" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer161">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR163" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG165" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB167" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA169" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id29"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur172" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset174" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer176">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR178" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG180" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB182" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA184" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id31"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur187" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset189" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer191">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR193" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG195" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB197" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA199" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id33"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur202" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset204" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer206">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR208" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG210" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB212" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA214" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id35"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur217" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset219" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer221">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR223" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG225" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB227" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA229" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id37"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur232" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset234" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer236">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR238" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG240" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB242" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA244" />
+      </feComponentTransfer>
+    </filter>
+    <filter
+       xlink:actuate="onLoad"
+       xlink:type="simple"
+       id="id40"
+       xlink:show="other"
+       filterUnits="userSpaceOnUse">
+      <feGaussianBlur
+         stdDeviation="3.0"
+         result="blur"
+         in="SourceAlpha"
+         id="feGaussianBlur247" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         result="offsetBlur"
+         in="blur"
+         id="feOffset249" />
+      <feComponentTransfer
+         result="componentOffsetBlur"
+         in="offsetBlur"
+         id="feComponentTransfer251">
+        <feFuncR
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncR253" />
+        <feFuncG
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncG255" />
+        <feFuncB
+           type="linear"
+           intercept="0.0"
+           slope="0"
+           id="feFuncB257" />
+        <feFuncA
+           type="linear"
+           intercept="0"
+           slope="0.4"
+           id="feFuncA259" />
+      </feComponentTransfer>
+    </filter>
+    <clipPath
+       id="id25">
+      <path
+         inkscape:connector-curvature="0"
+         id="path385"
+         d="M 0,0 150,0 150,80 0,80 z" />
+    </clipPath>
+    <clipPath
+       id="id42">
+      <path
+         inkscape:connector-curvature="0"
+         id="path435"
+         d="M 0,0 150,0 150,80 0,80 z" />
+    </clipPath>
+  </defs>
+  <g
+     id="g261">
+    <g
+       transform="translate(303.0 7.150000000000006)"
+       id="g263">
+      <use
+         xlink:href="#id1"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id0)"
+         id="use265" />
+      <use
+         xlink:href="#id3"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id2)"
+         id="use267" />
+    </g>
+    <g
+       transform="translate(188.0 130.05)"
+       id="g269">
+      <use
+         xlink:href="#id7"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id6)"
+         id="use271" />
+      <use
+         xlink:href="#id9"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id8)"
+         id="use273" />
+      <use
+         xlink:href="#id11"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id10)"
+         id="use275" />
+      <use
+         xlink:href="#id13"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id12)"
+         id="use277" />
+      <use
+         xlink:href="#id15"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id14)"
+         id="use279" />
+    </g>
+    <g
+       transform="translate(338.0 135.05)"
+       id="g281">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id17)"
+         inkscape:connector-curvature="0"
+         d="m 488,175.05 q 0,7.9565 -5.70904,15.30734 -5.70903,7.35084 -16.25795,12.97693 -10.54892,5.62609 -24.33175,8.67091 Q 427.91843,215.05 413,215.05 q -14.91843,0 -28.70126,-3.04482 -13.78283,-3.04482 -24.33175,-8.67091 -10.54892,-5.62609 -16.25795,-12.97693 Q 338,183.00649 338,175.05 q 0,-7.95649 5.70904,-15.30734 5.70903,-7.35084 16.25795,-12.97693 10.54892,-5.62609 24.33175,-8.67091 Q 398.08157,135.05 413,135.05 q 14.91843,0 28.70126,3.04482 13.78283,3.04482 24.33175,8.67091 10.54892,5.62609 16.25795,12.97693 Q 488,167.09351 488,175.05 z"
+         id="use283" />
+    </g>
+    <g
+       transform="translate(338.0 44.5)"
+       id="g285">
+      <use
+         xlink:href="#id21"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id20)"
+         id="use287" />
+    </g>
+    <g
+       transform="translate(530.0 44.5)"
+       id="g289">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id23)"
+         inkscape:connector-curvature="0"
+         d="m 680,84.5 q 0,7.956495 -5.70904,15.307337 -5.70903,7.350843 -16.25795,12.976933 -10.54892,5.62609 -24.33175,8.67091 Q 619.91843,124.5 605,124.5 q -14.91843,0 -28.70126,-3.04482 -13.78283,-3.04482 -24.33175,-8.67091 Q 541.41807,107.15818 535.70904,99.807337 530,92.456495 530,84.5 q 0,-7.956495 5.70904,-15.307337 5.70903,-7.350843 16.25795,-12.976934 10.54892,-5.626092 24.33175,-8.67091 Q 590.08157,44.5 605,44.5 q 14.91843,0 28.70126,3.044819 13.78283,3.044818 24.33175,8.67091 10.54892,5.626091 16.25795,12.976934 Q 680,76.543505 680,84.5 z"
+         id="use291" />
+    </g>
+    <g
+       transform="translate(338.0 228.0)"
+       id="g293">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id26)"
+         inkscape:connector-curvature="0"
+         d="m 488,268 q 0,7.9565 -5.70904,15.30734 -5.70903,7.35084 -16.25795,12.97693 -10.54892,5.62609 -24.33175,8.67091 Q 427.91843,308 413,308 q -14.91843,0 -28.70126,-3.04482 -13.78283,-3.04482 -24.33175,-8.67091 -10.54892,-5.62609 -16.25795,-12.97693 Q 338,275.9565 338,268 q 0,-7.9565 5.70904,-15.30734 5.70903,-7.35084 16.25795,-12.97693 10.54892,-5.62609 24.33175,-8.67091 Q 398.08157,228 413,228 q 14.91843,0 28.70126,3.04482 13.78283,3.04482 24.33175,8.67091 10.54892,5.62609 16.25795,12.97693 Q 488,260.0435 488,268 z"
+         id="use295" />
+    </g>
+    <g
+       transform="translate(741.0 79.5)"
+       id="g297">
+      <use
+         xlink:href="#id30"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id29)"
+         id="use299" />
+      <use
+         xlink:href="#id32"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id31)"
+         id="use301" />
+      <use
+         xlink:href="#id34"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id33)"
+         id="use303" />
+      <use
+         xlink:href="#id36"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id35)"
+         id="use305" />
+      <use
+         xlink:href="#id38"
+         xlink:actuate="onLoad"
+         xlink:type="simple"
+         xlink:show="embed"
+         filter="url(#id37)"
+         id="use307" />
+    </g>
+    <g
+       transform="translate(530.0 135.05)"
+       id="g309">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round;filter:url(#id40)"
+         inkscape:connector-curvature="0"
+         d="m 680,175.05 q 0,7.9565 -5.70904,15.30734 -5.70903,7.35084 -16.25795,12.97693 -10.54892,5.62609 -24.33175,8.67091 Q 619.91843,215.05 605,215.05 q -14.91843,0 -28.70126,-3.04482 -13.78283,-3.04482 -24.33175,-8.67091 -10.54892,-5.62609 -16.25795,-12.97693 Q 530,183.00649 530,175.05 q 0,-7.95649 5.70904,-15.30734 5.70903,-7.35084 16.25795,-12.97693 10.54892,-5.62609 24.33175,-8.67091 Q 590.08157,135.05 605,135.05 q 14.91843,0 28.70126,3.04482 13.78283,3.04482 24.33175,8.67091 10.54892,5.62609 16.25795,12.97693 Q 680,167.09351 680,175.05 z"
+         id="use311" />
+    </g>
+  </g>
+  <path
+     sodipodi:nodetypes="ccccc"
+     id="id1"
+     d="m 303,7.15 298,0 0,25 -298,0 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+  <path
+     sodipodi:nodetypes="ccccc"
+     id="id3"
+     d="m 303,32.15 298,0 0,224.7 -298,0 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+  <g
+     id="g319"
+     transform="translate(243.80664,7.15)">
+    <clipPath
+       id="id4">
+      <path
+         d="M 0,0 418,0 418,25 0,25 z"
+         id="path322"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <text
+       font-size="12"
+       clip-path="url(#id4)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       id="text324"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="187"
+         xml:space="preserve"
+         y="16.5"
+         textLength="44.0"
+         id="tspan326">System</tspan>    </text>
+  </g>
+  <g
+     transform="translate(308,37.15)"
+     id="g328">
+    <clipPath
+       id="id5">
+      <path
+         d="m 0,0 408,0 0,280.7 -408,0 z"
+         id="path331"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <text
+       font-size="10"
+       clip-path="url(#id5)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="normal"
+       id="text333"
+       style="font-size:10px;font-style:normal;font-weight:normal;text-decoration:none;fill:#000000;font-family:'Arial,Arial'" />
+  </g>
+  <g
+     id="g335"
+     transform="translate(188.54035,102.24399)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 60,10 q 0,1.989124 -0.761205,3.826834 -0.761204,1.837711 -2.167727,3.244234 -1.406523,1.406523 -3.244234,2.167727 Q 51.989124,20 50,20 48.010876,20 46.173166,19.238795 44.335455,18.477591 42.928932,17.071068 41.522409,15.664545 40.761205,13.826834 40,11.989124 40,10 40,8.0108763 40.761205,6.1731657 41.522409,4.335455 42.928932,2.9289322 44.335455,1.5224093 46.173166,0.76120467 48.010876,0 50,0 51.989124,0 53.826834,0.76120467 55.664545,1.5224093 57.071068,2.9289322 58.477591,4.335455 59.238795,6.1731657 60,8.0108763 60,10 z"
+       id="id7" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 50,20 0,20"
+       id="id9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 35,30 30,0"
+       id="id11" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 50,40 35,60"
+       id="id13" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 50,40 65,60"
+       id="id15" />
+    <g
+       id="g342"
+       transform="translate(0,60)">
+      <clipPath
+         id="id16">
+        <path
+           inkscape:connector-curvature="0"
+           id="path345"
+           d="M 0,0 100,0 100,30 0,30 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text347"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id16)"
+         font-size="12">
+        <tspan
+           id="tspan349"
+           textLength="47.0"
+           y="12"
+           xml:space="preserve"
+           x="28">Content </tspan>        <tspan
+           id="tspan351"
+           textLength="93.0"
+           y="26"
+           xml:space="preserve"
+           x="3">Application User</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g3618"
+     transform="translate(-33.50369,-32.25601)">
+    <path
+       id="path3539"
+       d="m 469.9884,174.5 q 0,6.0457 -4.33799,11.63121 -4.33798,5.5855 -12.35353,9.86046 -8.01554,4.27496 -18.48836,6.58855 -10.47282,2.31359 -21.80852,2.31359 -11.3357,0 -21.80852,-2.31359 -10.47281,-2.31359 -18.48836,-6.58855 -8.01555,-4.27496 -12.35353,-9.86046 -4.33799,-5.58551 -4.33799,-11.63121 0,-6.04571 4.33799,-11.63121 4.33798,-5.5855 12.35353,-9.86046 8.01555,-4.27496 18.48836,-6.58855 10.47282,-2.31359 21.80852,-2.31359 11.3357,0 21.80852,2.31359 10.47282,2.31359 18.48836,6.58855 8.01555,4.27496 12.35353,9.86046 4.33799,5.5855 4.33799,11.63121 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75984532;stroke-linejoin:round" />
+    <g
+       transform="translate(339.0807,133.42896)"
+       id="g356">
+      <clipPath
+         id="id19">
+        <path
+           inkscape:connector-curvature="0"
+           id="path359"
+           d="M 0,0 150,0 150,80 0,80 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text361"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id19)"
+         font-size="12">
+        <tspan
+           id="tspan363"
+           textLength="74.0"
+           y="37"
+           xml:space="preserve"
+           x="39">Start robot's </tspan>        <tspan
+           id="tspan365"
+           textLength="69.0"
+           y="51"
+           xml:space="preserve"
+           x="40">applications</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g367"
+     transform="translate(304.49631,31.45839)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75984532;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 131.9884,40 q 0,6.045705 -4.33799,11.631208 -4.33798,5.585503 -12.35353,9.860462 -8.01554,4.27496 -18.488363,6.58855 Q 86.335697,70.393812 75,70.393812 q -11.335697,0 -21.808515,-2.313592 Q 42.718667,65.76663 34.703118,61.49167 26.68757,57.216711 22.349587,51.631208 18.011603,46.045705 18.011603,40 q 0,-6.045705 4.337984,-11.631208 Q 26.68757,22.783289 34.703118,18.50833 42.718667,14.233371 53.191485,11.91978 63.664303,9.6061885 75,9.6061885 q 11.335697,0 21.808517,2.3135915 10.472823,2.313591 18.488363,6.58855 8.01555,4.274959 12.35353,9.860462 Q 131.9884,33.954295 131.9884,40 z"
+       id="id21" />
+    <g
+       id="g370">
+      <clipPath
+         id="id22">
+        <path
+           inkscape:connector-curvature="0"
+           id="path373"
+           d="M 0,0 150,0 150,80 0,80 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text375"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id22)"
+         font-size="12">
+        <tspan
+           id="tspan377"
+           textLength="99.0"
+           y="44"
+           xml:space="preserve"
+           x="25">Retrieve Screens</tspan>      </text>
+    </g>
+  </g>
+  <text
+     style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+     font-weight="bold"
+     font-style="normal"
+     text-decoration="none"
+     clip-path="url(#id25)"
+     font-size="12"
+     transform="translate(557.45253,40.5)"
+     id="text3598">
+    <tspan
+       textLength="28.0"
+       y="37"
+       xml:space="preserve"
+       x="61"
+       id="tspan3600"> </tspan>  </text>
+  <g
+     id="g3627"
+     transform="translate(-33.50369,-53.494462)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75984532;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 469.9884,266.5 q 0,6.0457 -4.33799,11.63121 -4.33798,5.5855 -12.35353,9.86046 -8.01554,4.27496 -18.48836,6.58855 -10.47282,2.31359 -21.80852,2.31359 -11.3357,0 -21.80852,-2.31359 -10.47281,-2.31359 -18.48836,-6.58855 -8.01555,-4.27496 -12.35353,-9.86046 -4.33799,-5.58551 -4.33799,-11.63121 0,-6.04571 4.33799,-11.63121 4.33798,-5.5855 12.35353,-9.86046 8.01555,-4.27496 18.48836,-6.58855 10.47282,-2.31359 21.80852,-2.31359 11.3357,0 21.80852,2.31359 10.47282,2.31359 18.48836,6.58855 8.01555,4.27496 12.35353,9.86046 4.33799,5.5855 4.33799,11.63121 z"
+       id="path3557" />
+    <g
+       transform="translate(338,228)"
+       id="g396">
+      <clipPath
+         id="id28">
+        <path
+           inkscape:connector-curvature="0"
+           id="path399"
+           d="M 0,0 150,0 150,80 0,80 z" />
+      </clipPath>
+      <text
+         transform="translate(38.203323,-9.9438291)"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text401"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id28)"
+         font-size="12">
+        <tspan
+           id="tspan403"
+           textLength="119.0"
+           y="44"
+           xml:space="preserve"
+           x="15">Update </tspan>      </text>
+      <text
+         transform="translate(22.315665,3.0245253)"
+         id="text3559"
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id28)"
+         font-size="12">
+        <tspan
+           id="tspan3561"
+           textLength="119.0"
+           y="44"
+           xml:space="preserve"
+           x="15">Configuration</tspan>      </text>
+    </g>
+  </g>
+  <g
+     id="g405"
+     transform="translate(603.75158,63.24399)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 60,10 q 0,1.989124 -0.761205,3.826834 -0.761204,1.837711 -2.167727,3.244234 -1.406523,1.406523 -3.244234,2.167727 Q 51.989124,20 50,20 48.010876,20 46.173166,19.238795 44.335455,18.477591 42.928932,17.071068 41.522409,15.664545 40.761205,13.826834 40,11.989124 40,10 40,8.0108763 40.761205,6.1731657 41.522409,4.335455 42.928932,2.9289322 44.335455,1.5224093 46.173166,0.76120467 48.010876,0 50,0 51.989124,0 53.826834,0.76120467 55.664545,1.5224093 57.071068,2.9289322 58.477591,4.335455 59.238795,6.1731657 60,8.0108763 60,10 z"
+       id="id30" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 50,20 0,20"
+       id="id32" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 35,30 30,0"
+       id="id34" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 50,40 35,60"
+       id="id36" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="M 50,40 65,60"
+       id="id38" />
+    <g
+       id="g412"
+       transform="translate(0,60)">
+      <clipPath
+         id="id39">
+        <path
+           inkscape:connector-curvature="0"
+           id="path415"
+           d="M 0,0 100,0 100,30 0,30 z" />
+      </clipPath>
+      <text
+         style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+         id="text417"
+         font-weight="bold"
+         font-style="normal"
+         text-decoration="none"
+         clip-path="url(#id39)"
+         font-size="12">
+        <tspan
+           id="tspan419"
+           textLength="87.0"
+           y="19"
+           xml:space="preserve"
+           x="6">robotBehaviour</tspan>      </text>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path421"
+     d="M 288,143.05 321.24921,69.370253"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path423"
+     d="m 288,143.05 33.24921,-0.80601"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path425"
+     d="m 288,143.05 33.78956,73.07658"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path427"
+     d="M 611,104.5 578.9549,69.910601"
+     sodipodi:nodetypes="cc" />
+  <g
+     id="g3646"
+     transform="translate(-90.85179,-32.25601)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75984532;stroke-linejoin:round"
+       inkscape:connector-curvature="0"
+       d="m 669.9884,174.5 q 0,6.0457 -4.33799,11.63121 -4.33798,5.5855 -12.35353,9.86046 -8.01554,4.27496 -18.48836,6.58855 -10.47282,2.31359 -21.80852,2.31359 -11.3357,0 -21.80851,-2.31359 -10.47282,-2.31359 -18.48837,-6.58855 -8.01555,-4.27496 -12.35353,-9.86046 -4.33799,-5.58551 -4.33799,-11.63121 0,-6.0457 4.33799,-11.63121 4.33798,-5.5855 12.35353,-9.86046 8.01555,-4.27496 18.48837,-6.58855 10.47281,-2.31359 21.80851,-2.31359 11.3357,0 21.80852,2.31359 10.47282,2.31359 18.48836,6.58855 8.01555,4.27496 12.35353,9.86046 4.33799,5.58551 4.33799,11.63121 z"
+       id="path3606" />
+    <text
+       transform="translate(580.09099,126.56583)"
+       font-size="12"
+       clip-path="url(#id42)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       id="text437"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="16"
+         xml:space="preserve"
+         y="44"
+         textLength="117.0"
+         id="tspan439">Create </tspan>    </text>
+    <text
+       transform="translate(560.79985,139.37279)"
+       font-size="12"
+       clip-path="url(#id42)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text3608">
+      <tspan
+         x="16"
+         xml:space="preserve"
+         y="44"
+         textLength="117.0"
+         id="tspan3610">Configuration</tspan>    </text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+     inkscape:connector-curvature="0"
+     id="path441"
+     d="m 611,104.5 -32.0451,37.74399"
+     sodipodi:nodetypes="cc" />
+  <g
+     id="g3637"
+     transform="translate(-90.85179,-13.04161)">
+    <path
+       id="path3565"
+       d="m 669.9884,84.5 q 0,6.045705 -4.33799,11.631208 -4.33798,5.585502 -12.35353,9.860462 -8.01554,4.27496 -18.48836,6.58855 -10.47282,2.31359 -21.80852,2.31359 -11.3357,0 -21.80851,-2.31359 -10.47282,-2.31359 -18.48837,-6.58855 -8.01555,-4.27496 -12.35353,-9.860462 Q 556.0116,90.545705 556.0116,84.5 q 0,-6.045705 4.33799,-11.631208 4.33798,-5.585503 12.35353,-9.860462 8.01555,-4.274959 18.48837,-6.58855 Q 601.6643,54.106189 613,54.106189 q 11.3357,0 21.80852,2.313591 10.47282,2.313591 18.48836,6.58855 8.01555,4.274959 12.35353,9.860462 4.33799,5.585503 4.33799,11.631208 z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75984532;stroke-linejoin:round" />
+    <text
+       transform="translate(539.55695,35.952366)"
+       font-size="12"
+       clip-path="url(#id25)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       id="text387"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'">
+      <tspan
+         x="61"
+         xml:space="preserve"
+         y="37"
+         textLength="28.0"
+         id="tspan389">Start</tspan>    </text>
+    <text
+       transform="translate(566.63844,49.046454)"
+       font-size="12"
+       clip-path="url(#id25)"
+       text-decoration="none"
+       font-style="normal"
+       font-weight="bold"
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text3587">
+      <tspan
+         x="16"
+         xml:space="preserve"
+         y="51"
+         textLength="117.0"
+         id="tspan3589">Application</tspan>    </text>
+    <text
+       style="font-size:12px;font-style:normal;font-weight:bold;text-decoration:none;fill:#000000;font-family:'Arial,Arial'"
+       id="text3602"
+       font-weight="bold"
+       font-style="normal"
+       text-decoration="none"
+       clip-path="url(#id25)"
+       font-size="12"
+       transform="translate(529.24722,49.976759)">
+      <tspan
+         id="tspan3604"
+         textLength="28.0"
+         y="37"
+         xml:space="preserve"
+         x="61">Contents</tspan>    </text>
+  </g>
+</svg>

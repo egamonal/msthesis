@@ -147,9 +147,6 @@ flango-gui  js
 flangoh     lib
 \end{lstlisting}
 
-\subsection{Flango and Robot Branches}
-The Flango project (Backend, Frontend and \cm) have to be compatible with the robot software.
-
 \section{Directives and modules}
 Modules encapsulate directives.
 Namespacing in JavaScript can be misleading (e.g. services should have unique names application-wide, even if they are in separate modules and a client only uses one of them).
@@ -332,11 +329,14 @@ It is merely a \texttt{button} (a basic UI Component) with certain style set wit
 \lstinputlisting[label=impl-directive-basebutton,language=JavaScript, caption={flBaseButton directive}]{src/impl-directive-basebutton.js}
 \lstinputlisting[label=impl-directive-basebutton-template,language=xml, caption={flBasebutton directive template}]{src/impl-directive-basebutton-template.xml}
 
+
 After this template is compiled, Angular finds another directive, \texttt{flButton} \ref{impl-directive-button}, which has the logic to create an \ac{HTML} node for the actual button displayed on the screen.
 
 \lstinputlisting[label=impl-directive-button,language=JavaScript, caption={flButton directive}]{src/impl-directive-button.js}
 
-At the end of the day, a button is rendered in the browser using a link and \texttt{div}s with the \ac{CSS} class \texttt{fl-base-button}.
+\lstinputlisting[label=impl-directive-basebutton-result,language=xml, caption={flBasebutton result}]{src/example-result-button.html}
+
+At the end of the day, a button is displayed in the browser (listing \ref{impl-directive-basebutton-result}) using a link and \texttt{div}s with the \ac{CSS} class \texttt{fl-base-button}.
 This style "includes" the style of a basic \texttt{button}.
 Exclusive properties (like the position or size) are transformed to \ac{CSS} and added as in-line style in the element.
 

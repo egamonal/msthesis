@@ -50,9 +50,9 @@ See the Gantt chart in \fref{fig:plan-gantt}.
 The execution phase focuses on building the product. 
 A web engineering process should be incremental, with frequent changes and short iterations \cite{Kappel:2006}.
 
-\begin{table}[ht]
+\begin{table}[htb]
     \centering
-    \begin{tabularx}{\linewidth}{| X | X |}
+    \begin{tabular}{| l | p{11cm} |}
     \hline
     Milestone & Deliverables \\
     \hline
@@ -60,7 +60,7 @@ A web engineering process should be incremental, with frequent changes and short
     Iteration 1 & Build a prototype comprehensive in number of features but simple in the implementation to validate the technology. \\ \hline
     Iteration 2 & Extend the prototype of Iteration 1 to complex cases. \\
     \hline
-    \end{tabularx}
+    \end{tabular}
     \caption{Milestones and deliverables of the execution phase}
     \label{tab:milestones}
 \end{table}
@@ -81,12 +81,8 @@ Prepare package with a stable set of features, presentation and documentation.
 \label{sec:budget}
 The estimated length of the project is $105 days \times 8 \euro{} \times 8 hours = 6720 \euro{} $
 
-FIXME check cost control (amortized? price?)
-
 \begin{table}[ht]
     \centering
-    \caption{Budget}
-    \label{tab:budget}
     \begin{tabular}{| l | l |}
     \hline
     Labour & 6720\euro{} \\ \hline
@@ -100,23 +96,14 @@ FIXME check cost control (amortized? price?)
      Overall & 7259.10\euro{} \\ 
      \hline
     \end{tabular}
+    \caption{Budget}
+    \label{tab:budget}
 \end{table}
 
 There are some infrastructure related costs excluded from the budget because they are part of the office maintenance monthly expenses.
 This is the case of subversion servers, network, power, backups, etc. 
 
 \section{Risk Analysis}
-TODO: notes: risk areas in reengineering: process, tool,  tech, strategy, personnel, application.
-tech:  tech inadequate to accomplish goals
-tools: dependence on tools that do no perform as advertised
-not using installed tools
-strategy: 
-application: reeng with no local application experts available 
-reengineerd system does not perform adequately
-
-project risks: schedule, cost, personnel, resource, customer, requirements, complexity, size, structural uncertainty. 
-tech risks: A) design, implementation, interface,verification,maintenance problems.– (B)leading edge technologies
-
 \label{sec:risk}
 \begin{risk}
 {Schedule: deviation}
@@ -200,3 +187,4 @@ Some undocumented features or \ac{XML} elements might be misleading (e.g. The no
 
 \section{Execution}
 progress, deviations, final cost
+FIXME
