@@ -13,8 +13,6 @@
 \item         should set the property to 40 for Catalan, 42 for French and 20 for default
 \item         should not set any property
 \item         (inline) should set the property to 42 for the default (language-independent)
-\item         should set the property to 42 for default (language-independent) of pal-container
-\item         (inline) should set the property to 42 for default (language-independent) of pal-container
 \end{enumerate}
 \item     height
 \begin{enumerate}
@@ -24,8 +22,6 @@
 \item         should set the property to 40 for Catalan, 42 for French and 20 for default
 \item         should not set the property
 \item         (inline) should set the property to 42 for the default language
-\item         should set the property to 42 for the default language of pal-container
-\item         (inline) should set the property to 42 for the default language of pal-container
 \end{enumerate}
 \item     x
 \begin{enumerate}
@@ -35,8 +31,6 @@
 \item         should set the property to 40 for Catalan, 42 for French and 20 for default
 \item         should not set the property
 \item         (inline) should set the property to 42 for the default language
-\item         should write 42.0 in scope.properties.x in pal-container
-\item         (inline) should write 42 in scope.properties.x in pal-container
 \end{enumerate}
 \item     y
 \begin{enumerate}
@@ -46,8 +40,6 @@
 \item         should set the property to 40 for Catalan, 42 for French and 20 for default
 \item         should not set the property
 \item         (inline) should set the property to 42 for the default language
-\item         should write 42.0 in scope.properties.y in pal-container
-\item         (inline) should write 42 in scope.properties.y in pal-container
 \end{enumerate}
 \item     src
 \begin{enumerate}
@@ -103,39 +95,27 @@
 \begin{enumerate}
 \item     subscreen
 \begin{enumerate}
-\item         should always be transformed to <fl:ui fl:subscreen>
+\item         should always be transformed to \textless fl:ui fl:subscreen\textgreater
 \item         should include a screen file (always uses filename screens/99.xml here) in the inner div
-\item         should add a <div> with at least the subscreen css class
+\item         should add a <div\textgreater with at least the subscreen css class
 \end{enumerate}
 \item     img
 \begin{enumerate}
-\item         should be transformed to <fl:ui fl:img>
-\item         should be replaced with <img>
-\item         should set the ng-src attribute in <img>
+\item         should be transformed to \textless fl:ui fl:img\textgreater
+\item         should be replaced with \textless img\textgreater
+\item         should set the ng-src attribute in \textless img\textgreater
 \end{enumerate}
 \item     button
 \begin{enumerate}
-\item         should be transformed to <fl:ui fl:button>
-\item         should be replaced with <a><div class="fl-overlay"></div><div class="caption-container"></div></a>
+\item         should be transformed to \textless fl:ui fl:button\textgreater
+\item         should be replaced with \textless a\textgreater\textless div class="fl-overlay"\textgreater\textless /div\textgreater\textless div class="caption-container"\textgreater\textless /div\textgreater\textless /a\textgreater
 \end{enumerate}
 \item     textarea
 \begin{enumerate}
-\item         should be transformed to <fl:ui fl:textarea>
-\item         should be replaced with <div></div>
+\item         should be transformed to \textless fl:ui fl:textarea\textgreater
+\item         should be replaced with \textless div\textgreater\textless /div\textgreater
 \end{enumerate}
-\item     video: should be transformed to <fl:ui video>
-\item     container
-\begin{enumerate}
-\item         should add a <div> with the necessary css classes
-\item         should add nothing if pal-container is empty
-\item         should add a <div> with css classes to loop vertically (loopy=auto)
-\item         should add a <div> with classes to loop vertically and inline style to repeated elements (loopy=200)
-\item         should add a <div> with css classes to loop
-\item         should add a <div> with css classes to loop horizontally (loopx=auto)
-\item         should add a <div> with css classes to loop horizontally and inline style to repeated elements(loopx=200)
-\item         should add a <div> with css classes to scroll horizontally
-\item         should add a <div> with css classes to scroll vertically
-\end{enumerate}
+\item     video: should be transformed to \textless fl:ui video\textgreater
 \end{enumerate}
 
 \section{Unit testing UI subscreen with real palSettings}
