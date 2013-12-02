@@ -28,68 +28,30 @@ A solution is completely  redesigning, recoding and retesting the program, even 
 
 
 \section{Technology}
-angularJS (teach the browser new syntax), javascript, html5, Qt, QtBrowser and its limitations (JS engine vs chrome v8 or firefox's). tdd+jasmine
-
 The project of this thesis, Flango \cm, is designed to work client side in a web browser.
-The natural technology in this environment is JavaScript, HTML and CSS.
+The natural technology in this environment is JavaScript, \ac{HTML} and \ac{CSS}.
 It uses the Google AngularJS framework with jQuery.
 Angular \textit{teaches the browser new syntax}.
 That is, instead of parsing the \ac{DOM} tree and building the \ac{GUI}, it defines the behaviour of new tags in \ac{HTML} documents that can be treated as regular \ac{HTML} nodes in the \ac{DOM}.
 It interoperates with other systems built with a different technology: components in the robot use \ac{ROS} and the \flangobe has an \ac{API} (see sections \ref{sec:context}, \ref{sec:interaction} and \ref{sec:interoperability} on page \pageref{sec:context}).
 
 \subsection{JavaScript}
-THIS SUBSECTION  IS NOT WRITTEN.
+JavaScript is probably the most misunderstood and at the same time popular language of all times.
+It is the language of the web browser and works closely with the \ac{DOM}, the \ac{API} of the browser.
 
-some hints. functional. scopes.
-language, jquery, qr, swf
+Some good and key ideas in the language include functions, loose typing, dynamic objects and an expressive object literal notations.
+On the other side, the programming model is based on global variables (although the language has tools to mitigate this) \cite{Crockford}.
+Functions are first class objects and can be passed as arguments or returned from functions, just like any other object.
+This allows the language to have function scope and lexical scoping: \\
+\textbf{Function scope} means that variables defined in a function are visible in the entire function, an approach different from block scope in languages like C or Java.\\
+\textbf{Lexical scoping} defines how names are resolved in nested functions: the scope of an inner function contains the scope of the parent function, even if the parent has returned.
+This scoping is key in the strategy to read and inherit properties with the \ac{XML} that defines UI Components.
 
-Object Literal Notation, constructors, closures, var scope, concept of classes
-notes:
-
-First thing you need to know is that JavaScript uses prototype-based inheritance. This means there is no distinction between classes and instances as in other OO languages (like Java). There are just objects. One implication of that is that differentiating between class and object diagrams does not make sense.
-
-Keep in mind that UML includes many types of diagrams, specifically a branch of behavior diagrams, including sequence and use case diagrams. Such diagrams specifically address your concern of modeling javascript as a behavior driven language.
-
-It is quite possible that a javascript system is not using object-oriented design. In such a case, class diagrams would probably not be appropriate, as you pointed out. However, since javascript does support object-oriented design, it is possible for class diagrams to effectively depict a system using javascript. It really depends on how the javascript is being used.
-
-JavaScript is an
-object-based
-language. Just as in C\#, you can create objects, call their
-methods, pass them as parameters, and so on. You could see this clearly when working
-with the DOM, where you manipulated the HTML document through the methods
-and properties of the implicit
-document
-object. However, JavaScript isn't generally
-considered a fully object-oriented language because it lacks support for some features
-that you'd
-fi
-nd in "real" OOP languages, or simply implements them differently.
-
- What does "object-oriented programming" mean anyway? Basically, as the name
-suggests, OOP puts objects at the centre of the programming model. The
-object
-is
-probably the most important concept in the world of OOP—a self-contained entity
-that has
-state
-and
-behavior
-, just like a real-world object. Each object is an instance of a
-class
-(also called
-type
-), which de
-fi
-nes the behavior that is shared by all its objects
-
-
-******
-
-description of the language and big uses
-objects
-functions
-prototypal inheritance (vs classical model, new, etc)
-
+JavaScript is an \textbf{object-oriented prototype-based language}, not a class-based language.
+It has a class-free object system in which objects inherit properties directly from other objects.
+Behaviour reuse (inheritance) is achieved by cloning existing objects (the prototypes).
+Crockford explains the prototypal inheritance mechanism \cite{Crockford:proto}:
+\quote{So instead of creating classes, you make prototype objects, and then use the object function to make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects}
 
 \subsection{AngularJS}
 The framework enforces a very strict separation of responsibilities: \ac{DOM} updates are abstracted away from model updates. 
@@ -744,12 +706,12 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
     \label{fig:design-seqdia-ui-controller}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{sidewaysfigure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/width-link.pdf}
     \caption{flWidth::link}
     \label{fig:design-seqdia-width-link}
-\end{figure}
+\end{sidewaysfigure}
 
 \begin{figure}[htb]
     \centering
@@ -841,6 +803,15 @@ Only after properties of the UI Component Subscreen have been set (and the corre
     \label{fig:design-seqdia-subscreen-compile}
 \end{sidewaysfigure}
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design/seqdia/palSettings-getScreenFile.pdf}
+    \caption{palSettings::getScreenFile}
+    \label{fig:design-seqdia-palsettings-getscreenfile}
+\end{figure}
+
+
+
 \FloatBarrier
 
 \subsection{External Calls}
@@ -879,12 +850,12 @@ The diagrams in this section show the system after the installation.
     \label{fig:deploy-basestation}
 \end{figure}
 
-\begin{sidewaysfigure}[htb]
+\begin{figure}[htb]
     \centering
     \includegraphics{figures/design-deployment-browser.pdf}
     \caption{Deployment Diagram -- browser}
     \label{fig:deploy-browser}
-\end{sidewaysfigure}
+\end{figure}
 
 \begin{figure}[htb]
     \centering
@@ -908,5 +879,3 @@ The diagrams in this section show the system after the installation.
 \end{figure}
 
 \FloatBarrier
-
-FIXME MAYBE ADD NETWORK DIAGRAM? VPN, ENCRIPTION? it's qutie simple
