@@ -315,11 +315,6 @@ For example: an application runs with \lstinline$security_level = 1$ (user) beca
 If client-side code is altered and \lstinline$security_level$ is set to \lstinline$2$ (admin), it will send the command to Qt (or publish it to a \ac{ROS} Topic, depending on the version of this project) and arms will move.
 robotBehaviour assumes safe input from Flango \cm because the code can not be altered except by engineers in the company.
 
-
-\section{Prototypical inheritance}
-TODO
-
-
 \section{Transformation to \ac{HTML}}
 The \texttt{flUi} directive makes decoupling and reusing directives possible \ref{impl-directive-ui}.
 It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}) \ref{impl-directive-basebutton}.
