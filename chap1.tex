@@ -10,9 +10,21 @@ fix the abstract to include UPC (currently only FIB is shown)
 
 \chapter{Introduction}
 % possible quotations: welcome humans. goodwill. and we have a plan.
-This is a report for a master's thesis.
-This document is a stand alone presentation of the work done, which belongs to a larger project: the Content Management System (codenamed \textit{Flango}) for the robots.
-More specifically, this thesis deals with the reengineering of Flango \cm , the part of the system deployed in the robot that displays contents applications on the touchscreen of \reem{H}.
+
+Humanoid service robots of \company have a touchscreen on their torso.
+Using a web application, users create contents applications (e.g. buttons that trigger actions in the robot or a picture gallery) that can be displayed in the screens of the robots.
+The software in the robots depends on \flash and needs to be reengineered with web technology.
+
+This document is a stand alone presentation of the work done at \company , which belongs to a larger project: the Content Management System (codenamed \textit{Flango}).
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/intro-system-overview.pdf}
+    \caption{Overview of the Content Management system}
+    \label{fig:intro-system-overview}
+\end{figure}
+More specifically, \textbf{this thesis deals with the reengineering of Flango \cm , the part of the system deployed \textbf{in the robot}} that displays contents applications on the touchscreen of \reem{H} (\fref{fig:intro-system-overview}).
+\textbf{It does not reengineer the rest of the system}, like the web application (that uses \flash as well) to generate contents applications, although there might be minor changes to adapt their interfaces to the new technology.
+
 It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same that the old system generates.
 
 This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
@@ -45,8 +57,8 @@ They are intended for use in public places such as hotels, malls, airports or mu
     \caption{\reem{H} Series}
     \label{fig:reemseries}
 \end{figure}
-
-\begin{table}[ht]
+\FloatBarrier
+\begin{table}
     \centering
     \begin{tabularx}{\linewidth}{| X | X |}
     \hline
@@ -63,19 +75,12 @@ They are intended for use in public places such as hotels, malls, airports or mu
     \caption{Reem H2 and H3}
     \label{tab:rh2}
 \end{table}
-
+\FloatBarrier
 \section{The Current System}
 The \reem{H} series have a multi-modal interface: besides speech or joystick manual control, humans can use a touch screen to command the robot or obtain information.
 \reem{H} can display multimedia contents like videos, facts about a company, robot features, language settings, etc.
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=14cm]{figures/intro-system-overview}
-    \caption{Overview of the system}
-    \label{fig:intro-system-overview}
-\end{figure}
-
-The Contents Management System comprises \emph{\flangofe} and \emph{\flangobe} (both in Basestation), and \emph{Flango \cm} (in the robot).
+The Contents Management System comprises \emph{\flangofe} and \emph{\flangobe} (both in Basestation), and \emph{Flango \cm} (in the robot) (see \fref{fig:intro-system-overview}).
 The Basestation is an application server that hosts Flango, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
 Clients can create contents applications  with the \flangofe (\se), a tool built with \flash .
 When application contents are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
@@ -84,33 +89,34 @@ When application contents are ready, clients can associate $1$ application with 
 
 The elements of a contents application (screens and entities) have an \ac{XML} representation (listing \ref{example-screen-xml}), an approach similar to popular projects (e.g. Android, NetBeans) and even, in a sense, all \acp{RIA} made with \ac{HTML}.
 
+The Flango \cm interprets the \ac{XML} and displays the result on the screen (\fref{fig:xml-flango-view}).
+
 A contents application is essentially a set of screens, navigation, multimedia contents that users manage with the media library, and entities. 
 The latter are domain objects that can be instantiated and represented in a view. 
-This way a client can create an application that shows information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "shake hands"), display videos and picture galleries, etc.
+This way a user can create an application that shows information about the company, include buttons to provide an easy way to give commands to the robot (e.g. "follow me", "shake hands"), display videos and picture galleries, etc.
 All of these components are localisable:  
 They can be resized, repositioned, repainted... depending on the active language.
 Using other tools, clients can also associate sentences to screens and the text-to-speech system reads them aloud.
 
 \begin{figure}[htb]
-    \label{fig:screens-editor}
     \centering
     \includegraphics[width=\textwidth]{figures/screens-editor}
     \caption{\se , a \flash application in Flango}
+    \label{fig:screens-editor}
 \end{figure}
 
-\reem{H} robots have a built-in software to display the content applications. 
-It is also made with \flash .
-The main responsibility of this software is transforming \ac{XML} files into a \ac{UI}. 
+\reem{H} robots have a built-in software to display the content applications, the Flango \cm , which is also made with \flash .
 Initially, this software has no \ac{GUI} or direct interaction with a person.
+It transforms \ac{XML} files into a \ac{UI} (\fref{fig:xml-flango-view}) and, finally, displays the screens and manages the user interaction (e.g. clicks on a button).
 
 \begin{figure}[htb]
-    \label{fig:xml-flango-view}
     \centering
     \includegraphics[width=\textwidth]{figures/xml-flango-screenshot}
     \caption{From \ac{XML} to the \ac{GUI}}
+    \label{fig:xml-flango-view}
 \end{figure}
 
-\textbf{This thesis documents the project to re-engineer the \cm , in the robot, to use modern web technologies instead of \flash}.
+\textbf{This thesis documents the project of reengineering the \cm , in the robot, with web technology instead of \flash , namely \acs{HTML5}, \acs{CSS3} and \acf{JS}}.
 
 \section{The New System}
 The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
