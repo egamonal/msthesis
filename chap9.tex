@@ -1,50 +1,86 @@
-\chapter{Conclusion}
-\section{Contributions}
-This thesis is emintently a practical work with a clear goal: reengineer Flango \cm with web technology.
-The new version of the software works and is ready for production.
-It covers 80\% of the most common features and can substitute safely the old \flash system.
+\chapter{Conclusions}
+%\section{Conclusions}
+Software products do not degrade with time or external factors but they are adapted, corrected and extended.
+Changes in the project or dependency on third-party software can lead to critical situations (e.g the vendor stop supporting the product) and make the software unmaintainable.
+Reengineering the system, altering the internal structure of the code or even substituting it without changing the external behaviour, becomes a requirement.
 
-%The project is unique and new in the company and solves a need.
+This thesis was eminently a practical work with a clear goal: reengineer Flango \cm with web technology.
 
-This thesis was conceived to apply the principles and techniques acquired not only in this master's course but in the BSc degree as well related to 
+The first chapter, the introduction, provided an overview of the project to develop regarding the context and the boundaries of this thesis.
 
+Next, the second chapter contained a general overview of topics surrounding those that structure and support this thesis.
+It described the reengineering process proposed by Pressman \cite{Pressman:2007}, the evolution and present of web technology and the methodology of this project.
 
-Initially, the project was planned in terms of scope, schedule and budget.
-Secondly, requirements were gathered from exploring the old version and discussing about the system with the previous developer.
+Chapters 3 to 8 described the development of this project from the perspective of software engineering.
+Despite the fact that the software was developed in small iterations, each chapter presents a view of the system: plan, requirements, specification, internal design and deployment, details on the implementation and testing.
 
-After this, the specification of the system was made combining \ac{TDD} and design by contract for the behaviour model, and a class diagram for the conceptual model.
+Initially, the project was \textbf{planned} in terms of scope, schedule and budget. 
+A risk analysis was conducted to prevent and mitigate situations that could make the project fail.
+During the development, deviations were tracked and understood and the plan was adapted accordingly.
+The overall number of hours was approximately the same (FIXME NUMBER) and the scope has been slightly smaller.
+
+Secondly, \textbf{requirements} were gathered from exploring the old version and interviewing the previous developer.
+Using this approach saved time and provided a deep understanding of the system.
+Functional and non-functional requirements were listed along with constraints and off-the-shelf solutions.
+
+After this, the \textbf{specification} of the system was made: system use cases, conceptual model and behaviour model, which combined test-driven development and design by contract.
+Even though this was not a traditional approach to creating the specification of a system, it fitted very well in the development methodology.
 This part was kept as technology agnostic as possible and emphasised the first three steps in a reengineering process: inventory analysis, documentation restructuring and reverse engineering.
+This \emph{reverse engineering} step was crucial to understand the old system and became the most complex and extensive.
 
-Then, the system was designed internally taking into account software engineering principles (\ac{GRASP} and \ac{SOLID}).
-It described the architecture of the software (\ac{MVC}), the patterns (dependency injection, command, factory, revealing module AND FIXME REMOTE FACADE), the strategy to interoperate with the robot's system and with the back-end.
-Several diagrams for a static and a dynamic views were made: class and packages diagrams, sequence diagrams of relevant operations and deployment diagrams.
+Then, the system was \textbf{designed} internally with class and packages diagrams, sequence diagrams of relevant operations and deployment diagrams.
+The software was built with a \ac{MVC} architecture in a SOA-like ecosystem (ROS) and used the following patterns: dependency injection, command, factory, revealing module AND FIXME REMOTE FACADE.
+Designing the software as a service would have been a better choice to make integration with ROS easier.
+In any case, the proposed solution is robust and interoperates correctly with the robot's system by using ROS Bridge and with Basestation, by using JSON.
+This part was done after choosing the technology and emphasised the last three steps in a reengineering process: code restructuring, data restructuring and forward engineering.
+Because the new application substituted the old one, only the \emph{forward engineering} step was relevant, but minor changes in the \flangobe and robotBehaviour were done in the \emph{code/data restructuring} steps.
 
-Finally, the software was implemented with Angular (JavaScript), HTML, SASS and ROSLibJS, and minor changes were made in the back-end (Python).
+Finally, the software was \textbf{implemented} with Google Angular (JavaScript), HTML, SASS, ROSLibJS and other JS libraries.
+There were minor changes in the back-end (Python) and even in the screens editor.
+Amongst other improvements, using web technology made the new system more flexible (changeability of themes, addition of new components) and easier to debug, interoperable (access to ROS Topics and, therefore, to hardware) and increased performance (audio and video with native codecs instead of \flash and use of Google Chrome JavaScript engine instead of QtWebKit's SquirrelFish).
+Google Angular was used in an exotic fashion to fit in the constraints of the \ac{XML}, which resulted in not using all the features of the framework (or even overiding a few of them) but, at the same time, it reduced the workload and the amount of code to write.
+SASS enabled thinking in object oriented design even for style sheets, reuse of code and efficiency in the browser.
 
-The testing strategy had \ac{TDD} at the core all throughout the development of the project.
-Unit tests were used as executable specifications and helped design better components that are less coupled and more cohesive.
+Unit \textbf{tests} were used as \textbf{executable specifications} and helped design less coupled and more cohesive components.
 
-Despite the fact that this thesis sorts chapters as if it had been developed using the waterfall method, the software was designed in small iterations and milestones.
+There are many ways to reengineer a system.
+Pressman's book provided a framework to divide the process in phases, set boundaries, discover new tasks (e.g. extending the \flangobe to obtain data in a suitable format) and structure this document.
 
+Even though there are some limitations, I believe that this master's thesis has described the development of the new system with precision and consistency.
+The software has been constructed applying a systematic approach, proven techniques (like software patterns and architectures) and creativity towards solving a problem: reengineering the Flango \cm .
+
+All the goals of this project have been achieved:
+\begin{enumerate}
+\item The new software works, covers 80\% of the most common features and can substitute safely the old \flash system: it is ready for production.
+\item It has a strong testing strategy with \ac{TDD}.
+\item It is compatible with non-reengineered parts of the system (\flangobe and \flangofe).
+\end{enumerate}
+
+
+\section{Personal note}
 FIXME and now a paragraph about what I learnt in the master's to impress everybody
-
-\section{Challenges}
- FIXME MAYBE NOT NECESSARY
-challenges: tech unkown, soa, fitting xml for flash in web
-
-The project had challenges of diverse nature that were overcome succesfully with patience, attention to details, creativity and logic.
-
-One of the biggest challenges was that the old technology and product were unknown and not documented at the beginning.
-Understanding the role of the application in the system was crucial to develop a successful new product.
-Only in the last weeks of development it was noticed that the application could have been built as a service to make interoperation with ROS easier.
-However, the internal design was flexible enough to adapt to changes and take advantage of the framework.
-
-Another big challenge was to adapt to \ac{XML} and a back-end designed for an ActionScript application.
-Choosing the technology correctly was critical to minimise the work.
-
-
+This master thesis is 
 
 
 \section{Future Work}
+Although I believe that this master's thesis provides a comprehensive and solid description of the system developed, it is important to note that there are limitations that could introduce future work.
 
-davsdfvbsdf
+\paragraph{Project Scope} This thesis presented only a part of the Flango \cm . 
+A number of features were left out of the scope to conform to time constraints and should be added in the upcoming weeks.
+These include the implementation of Entities (incomplete at the time of writing this document) and the management of user sessions.
+
+\paragraph{Content and container} Reading inner and inherited properties (\lstinline$<elem><width>30</width></elem>$) instead of reading them in-line (\lstinline$<elem width=30 />$) becomes cumbersome when UI Components (\lstinline$<fl:ui fl:type=...>$) are in a container defined in the \ac{XML} (\lstinline$<fl:ui fl:type="container">...</elem>$).
+The first strategy proposed used inner attributes in elements to modify the container.
+The current strategy works but can not reuse logic and makes maintainance harder than necessary.
+In the future, a better design should be researched.
+The most frequent use of containers is display entities is not generated by the screens editor, we could change it to regular Angular loop directives.
+
+\paragraph{SOA and integration} There are two clients, at least, that use the software: the robot and a contents application user.
+It was only in the last weeks of development that we considered developing the software as a service, like other components in \ac{ROS} that use the messaging system.
+The software was not designed strictly as a service due to time constraints but included a remote facade to attend requests from the robot via Topics.
+This was a simple approach to a simple need (less than 10 types of requests).
+In the future, redesigning this remote facade should be considered to allow reuse of components and make the logic of Flango \cm a service in the robot.
+
+\paragraph{Theming} The previous version only had one theme and did not implement the logic to change them.
+The new version is ready for this but incomplete.
+In the future, this implementation should be finished and experiment with scaffolding and SASS: variables, \textit{mixins} and inheritance will allow quick development and customisation of the look and feel of contents applications.
