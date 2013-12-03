@@ -538,11 +538,11 @@ requirements for the \@degreeword\ of \\
 \def\MIT{MASSACHUSETTS INSTITUTE OF TECHNOLOGY}
 \def\Mit{Massachusetts Institute of Technology}
 
-\def\UPC{TECHNICAL UNIVERSITY OF CATALONIA}
-\def\Upc{Technical University of Catalonia (BarcelonaTech)}
+\def\UPC{UNIVERSITAT POLIT\`{E}CNICA DE CATALUNYA}
+\def\Upc{Universitat Polit\`{e}cnica de Catalunya}
 
-\def\FIB{BARCELONA SCHOOL OF INFORMATICS}
-\def\Fib{Barcelona School of Informatics}
+\def\FIB{FACULTAT D'INFORM\`{A}TICA DE BARCELONA}
+\def\Fib{Facultat d'inform\`{a}tica de Barcelona}
 
 \def\permission{\par\noindent{\centering
    The author hereby grants to MIT permission to reproduce and to
