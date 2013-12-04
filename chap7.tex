@@ -299,7 +299,7 @@ init \rightarrow getConfig \rightarrow getGenericConfig \rightarrow getApplicati
 \end{eqnarray}
 The latest two operations could run concurrently but if \texttt{getApplicationConfig} failed, \texttt{getStructure} would have to be called again with \texttt{appId = "default"}
 
-This promise is used to block the loading of the application contents until the palSettings service is correctly initialised.
+This promise is used to block the loading of the content applications until the palSettings service is correctly initialised.
 Settings include security parameters like \texttt{perform\_callbacks} or \texttt{security\_level}, routes, \ac{URI} of the home screen, default language... that must not be undefined to guarantee a consistent boot strap of the application.
 
 \paragraph{A note about security} Web or distributed systems normally have two levels of security: one client side, one server side.

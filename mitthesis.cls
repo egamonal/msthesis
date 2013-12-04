@@ -506,7 +506,7 @@ by \\
 \par
 \def\baselinestretch{1}\@normalsize
 Submitted to the \@department \\
-on \@thesisdate, in partial fulfillment of the \\
+on \@thesisdate, in partial fulfilment of the \\
 requirements for the \@degreeword\ of \\
 \@degree
 \end{center}

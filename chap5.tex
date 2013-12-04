@@ -312,7 +312,7 @@ This section describes the services of the system as sequences of events trigger
 \subsection*{Actors}
 The actors who use the system are:
 \begin{description}
-	\item[robotBehaviour] The software that governs the \ac{GUI} of the touchscreen. It can load application contents, bring them to the front, sent them to the back, load other \acp{GUI} etc.
+	\item[robotBehaviour] The software that governs the \ac{GUI} of the touchscreen. It can load content applications, bring them to the front, sent them to the back, load other \acp{GUI} etc.
 	\item[Contents Application User] A person (or any other agent that can use a touchscreen) who interacts with the loaded contents application. Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
 For example: the program displays a screen with one button whose action is to make Reem say "hi, my name is Reem".
 The input is an \ac{XML} file, the output is a \ac{GUI} ready to be used.
@@ -585,7 +585,7 @@ FIXME: robot behaviour ja no cal!!
 \begin{sopcontract}{getScreens(appId: Integer)}
 {Obtains the screens of the contents application with id = \texttt{appId}}
 {\texttt{id} is a well-formatted contents application identifier}
-{A list of all screens of application contents with id = \texttt{appId} was returned}
+{A list of all screens of content applications with id = \texttt{appId} was returned}
 \end{sopcontract}
 
 \begin{sopcontract}{goTo(appId: Integer, uri: String)}
