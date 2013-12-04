@@ -1,8 +1,10 @@
 \chapter{Testing}
 This chapter contains a description of how \ac{TDD} is applied to this project.
 
-\section{Overview}
 Considering testing as equal in importance to application writing makes the code to be more robust, lowers the cost of maintenance and helps to have a better internal design.
+
+\section{Tools and Test Types}
+Angular comes with tools to automate testing:
 \begin{description}
     \item[Jasmine]\footnote{\url{http://pivotal.github.io/jasmine/}} A behaviour-driven development framework for testing JavaScript code.
     It provides a simple and self-descriptive syntax to write test suites.
@@ -48,7 +50,7 @@ It contains several\texttt{it} blocks that check one and only one result (e.g. t
 When karma runner executes all test suites, it creates a report with sentences like "UI directive: width directive should set the property to 42 for the default language".
 The initial situation is an \ac{XML} node, the operation run is \$compile() and the asserts are the \texttt{expect()} operations.
 
-\paragraph{Dependency injection} Even though the internal design of the application minimises the coupling of components and tries to maximise cohesion, there are dependencies between some classes.
+\textbf{Dependency injection} Even though the internal design of the application minimises the coupling of components and tries to maximise cohesion, there are dependencies between some classes.
 This is critical when it involves remote requests or using operations that are defined in another user class (as opposed to using well-tested code in the Angular core).
 It is then desirable to use (and re-use) mocks in tests.
 Dependency injection allows tests to mock dependencies: it loads a module with a mocked dependency of the same name that simply returns hard-coded values but offers the same interface.

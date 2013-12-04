@@ -75,41 +75,6 @@ Depending on the circumstances, completely redesigning a software might be costl
 The project of this thesis redesigns the software to incorporate new practices, new technology and, in the future (out of the scope of the thesis), additional requirements.
 The outcome of this activity is a new software that replaces the current implementation.
 
-%introduction
-
-%software reenginering:
-%main activities (software reengineering prcess model defines 6 activities, fig 30.2):
-%inventory analysis
-%document reestructure (option 1)
-%reverse engineering
-%code restructuring
-%data restructuring
-%forward engineering
-
-%reverse engineering:
-%keys: abstraction level, completeness, directionality:
-%abstraction: make it as high as possible (ideally, entity-relationship models)
-%completeness: how much detail prvided at an abstraction level?
-%(there are tools to analyse software but this thesis isn't using them)
-%directionality: one way. extract info from the source code, give it to an engineer, use it during any mmaintenance %activty,. it can also be two-way (feed info to a reengineering tool that fixes the old program)
-
-%first activity of reverse engineering: understand processing. analyse code at varying levels of abstraction: system, %program, component, pattern, statement. 
-%understand overall functionality before doing more steps (set a context, pay attention to interoperabilty issues). %Block diagrams of the programs (show interaction). do some narrative for each component.
-%normally there is code for: prepare data, process data, prepare results for the view
-
-%next activity: understand data:
-%internal data structures. goal: identify classes. focus on teh definition of classes of objects. book is old-fashioned %and assumes crappy old code.
-%database structure. bottomline: rethink the design.
-
-%next: reverse enginer UI
-
-%restructuring
-%(mention it. this is related to TDD)
-%code restructuring is not enough. it alleviates immediate problems. real benefit is achieved only when data and %architecture are restrucured. spaguetti-bowl code to structured programming.
-%data restructuring: standarise, rationalise, make physical modifications.
-
-%forward engineering: change the code, redesign, or make big changes (completely redesign, recode, test..). preventive %maintenance. cost of maintenance.
-
 
 \section{Web Technology}
 % quotations: something about emacs life style, or berners lee
@@ -183,7 +148,7 @@ Despite the fact that it works in the specific context of a robot, globality is 
 A typical scenario would be a fleet of robots in a conference: users from many different cultural backgrounds can use the application at any time.
 
 
-\subsection{Browsers and isolation of programs}    
+\subsection{Isolation of Applications in the Browser}    
 Many of the websites in the aforementioned third phase contain substantial amounts of client-side code. 
 At the end of the day, a \ac{RIA} is a distributed application. 
 In the past, the client-side part was thin and simple, whereas today's application have complex logic delegated to client nodes with local storage, hardware-accelerated components, web sockets and other advanced capabilities.

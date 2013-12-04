@@ -1,9 +1,10 @@
 \chapter{Design}
 \label{chap:design}
 This chapter describes the internal wiring of the application and the reasons that lead to this design.
-It explains the programming languages, frameworks and most relevant libraries, 
+First, it explains the technology used: the programming languages, frameworks and most relevant libraries.
+Next, it presents the architecture of the system and the application, the software patterns and sequence diagrams of the most relevant operations.
+Finally, it presents a physical view with deployment diagrams.
 
-\section{Overview}
 Reverse engineering the current project involves 3 activities related to technology and implementation details: \textbf{code restructuring}, \textbf{data restructuring} and\textbf{ forward engineering}.
 No modifications in the code of the old version of Flango \cm are scheduled: there is no code or data restructuring.
 However, there are some adaptations to be done in the \flangobe (\ac{API}), \ac{XML} and robotBehaviour:
@@ -14,18 +15,15 @@ It is less verbose (minimise bandwidth) and has a straight-forward translation t
 
 \paragraph{Changes in \ac{XML}} The \ac{XML} syntax is designed to work isolated.
 The new version, however, can mix \ac{XML} with \ac{HTML} thanks to Angular.
-This leads to two problems:
-\begin{itemize}
-\item Some tags of the \ac{XML} vocabulary conflict with \ac{HTML}. For instance, \texttt{caption}. Solution: add a namespace \texttt{fl} to all tags. Thus, in the new version a \\ \lstinline$<ui type="base-button"></ui>$  becomes\\ \lstinline$<fl:ui fl:type="base-button"></fl:ui>$ .
-\end{itemize}
+Some tags of the \ac{XML} vocabulary conflict with \ac{HTML}. For instance, \texttt{caption}. Solution: add a namespace \texttt{fl} to all tags. 
+Therefore, in the new version a \\ \lstinline$<ui type="base-button"></ui>$  becomes\\ \lstinline$<fl:ui fl:type="base-button"></fl:ui>$ .
 
 \paragraph{Changes in robotBehaviour} Current interoperation between Flango \cm and the robot is limited to robotBehaviour.
 This communication is done with JavaScript callbacks and \acp{URL}.
 To decouple the \cm as much as possible from the rest of the robot, the new system uses \ac{ROS} Topics and ROS Bridge
 
-\subsection{Forward Engineering} A program that depends on a dead browser plug-in with performance issues is not sustainable.
+\paragraph{Forward Engineering} A program that depends on a dead browser plug-in with performance issues is not sustainable.
 A solution is completely  redesigning, recoding and retesting the program, even with a different technology that makes it more flexible, open to new developers and without performance problems.
-
 
 \section{Technology}
 The project of this thesis, Flango \cm, is designed to work client side in a web browser.
@@ -134,22 +132,22 @@ A key feature in this project is the \lstinline$@extend$ directive: it tells \ac
 Example: the style \texttt{base-button} has a grey background. The style \texttt{button} sets the size of the element to $100 x 50 px$.
 Because all \texttt{base-button}s are \texttt{button}s, the first should inherit the style from the second instead of replicating it, like one would do with \ac{OOD}.
 With \ac{HTML} this would be written \lstinline$<div class="base-button button" />$.
-With SASS one can write \lstinline$.base-button { @extend .button }$ and keep \ac{HTML} cleaner: \lstinline$<div class="base-button" />$
+With SASS one can write \lstinline$.base-button { @extend .button }$ and keep \ac{HTML} cleaner: \\ \lstinline$<div class="base-button" />$
 
 SASS variables and mixins make it easier to create themes for Flango \cm and have consistency in the visual design (e.g. all themes can have palettes of the same size).
 
 \subsection{Robot Web Tools}
 Robot Web Tools is a collection of open-source modules and tools for building web-based robot applications.
 It provides 3 core libraries to communicate with \ac{ROS} on the robot over rosbridge's WebSocket server: roslibjs, ros2js, and ros3djs.
-This project uses roslibjs\footnote{\url{https://github.com/RobotWebTools/roslibjs}} to subscribe and publish to ROS Topics.
+This project uses roslibjs\footnote{\url{https://github.com/RobotWebTools/roslibjs}} to subscribe and publish to \ac{ROS} Topics.
 
 \section{Architecture}
 This section contains details about the architecture of the system (ROS) and the project of this thesis (Flango \cm ). 
-Flango \cm is a piece in \ac{ROS}, which is simmilar to a \ac{SOA} system, and interoperates with it using its message system.
+Flango \cm is a piece in \ac{ROS}, which is similar to a \ac{SOA} system, and interoperates with it using its message system.
 The following pages have a high-level description of the system architecture and the patterns used.
 
 \subsection{Robot Operating System}
-\ac{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster. 
+The operating system of \reem{H} is Ubuntu Linux. \acf{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster.
 It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
 It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA} \cite{ROS:2009}.
 
@@ -161,7 +159,7 @@ Nodes communicate with each other by publishing/subscribing with two protocols:
 \end{description}
 
 Messages are strictly typed data structures . There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
-To find service in this peer-to-peer topology, there is a lookup mecanism: \emph{rosmaster} \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}.
+To find service in this peer-to-peer topology, there is a lookup mechanism: \emph{rosmaster} \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}.
 
 The robot has two parts: robotBehaviour and Stacks.
 Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} workflow but still uses Topics to communicate with the Stacks, the part of the project that does use \ac{ROS}.
@@ -466,13 +464,12 @@ The notion of package is implemented with Angular modules.
 \FloatBarrier
 
 \section{Dynamic view}
-\subsection{Overview}
 This section contains a detailed description of the most relevant operations.
 They are grouped in 7 FIXME categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
 It always works the same way: writing the appropriate behaviour in directives (controller, compile and link functions) and injecting the required services following the flow that Angular needs.
 
 \subsection{Boot-strap and Configuration}
-During the boot-strap process of Angular, the system performs some key operations, like registering modules, setting dependencies and the default routes (e.g. \texttt{http:// ... /app/index.html\#/products-view/14/detail-view}.
+During the boot-strap process of Angular, the system performs some key operations, like registering modules, setting dependencies and the default routes \\ (e.g. \texttt{http:// ... /app/index.html\#/products-view/14/detail-view}.
 The Flango \cm also fetches de configuration from the backend and builds the local object that represents it.
 Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-2} and \fref{fig:design-seqdia-bootstrap-3}, show the bootstrap of the program.
 
@@ -516,7 +513,7 @@ The three words are often used interchangeably although they have some differenc
 \item Promise: writeable, single assignment container that sets the value of the future.
 \end{itemize}
 Essentially, promises represent the result of a task that might have not been completed, something very common in JavaScript.
-Asynchronous calls are normally handled with callbacks (FIXME see chapter 7 for impl).
+Asynchronous calls are normally handled with callbacks (see \fref{chap:implementation}).
 However, when there are nested or concurrent asynchronous calls, like the case of fetching the configuration from the \flangobe , callbacks become hard to maintain.
 A solution is defining a promise at the beginning and \emph{resolving} it when all calls are completed (or \emph{rejecting} it when a sufficient number of calls have failed).
 This way functions can be decoupled and testing is easier. 
@@ -570,7 +567,7 @@ This way functions can be decoupled and testing is easier.
 Browsers can only parse \ac{HTML} nodes.
 When the parser finds an \ac{XML} node, it prints the inner text node because \ac{HTML} also has text nodes.
 With Angular \ac{XML} nodes can have behaviour: it teaches the browser new syntax.
-For example, \lstinline$<fl:ui fl:base-button fl:x="100" fl:width="90"></ui>$ triggers the directive \lstinline$flBaseButton$, which encapsulates the behaviour to transform it to \ac{HTML}: \lstinline$<a href="..."><div>text</div></a>$.
+For example, \\ \lstinline$<fl:ui fl:base-button fl:x="100" fl:width="90"></ui>$ triggers the directive \\ \lstinline$flBaseButton$, which encapsulates the behaviour to transform it to \ac{HTML}: \\ \lstinline$<a href="..."><div>text</div></a>$.
 
 To expose values to the view, Angular attaches an object \texttt{\$scope} to all directives  \fref{fig:design-properties-management}.
 A scope can be \textbf{isolated}, \textbf{prototypically inherited} from the parent, or \textbf{shared} with other directives of the same type.
@@ -598,7 +595,8 @@ Scopes are also watched to provide two-way data binding with controllers (see CR
 Directives can be \textbf{restricted} to \textbf{Element}, \textbf{Attribute}, \textbf{Class} or \textbf{coMment} \fref{fig:class-ngfactory}.
 Flango \cm is designed to adapt to this syntax and to decouple and reuse elements as much as possible.
 All UI Components have the tag \lstinline$<fl:ui>$ and an attribute \lstinline$fl:type$ that defines the concrete type.
-Instead of having all behaviour in one directive \texttt{fl:ui} (restricted to Element), it uses \texttt{flUi} to rewrite the \ac{DOM}: \lstinline$<fl:ui fl:type="base-button"></ui>$ becomes \lstinline$<fl:ui base-button></ui>$, where \texttt{base-button} is an attribute of the element \texttt{fl:ui}.
+Instead of having all behaviour in one directive \texttt{fl:ui} (restricted to Element), it uses \texttt{flUi} to rewrite the \ac{DOM}:\\
+\lstinline$<fl:ui fl:type="base-button"></ui>$ becomes \\ \lstinline$<fl:ui base-button></ui>$, where \texttt{base-button} is an attribute of the element \texttt{fl:ui}.
 There is a directive \texttt{flBaseButton} (restricted to Attribute) that encapsulates the behaviour of this tag.
 Likewise, it initialises the properties object for this \texttt{ui} element and stores the type that will be later used as a value for the \texttt{class} attribute in the \ac{HTML} element.
 The stylesheet of the theme defines the inheritance of styles: a base-button is implemented with a button and, therefore, inherits all properties of the class \texttt{button}.
@@ -648,7 +646,8 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
     \label{fig:design-seqdia-basebutton-link}
 \end{figure}
 
-\lstinline$<fl:ui base-button></ui>$ eventually becomes \lstinline$<div class="base-button" style="..."><div class="caption">Hello World</caption></div>$. 
+\lstinline$<fl:ui base-button></ui>$ eventually becomes \\
+\lstinline$<div class="base-button" style="..."><div class="caption">Hello World</caption></div>$. 
 With this rewrite strategy the directive eventually outputs real \ac{HTML} that defines the structure of the UI Component and uses the style sheet.
 
 All UI Components have an  \textbf{\ac{HTML} template} that defines their structure, a \textbf{\ac{CSS} class} that defines their style, \textbf{in-line \ac{CSS}} that defines their exclusive properties (e.g. position, size...) and they are binded to \textbf{\texttt{ActionCtrl}} to expose behaviour (e.g. on click).

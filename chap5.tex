@@ -309,18 +309,18 @@ Listing \fref{chap:specification-button-example-1} shows an example of the \ac{X
 \section{Use Case Model}
 This section describes the services of the system as sequences of events triggered by external actors.
 
-\subsection{Actors}
+\subsection*{Actors}
 The actors who use the system are:
-\begin{itemize}
-	\item robotBehaviour: the software that governs the \ac{GUI} of the touchscreen. It can load application contents, bring them to the front, sent them to the back, load other \acp{GUI} etc.
-	\item Contents Application User: a person (or any other agent that can use a touchscreen) who interacts with the loaded contents application. Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
+\begin{description}
+	\item[robotBehaviour] The software that governs the \ac{GUI} of the touchscreen. It can load application contents, bring them to the front, sent them to the back, load other \acp{GUI} etc.
+	\item[Contents Application User] A person (or any other agent that can use a touchscreen) who interacts with the loaded contents application. Humans only interact directly with the output of this software (see \fref{sec:context}), which becomes the \ac{GUI}.
 For example: the program displays a screen with one button whose action is to make Reem say "hi, my name is Reem".
 The input is an \ac{XML} file, the output is a \ac{GUI} ready to be used.
 Humans can now touch the button that sends events to robotBehaviour so, essentially, the \ac{GUI} of the program and not only the output is built as a function of the input.
 When the \ac{GUI} is ready, a new actor (Contents Application User) and new use cases appear.
-\end{itemize}
+\end{description}
 
-\subsection{System Use Cases}
+\subsection*{System Use Cases}
 \begin{figure}[htb]  
     \centering
     \includegraphics[width=\linewidth]{figures/specification-sucs}
@@ -550,7 +550,7 @@ Users do not interact directly with them: they do not execute operations that re
     \centering
     \includegraphics{figures/spec-seq-manage-conf-update.pdf}
     \caption{System Sequence Diagram - Manage Configuration (Update)}
-    \label{fig:spec-manage-conf-create}
+    \label{fig:spec-manage-conf-update}
 \end{figure}
 
 \begin{figure}[htb]

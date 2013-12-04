@@ -7,7 +7,7 @@ Flango \cm belongs to a bigger project.
 The development environment is adapted to this situation to ensure a correct integration.
 Moreover, the project uses tools to run unit tests, generate code, etc.
 
-\subsection{Integration}
+\subsection*{Integration}
 The files of Flango \cm live in the server as part of the \flangobe .
 The backend is developed with Django and requires a set of Python libraries that might not be available in the system.
 To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django, although Basestation uses Apache2 and the robot Lighttpd.
@@ -104,7 +104,7 @@ The first version of the new Flango \cm could run in any of these three levels.
 However, the final version runs in Google Chrome in the robot and there is no need to use this simulation.
 In this case, interoperability is tested with \ac{ROS} topics in localhost and Google Chrome.
 
-\subsection{Tools}
+\subsection*{Tools}
 The development of this project uses a number of tools to automate tasks and control de quality of the code to build a robust product.
 
 \paragraph{\ac{IDE}} WebStorm is an \ac{IDE} based on IntelliJ IDEA designed to develop \acp{RIA}.
@@ -223,7 +223,7 @@ palSettingsModule.factory('palSettings', function (...) {
 \label{sec:controllers}
 Controllers are key parts of any \ac{CRUD} application.
 However, because Flango \cm does not know about the objects of the specific domain  of the contents application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
-\paragraph{Command Pattern} This controller implements the \textbf{command pattern} (\cite{Osmani:2012}) and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments.
+\textbf{Command Pattern} This controller implements the \textbf{command pattern} (\cite{Osmani:2012}) and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments.
 
 \lstinputlisting[label=impl-action-ctrl,language=JavaScript, caption={ActionCtrl implementation}]{src/impl-controllers.js}
 
@@ -463,7 +463,7 @@ var listener = new ROSLIB.Topic({
 listener.subscribe(function(message) { /* callback */ } );
 \end{lstlisting}
 
-\paragraph{Inversion of control} palROSBridge service interfaces to ROSLib.
+\textbf{Inversion of control} palROSBridge service interfaces to ROSLib.
 Services can be injected and add logic specific for Flango \cm .
 To make the subscribe callback available to the client instance, one of the parameters of palROSLib::subscribe() is a function:
 
@@ -478,7 +478,7 @@ var subscribe = function (name, messageType, callback) {
 };
 \end{lstlisting}
 
-\paragraph{Reveal Pattern} This pattern allows for a clearer way of writing JavaScript modules.
+\textbf{Reveal Pattern} This pattern allows for a clearer way of writing JavaScript modules.
 Private methods are in a private closure and only a few are exposed in the returned object as a public \ac{API} with pointers to the internal operation.
 
 \begin{lstlisting}[language=JavaScript, caption=Reveal Pattern in palROSBridge, label=impl-flango-ros-palroslib-reveal]
