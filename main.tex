@@ -29,7 +29,6 @@
 \usepackage{lgrind}
 \usepackage{url}
 \usepackage{acronym}
-\usepackage[colorlinks=true,urlcolor=black,colorlinks=true,linkcolor=black,citecolor=black,filecolor=black,urlcolor=black,]{hyperref}
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{fancyref}
@@ -48,6 +47,9 @@
 \usepackage{xspace}
 \usepackage{textcomp}
 \usepackage[parfill]{parskip}
+\usepackage[toc,page]{appendix}
+\usepackage[hypertexnames=false,colorlinks=true,urlcolor=black,colorlinks=true,linkcolor=black,citecolor=black,filecolor=black,urlcolor=black,bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1]{hyperref}
+%\usepackage{bookmark}
 
 \pagestyle{plain}
 
@@ -61,6 +63,7 @@
 \definecolor{superlightgrey}{RGB}{238,238,238}
  
 \usepackage{enumitem}
+
 \setlist{nolistsep}
  
 \lstset{
@@ -114,6 +117,10 @@
   morekeywords={include, width, height, extend, size}% list your attributes here
 }
 
+%\lstdefinelanguage{terminal} {
+%  moredelim=[s][\color{darkblue}]{}{\$}
+%}
+
 \pdfminorversion=4
 
 %% This bit allows you to either specify only the files which you wish to
@@ -125,18 +132,20 @@
 %\ifx\files\all \typeout{Including all files.} \else \typeout{Including only \files.} %\includeonly{\files} \fi
 
 \begin{document}
-
 \include{cover}
 % Some departments (e.g. 5) require an additional signature page.  See
 % signature.tex for more information and uncomment the following line if
 % applicable.
 % \include{signature}
 \pagestyle{plain}
+\pagenumbering{roman}
+
 \include{contents}
 % FIXME should acronyms go here?
 \newpage
 \include{acronyms}
-
+%\cleardoublepage
+\pagenumbering{arabic}
 \include{chap1} % intro
 \include{chap2} % related work
 \include{chap3} % project management
@@ -147,9 +156,10 @@
 \include{chap8} % test
 \include{chap9} % future work, conclusions
 
-\appendix
+\begin{appendices}
 \include{app-ui-components-list}
 \include{app-tests-report}
+\end{appendices}
 %\include{appb}
 \include{biblio}
 \end{document}
