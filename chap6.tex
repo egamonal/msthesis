@@ -582,8 +582,8 @@ Scopes are also watched to provide two-way data binding with controllers (see CR
     \label{fig:design-properties-management}
 \end{figure}
 
-\lstinputlisting[language=xml, caption={Original XML BaseButton}, label="design-real-xml-button"]{src/from-xml-to-html-1.xml}
-\lstinputlisting[language=JavaScript, caption={Properties object}, label="design-scope-properties"]{src/from-xml-to-html-properties.js}
+\lstinputlisting[language=xml, caption={Original XML BaseButton}, label=design-real-xml-button]{src/from-xml-to-html-1.xml}
+\lstinputlisting[language=JavaScript, caption={Properties object}, label=design-scope-properties]{src/from-xml-to-html-properties.js}
 
 \begin{figure}
     \centering
@@ -601,7 +601,7 @@ There is a directive \texttt{flBaseButton} (restricted to Attribute) that encaps
 Likewise, it initialises the properties object for this \texttt{ui} element and stores the type that will be later used as a value for the \texttt{class} attribute in the \ac{HTML} element.
 The stylesheet of the theme defines the inheritance of styles: a base-button is implemented with a button and, therefore, inherits all properties of the class \texttt{button}.
 
-Figure \fref{fig:design-xml-to-html-3} shows the implementation of the transformation the base button in the \ac{XML} screen (\ref{design-real-xml-button}) and the use of the properties object in the scope (\ref{fig:design-xml-to-html-3}).
+\Fref{fig:design-xml-to-html-3} shows the transformation of a base button in the \ac{XML} screen (listing \ref{design-real-xml-button}) and the use of the properties object in the scope (listing \ref{design-scope-properties}).
 
 The algorithm to decide the properties for an object and draw it with \ac{HTML} goes with the flow of the framework:
 \begin{enumerate}
