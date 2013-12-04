@@ -187,8 +187,8 @@ Topics are the only way to communicate with it.
     \label{fig:design-ros-services}
 \end{figure}
 
-\subsection{MVC}
-\ac{MVC} is a decoupled architecture with a strong separation of responsibilities (\fref{fig:mvc-overview}).
+\subsection{\acf{MVC}}
+\acf{MVC} is a decoupled architecture with a strong separation of responsibilities (\fref{fig:mvc-overview}).
 \begin{description}
     \item[Model] (application state). Maintains application state and notifies dependent views and controllers when changes occur (with the observer pattern)
     \item[View] (output) queries the model to print [parts of] it, listens for changes in the model
@@ -200,9 +200,9 @@ It is possible to have multiple views and controllers for the same model and the
 Angular applications take the most of the framework when they are designed with a \ac{MVC} architecture.
 A typical use case in a \ac{MVC} application might be:
 \begin{itemize}
-    \item Model: [orange, apple, pineapple, coconut]
+    \item Model: \texttt{[orange, apple, pineapple, coconut]}
     \item View: displays a list of 2 random pieces of fruit
-    \item Controller: logic that decides to fetch two pieces of fruit
+    \item Controller: logic to fetch two pieces of fruit
 \end{itemize}
 
 Flango \cm does not have a \ac{GUI} or a set of predefined and stable use cases: this changes for every contents application.
@@ -224,14 +224,14 @@ FIXME: SURE? Controllers are completely separated from the view and unaware of i
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-mvc-1.pdf}
-    \caption{MVC overview}
+    \caption{\ac{MVC} overview}
     \label{fig:mvc-overview}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-mvc-2.pdf}
-    \caption{MVC with observer pattern}
+    \caption{\ac{MVC} with observer pattern}
     \label{fig:mvc-with-observer}
 \end{figure}
 
@@ -259,7 +259,7 @@ The dependency is supplied to the software component.
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-servicelocator.pdf}
-    \caption{Service Locator}
+    \caption{Pattern: Service Locator}
     \label{fig:design-service-locator}
 \end{figure}
 
@@ -278,10 +278,9 @@ For example, a Directive Definition Object or a Service.
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-factory.pdf}
-    \caption{Factory Method}
+    \caption{Pattern: Factory Method}
     \label{fig:design-patterns-factory}
 \end{figure}
-
 
 \paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having separated the units of code for a project.
 JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
@@ -305,20 +304,20 @@ Other names are \textbf{Transaction} or \textbf{Action Pattern}
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-command-1.pdf}
-    \caption{design patterns command 1}
+    \caption{Pattern: Command (general)}
     \label{fig:design-command-general}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-command-flango.pdf}
-    \caption{design patterns command flango}
+    \caption{Pattern: Command (in Flango \cm}
     \label{fig:design-command-flango}
 \end{figure}
 
 \Fref{fig:design-command-general} shows the class diagram of this pattern in the context a traditional object-oriented programming language.
 With JavaScript there are no abstract classes.
-Osmani (\cite{Osmani:2012} proposes having only concrete classes with a common \texttt{execute()} method.
+Osmani \cite{Osmani:2012} proposes having only concrete classes with a common \texttt{execute()} method.
 \fref{sec:controllers} contains a description of the implementation in JavaScript of this pattern.
 
 With a simple controller (\fref{fig:design-command-general}) one would call the methods in the object.
@@ -370,14 +369,14 @@ Most of boxes in these diagrams are not strictly classes but objects that the fr
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-class-ui.pdf}
-    \caption{Class Diagram -- UI}
+    \caption{Class Diagram: UI}
     \label{fig:class-ui}
 \end{figure}
 
 \begin{sidewaysfigure}[htb]
     \centering
     \includegraphics{figures/design-class-uicomponent.pdf}
-    \caption{Class Diagram -- UI Component}
+    \caption{Class Diagram: UI Component}
     \label{fig:class-uicomponent}
 \end{sidewaysfigure}
 
@@ -391,28 +390,28 @@ Most of boxes in these diagrams are not strictly classes but objects that the fr
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-class-services.pdf}
-    \caption{Class Diagram -- UI services}
+    \caption{Class Diagram: UI services}
     \label{fig:class-services}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-class-ngfactory.pdf}
-    \caption{Class Diagram -- angular factory}
+    \caption{Class Diagram: Angular factory}
     \label{fig:class-ngfactory}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-class-controllers.pdf}
-    \caption{Class Diagram -- angular controllers}
+    \caption{Class Diagram: Angular controllers}
     \label{fig:class-controllers}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-class-action.pdf}
-    \caption{Class Diagram -- ui action}
+    \caption{Class Diagram: UI action}
     \label{fig:class-action}
 \end{figure}
 
@@ -425,42 +424,42 @@ The notion of package is implemented with Angular modules.
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-package-controllers.pdf}
-    \caption{Packages Diagram -- controllers}
+    \caption{Packages Diagram: Controllers}
     \label{fig:pkg-controllers}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-package-reemi.pdf}
-    \caption{Packages Diagram -- application}
+    \caption{Packages Diagram: Application}
     \label{fig:pkg-reemi}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-package-services.pdf}
-    \caption{Packages Diagram -- services}
+    \caption{Packages Diagram: Services}
     \label{fig:pkg-services}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-package-uicomponents.pdf}
-    \caption{Packages Diagram -- UI components}
+    \caption{Packages Diagram: UI components}
     \label{fig:pkg-uicomponents}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-package-ui.pdf}
-    \caption{Packages Diagram -- UI}
+    \caption{Packages Diagram: UI}
     \label{fig:pkg-ui}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-package-uithemecomponents.pdf}
-    \caption{Packages Diagram -- UI theme components}
+    \caption{Packages Diagram: UI theme components}
     \label{fig:pkg-themecomponents}
 \end{figure}
 
@@ -480,21 +479,21 @@ Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/bootstrap-1.pdf}
-    \caption{Bootstrap 1}
+    \caption{Sequence Diagram: Bootstrap 1}
     \label{fig:design-seqdia-bootstrap-1}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/bootstrap-2.pdf}
-    \caption{Bootstrap 2}
+    \caption{Sequence Diagram: Bootstrap 2}
     \label{fig:design-seqdia-bootstrap-2}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/bootstrap-3.pdf}
-    \caption{Bootstrap 3}
+    \caption{Sequence Diagram: Bootstrap 3}
     \label{fig:design-seqdia-bootstrap-3}
 \end{figure}
 
@@ -525,28 +524,28 @@ This way functions can be decoupled and testing is easier.
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-init.pdf}
-    \caption{init()}
+    \caption{Sequence Diagram: init()}
     \label{fig:design-seqdia-palSettings-init}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-getConfig.pdf}
-    \caption{getConfig()}
+    \caption{Sequence Diagram: getConfig()}
     \label{fig:design-seqdia-palSettings-getConfig}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-getGenericConfig.pdf}
-    \caption{getGenericConfig()}
+    \caption{Sequence Diagram: getGenericConfig()}
     \label{fig:design-seqdia-palSettings-getGenericConfig}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-getApplicationConfig.pdf}
-    \caption{getApplicationConfig()}
+    \caption{Sequence Diagram: getApplicationConfig()}
     \label{fig:design-seqdia-palSettings-getApplicationConfig}
 \end{figure}
 
@@ -554,14 +553,14 @@ This way functions can be decoupled and testing is easier.
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-getStructure.pdf}
-    \caption{getStructure()}
+    \caption{Sequence Diagram: getStructure()}
     \label{fig:design-seqdia-palSettings-getStructure}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-defaultApplicationConfig.pdf}
-    \caption{defaultApplicationConfig()}
+    \caption{Sequence Diagram: defaultApplicationConfig()}
     \label{fig:design-seqdia-palSettings-defaultApplicationConfig}
 \end{figure}
 
@@ -592,10 +591,9 @@ Scopes are also watched to provide two-way data binding with controllers (see CR
 \begin{figure}
     \centering
     \includegraphics{figures/design/from-xml-to-html-3.pdf}
-    \caption{Transformation from XML to HTML and styles management}
+    \caption{Transformation from \acs{XML} to \acs{HTML} and styles management}
     \label{fig:design-xml-to-html-3}
 \end{figure}
-
 
 Directives can be \textbf{restricted} to \textbf{Element}, \textbf{Attribute}, \textbf{Class} or \textbf{coMment} \fref{fig:class-ngfactory}.
 Flango \cm is designed to adapt to this syntax and to decouple and reuse elements as much as possible.
@@ -618,35 +616,35 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/ui-compile.pdf}
-    \caption{flUi::compile}
+    \caption{Sequence Diagram: flUi::compile}
     \label{fig:design-seqdia-ui-compile}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/ui-controller.pdf}
-    \caption{flUi::controller}
+    \caption{Sequence Diagram: flUi::controller}
     \label{fig:design-seqdia-ui-controller}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/ui-link.pdf}
-    \caption{flUi::link}
+    \caption{Sequence Diagram: flUi::link}
     \label{fig:design-seqdia-ui-link}
 \end{figure}
 
 \begin{sidewaysfigure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/width-link.pdf}
-    \caption{flWidth::link}
+    \caption{Sequence Diagram: flWidth::link}
     \label{fig:design-seqdia-width-link}
 \end{sidewaysfigure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/basebutton-link.pdf}
-    \caption{flBaseButton::link}
+    \caption{Sequence Diagram: flBaseButton::link}
     \label{fig:design-seqdia-basebutton-link}
 \end{figure}
 
@@ -676,21 +674,21 @@ To create the list of actions, when the component is clicked it runs \lstinline$
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/actionCtrl-executeActions.pdf}
-    \caption{ActionCtrl::executeActions}
+    \caption{Sequence Diagram: ActionCtrl::executeActions}
     \label{fig:design-seqdia-actionCtrl-executeActions}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/actionCtrl-execute.pdf}
-    \caption{ActionCtrl::execute}
+    \caption{Sequence Diagram: ActionCtrl::execute}
     \label{fig:design-seqdia-actionCtrl-execute}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/actionCtrl-goto.pdf}
-    \caption{ActionCtrl::execute}
+    \caption{Sequence Diagram: ActionCtrl::execute}
     \label{fig:design-seqdia-actionCtrl-goto}
 \end{figure}
 
@@ -710,7 +708,7 @@ e.g. the \ac{URL} \texttt{/main-view/animals-list} does not populate the subscre
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/internal-navigation.pdf}
-    \caption{Screens and subscreens for internal navigation}
+    \caption{Internal navigation with Screens and subscreens}
     \label{fig:design-internal-navigation}
 \end{figure}
 
@@ -721,18 +719,16 @@ Only after properties of the UI Component Subscreen have been set (and the corre
 \begin{sidewaysfigure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/subscreen-compile.pdf}
-    \caption{Subscreen::compile}
+    \caption{Sequence Diagram: Subscreen::compile}
     \label{fig:design-seqdia-subscreen-compile}
 \end{sidewaysfigure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/palSettings-getScreenFile.pdf}
-    \caption{palSettings::getScreenFile}
+    \caption{Sequence Diagram: palSettings::getScreenFile}
     \label{fig:design-seqdia-palsettings-getscreenfile}
 \end{figure}
-
-
 
 \FloatBarrier
 
@@ -745,14 +741,14 @@ service, topic, rosbridge, etc
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/ROSBridgeCtrl-creation.pdf}
-    \caption{ROSBridgeCtrl::instantiation and subscription to topic}
+    \caption{Sequence Diagram: ROSBridgeCtrl::instantiation and subscription to topic}
     \label{fig:design-seqdia-ROSBridgeCtrl-creation}
 \end{figure}
 
 \begin{sidewaysfigure}[htb]
     \centering
     \includegraphics{figures/design/seqdia/ROSBridgeCtrl-callback.pdf}
-    \caption{ROSBridgeCtrl::Example callback function}
+    \caption{Sequence Diagram: ROSBridgeCtrl::Example callback function}
     \label{fig:design-seqdia-ROSBridgeCtrl-callback}
 \end{sidewaysfigure}
 
@@ -768,35 +764,35 @@ The diagrams in this section show the system after the installation.
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-deployment-basestation.pdf}
-    \caption{Deployment Diagram -- basestation}
+    \caption{Deployment Diagram: Basestation}
     \label{fig:deploy-basestation}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-deployment-browser.pdf}
-    \caption{Deployment Diagram -- browser}
+    \caption{Deployment Diagram: Browser}
     \label{fig:deploy-browser}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-deployment-mediacomputer.pdf}
-    \caption{Deployment Diagram -- media computer}
+    \caption{Deployment Diagram: Media computer}
     \label{fig:deploy-media}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-deployment-reem.pdf}
-    \caption{Deployment Diagram -- reem}
+    \caption{Deployment Diagram: Reem}
     \label{fig:deploy-reem}
 \end{figure}
 
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-deployment-webserver.pdf}
-    \caption{Deployment Diagram -- webserver}
+    \caption{Deployment Diagram: Webserver}
     \label{fig:deploy-webserver}
 \end{figure}
 

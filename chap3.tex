@@ -8,8 +8,8 @@ The system has three parts: the \flangobe, the \flangofe (with the \se) both at 
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=14cm]{figures/intro-system-overview}
-    \caption{System components}
+    \includegraphics{figures/intro-system-overview.pdf}
+    \caption{Boundaries and context of this project}
     \label{fig:system-overview}
 \end{figure}
 
@@ -76,10 +76,8 @@ Prepare package with a stable set of features, presentation and documentation.
 
 \section{Cost}
 
-\FloatBarrier
-
 \label{sec:budget}
-The estimated length of the project is $105 days \times 8 \euro{} \times 8 hours = 6720 \euro{} $
+The estimated length of the project is $95 days \times 8 \euro{} \times 8 hours = 6080 \euro{} $
 
 \begin{table}[ht]
     \centering
@@ -93,7 +91,7 @@ The estimated length of the project is $105 days \times 8 \euro{} \times 8 hours
     \multirow{2}{*}{Software}
         & JetBrains WebStorm license 89.10\euro{} \\ % check this    
         & GNU/Linux 0\euro{} \\ \hline
-     Overall & 7259.10\euro{} \\ 
+     Overall & 6619.10\euro{} \\ 
      \hline
     \end{tabular}
     \caption{Budget}
@@ -165,7 +163,7 @@ This is the case of subversion servers, network, power, backups, etc.
 {Inadequate technology}
 {The chosen technology is inadequate: it doesn't allow a complete reengineering of the application (100\% of chosen use cases), performance is more than 10\% lower, it is not reliable and fails in more than 3\% of action executions}
 {Assess at least 2 solutions before implementing a prototype. Implement a prototype with basic cases of at least each critical feature.}
-{sdnsdgndf}
+{Stop the development and evaluate a different technology.}
 \end{risk}
 
 \begin{risk}
@@ -173,11 +171,11 @@ This is the case of subversion servers, network, power, backups, etc.
 {The current implementation of the backend or the screens editor might have bugs.
 Some undocumented features or \ac{XML} elements might be misleading (e.g. The normal behaviour for the QR component is generating a QR code. \lstinline$<ui type="qr" src="path">$ does not generate a QR code, but embeds an image that already exists instead.) }
 {Contact the application expert before implementing the feature.}
-{Fix the backend (python) or ask/hire the application expert to fix the screens editor (Adobe Flash)}
+{Fix the backend (Python) or ask/hire the application expert to fix the screens editor (\flash)}
 \end{risk}
 
 \begin{risk}
-{AngularJS or dependencies do not perform as advertised \footnote{Added after specifications were defined}}
+{Angular or dependencies do not perform as advertised \footnote{Added after specifications were defined}}
 {The chosen framework and libraries have young maturity and might contain bugs, be subject to rapid changing cycles and new versions might break older versions}
 {Use stable versions}
 {Investigate the bug, isolate it, create a minimal full working example and, if possible, open a pull request with a fix in Github or notify the error to the project managers.}
@@ -186,5 +184,44 @@ Some undocumented features or \ac{XML} elements might be misleading (e.g. The no
 \FloatBarrier
 
 \section{Execution}
-progress, deviations, final cost
-FIXME
+The project was planned initially to start on April 4 and end on September 1 with full-time dedication: 760h.
+However, some situations caused a first delay and the ending day was pushed to October 10.
+Another delay appeared and the final date was moved to December 18.
+the overall number of hours remained approximately the same, 870h (+14\%).
+Delays were caused by changes in the dedication time (with some weeks working only 20\% of the time on this project) or the appearance of risks.
+This section summarises the execution of the project, the risks that appeared and the actions taken, the delays and the final result.
+
+\paragraph{Scope}
+The project had initially 2 iterations (\fref{tab:milestones}).
+Whereas the first iteration was completed in time, in the second iteration entities were removed from the scope in order to deliver the project in time.
+Parsing of deprecated components was also removed from the scope.
+
+\paragraph{Risks}
+\begin{itemize}
+\item \textbf{Schedule and resources: deviation}. The company had urgent tasks and it was impossible to work full-time on this project. 
+Among other delays, development was stopped for 2 weeks in June, 4 days in late July, and one week per month until December.
+The development finished on the last week of November and this document was finished on December 8.
+The solution was rescheduling all iterations and cutting the scope.
+\item \textbf{Personnel: Application expert leaves the project}. The engineer that developed the old system left the company in September. Since then, only minor bugs have appeared and they have been fixed without contacting him. In September he had documented a big part of the project.
+\end{itemize}
+
+\paragraph{Cost}
+The final length of the project is $109 days \times 8 \euro{} \times 8 hours = 6976 \euro{} $
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{| l | l |}
+    \hline
+    Labour & 6976\euro{} \\ \hline
+    \multirow{3}{*}{Hardware} 
+        & Desktop Computer (amortized) 250\euro{} \\ % check this
+        & 22 Monitor (amortized) 50\euro{} \\
+        & Reem H3 testing time 150\euro{} \\ \hline   
+    \multirow{2}{*}{Software}
+        & JetBrains WebStorm license 89.10\euro{} \\ % check this    
+        & GNU/Linux 0\euro{} \\ \hline
+     Overall & 7515.10\euro{} \\ 
+     \hline
+    \end{tabular}
+    \caption{Final cost}
+    \label{tab:final-cost}
+\end{table}
