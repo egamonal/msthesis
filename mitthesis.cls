@@ -474,14 +474,16 @@ at the
 \noindent\begin{minipage}{\textwidth}
 \begin{minipage}[t][2 cm][b]{0.5\textwidth}  
     \begin{flushleft}
-    N\'{u}ria Castell Ari\~{n}o \\
-    Thesis Supervisor
+    N\'{u}ria Castell\\
+    Tutor \\
+    Associate Professor
     \end{flushleft}
 \end{minipage} 
 \hfill
 \begin{minipage}[t][2 cm][b]{0.5\textwidth} 
     \begin{flushright}
     Daniel Pinyol \\
+    Supervisor \\ 
     CTO at \company
     \end{flushright}
 \end{minipage} 
