@@ -19,7 +19,7 @@ The first three focus on what the system does and are used in this chapter, wher
 
 This chapter starts by describing the \textbf{current system}: the software parts (\textbf{inventory analysis}) and what it does (\textbf{reverse engineering} to understand the system with special attention to \textbf{context}, \textbf{interaction} and \textbf{interoperability}).
 It is followed by a description of what the \textbf{new system} has to do: the \textbf{specification} comprises a \textbf{conceptual model}, a \textbf{use case model} and a \textbf{behaviour model}.
-FIXME Finally, it describes the \ac{XML} used to represent contents applications.
+FIXME Finally, it describes the \ac{XML} used to represent content applications.
 
 \section{Inventory Analysis}
 A list of software in the organisation makes candidates for reengineering appear.
@@ -109,7 +109,7 @@ Details of how this software does the same with a new technology are in \fref{ch
 The program that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, developed with Qt.
 A window in this program contains a QtWebKit widget, the embedded web browser that loads the contents for the touchscreen.
 Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\ref{fig:context-original} on \pageref{fig:context-original}).
-The \flangobe has an \ac{API} to serve the contents applications to the robots.
+The \flangobe has an \ac{API} to serve the content applications to the robots.
 The project of this thesis is reengineering the Flango \cm , in the robot (\fref{fig:context-new}).
 
 \FloatBarrier
@@ -252,7 +252,7 @@ However, the new implementation uses \ac{JSON} because it is more \ac{JS}-friend
 \end{sidewaysfigure}
 
 The new Flango \cm has to be compatible with the current implementation of the \se (\flangofe).
-Otherwise, users would create contents applications with the \se that would look different when they are displayed in the robot.
+Otherwise, users would create content applications with the \se that would look different when they are displayed in the robot.
 To ensure compatibility, it is necessary a good understanding not only at system level, but at component level.
 It is required, then, that the new implementation displays consistently all of the \ac{UI} components that the \se can create exactly like it does with the old version. 
 Same applies to settings and use of entities.
@@ -619,7 +619,7 @@ FIXME: robot behaviour ja no cal!!
 \subsection{Unit Tests}
 The conceptual model in \fref{fig:specification-conceptual-model} describes the real world and shows the relationship between elements that define the problem.
 Actors do not interact with most of the classes shown and contracts and sequence diagrams are intended to describe the system as a unit that provides some service to actors.
-One of the goals of this project is making it compatible with the current \ac{XML} that defines the contents applications.
+One of the goals of this project is making it compatible with the current \ac{XML} that defines the content applications.
 To meet this goal, it should be clearly specified how \ac{XML} are parsed.
 This project uses \ac{TDD} and has executable specifications for all parts of the system, including those (e.g. internal operations or parsing) that are not strictly eligible for other sections in this chapter.
 

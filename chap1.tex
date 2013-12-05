@@ -12,8 +12,8 @@ This document is a stand alone presentation of the work done at \company , which
     \caption{Overview of the Content Management System}
     \label{fig:intro-system-overview}
 \end{figure}
-More specifically, \textbf{this thesis deals with the reengineering of Flango \cm , the part of the system deployed \textbf{in the robot}} that displays contents applications on the touchscreen of \reem{H} (\fref{fig:intro-system-overview}).
-\textbf{It does not reengineer the rest of the system}, like the web application (that uses \flash as well) to generate contents applications, although there might be minor changes to adapt their interfaces to the new technology.
+More specifically, \textbf{this thesis deals with the reengineering of Flango \cm , the part of the system deployed \textbf{in the robot}} that displays content applications on the touchscreen of \reem{H} (\fref{fig:intro-system-overview}).
+\textbf{It does not reengineer the rest of the system}, like the web application (that uses \flash as well) to generate content applications, although there might be minor changes to adapt their interfaces to the new technology.
 
 It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same that the old system generates.
 
@@ -72,7 +72,7 @@ The \reem{H} series have a multi-modal interface: besides speech or joystick man
 
 The Contents Management System comprises \emph{\flangofe} and \emph{\flangobe} (both in Basestation), and \emph{Flango \cm} (in the robot) (see \fref{fig:intro-system-overview}).
 The Basestation is an application server that hosts Flango, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
-Clients can create contents applications  with the \flangofe (\se), a tool built with \flash .
+Clients can create content applications  with the \flangofe (\se), a tool built with \flash .
 When content applications are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
 
 \lstinputlisting[label=example-screen-xml,language=XML, caption={Example Screen XML}, breaklines=true]{src/example-screen.xml}
