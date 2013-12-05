@@ -14,7 +14,7 @@
    id="svg4812"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="New document 2">
+   sodipodi:docname="design-patterns-command-flango.svg">
   <defs
      id="defs4814">
     <marker
@@ -203,16 +203,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="520"
+     inkscape:zoom="1.4"
+     inkscape:cx="383.52687"
+     inkscape:cy="539.38881"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="513"
-     inkscape:window-height="406"
+     inkscape:window-width="1219"
+     inkscape:window-height="766"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="24"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata4817">
@@ -222,7 +222,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -304,8 +304,9 @@
       <path
          style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          inkscape:connector-curvature="0"
-         d="m 0,25 133,0 0,123 L 0,148 0,25 z"
-         id="id120" />
+         d="m 0,25 133,0 0,105 -133,0 z"
+         id="id120"
+         sodipodi:nodetypes="ccccc" />
       <g
          id="g1269">
         <clipPath

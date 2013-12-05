@@ -1,9 +1,9 @@
 \chapter{Design}
 \label{chap:design}
 This chapter describes the internal wiring of the application and the reasons that lead to this design.
-First, it explains the technology used: the programming languages, frameworks and most relevant libraries.
+First, it explains the technology used: the programming language, frameworks and most relevant libraries.
 Next, it presents the architecture of the system and the application, the software patterns and sequence diagrams of the most relevant operations.
-Finally, it presents a physical view with deployment diagrams.
+Finally, it includes a physical view with deployment diagrams.
 
 Reverse engineering the current project involves 3 activities related to technology and implementation details: \textbf{code restructuring}, \textbf{data restructuring} and\textbf{ forward engineering}.
 No modifications in the code of the old version of Flango \cm are scheduled: there is no code or data restructuring.
@@ -16,7 +16,7 @@ It is less verbose (minimise bandwidth) and has a straight-forward translation t
 \paragraph{Changes in \ac{XML}} The \ac{XML} syntax is designed to work isolated.
 The new version, however, can mix \ac{XML} with \ac{HTML} thanks to Angular.
 Some tags of the \ac{XML} vocabulary conflict with \ac{HTML}. For instance, \texttt{caption}. Solution: add a namespace \texttt{fl} to all tags. 
-Therefore, in the new version a \\ \lstinline$<ui type="base-button"></ui>$  becomes\\ \lstinline$<fl:ui fl:type="base-button"></fl:ui>$ .
+Therefore, in the new version a \lstinline$<ui type="base-button"></ui>$ becomes \\ \lstinline$<fl:ui fl:type="base-button"></fl:ui>$ .
 
 \paragraph{Changes in robotBehaviour} Current interoperation between Flango \cm and the robot is limited to robotBehaviour.
 This communication is done with JavaScript callbacks and \acp{URL}.
@@ -27,6 +27,7 @@ A solution is completely  redesigning, recoding and retesting the program, even 
 
 \section{Technology}
 The project of this thesis, Flango \cm, is designed to work client side in a web browser.
+That is, in the robot, as a client, despite the fact that the server is in the robot as well.
 The natural technology in this environment is JavaScript, \ac{HTML} and \ac{CSS}.
 It uses the Google Angular framework with jQuery.
 Angular \textit{teaches the browser new syntax}.
@@ -37,7 +38,7 @@ It interoperates with other systems built with a different technology: component
 JavaScript is probably the most misunderstood and at the same time popular language of all times.
 It is the language of the web browser and works closely with the \ac{DOM}, the \ac{API} of the browser.
 
-Some good and key ideas in the language include functions, \textbf{loose typing}, \textbf{dynamic objects} and an expressive \textbf{object literal notations}.
+Some good and key ideas in the language include \textbf{functions}, \textbf{loose typing}, \textbf{dynamic objects} and an expressive \textbf{object literal notations}.
 On the other side, the programming model is based on global variables (although the language has tools to mitigate this) \cite{Crockford}.
 \textbf{Functions are first class objects} and can be passed as arguments or returned from functions, just like any other object.
 This allows the language to have function scope and lexical scoping: \\
@@ -54,11 +55,7 @@ So instead of creating classes, you make prototype objects, and then use the obj
 \end{quote}
 
 \subsection{AngularJS}
-The framework enforces a very strict separation of responsibilities: \ac{DOM} updates are abstracted away from model updates. 
-Directives act as the layer that keeps the two parts loosely coupled.
-On one hand, directives translate data into user interfaces and, on the other hand, directives translate user interactions back into \texttt{\$scope} behaviors. FIXME Reword this
-
-\paragraph{Overview} Angular is a framework for dynamic web applications.
+\paragraph{Overview} Angular is a \ac{MVC} framework for dynamic web applications that enforces a strict separation of concerns.
 \ac{HTML} was created to declare static documents and needs libraries and frameworks to enable application development.
 Angular lets developers use \ac{HTML} in the templates and extend the language syntax to express reusable components.
 It \textit{teaches the browser new syntax} through a construct called Directive.
@@ -70,8 +67,8 @@ Features:
 
 Flango \cm reads \ac{XML} and renders it as \ac{HTML}.
 There are two possible approaches: parsing the \ac{DOM} tree in the browser or teaching the browser new syntax.
-This project uses the second (FIXME language: the latter?): instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (Angular Directives) and includes the \ac{XML} files in the appropriate place in the \ac{DOM}. 
-The browser already traverses the tree to render the page and there is no need to do it manually.
+This project uses the latter: instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (Angular Directives) and includes the \ac{XML} files in the appropriate places in the \ac{DOM}. 
+The browser already traverses the tree in order to display the page and there is no need to do it manually.
 Normally a browser ignores an element that does not belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></fl:ui>$)
 With Angular, the browser runs the behaviour defined in the reusable component.
 
@@ -132,9 +129,9 @@ A key feature in this project is the \lstinline$@extend$ directive: it tells \ac
 Example: the style \texttt{base-button} has a grey background. The style \texttt{button} sets the size of the element to $100 x 50 px$.
 Because all \texttt{base-button}s are \texttt{button}s, the first should inherit the style from the second instead of replicating it, like one would do with \ac{OOD}.
 With \ac{HTML} this would be written \lstinline$<div class="base-button button" />$.
-With SASS one can write \lstinline$.base-button { @extend .button }$ and keep \ac{HTML} cleaner: \\ \lstinline$<div class="base-button" />$
+With SASS one can write \lstinline$.base-button { @extend .button }$ and keep \ac{HTML} cleaner: \\ \lstinline$<div class="base-button" />$ instead of \lstinline$<div class="base-button button" />$
 
-SASS variables and mixins make it easier to create themes for Flango \cm and have consistency in the visual design (e.g. all themes can have palettes of the same size).
+SASS variables and mixins make it easier to create themes for Flango \cm and provide a way to ensure visual consistency (e.g. all themes can have palettes of the same size).
 
 \subsection{Robot Web Tools}
 Robot Web Tools is a collection of open-source modules and tools for building web-based robot applications.
@@ -148,7 +145,7 @@ The following pages have a high-level description of the system architecture and
 
 \subsection{Robot Operating System}
 The operating system of \reem{H} is Ubuntu Linux. \acf{ROS} is a framework for robot software development that provides operating system-like functionality on a heterogeneous computer cluster.
-It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project with the goal of providing an architectural framework supporting modular, tool-based development for robotic software.
+It was originally developed in 2007 as part of the Stanford AI Robot (STAIR) project to create an architectural framework for modular, tool-based development of robotic software.
 It has a loosely coupled architecture with nodes, messages, topics and services, similar to \ac{SOA} \cite{ROS:2009}.
 
 Nodes are processes that perform computation, a "software module". 
@@ -158,8 +155,8 @@ Nodes communicate with each other by publishing/subscribing with two protocols:
 \item[Services] synchronous. \ac{RPC} (pairs of request/response messages). Typed by a \ac{ROS} Service
 \end{description}
 
-Messages are strictly typed data structures . There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
-To find service in this peer-to-peer topology, there is a lookup mechanism: \emph{rosmaster} \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}.
+Messages are strictly typed data structures. There are some available by default, like \texttt{std\_msgs/String} and other primitive types.
+To find a service in this peer-to-peer topology, there is a lookup mechanism: \emph{rosmaster} (see \fref{fig:design-ros-topics} and \fref{fig:design-ros-services}).
 
 The robot has two parts: robotBehaviour and Stacks.
 Part of the code of the robot (robotBehaviour) does not follow the \ac{ROS} workflow but still uses Topics to communicate with the Stacks, the part of the project that does use \ac{ROS}.
@@ -203,13 +200,13 @@ A typical use case in a \ac{MVC} application might be:
     \item Controller: logic to fetch two pieces of fruit
 \end{itemize}
 
-Flango \cm does not have a \ac{GUI} or a set of predefined and stable use cases: this changes for every contents application.
-The system only knows the use cases after loading the contents application.
+Flango \cm does not have a \ac{GUI} or a set of predefined and stable use cases: this changes for every content application.
+The system only knows the use cases after loading the content application.
 There can not be controllers for application-specific use cases and the view is created dynamically from the model.
 
 \begin{itemize}
     \item \textbf{Model}: screens definitions, entities, configuration... stored in the backend
-    \item \textbf{View}: built dynamically from the model. The application loads screens as the user browses to \ac{URL}s and transforms them to \ac{HTML} so that they can be displayed in the browser.
+    \item \textbf{View}: built dynamically from the model. The application loads screens as the user navigates to \ac{URL}s and transforms them to \ac{HTML} so that they can be displayed in the browser.
     \item \textbf{Controller}: Typically, controllers in Angular manage the \texttt{\$scope} and expose behaviour to the View. This application has some generic (as opposed to application-specific) ones. For example: an instance of \texttt{ActionCtrl} for each button, a \texttt{ROSBridgeCtrl} to respond to requests from ROS Bridge, etc. Directives also have a special type of controllers: Directive Controllers are defined within the context of one directive but they can be injected into other directives to facilitate inter-directive communication. For example, a controller in the \texttt{flUi} directive manages its properties (\texttt{x}, \texttt{y}, \texttt{width}, \texttt{height}, \texttt{caption}...). \texttt{flWidth}, \texttt{flX}, and other directives use the controller in \texttt{flUi}.
 \end{itemize}
 
@@ -237,19 +234,18 @@ FIXME: SURE? Controllers are completely separated from the view and unaware of i
 This subsection is a high-level description of the most relevant software patterns in the project: dependency injection and service locator, factory method, module and revealing module, command and FIXME Remote facade.
 
 \paragraph{Dependency Injection and Service Locator} 
-After applying the Creator Pattern (\ac{GRASP}) class \texttt{A} creates objects of dependant class \texttt{B}.
-FIXME: sure? Managing dependencies correctly is a good way of applying other principles, like the Open-Closed.
-One of the \ac{SOLID} principles, inversion of control, states that one should "Depend upon Abstractions. Do not depend upon concretions."
-Dependency Injection is one of the implementations of this principle \cite{Fowler}.
+After applying the Creator Pattern (\acs{GRASP} \cite{GoF:1995}) class \texttt{A} creates objects of dependant class \texttt{B}.
+One of the \acs{SOLID} principles, dependency inversion, states that one should "Depend upon Abstractions. Do not depend upon concretions."
+\textbf{Dependency Injection} is one of the implementations of this principle \cite{Fowler}.
 
-In general there are 3 ways an object can use another one:
+In general there are 3 ways an object can use another one in JavaScript:
 \begin{enumerate}
 	\item With a \texttt{new} operator (\texttt{A} creates \texttt{B})
 	\item Using global variables (\texttt{A} uses a global \texttt{B})
 	\item Pass in the dependency to where it is needed
 \end{enumerate}
 
-\textbf{Inversion of control} means that objects do not create other objects on which they rely to do their work.
+\textbf{Dependency Inversion} means that objects do not create other objects on which they rely to do their work.
 They get the dependencies from an outside source (e.g. an \ac{XML} configuration file).
 \textbf{Dependency Injection} means that this is done in a transparent way for the object.
 The dependency is supplied to the software component.
@@ -262,7 +258,7 @@ The dependency is supplied to the software component.
 \end{figure}
 
 The framework encourages the use of this pattern in all components. 
-More specifically, the framework uses a Service Locator (\fref{fig:design-service-locator}) called \texttt{injector} that manages the dependency creation.
+More specifically, the framework uses a \textbf{Service Locator} (\fref{fig:design-service-locator}) called \texttt{\$injector} that manages the dependency creation.
 This allows services to be used in controllers and directives by their name.
 The client class does not need to know the concrete implementation of the service. 
 With this principle it is easy to mock classes for unit testing and change components in general.
@@ -270,7 +266,7 @@ With this principle it is easy to mock classes for unit testing and change compo
 
 \paragraph{Factory} Directives, controllers, services... are registered on modules. 
 The \texttt{module.directive} \ac{API} registers them. 
-It takes a normalised name and a factory function (\ref{fig:design-patterns-factory}) that returns an object with the fields that can be exposed to classes that use it.
+It takes a normalised name and a factory function (\fref{fig:design-patterns-factory}) that returns an object with the fields that can be exposed to classes that use it.
 For example, a Directive Definition Object or a Service.
 
 \begin{figure}[htb]
@@ -280,14 +276,14 @@ For example, a Directive Definition Object or a Service.
     \label{fig:design-patterns-factory}
 \end{figure}
 
-\paragraph{Revealing Module} \cite{Osmani:2012} Modules typically help in having separated the units of code for a project.
+\paragraph{Revealing Module} Modules typically help in having separated the units of code for a project.
 JavaScript does not support the concept of classes but it does support special constructor functions that work with objects. 
-The $new$ keyword used in a call to a constructor function makes JavaScript instantiate the new object with members defined by that function.
+The \texttt{new} keyword used in a call to a constructor function makes JavaScript instantiate the new object with members defined by that function.
 Modules are a way to emulate the concept of classes.
 There are several options to implement them.
 The \textbf{module pattern} encapsulates privacy, state and organisation using closures.
 Only a public \ac{API} is returned, keeping everything else hidden within the closure private.
-With the \textbf{Revealing Module Pattern} the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
+With the \textbf{Revealing Module Pattern} \cite{Osmani:2012} the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
 An implementation is shown in listing \ref{impl-factory-reveal} on page \pageref{impl-factory-reveal}.
 
 \paragraph{Remote Facade} FIXME: sure? do I have a remote facade in the app, in a controller? rosbridgectrl?
@@ -316,17 +312,17 @@ Other names are \textbf{Transaction} or \textbf{Action Pattern}
 \Fref{fig:design-command-general} shows the class diagram of this pattern in the context a traditional object-oriented programming language.
 With JavaScript there are no abstract classes.
 Osmani \cite{Osmani:2012} proposes having only concrete classes with a common \texttt{execute()} method.
-\fref{sec:controllers} contains a description of the implementation in JavaScript of this pattern.
+\Fref{sec:controllers} contains a description of the implementation in JavaScript of this pattern.
 
 With a simple controller (\fref{fig:design-command-general}) one would call the methods in the object.
-while this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
+While this is correct, at the time the \ac{GUI} is built the \texttt{UI Component} does not know about the operations being requested.
 For example, there is no way to define the behaviour for a \texttt{UI Component::Button} click handler.
-Only the contents application knows it.
+Only the content application knows it.
 By adding an \texttt{execute} method to \texttt{ActionCtrl}, used in \texttt{UI Components} that accept the tag \texttt{onclick} and \texttt{action}, methods can be called without knowing them (\fref{fig:design-command-flango}).
 
 \subsection{Orientation to Web Components}
 Web Components is a set of specifications that let web developers use \ac{HTML}, \ac{CSS} and JavaScript to build widgets that can be reused easily and reliably.
-A web component consists of five pieces\cite{W3CComponents:2013}:
+A web component consists of five pieces \cite{W3CComponents:2013}:
 \begin{description}
     \item[Templates] define chunks of mark-up that are inert but can be activated for use later.
     \item[Decorators] apply templates based on CSS selectors to affect rich visual and behavioural changes to documents.
@@ -418,6 +414,7 @@ Most of boxes in these diagrams are not strictly classes but objects that the fr
 \FloatBarrier
 \subsection{Packages Diagrams}
 The notion of package is implemented with Angular modules.
+Modules can have an array of dependencies.
 
 \begin{figure}[htb]
     \centering
@@ -471,7 +468,7 @@ It always works the same way: writing the appropriate behaviour in directives (c
 \subsection{Boot-strap and Configuration}
 During the boot-strap process of Angular, the system performs some key operations, like registering modules, setting dependencies and the default routes \\ (e.g. \texttt{http:// ... /app/index.html\#/products-view/14/detail-view}.
 The Flango \cm also fetches de configuration from the backend and builds the local object that represents it.
-Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-2} and \fref{fig:design-seqdia-bootstrap-3}, show the bootstrap of the program.
+Figures \ref{fig:design-seqdia-bootstrap-1}, \ref{fig:design-seqdia-bootstrap-2} and \ref{fig:design-seqdia-bootstrap-3}, show the bootstrap of the program.
 
 \begin{figure}[htb]
     \centering
@@ -496,7 +493,7 @@ Figures \fref{fig:design-seqdia-bootstrap-1}, \fref{fig:design-seqdia-bootstrap-
 
 The configuration is encapsulated in the \texttt{palSettings} angular service which, like all services in Angular, is a singleton.
 It is created with a factory: when a new instance of \texttt{palSettings} is to be created, it runs some code that prepares an object to return, the instance itself.
-The bootstrap process, there is a call \lstinline$palSettings.init(queryString)$ \fref{fig:design-seqdia-palSettings-init}.
+The bootstrap process, there is a call \lstinline$palSettings.init(queryString)$ (\fref{fig:design-seqdia-palSettings-init}).
 This method fetches the configuration from the backend using an asynchronous call (\fref{fig:design-seqdia-palSettings-getConfig}) which, in turn, delegates to other internal operations.
 To avoid errors, the system uses \emph{deferred promises}: the \texttt{init} method returns an object immediately and it receives a notification when all asynchronous calls have been completed, that is, when the configuration object is ready to be used in the application.
 
@@ -573,7 +570,7 @@ To expose values to the view, Angular attaches an object \texttt{\$scope} to all
 A scope can be \textbf{isolated}, \textbf{prototypically inherited} from the parent, or \textbf{shared} with other directives of the same type.
 This project uses the scope to encapsulate the properties extracted or inferred from the \ac{XML} node.
 Thus, any element \lstinline$<fl:ui>$ or concrete types \lstinline$base-button$, \lstinline$back-button$, etc has a \texttt{scope} object attached that contains all the necessary data to render an \ac{HTML} node.
-Scopes are also watched to provide two-way data binding with controllers (see CROSS REF observer/mvc)
+Scopes are also watched to provide two-way data binding with controllers (see \fref{fig:mvc-with-observer})
 
 \begin{figure}[h]
     \centering
@@ -607,7 +604,7 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
 \begin{enumerate}
 	\item With directive \texttt{flUi}: Create an attribute with the value of the \texttt{type} attribute \fref{fig:design-seqdia-ui-compile}. Initialise the properties object in the controller \fref{fig:design-seqdia-ui-controller} The framework compiles and links the rest of the code (e.g. the \texttt{link()} function in inner \texttt{width} tags to read values of inner tags (\fref{fig:design-seqdia-width-link}))
 	\item With directive \texttt{flUi} link function (\fref{fig:design-seqdia-ui-link}), read in-line attributes. Because it reads everything recursively, this is the last function to run. Properties are only set if they have not been set yet: inner tags (more specific) have higher priority than in-line attributes. Recompile the directive to make angular find it. 
-	\item With the new directive (e.g. \texttt{flBaseButton}), run component-specific behaviour. \texttt{flUi} does not have a \texttt{type} attribute anymore and is ignored. Specific behaviour can be transforming it using a template \fref{fig:design-seqdia-basebutton-link}. Recompile (e.g. the template might, and normally has, tags that can trigger angular directives).
+	\item With the new directive (e.g. \texttt{flBaseButton}), run component-specific behaviour. \texttt{flUi} does not have a \texttt{type} attribute anymore and is ignored. Specific behaviour can be transforming it using a template (\fref{fig:design-seqdia-basebutton-link}). Recompile (e.g. the template might, and normally has, tags that can trigger angular directives).
 	\item Eventually reach a base component and run component-specific behaviour, e.g. create \ac{HTML} nodes that can actually draw the UI Component.
 \end{enumerate}
 
@@ -646,8 +643,8 @@ The algorithm to decide the properties for an object and draw it with \ac{HTML} 
     \label{fig:design-seqdia-basebutton-link}
 \end{figure}
 
-\lstinline$<fl:ui base-button></ui>$ eventually becomes \\
-\lstinline$<div class="base-button" style="..."><div class="caption">Hello World</caption></div>$. 
+\lstinline$<fl:ui base-button>...</ui>$ eventually becomes \\
+\lstinline$<div class="base-button" style="...">...</div>$. 
 With this rewrite strategy the directive eventually outputs real \ac{HTML} that defines the structure of the UI Component and uses the style sheet.
 
 All UI Components have an  \textbf{\ac{HTML} template} that defines their structure, a \textbf{\ac{CSS} class} that defines their style, \textbf{in-line \ac{CSS}} that defines their exclusive properties (e.g. position, size...) and they are binded to \textbf{\texttt{ActionCtrl}} to expose behaviour (e.g. on click).
@@ -655,7 +652,7 @@ All UI Components have an  \textbf{\ac{HTML} template} that defines their struct
 
 \paragraph{Inheritance and composition} UI Components can be composited: a \texttt{home-button} is implemented with a \texttt{base-button}, which in turn it is implemented with a \texttt{button}, that eventually becomes \ac{HTML}.
 Each component can have defaults for properties.
-For instance, if \texttt{base-button} has a \texttt{width} of 100px in the template, and a component that is implemented with \texttt{base-button} (e.g. \texttt{home-button}) does not define a different with, it sets \texttt{with} to 100 in the properties object.
+For instance, if \texttt{base-button} has a \texttt{width} of 100px in the template, and a component that is implemented with \texttt{base-button} (e.g. \texttt{home-button}) does not define a different with, it sets \texttt{width} to 100 in the properties object.
 This behaviour is achieved with the \texttt{compile} and \texttt{link} functions of directives.
 Language-specific properties are decided the same way: it attempts to use current language properties, if they are not defined, it falls back to the default language.
 
@@ -664,11 +661,11 @@ Buttons and other UI Components, like images or QR Codes, respond to clicks.
 \ac{XML} can define a list of actions to execute (e.g. set the language, open a popup, go to \ac{URI}...)
 The controller ActionCtrl encapsulates the logic to process these commands.
 
-\lstinputlisting[language=xml, caption={A list of actions}]{src/example-actions.xml}
+\lstinputlisting[language=xml, caption={A list of actions in \ac{XML}}]{src/example-actions.xml}
 
 \lstinputlisting[language=xml, caption={Result button (snippet)}]{src/example-result-button-action.html}
 
-To create the list of actions, when the component is clicked it runs \lstinline$executeActions()$, which has a list of actions to execute as a parameter using the command pattern.
+To create the list of actions, when the component is clicked it runs \lstinline$executeActions()$, which has a list of actions to execute as a parameter using the \emph{command pattern}.
 
 \begin{figure}[htb]
     \centering
@@ -701,7 +698,7 @@ Angular has a navigation system based on the \acp{URL}.
 The \$route service has a map that relates \acp{URL} with screens, \ac{HTML} files with directives.
 On each location change, Angular looks up the destination \ac{URL} in the map to fetch the correct file.
 
-Flango \cm composites screens with subscreens and decides the contents to show using the \ac{URL} \fref{fig:design-internal-navigation}.
+Flango \cm composites screens with subscreens and decides the contents to show using the \ac{URL} (\fref{fig:design-internal-navigation}).
 e.g. the \ac{URL} \texttt{/main-view/animals-list} does not populate the subscreen \texttt{red-panda-details}
 
 \begin{figure}[htb]
@@ -732,10 +729,12 @@ Only after properties of the UI Component Subscreen have been set (and the corre
 \FloatBarrier
 
 \subsection{External Calls}
-motivation, rosbridge
+FIXME motivation, rosbridge
+complementa la subseccio de sota
 
 \subsection{Responding to requests from the robot}
-service, topic, rosbridge, etc
+FIXME service, topic, rosbridge, etc.
+complementa la subsecio external calls (una d'anada, una de tornada)
 
 \begin{figure}[htb]
     \centering

@@ -10,7 +10,7 @@ Angular comes with tools to automate testing:
     \item[Jasmine]\footnote{\url{http://pivotal.github.io/jasmine/}} A behaviour-driven development framework for testing JavaScript code.
     It provides a simple and self-descriptive syntax to write test suites.
     \item[Angular Mocks] there are stub objects ready to load in tests (e.g. \texttt{\$httpBackend} mocks \ac{HTTP} calls)
-    \item[Karma] is a test runner to automate the execution of the test suites. 
+    \item[Karma]\footnote{\url{http://karma-runner.github.io/}} is a test runner to automate the execution of the test suites. 
 \end{description}
 
 \ac{TDD} is explained in \fref{sec:testdrivendev}.
@@ -59,7 +59,7 @@ No modifications in the real component are needed.
 
 \lstinputlisting[label=test-di,language=javascript, caption={Dependency injection in tests}]{src/test-di.js}
 
-\ref{test-di} shows the implementation: modules are loaded to make them available to the test suite.
+Listing \ref{test-di} shows the implementation: modules are loaded to make them available to the test suite.
 In the \texttt{beforeEach} clause it stores a reference to the injected element to a local variable.
 Whenever a test calls an operation of the injected service, it will use the mock.
 
@@ -81,7 +81,7 @@ They are excluded from deployment to the robot.
 \section{Test Automation}
 \emph{Fail early, fail often}: karma runner is a process watching the project. 
 It runs all tests on every change without disturbing the development and in less than two seconds.
-Karma is a \textit{spectacular test runner for JavaScript} that can run tests in real browsers like Chrome or a program with QtWebKit and that can be integrated with WebStorm or launched from the console ()
+Karma is a \textit{spectacular test runner for JavaScript} that can run tests in real browsers like Chrome or a program with QtWebKit and that can be integrated with WebStorm or launched from the console (listing \ref{test-launch-karma})
 
 \begin{lstlisting}[label=test-launch-karma,language=bash, caption=Launching Karma Runner]
 $ ./scripts/test.sh

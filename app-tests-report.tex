@@ -2,7 +2,7 @@
 \label{chap:app-unittests}
 \begin{singlespace}
 
-\section{Unit testing UI directive}
+\section*{Unit testing UI directive}
 \begin{enumerate}
 \item     inline type property: should have type defined
 \item     width
@@ -80,7 +80,7 @@
 \end{enumerate}
 \end{enumerate}
 
-\section{Unit testing UI directive -- ambiguity}
+\section*{Unit testing UI directive -- ambiguity}
 \begin{enumerate}
 \item     (width) should use inner value (20) instead of inline value (10)
 \item     (height) should use inner value (20) instead of inline (10)
@@ -91,7 +91,7 @@
 \item     (palStyle) should give inner values ("big" and "red") higher priority than inline ("ugly")
 \end{enumerate}
 
-\section{Unit testing UI Components directives}
+\section*{Unit testing UI Components directives}
 \begin{enumerate}
 \item     subscreen
 \begin{enumerate}
@@ -118,12 +118,12 @@
 \item     video: should be transformed to \textless fl:ui video\textgreater
 \end{enumerate}
 
-\section{Unit testing UI subscreen with real palSettings}
+\section*{Unit testing UI subscreen with real palSettings}
 \begin{enumerate}
 \item     should include the file for route /root/pal/reem-video (98.xml) in the inner div
 \end{enumerate}
 
-\section{Unit testing: Testing modules and dependencies}
+\section*{Unit testing: Testing modules and dependencies}
 \begin{enumerate}
 \item     Reemi Module:
 \begin{enumerate}
@@ -141,7 +141,7 @@
 \end{enumerate}
 \end{enumerate}
 
-\section{palProperties Service}
+\section*{palProperties Service}
 \begin{enumerate}
 \item         should return a sanitized number
 \item         should return a sanitized string
@@ -152,7 +152,7 @@
 \item         should get a property in the current language, or fallback to the language-independent property
 \end{enumerate}
 
-\section{palSettings Service}
+\section*{palSettings Service}
 \begin{enumerate}
 \item     generic configuration method
 \begin{enumerate}
@@ -204,7 +204,7 @@
 \end{enumerate}
 \end{enumerate}
 
-\section{palUri Service}
+\section*{palUri Service}
 \begin{enumerate}
 \item     should get the root when trying to make an external call without params
 \item     should form the url for an external call, with params

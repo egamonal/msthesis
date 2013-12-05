@@ -47,19 +47,18 @@ Certain constraints were defined before the beginning of the project:
         
     \end{enumerate}
     \item \textbf{Themes}. The current version has a default theme, a set of \ac{UI} components that extend the basic ones and provide a certain look and feel. All theme components are eventually implemented with a basic component, e.g. a \texttt{back-button}, a \texttt{home-button}, a \texttt{base-button}, etc.
-    \item Internal \textbf{navigation} (subscreens). Subscreens are containers whose content is determined by the \ac{URL}.
-    \item \textbf{Settings} management. There are three configurations to load: generic settings (default language, paths...), application specific settings (current language, current theme...) and structure of the application (a graph that defines an id and a \ac{URL} for each node (screen)). FIXME: graph? not a tree definitely
+    \item Internal \textbf{navigation} (subscreens). Subscreens are containers whose content is determined by the \ac{URI}.
+    \item \textbf{Settings} management. There are three configurations to load: generic settings (default language, paths...), application specific settings (current language, current theme...) and structure of the application (a graph that defines an $id$ and a \ac{URI} for each node (screen)).
     \item Basic support for \textbf{Entities}.
 \end{enumerate}
 
 \section{Non Functional Requirements}
-FIXME: add measurable stuff
 \begin{enumerate}
     \item \textbf{Target browser}: QtWebKit (Qt 5.0.x) for the first phase, Google Chrome 28 for the second.
     \item \textbf{Extensibility}: The software has to be extensible. The design has to allow adding new features in the future.
     \item \textbf{Robustness}: the software has to be reliable and has to be delivered with a comprehensive test suite. It should be compatible with Jenkins and continuous integration.
     \item \textbf{Hardware}: the software has to perform smoothly in Reem H3 and a multitouch screen.
-    \item \textbf{\ac{UX}}: the time to change to another screen in the rendered contents application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. Rendered components should be aesthetically pleasant.
+    \item \textbf{\ac{UX}}: the time to change to another screen in the rendered content application should be less than 0.5s. Media contents (images, videos) have to be ready in less than 1s after a screen change. Rendered components should be aesthetically pleasant.
     \item \textbf{Interoperability}: it has to interoperate at least with:
     \begin{itemize}
         \item \textbf{Backend}: there is an \ac{API} in a Django backend that provides settings and serves the contents

@@ -1,6 +1,7 @@
 \chapter{Implementation}
 \label{chap:implementation}
-This chapter describes the environment to develop and run Flango \cm and the implementation of the key features.
+This chapter describes the environment to develop and run Flango \cm.
+It illustrates the implementation of key features with code examples.
 
 \section{Development environment set-up}
 Flango \cm belongs to a bigger project.
@@ -10,10 +11,10 @@ Moreover, the project uses tools to run unit tests, generate code, etc.
 \subsection*{Integration}
 The files of Flango \cm live in the server as part of the \flangobe .
 The backend is developed with Django and requires a set of Python libraries that might not be available in the system.
-To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django, although Basestation uses Apache2 and the robot Lighttpd.
+To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django, although Basestation uses Apache2, and the robot Lighttpd.
 All the code is in a subversion repository.
 
-\begin{lstlisting}[caption=lalala, label=virtual-env]
+\begin{lstlisting}[caption=Creation of virtual environments, label=virtual-env]
 $ mkvirtualenv local-flango
 $ workon local-flango
 $ pip install --upgrade -r requirements.txt
@@ -41,7 +42,7 @@ Quit the server with CONTROL-C.
 The file structure of the whole project is shown in listing \ref{impl-flango-files-layout}.
 Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts to build Debian packages to deploy the software on the robot and basestation.
 \texttt{src} contains the \flangobe , which includes the \flangofe (and the \se).
-The project of this thesis, Flango \cm is in the \texttt{static} folder (\ref{impl-flango-static-files-layout}), that contains files served without any processing server-side.
+The project of this thesis, Flango \cm is in the \texttt{static} folder (listing \ref{impl-flango-static-files-layout}), that contains files served without any server-side processing.
 
 \begin{lstlisting}[columns=fixed,caption=Flango files layout, label=impl-flango-files-layout]
 ~/contentMgmtBranches/trunk/backend$ ls
@@ -50,15 +51,14 @@ src    static
 \end{lstlisting}
 
 The browser can open any file in the \texttt{static} folder.
-Alternating between the new and the old version only requires to load \texttt{frontend/index.html} (\flash) or \texttt{flangoh/flangoh/app/index.html} (AngularJS).
+Alternating between the new and the old version only requires to load \texttt{frontend/index.html} (\flash) or \\ \texttt{flangoh/flangoh/app/index.html} (Angular).
 
 \begin{lstlisting}[columns=fixed,language=bash,caption=Flango static files layout, label=impl-flango-static-files-layout]
 ~/contentMgmtBranches/trunk/backend/static$ ls
-admin       fonts     lib
-css         frontend  media
-exports     img       vpnUsersStatus.xml
-flango-gui  imports   vpnUsers.xml
-flangoh     js        
+admin       flangoh   imports   vpnUsersStatus.xml
+css         fonts     js        vpnUsers.xml
+exports     frontend  lib
+flango-gui  img       media
 \end{lstlisting}
 
 The development computer also has a working copy of the code for the robot and Basestation to run simulations and test the new \cm  without using robot time, a scarce resource.
@@ -90,7 +90,7 @@ In this case, the robot (or the simulation) loads the old version, an \ac{HTML} 
 ...    
 \end{lstlisting}
 
-\begin{lstlisting}[language=bash,caption=Run robot simulation, label=impl-robot-run-simulation]
+\begin{lstlisting}[language=bash,caption=Execution of a robot simulation, label=impl-robot-run-simulation]
 $ nohup roscore &
 cd $PAL_ROBOT_DIR/local
 $ output/bin/htmlDialog "http://localhost/..."
@@ -129,8 +129,8 @@ Listing \ref{sass-example} shows logical nesting and inheritance.
 
 \lstinputlisting[label=sass-example,language=SASS, caption={SASS code example}]{src/sass-example.css}
 
-\paragraph{Connection with robots} Robots are essentially two Linux boxes with \ac{ssh} enabled.
-\reem{H3} has two computers, one in the torso (\texttt{media}) where Flango lives \ref{impl-ssh}, one in the lower half (\texttt{control}).
+\paragraph{Connection with robots} Robots are essentially two GNU/Linux computers with \ac{ssh} enabled.
+\reem{H3} has one in the torso (\texttt{media}) where Flango is installed \ref{impl-ssh}, and one in the lower half (\texttt{control}).
 
 \begin{lstlisting}[columns=fixed,language=bash,caption=Connection with robots, label=impl-ssh]
 $ ssh pal@reemh3-1m
@@ -164,7 +164,7 @@ To enforce isolation of components, this project puts all modules in separate cl
 \end{lstlisting}
 
 Directives are the core of Flango \cm .
-A simple directive that only does background logic (reading the \texttt{height} tag) is shown in \ref{impl-directive-height-example}.
+A simple directive that only does background logic (reading the \texttt{height} tag) is shown in listing \ref{impl-directive-height-example}.
 It is restricted to elements (i.e. \lstinline$<fl:height>100</fl:height>$ triggers it but \lstinline$<fl:ui fl:height="100">$ does not)
 \texttt{palProperties} is a service \textbf{injected} in directive.
 
@@ -192,7 +192,7 @@ Angular Services can be declared with the \texttt{service()} constructor, with a
 \lstinputlisting[label=impl-factory-reveal, language=javascript, caption={Example of Factory and Reveal Module Pattern}]{src/design-di-factory.js}
 
 
-\texttt{service()} \ref{impl-services-definition-service} returns an object, whereas \texttt{factory()} first creates it and then returns the instance \ref{impl-services-definition-factory} and \ref{impl-factory-reveal}
+\texttt{service()} (listing \ref{impl-services-definition-service}) returns an object, whereas \texttt{factory()}  (listings \ref{impl-factory-reveal} and \ref{impl-services-definition-factory}) first creates it and then returns the instance.
 
 \begin{lstlisting}[language=JavaScript,caption=Examples of services definition (service()), label=impl-services-definition-service]
 palPropertiesModule.service('palProperties', function (...) {
@@ -222,8 +222,8 @@ palSettingsModule.factory('palSettings', function (...) {
 \section{Controllers}
 \label{sec:controllers}
 Controllers are key parts of any \ac{CRUD} application.
-However, because Flango \cm does not know about the objects of the specific domain  of the contents application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
-\textbf{Command Pattern} This controller implements the \textbf{command pattern} (\cite{Osmani:2012}) and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments.
+However, because Flango \cm does not know about the objects of the specific domain  of the content application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
+\textbf{Command Pattern} This controller implements the \textbf{command pattern} and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments \cite{Osmani:2012}.
 
 \lstinputlisting[label=impl-action-ctrl,language=JavaScript, caption={ActionCtrl implementation}]{src/impl-controllers.js}
 
@@ -238,7 +238,7 @@ Both options couple classes \texttt{A} and \texttt{B} (e.g. hard-coded dependenc
 However, in listing \ref{impl-nonhardcoded-deps} \texttt{MasterGreater} is not concerned with locating the \texttt{greeter} dependency, it is simply handed the \texttt{greeter} at runtime.
 This is desirable, but it puts the responsibility of getting hold of the dependency on the code that constructs \texttt{MasterGreater}.
 
-Angular applies the \emph{Inversion of Control} principle intensively and has a service locator to find services and other dependencies.
+Angular applies the \emph{Dependency inversion} principle (\acs{SOLID}) intensively and has a service locator to find services and other dependencies.
 Injectable components are created with a factory and are made available using a global injector.
 They can be injected just by using their name.
 
@@ -274,17 +274,18 @@ The program in listing \ref{impl-async} generates the output shown in listing \r
 
 Asynchronous calls are normally handled with callbacks following the \ac{CPS}: control is passed explicitly in the form of continuation.
 
-\lstinputlisting[label=impl-promises-call,language=javascript, caption={JavaScript async calls}]{src/impl-promises-call.js}
+\lstinputlisting[label=impl-promises-call,language=javascript, caption={JavaScript: $printer$ will be called when $a$ returns}]{src/impl-promises-call.js}
 
 \lstinputlisting[label=impl-promises-1,language=javascript, caption={JavaScript Callbacks}]{src/impl-promises-1.js}
 
-Listing \ref{impl-promises-1} (called as in listing \ref{impl-promises-call}) shows a first approach\footnote{This is a simplification that might not cover all cases} to callbacks \texttt{\$http.get()} takes two parameters, the \texttt{success} and the \texttt{error} functions. 
+Listing \ref{impl-promises-1} (called as in listing \ref{impl-promises-call}) shows a first approach\footnote{This is a simplification that might not cover all cases} to callbacks.
+\texttt{\$http.get()} takes two parameters, the \texttt{success} and the \texttt{error} functions. 
 They are executed after \texttt{\$http.get} has computed the return value, which is passed to the callbacks.
 However, when there are nested or concurrent asynchronous calls, like the case of fetching the configuration from the \flangobe , callbacks become hard to maintain and readability of the code is dramatically affected.
 
 \lstinputlisting[label=impl-promises-2,language=javascript, caption={JavaScript Callbacks (separate declaration)}]{src/impl-promises-2.js}
 
-A better approach consists on extracting the body of the callback functions and use only pointers to these functions (see listing \ref{impl-promises-2}).
+A better approach consists on extracting the body of the callback functions and using only pointers to these functions (listing \ref{impl-promises-2}).
 This still does not resolve the problem of concurrency: the result of \texttt{a()} is not complete until \texttt{b()} and \texttt{c()} have completed (e.g. if the returned value of each function had to be aggregated into a \lstinline$var result = {a: [], b: []}$. 
 
 \lstinputlisting[label=impl-promises-3,language=javascript, caption={Angular Promises}]{src/impl-promises-3.js}
@@ -313,8 +314,8 @@ If client-side code is altered and \lstinline$security_level$ is set to \lstinli
 robotBehaviour assumes safe input from Flango \cm because the code can not be altered except by engineers in the company.
 
 \section{Transformation to \ac{HTML}}
-The \texttt{flUi} directive makes decoupling and reusing directives possible \ref{impl-directive-ui}.
-It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}) \ref{impl-directive-basebutton}.
+The \texttt{flUi} directive makes decoupling and reusing directives possible (listing \ref{impl-directive-ui}).
+It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}, listing \ref{impl-directive-basebutton}).
 Dependencies are \textbf{injected} by using their name in the parameters of the function.
 The \texttt{controller} can be called from inner directives (e.g. flHeight in listing \ref{impl-ros-create-message}, the \texttt{compile} function manipulates the \ac{DOM} before it is replaced with anything and the \texttt{link} function reads in-line attributes (\texttt{flX}, \texttt{flY}...) in the last place, as the link function of inner elements is executed first.
 Finally, it adds a class to a vector that is used to set \ac{CSS} style to the \ac{HTML} element.
@@ -323,14 +324,13 @@ Finally, it adds a class to a vector that is used to set \ac{CSS} style to the \
 
 After compiling, Angular finds a new directive (e.g.  \lstinline$<fl:ui fl:base-button ...>$ (\texttt{fl:ui} only runs functions if there is a \texttt{type} attribute, which was removed, and \texttt{flBaseButton} does have code to run).
 flBaseButton (listing \ref{impl-directive-basebutton}) is a directive in the themes module.
-It only links to a file that contains the template \ref{impl-directive-basebutton-template}.
+It only links to a file that contains the template (listing \ref{impl-directive-basebutton-template}).
 It is merely a \texttt{button} (a basic UI Component) with certain style set with the \ac{CSS} class \texttt{fl-base-button}.
 
 \lstinputlisting[label=impl-directive-basebutton,language=JavaScript, caption={flBaseButton directive}]{src/impl-directive-basebutton.js}
 \lstinputlisting[label=impl-directive-basebutton-template,language=xml, caption={flBasebutton directive template}]{src/impl-directive-basebutton-template.xml}
 
-
-After this template is compiled, Angular finds another directive, \texttt{flButton} \ref{impl-directive-button}, which has the logic to create an \ac{HTML} node for the actual button displayed on the screen.
+After this template is compiled, Angular finds another directive, \texttt{flButton} (listing \ref{impl-directive-button}), which has the logic to create an \ac{HTML} node for the actual button displayed on the screen.
 
 \lstinputlisting[label=impl-directive-button,language=JavaScript, caption={flButton directive}]{src/impl-directive-button.js}
 
@@ -463,9 +463,9 @@ var listener = new ROSLIB.Topic({
 listener.subscribe(function(message) { /* callback */ } );
 \end{lstlisting}
 
-\textbf{Inversion of control} palROSBridge service interfaces to ROSLib.
+\textbf{Inversion of control} \texttt{palROSBridge} service interfaces to \texttt{ROSLib}.
 Services can be injected and add logic specific for Flango \cm .
-To make the subscribe callback available to the client instance, one of the parameters of palROSLib::subscribe() is a function:
+To make the subscribe callback available to the client instance, one of the parameters of \texttt{palROSLib::subscribe()} is a function:
 
 \begin{lstlisting}[language=JavaScript, caption=palROSLib subscribe method, label=impl-flango-ros-palroslib-subscribe]
 var listeners = {};

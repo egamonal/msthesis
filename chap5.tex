@@ -1,6 +1,6 @@
 \chapter{Specification}
 The specification of the program defines \textbf{what it does} rather than how.
-This chapter presents the specification of the system taking into consideration general software engineering principles, the models proposed by Larman  in \cite{Larman:2004} (at least conceptual, use case and behaviour models) and Meyer's (FIXME CITE??) \ac{DbC}.
+This chapter presents the specification of the system taking into consideration general software engineering principles, the models proposed by Larman  in \cite{Larman:2004} (at least conceptual, use case and behaviour models) and Meyer's \ac{DbC}.
 For the particular case of this thesis, the specification takes into account reengineering principles and procedures and \ac{TDD} as a tool to define what the system does as opposed to a simple testing technique.
 
 Reengineering software comprises 6 activities (\fref{sec:reengineering}): 
@@ -19,7 +19,6 @@ The first three focus on what the system does and are used in this chapter, wher
 
 This chapter starts by describing the \textbf{current system}: the software parts (\textbf{inventory analysis}) and what it does (\textbf{reverse engineering} to understand the system with special attention to \textbf{context}, \textbf{interaction} and \textbf{interoperability}).
 It is followed by a description of what the \textbf{new system} has to do: the \textbf{specification} comprises a \textbf{conceptual model}, a \textbf{use case model} and a \textbf{behaviour model}.
-FIXME Finally, it describes the \ac{XML} used to represent content applications.
 
 \section{Inventory Analysis}
 A list of software in the organisation makes candidates for reengineering appear.
@@ -71,16 +70,16 @@ maintenCost=1 software engineer full-time
 }
 \end{inventory} 
 
-However, Flango \cm uses other software (\ref{inventory-flango-se} and \ref{inventory-flango-be} ) that might have to be reengineered in the future or even modified to suit the needs of the new technology in the project.
+However, Flango \cm uses other software (tables \ref{inventory-flango-se} and \ref{inventory-flango-be} ) that might have to be modified or even reengineered in the future to suit the needs of the new technology in the project.
 
 When it was decided to reengineer \flangofe it was not very old but there were major changes already contemplated for the application (e.g. abandon \flash), that would require big commitment of effort and that would not converge to a sustainable situation.
-Reengineering costs are lower than the cost to make changes plus the cost of maintenance.
+Reengineering costs are lower than the cost of making changes plus the cost of maintenance.
 
 \section{Reverse Engineering}
 \label{sec:reverse-eng}
 Reengineering a software involves reverse engineering, \textbf{understanding what the system does}.
 
-There are 3 key issues in understanding the current system: \textbf{abstraction level}, \textbf{completeness} and \textbf{direction}.
+There are three key issues in understanding the current system: \textbf{abstraction level}, \textbf{completeness} and \textbf{direction}.
 This specification uses a system-level abstraction, only takes into account interaction with external elements, and is one-way (from current system to the specification of the new system).
 Other levels of abstraction do not apply here to keep this specification technology-agnostic.
 This section focuses on what the current version of the software does and what the new version has to do.
@@ -108,7 +107,7 @@ Details of how this software does the same with a new technology are in \fref{ch
 \reem{H3} has about 600MB of specialised code.
 The program that glues all software parts and serves as an interface to the hardware is \textbf{robotBehaviour}, developed with Qt.
 A window in this program contains a QtWebKit widget, the embedded web browser that loads the contents for the touchscreen.
-Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\ref{fig:context-original} on \pageref{fig:context-original}).
+Contents are fetched from Basestation, a server that hosts Flango, a web application that lets users edit screens (with the \se), add media contents and synchronise them with robots (\fref{fig:context-original}).
 The \flangobe has an \ac{API} to serve the content applications to the robots.
 The project of this thesis is reengineering the Flango \cm , in the robot (\fref{fig:context-new}).
 
@@ -149,14 +148,14 @@ The general boot sequence is:
   \begin{minipage}{0.5\linewidth} 
       \centering
       \includegraphics{figures/interoperability-original.pdf}
-      \caption{Reverse engineering: Current interoperability \\ (in robot)}
+      \caption{Reverse engineering: Current interoperability  (in robot)}
       \label{fig:interoperability-original}
   \end{minipage}
   \hspace{0.5cm}
   \begin{minipage}{0.5\linewidth} 
       \centering
       \includegraphics{figures/interoperability-new.pdf}
-      \caption{Reverse engineering: New interoperability \\ (in robot)}
+      \caption{Reverse engineering: New interoperability  (in robot)}
       \label{fig:interoperability-new}
   \end{minipage}
 \end{figure}
@@ -179,7 +178,7 @@ To send a message from robotBehaviour:
 \begin{enumerate}
     \item Calls a \ac{JS} function in the Flash website (\texttt{/static/frontend/index.html})
     \item The \ac{JS} function delegates to the Flash container
-    \item The application facade of Flango Content Manager starts the required action
+    \item The application facade of Flango \cm starts the required action
 \end{enumerate}
 
 The requirements state that the new software has to be implemented using web technology. 
@@ -277,7 +276,7 @@ To support themes, there are two types of UI Components: basic (UI Component) an
 All UI Theme Components are eventually implemented with a basic UI Component.
 \end{description}
 
-Listings \ref{uicomponents-list} and \ref{uithemecomponents-list} in \fref{chap:app-uicomponents} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the current implementation.
+Listings \ref{uicomponents-list} and \ref{uithemecomponents-list} in appendix \ref{chap:app-uicomponents} on page \pageref{chap:app-uicomponents} contain a comprehensive list of UI Components extracted from listing the necessary files in a package of the old implementation.
 All files in \ref{uicomponents-list} have the corresponding class in the conceptual model if they have to be implemented.
 The elements of \ref{uithemecomponents-list} are in fact folders but they can be considered classes in this specification as they are part of the domain of the problem.
 However, some elements are not to be implemented because they are deprecated and some other components are to be implemented in future releases, but not in the software of this thesis.
@@ -365,7 +364,7 @@ The initial screen of the contents application is shown
 }
 {
     \begin{enumerate}
-        \item robotBehaviour determines the $app_id$ and asks the system to load the application with the given $app_id$ and initialisation parameters.
+        \item robotBehaviour determines the $app\_id$ and asks the system to load the application with the given $app\_id$ and initialisation parameters.
         \item include Manage Configuration
 		\item the system loads the initial screen
     \end{enumerate}
@@ -402,7 +401,7 @@ The configuration object is created\footnote{Delete and read configuration are i
         \item robotBehaviour starts the Flango Content Manager
         \item The system requests the generic configuration to the Backend
 		\item The Backend sends the generic configuration $c$
-		\item The system requests the application-specific configuration for application $c.app_id$ or $auto$
+		\item The system requests the application-specific configuration for application $c.app\_id$ or $auto$
 		\item The Backend returns the application-specific configuration $sc$
 		\item The system requests the application structure
 		\item The Backend returns the application structure $as$
@@ -565,7 +564,7 @@ Users do not interact directly with them: they do not execute operations that re
 FIXME: robot behaviour ja no cal!!
 
 \begin{sopcontract}{getRobotApplications()}
-{FIXME: this is part of the contents of an XML file, like functions.xml. Maybe it should not be here. Retrieves a list of applications that can be launched from the Flango \cm , e.g. Qt applications like navigation or face recognition.}
+{Retrieves a list of applications that can be launched from the Flango \cm , e.g. Qt applications like navigation or face recognition\footnote{In the design phase operations only launch valid commands to start applications using an \ac{API} instead of fetching a list and choosing one.}.}
 {RobotBehaviour is running}
 {A list \texttt{l} of robot applications was returned}
 \end{sopcontract}
@@ -577,9 +576,9 @@ FIXME: robot behaviour ja no cal!!
 \end{sopcontract}
 
 \begin{sopcontract}{start(appId: Integer, confParams: HashMap)}
-{Starts the contents  application with id \texttt{appId} and configuration parameters \texttt{confParam} that can overwrite the fetched configuration from the backend}
+{Starts the content application with id \texttt{appId} and configuration parameters \texttt{confParam} that can overwrite the fetched configuration from the backend}
 {\texttt{id} is a well-formatted contents application identifier}
-{FIXME aaaa}
+{Loads the content application with id = confParams.id or, if not defined, with id = \texttt{appId} and displays its initial screen}
 \end{sopcontract}
 
 \begin{sopcontract}{getScreens(appId: Integer)}
@@ -646,8 +645,3 @@ An example of specifications by example of the UI directive:
 \end{enumerate}
 
 \textbf{A comprehensive list is available in \fref{chap:app-unittests}}.
-
-\section{XML Representation}
-FIXME explain syntax here?
-
-at least the inheritance and themes. with code.
