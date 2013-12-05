@@ -50,7 +50,7 @@ It has a class-free object system in which objects inherit properties directly f
 Behaviour reuse (inheritance) is achieved by cloning existing objects (the prototypes).
 Crockford explains the prototypal inheritance mechanism \cite{Crockford:proto}:
 \begin{quote}
-So instead of creating classes, you make prototype objects, and then use the object function to make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We don't need classes to make lots of similar objects
+So instead of creating classes, you make prototype objects, and then use the object function to make new instances. Objects are mutable in JavaScript, so we can augment the new instances, giving them new fields and methods. These can then act as prototypes for even newer objects. We do not need classes to make lots of similar objects.
 \end{quote}
 
 \subsection{AngularJS}
@@ -72,7 +72,7 @@ Flango \cm reads \ac{XML} and renders it as \ac{HTML}.
 There are two possible approaches: parsing the \ac{DOM} tree in the browser or teaching the browser new syntax.
 This project uses the second (FIXME language: the latter?): instead of developing an algorithm to traverse the tree and render elements, it defines reusable components (Angular Directives) and includes the \ac{XML} files in the appropriate place in the \ac{DOM}. 
 The browser already traverses the tree to render the page and there is no need to do it manually.
-Normally a browser ignores an element that doesn't belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></fl:ui>$)
+Normally a browser ignores an element that does not belong to the \ac{HTML} specification (e.g. \lstinline$<fl:ui fl:type="base-button"></fl:ui>$)
 With Angular, the browser runs the behaviour defined in the reusable component.
 
 \paragraph{Building Blocks} There are several key components in Angular to build the application.
