@@ -309,7 +309,7 @@ Other names are \textbf{Transaction} or \textbf{Action Pattern}
 \begin{figure}[htb]
     \centering
     \includegraphics{figures/design-patterns-command-flango.pdf}
-    \caption{Pattern: Command (in Flango \cm}
+    \caption{Pattern: Command (in Flango \cm)}
     \label{fig:design-command-flango}
 \end{figure}
 
@@ -381,7 +381,7 @@ Most of boxes in these diagrams are not strictly classes but objects that the fr
 \begin{sidewaysfigure}[htb]
     \centering
     \includegraphics{figures/design-class-themecomponents.pdf}
-    \caption{Class Diagram -- UI Theme Component}
+    \caption{Class Diagram: UI Theme Component}
     \label{fig:class-themecomponent}
 \end{sidewaysfigure}
 
@@ -463,7 +463,7 @@ The notion of package is implemented with Angular modules.
 
 \FloatBarrier
 
-\section{Dynamic view}
+\section{Dynamic View}
 This section contains a detailed description of the most relevant operations.
 They are grouped in 7 FIXME categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
 It always works the same way: writing the appropriate behaviour in directives (controller, compile and link functions) and injecting the required services following the flow that Angular needs.
@@ -563,7 +563,7 @@ This way functions can be decoupled and testing is easier.
 
 \FloatBarrier
 
-\subsection{Properties management and transformation to \ac{HTML}}
+\subsection{Properties management and transformation to \acs{HTML}}
 Browsers can only parse \ac{HTML} nodes.
 When the parser finds an \ac{XML} node, it prints the inner text node because \ac{HTML} also has text nodes.
 With Angular \ac{XML} nodes can have behaviour: it teaches the browser new syntax.
@@ -693,8 +693,8 @@ To create the list of actions, when the component is clicked it runs \lstinline$
 
 \FloatBarrier
 
-\subsection{Pop-Ups}
-description and use example
+%\subsection{Pop-Ups}
+%description and use example
 
 \subsection{Internal Navigation}
 Angular has a navigation system based on the \acp{URL}.
@@ -753,7 +753,7 @@ service, topic, rosbridge, etc
 
 \FloatBarrier
 
-\section{Physical view}
+\section{Physical View}
 This section presents a series of diagrams to illustrate the physical layout of the project: the nodes involved, the components in each node, and a clear separation of the Flango \cm and the environment.
 The application is assembled in a Debian package and deployed to Basestation and the robot.
 The control scripts of this package perform tasks like copying the files to the correct place (e.g. the public html folder of the web server), initialise data in the backend, etc.

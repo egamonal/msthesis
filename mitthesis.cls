@@ -544,7 +544,7 @@ requirements for the \@degreeword\ of \\
 \def\Upc{Universitat Polit\`{e}cnica de Catalunya}
 
 \def\FIB{FACULTAT D'INFORM\`{A}TICA DE BARCELONA}
-\def\Fib{Facultat d'inform\`{a}tica de Barcelona}
+\def\Fib{Facultat d'Inform\`{a}tica de Barcelona}
 
 \def\permission{\par\noindent{\centering
    The author hereby grants to MIT permission to reproduce and to

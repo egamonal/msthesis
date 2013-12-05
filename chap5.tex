@@ -622,6 +622,9 @@ Actors do not interact with most of the classes shown and contracts and sequence
 One of the goals of this project is making it compatible with the current \ac{XML} that defines the content applications.
 To meet this goal, it should be clearly specified how \ac{XML} are parsed.
 This project uses \ac{TDD} and has executable specifications for all parts of the system, including those (e.g. internal operations or parsing) that are not strictly eligible for other sections in this chapter.
+Formally, an executable, technology-agnostic, specification might be written in \ac{OCL} and run in a \ac{UML} model.
+These tests focus on the implementation and are written in JavaScript.
+Even though they depend on technology, they define the system's behaviour and are considered part of the specification in this document.
 
 Tests are organised in test-suites for components and each suite has several test cases.
 This section focuses on the \ac{XML} description.
@@ -629,7 +632,7 @@ This section focuses on the \ac{XML} description.
 \Fref{chap:testing} has a full list and examples of other test suites that refer directly to components of the software (described in \fref{chap:design})
 Tests challenge behaviour like reading text nodes in \ac{XML} tags, setting properties (i.e. mutating correctly an object in the system), reading order or inheritance of properties, fallback to default values and transformation to \ac{HTML} code.
 
-An example of specifications by example of  the UI directive:
+An example of specifications by example of the UI directive:
 \begin{enumerate}
 	\item inline type property: should have type defined
 	\item width, height, x, y, 

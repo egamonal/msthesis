@@ -4,7 +4,7 @@ The execution and deviations are shown at the end of this chapter.
 
 \section{Scope}
 \label{sec:scope}
-The system has three parts: the \flangobe, the \flangofe (with the \se) both at Basestation, and the screens renderer in the robots (the robot's \cm \fref{fig:system-overview}).
+The system has three parts: the \flangobe, the \flangofe (with the \se) both at Basestation, and the content application in the robots (the robot's \cm \fref{fig:system-overview}).
 
 \begin{figure}[htb]
     \centering
@@ -17,7 +17,7 @@ This project reengineers the robot's \cm with web technologies but not the back-
 The input of the new \cm are content applications, generated with the \se . The output is the screen rendered with web elements.
 Content applications have configuration files that define the theme, the location of binary resources (images, videos, etc), the default language and other settings. 
 This project can read and use the configuration files.
-This project accepts valid syntax generated with the \se for a comprehensive set of components (\texttt{back-button}, \texttt{base-button}, \texttt{image}, \texttt{video}...) and their properties (\texttt{width}, \texttt{x}, \texttt{y}, \texttt{background}...), and generates \ac{HTML5} that renders them as defined.
+This project accepts valid syntax generated with the \se for a comprehensive set of components (\texttt{back-button}, \texttt{base-button}, \texttt{image}, \texttt{video}...) and their properties (\texttt{width}, \texttt{x}, \texttt{y}, \texttt{background}...), and generates \ac{HTML5} that displays them as they are defined in templates.
 
 Developing an intense testing strategy is part of this project.
 The final artifact is this master's thesis that describes the system and the rationale that guides all decisions.

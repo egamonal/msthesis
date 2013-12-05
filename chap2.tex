@@ -1,14 +1,14 @@
 \chapter{Related Work}
 This chapter is a short introduction to the main knowledge areas involved in the development of this project.
-It describes what has been done before in the field and the theory the project is based upon.
-It includes the motivation and the steps to reengineer an application, the evolution of web technology from simple documents to \acp{RIA} like the one of this thesis, the \ac{TDD} method and the relationship with \ac{DbC} and finally, FIXME \ac{XML} as an intermediate representation of the model to interoperate between Basestation and Flango \cm in the robot.
+It provides an overview of what has been done before in the field and the theory the project is based upon.
+It includes the motivation and the steps to reengineer an application, the evolution of web technology from simple documents to \acp{RIA} like the one of this thesis and, finally, the \ac{TDD} method and the relationship with \ac{DbC}
 
 \section{Reengineering}
 \label{sec:reengineering}
 This thesis takes over the work of the past two years at \company in content management.
 The initial situation is a system made with \flash and Django called Flango.
 The \se and the robot's \cm are \flash applications.
-Whereas the first one runs in a modern browser, on desktop computers, the robot's \cm runs in the robot.
+Whereas the first one runs in a modern browser, on desktop computers, the \cm runs in the robot.
 The robot is a Linux system and the browser is a QtWebKit widget embedded in the Qt application that governs the behaviour.
 The \flash plug-in will not be updated and this part of the system has to be rewritten in a different technology.
 
@@ -26,7 +26,7 @@ That's what we call reengineering.
 
 Unlike other products, software does not degrade with time due to external factors such as the inclemencies of the weather, power outages or intense use.
 Software packages are adapted, corrected, extended and improved constantly.
-That can lead to unstable applications or unexpected side effects, even if the original product had been designed with the best practices at that time.
+That can lead to unstable applications or unexpected side effects, even if the original product had been designed initially with the best practices.
 After a certain amount of time, changes become harder to implement. % FIXME language
 Sometimes the vendor of frameworks, libraries and third-party software used in a project stops supporting it and the only solution is substituting the components that depend on it. 
 The product becomes unmaintainable in many aspects and reenginering is required. 
@@ -63,14 +63,14 @@ Sometimes the solution is restructuring the current program.
 The project of this thesis skips this part because a new application is being developed using the output of the first task: understand the current program
 Restructuring the code might not be enough in most cases. 
 It can fix immediate issues but it is not a long-term solution.
-However, when doing so, \ac{TDD} is useful because tests breaks immediately and often, specially if they are running in the background or periodically.
+However, when doing so, \ac{TDD} is useful because tests break immediately and often, specially if they are running in the background or periodically.
 To improve the software design both data and architecture should be restructured.
 \ac{TDD} can provide robustness to this process: if there are tests available, the new design can be proven to work, at least, for the example cases. 
 If not, the solution can be built incrementally with tests that define the requirements of the system (extracted in the first activity, thus using them as an specification.
 
 \paragraph{Forward engineering}
 There is a number of options when it comes to apply changes in the current program. 
-For example, apply patches, redesign parts of the software or completely redesign it.
+For example, apply patches, redesign parts of the software or all of it.
 Depending on the circumstances, completely redesigning a software might be costly but, in the long-term, it might be a cost-effective solution.
 The project of this thesis redesigns the software to incorporate new practices, new technology and, in the future (out of the scope of the thesis), additional requirements.
 The outcome of this activity is a new software that replaces the current implementation.
@@ -160,19 +160,19 @@ A similar problem occurred in early operating systems (e.g. MS-DOS), before proc
 Most of browsers have a monolithic architecture with poor isolation between web application instances. Chromium, however, implemented an architecture based on \ac{OS} processes. 
 Another way of isolating web applications is running them in a plug-in container. 
 
-The project of this thesis does the first phase with QtWebKit, the port of WebKit on top of Qt, to display the application in a Qt window and communicate with the software in the robot. 
-The second part uses Chrome to meet the technology requirements.
-QtWebKit components comprise the WebCore and the javascript engine SquirrelFish Extreme, which compiles Javascript into native machine code. 
-It is compatible with \flash player but because it will not receive more updates in the future, it will not be used any more.
+In the first phase, the project of this thesis uses QtWebKit, the port of WebKit for Qt, to display the application in a Qt window and communicate with the software in the robot. 
+The second part uses Google Chrome to meet the technology requirements.
+QtWebKit components comprise the WebCore and the SquirrelFish Extreme JavaScript engine , which compiles JavaScript into native machine code. 
+It is compatible with \flash Player but because it will not receive more updates in the future, it will not be used any more.
 The \flash plug-in is a black box isolated from other elements in the \ac{DOM}.
-Isolation is not an issue in this project because there is only one application running at a time and, even in a normal use of a browser, with many websites running at once, isolation is not a blocking issue.
+Isolation is not an issue in this project because there is only one application running at a time and, even in a normal use of a browser, with many websites running at once, applications do not have conflicts.
 
 
 \section{Test-Driven Development}
 \label{sec:testdrivendev}
 The software written for this thesis is executed in a complex environment.
 Testing it properly and ensuring the quality is crucial to avoid unexpected behaviour in one of the most visible parts of this system, the screen.
-Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the system (e.g. displaying a Qt window different than expected, not making the call, sending it with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
+Crashes and \ac{UI} flaws can lead to triggering wrong external calls to other components of the system (e.g. displaying a Qt window different than expected, starting an action with bad parameters...), blocking access to features or seriously affecting the \ac{UX}.
 
 Reengineering this system has, at least, two sources of potential errors: 
 undocumented features in the original application and integration of the new software in the current system.
@@ -203,7 +203,3 @@ During the development, the original software keeps adding features and bug fixe
 
 This methodology is specially useful in the implementation of this project for two reasons: 
 the Google Angular framework is extremely friendly with unit testing and \ac{E2E} tests thanks to Karma Runner, and the company has the infrastructure to incorporate the project in a continuous integration system with Jenkins.
-
-\section{XML as an intermediate representation}
-FIXME
-lorem ipsum
