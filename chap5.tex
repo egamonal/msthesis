@@ -386,8 +386,8 @@ The initial screen of the contents application is shown
 
 \begin{suc}
 {Manage Configuration -- Create}
-{The system fetches the configuration (on load) from the Backend. If it can not be found, it falls back to a default configuration. FIXME: no clear actor}
-{Event on-load}
+{The system fetches the configuration (on load) from the Backend. If it can not be found, it falls back to a default configuration.}
+{robotBehaviour\footnote{as part of the bootstrap sequence of the system}}
 {
 	\begin{enumerate}
         \item robotBehaviour is running
@@ -446,7 +446,7 @@ The configuration object is mutated
         \item The user asks the system to retrieve the configuration object
         \item The system returns the configuration object
         \item The user changes a value and asks the system to store it (e.g. current language)
-		\item The system updates the configuration object (FIXME and notifies the system?)
+		\item The system updates the configuration object
     \end{enumerate}
 }
 {     
@@ -559,10 +559,8 @@ Users do not interact directly with them: they do not execute operations that re
     \label{fig:spec-manage-conf-create}
 \end{figure}
 
+\FloatBarrier
 \subsection{Contracts}
-
-FIXME: robot behaviour ja no cal!!
-
 \begin{sopcontract}{getRobotApplications()}
 {Retrieves a list of applications that can be launched from the Flango \cm , e.g. Qt applications like navigation or face recognition\footnote{In the design phase operations only launch valid commands to start applications using an \ac{API} instead of fetching a list and choosing one.}.}
 {RobotBehaviour is running}

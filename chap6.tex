@@ -114,7 +114,10 @@ The \texttt{flWidth} directive is restricted to elements (it matches \lstinline$
 
     
 \subsection{HTML5}
-FIXME maybe not useful. maybe just html
+\ac{HTML} has been extended towards enabling application development in the browser.
+This project extensively uses regular \ac{HTML} and the \lstinline$<video>$ tag to implement the UI Video component.
+Therefore, new videos are encoded to be compatible with the browser instead of \texttt{flv} and \texttt{f4v}. For example, \texttt{H.264} or \texttt{ogv}.
+
 
 \subsection{SASS}
 Writing plain \ac{CSS} can be tedious and error-prone.
@@ -213,8 +216,8 @@ There can not be controllers for application-specific use cases and the view is 
 Angular uses an \ac{MVC} pattern with two-way data binding \fref{fig:mvc-with-observer}: changes in the view are reflected to the model immediately and viceversa in order to use the model as a single source of truth.
 Controllers use the \texttt{\$scope} to expose values and behaviour to the view: they update the object that is used in the view.
 The \texttt{scope} is an object that refers to the application model.
-FIXME LANGUAGE Informally, it is the glue between the controller and the view.
-FIXME: SURE? Controllers are completely separated from the view and unaware of it: they just expose values but do not manipulate the \ac{DOM} or read it in any way to make testing easier.
+Informally, it is the glue between the controller and the view.
+Controllers expose values and behaviour via the \$scope service but do not manipulate the \ac{DOM} or read it in any way.
 
 \begin{figure}[htb]
     \centering
@@ -231,7 +234,7 @@ FIXME: SURE? Controllers are completely separated from the view and unaware of i
 \end{figure}
 
 \subsection{Software Patterns}
-This subsection is a high-level description of the most relevant software patterns in the project: dependency injection and service locator, factory method, module and revealing module, command and FIXME Remote facade.
+This subsection is a high-level description of the most relevant software patterns in the project: dependency injection and service locator, factory method, module and revealing module, command, and remote facade.
 
 \paragraph{Dependency Injection and Service Locator} 
 After applying the Creator Pattern (\acs{GRASP} \cite{GoF:1995}) class \texttt{A} creates objects of dependant class \texttt{B}.
@@ -286,7 +289,11 @@ Only a public \ac{API} is returned, keeping everything else hidden within the cl
 With the \textbf{Revealing Module Pattern} \cite{Osmani:2012} the code of the module is simplified: all variables and functions are defined in the private scope and returns an anonymous object with pointers to the private properties that should be revealed.
 An implementation is shown in listing \ref{impl-factory-reveal} on page \pageref{impl-factory-reveal}.
 
-\paragraph{Remote Facade} FIXME: sure? do I have a remote facade in the app, in a controller? rosbridgectrl?
+\paragraph{Remote Facade} 
+The software of this thesis is a component in \ac{ROS}.
+A way of integrating it with the system would be desinging the business layer as a service\footnote{This approach was only considered in the last weeks of development due to changes in robotBehaviour and only a simplified design is completed.}.
+A Remote Facade subscribes and listens to \ac{ROS} topics and exposes the logic to other components.
+Normally, remote facades have coarse-grained methods and, in this design, operations attend requests made via \ac{ROS} topics to behave like a simplified \emph{service layer}.
 
 \paragraph{Command} 
 Sometimes requests are issued to objects without knowing anything about the operation being requested or the receiver.
@@ -462,8 +469,8 @@ Modules can have an array of dependencies.
 
 \section{Dynamic View}
 This section contains a detailed description of the most relevant operations.
-They are grouped in 7 FIXME categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, pop-ups, internal navigation and communication with ROS Bridge.
-It always works the same way: writing the appropriate behaviour in directives (controller, compile and link functions) and injecting the required services following the flow that Angular needs.
+They are grouped in 6 categories: boot-strap and configuration, handling properties and transformation to \ac{HTML}, internal navigation and communication with ROS Bridge.
+It always works the same way: writing the appropriate behaviour in directives (\texttt{controller}, \texttt{compile} and \texttt{link} functions) and injecting the required services.
 
 \subsection{Boot-strap and Configuration}
 During the boot-strap process of Angular, the system performs some key operations, like registering modules, setting dependencies and the default routes \\ (e.g. \texttt{http:// ... /app/index.html\#/products-view/14/detail-view}.
@@ -729,12 +736,23 @@ Only after properties of the UI Component Subscreen have been set (and the corre
 \FloatBarrier
 
 \subsection{External Calls}
-FIXME motivation, rosbridge
-complementa la subseccio de sota
+The \texttt{palROSBridge} service can be injected to any component that needs to publish to a topic.
+palROSBridge.publish(topic, message) uses the roslibjs library to publish the topic.
+\Fref{fig:design-seqdia-ActionCtrl-publish} illustrates the interaction between a component and \texttt{palROSBridge} service.
 
-\subsection{Responding to requests from the robot}
-FIXME service, topic, rosbridge, etc.
-complementa la subsecio external calls (una d'anada, una de tornada)
+\begin{figure}[htb]
+    \centering
+    \includegraphics{figures/design/seqdia/actionCtrl-externalCall.pdf}
+    \caption{Sequence Diagram: Publishing to a topic}
+    \label{fig:design-seqdia-ActionCtrl-publish}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Responding to Requests From The Robot}
+The previous section demonstrated how to publish a message to a \ac{ROS} Topic.
+This section shows how the facade ROSBridgeCtrl behaves like a service layer and exposes logic to \ac{ROS} (\fref{fig:design-seqdia-ROSBridgeCtrl-creation}): it subscribes to the topic that all components of the robot can use to send data to the Flango \cm .
+Whenever a request is received, ROSBridgeCtrl delegates the responsibility to the correct component (\fref{fig:design-seqdia-ROSBridgeCtrl-callback}).
 
 \begin{figure}[htb]
     \centering

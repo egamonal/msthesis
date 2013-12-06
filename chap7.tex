@@ -242,7 +242,7 @@ Angular applies the \emph{Dependency inversion} principle (\acs{SOLID}) intensiv
 Injectable components are created with a factory and are made available using a global injector.
 They can be injected just by using their name.
 
-A particular implementation of this principle is in the wrapper for roslibjs: the service \texttt{palROSBridge} in the application is made injectable and provides callbacks to allow a decoupled design. FIXME LANGUAGE.
+A particular implementation of this principle is in the wrapper for roslibjs: the service \texttt{palROSBridge} in the application can be injected and its operations accept a callback function as a parameter enabling a decoupled design.
 
 \lstinputlisting[language=javascript, caption={Injecting services in a controller}]{src/design-di-injection.js}
 
@@ -444,7 +444,7 @@ This library uses its own events system and needs to be wrapped in a service to 
 
 Essentially, roslibjs has 3 methods: \texttt{connect(host, port)}, \texttt{subscribe(name, messageType, callback)} (and \texttt{unsubscribe(name, callback)}) and \texttt{publish(name, message)}.
 
-\begin{lstlisting}[caption=ROSLibJS connect method, label=impl-flango-ros-roslib-connect]
+\begin{lstlisting}[caption=ROSLibJS connect method, label=impl-flango-ros-roslib-connect, language=javascript]
 ros = new ROSLIB.Ros({
     url : 'ws://hostname:port'
 });
@@ -453,7 +453,7 @@ ros = new ROSLIB.Ros({
 Clients can subscribe to topics providing the name of the topic and the name of the type.
 \texttt{ROSLIB.Topic} returns a listener that can wait for events.
 
-\begin{lstlisting}[caption=ROSLibJS subscribe method, label=impl-flango-ros-roslib-subscribe]
+\begin{lstlisting}[caption=ROSLibJS subscribe method, label=impl-flango-ros-roslib-subscribe, language=javascript]
 var listener = new ROSLIB.Topic({
     ros : ros,
     name : '/topic_name',
@@ -486,7 +486,7 @@ palROSBridgeModule.factory('palROSBridge', function () {
     /* init logic*/
     var ros, listeners = {};
     var connect = function(host, port) {...};
-
+    ...
     // ROSLIB.Topic.subscribe creates a list of subscribers.
     // this is just delegating the task
     var subscribe = function (name, messageType, callback) {...};
@@ -497,12 +497,10 @@ palROSBridgeModule.factory('palROSBridge', function () {
     var service = {
         'connect': connect,
         'subscribe': subscribe,
-        'unsubscribe': unsubscribe
+        'unsubscribe': unsubscribe,
+        ...
    };
    
    return service;
 });
 \end{lstlisting}
-
-
-FIXME ADD PUBLISH METHOD

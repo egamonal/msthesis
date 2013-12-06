@@ -73,7 +73,7 @@ The \reem{H} series have a multi-modal interface: besides speech or joystick man
 The Contents Management System comprises \emph{\flangofe} and \emph{\flangobe} (both in Basestation), and \emph{Flango \cm} (in the robot) (see \fref{fig:intro-system-overview}).
 The Basestation is an application server that hosts Flango, a \ac{RIA} to manage contents and robots made with Django, a widely used framework for Python. 
 Clients can create content applications  with the \flangofe (\se), a tool built with \flash .
-When content applications are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen.
+When content applications are ready, clients can associate $1$ application with $n$ robots to display it in the touch screen (\fref{fig:demo-app-preview} and \fref{fig:demo-app-robot}).
 
 \lstinputlisting[label=example-screen-xml,language=XML, caption={Example Screen XML}, breaklines=true]{src/example-screen.xml}
 
@@ -104,6 +104,20 @@ It transforms \ac{XML} files into a \ac{UI} (\fref{fig:xml-flango-view}) and, fi
     \includegraphics[width=\textwidth]{figures/xml-flango-screenshot}
     \caption{Transformation of \acs{XML} into a \acs{GUI}}
     \label{fig:xml-flango-view}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/demo-app-preview}
+    \caption{Preview of a content application}
+    \label{fig:demo-app-preview}
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/demo-app-robot}
+    \caption{The content application in the robot}
+    \label{fig:demo-app-robot}
 \end{figure}
 
 \textbf{This thesis documents the project of reengineering the \cm , in the robot, with web technology instead of \flash , namely \acs{HTML5}, \acs{CSS3} and \acf{JS}}.

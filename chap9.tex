@@ -29,7 +29,7 @@ This part was kept as technology agnostic as possible and emphasised the first t
 This \emph{reverse engineering} step was crucial to understand the old system and became the most complex and extensive.
 
 Then, the system was \textbf{designed} internally with class and packages diagrams, sequence diagrams of relevant operations and deployment diagrams.
-The software was built with a \ac{MVC} architecture in a \ac{SOA}-like ecosystem (\ac{ROS}) and used the following patterns: dependency injection, command, factory, revealing module AND FIXME REMOTE FACADE.
+The software was built with a \ac{MVC} architecture in a \ac{SOA}-like ecosystem (\ac{ROS}) and used the following patterns: dependency injection, command, factory, revealing module and remote facade.
 Designing the software as a service would have been a better choice to make integration with \ac{ROS} easier.
 In any case, the proposed solution is robust and interoperates correctly with the robot's system by using ROS Bridge and with Basestation, by using JSON.
 This part was done after choosing the technology and emphasised the last three steps in a reengineering process: code restructuring, data restructuring and forward engineering.
@@ -47,7 +47,7 @@ Unit \textbf{tests} were used as \textbf{executable specifications} and helped d
 There are many ways to reengineer a system.
 Pressman's book provided a framework to divide the process in phases, set boundaries, discover new tasks (e.g. extending the \flangobe to obtain data in a suitable format) and structure this document.
 
-All the goals of this project have been achieved:
+All the goals of this project have been fulfilled:
 \begin{enumerate}
 \item The new software works, covers 80\% of the most common features and can substitute safely the old \flash system: it is ready for production.
 \item It has a strong testing strategy with \ac{TDD}.
@@ -57,32 +57,47 @@ All the goals of this project have been achieved:
 Even though there are some limitations, I believe that this master's thesis has addressed the reengineering of the content manager and developed the new system with accuracy, creativity and consistency, applied a systematic approach and used proven techniques like software patterns and widely-known architectures.
 
 
-\section{Personal note}
-FIXME and now a paragraph about what I learnt in the master's to impress everybody
+\section{Personal Insights}
+This work is the artifact that puts an end to a two-year master's course that has helped me strenghten my computer science and software engineering education.
+These 4 semesters have provided me with a diverse and strong background in my field, including topics like compilers or artificial intelligence, a project-driven approach to software design and databases, or even business and project management.
+Part of this master's was taken at Northeastern University (Boston, MA).
+There, I learned about research and explored topics that do not belong to my specialisation, like machine learning.
+However, it provided me the base to academic writing that has been applied to this project.
+Moreover, I learned about human-computer interaction and web technology, which helped me understand the context of this project.
 
-coses que he apr`es.
-tdd, integracio en una arquitectura amb una tecnologia diferent de la del projecte, consolidaci´o de coneixements d ES (patrons i la seva implementaci´o)
+Specifically, this thesis gave me the opportunity to research topics that were not in the curriculum of the courses I took, namely service-oriented architectures, integration of systems, reengineering a software or applying and implementing software patterns in a real environment.
+I worked with innovative technology that does not fit in classical software designm models, like JavaScript, and I reviewed, extended and fixed code in Python or ActionScript developed by previous members of the team.
+
+This project was developed for the industry in a company that focuses in humanoid robots.
+Most of engineers work with either Python or C++, but not web technology.
+Being a one-man team helped me find ways to overcome all problems in order to make the project successful.
+Furthermore, this setting forced me to think the trade-offs between time and scope of projects, and t o build the product incrementally.
+
+In conclusion, this master's thesis consolidates not only my technical skills, but also a fundamental quality in a software engineer: problem-solving.
 
 
 \section{Future Work}
 Although I believe that this master's thesis provides a comprehensive and solid description of the system developed, it is important to note that there are limitations that could introduce future work.
 
 \textbf{Project Scope} This thesis presented only a part of the Flango \cm . 
-A number of features were left out of the scope to conform to time constraints and should be added in the upcoming weeks.
+A number of features were left out of the scope due to time constraints and should be added in the upcoming weeks.
 These include the implementation of Entities (incomplete at the time of writing this document) and the management of user sessions.
 
-\textbf{Content and container} Reading inner and inherited properties \\(\lstinline$<elem><width>30</width></elem>$) instead of reading them in-line (\lstinline$<elem width=30 />$) becomes cumbersome when UI Components (\lstinline$<fl:ui fl:type=...>$) are in a container defined in the \ac{XML} \\(\lstinline$<fl:ui fl:type="container">...</elem>$).
-The first strategy proposed used inner attributes in elements to modify the container.
-The current strategy works but can not reuse logic and makes maintenance harder than necessary.
-In the future, a better design should be researched.
-The most frequent use of containers is display entities is not generated by the screens editor, we could change it to regular Angular loop directives.
+\textbf{Content and container} Reading inner and inherited properties \\(\lstinline$<elem><width>30</width></elem>$) instead of reading them in-line (\lstinline$<elem width="30" />$) becomes cumbersome when UI Components are in a container defined in the \ac{XML} (\lstinline$<fl:ui fl:type="container">...</elem>$).
+With a first strategy, containers were modified by inner attributes of UI Components.
+The current strategy works but it makes logic reuse and maintenance harder than necessary.
+In the future, a better design should be implemented.
+The most frequent use of containers is display entities.
+This code is not generated by the screens editor. 
+Therefore, it could be changed to regular Angular loop directives.
 
-\textbf{SOA and integration} There are two clients, at least, that use the software: the robot and a contents application user.
+\textbf{SOA and integration} There are two clients, at least, that use the software: the robot and a content application user.
 It was only in the last weeks of development that we considered developing the software as a service, like other components in \ac{ROS} that use the messaging system.
 The software was not designed strictly as a service due to time constraints but included a remote facade to attend requests from the robot via Topics.
 This was a simple approach to a simple need (less than 10 types of requests).
 In the future, redesigning this remote facade should be considered to allow reuse of components and make the logic of Flango \cm a service in the robot.
 
 \textbf{Theming} The previous version only had one theme and did not implement the logic to change them.
-The new version is ready for this but incomplete.
-In the future, this implementation should be finished and experiment with scaffolding and \ac{SASS}: variables, \textit{mixins} and inheritance will allow quick development and customisation of the look and feel of content applications.
+The new version is ready for this but it is incomplete.
+In the future, this implementation should be finished.
+\ac{SASS} elements, like variables, \textit{mixins} and inheritance will allow quick development and customisation of the look and feel of content applications.
