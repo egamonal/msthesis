@@ -2,7 +2,7 @@
 % possible quotations: welcome humans. goodwill. and we have a plan.
 
 Humanoid service robots of \company have a touchscreen on their torso.
-Using a web application, users create content applications (e.g. buttons that trigger actions in the robot or a picture gallery) that can be displayed in the screens of the robots.
+Using a web application, users create content applications (e.g. buttons that trigger actions in the robot or a picture gallery) that can be displayed on the screen of the robots.
 The software in the robots depends on \flash and needs to be reengineered with web technology.
 
 This document is a stand alone presentation of the work done at \company , which belongs to a larger project: the Content Management System (codenamed \textit{Flango}).
@@ -12,7 +12,7 @@ This document is a stand alone presentation of the work done at \company , which
     \caption{Overview of the Content Management System}
     \label{fig:intro-system-overview}
 \end{figure}
-More specifically, \textbf{this thesis deals with the reengineering of Flango \cm , the part of the system deployed \textbf{in the robot}} that displays content applications on the touchscreen of \reem{H} (\fref{fig:intro-system-overview}).
+More specifically, \textbf{this thesis deals with the reengineering of Flango \cm , the part of the system deployed \textbf{on the robot}} that displays content applications on its the touchscreen (\fref{fig:intro-system-overview}).
 \textbf{It does not reengineer the rest of the system}, like the web application (that uses \flash as well) to generate content applications, although there might be minor changes to adapt their interfaces to the new technology.
 
 It is desired not only to develop a practical solution but also to guarantee that the final output of the Flango \cm is the same that the old system generates.
@@ -20,6 +20,8 @@ It is desired not only to develop a practical solution but also to guarantee tha
 This thesis is eminently a practical work, although the theoretical background has been extensively explored. 
 Using web technology in a component of the robot is a novelty in the company. 
 It is done to develop a sustainable product based on open standards (as opposed to the current implementation with \flash) that can be extended and reused for other robotic products that might be designed in the future.
+
+\textbf{This thesis documents the project of reengineering the \cm , in the robot, with web technology instead of \flash , namely \acs{HTML5}, \acs{CSS3} and \acf{JS}}.
 
 \section{\company}
 \company is a company based in Barcelona dedicated to R\&D of humanoid robots and robotic components. 
@@ -120,7 +122,7 @@ It transforms \ac{XML} files into a \ac{UI} (\fref{fig:xml-flango-view}) and, fi
     \label{fig:demo-app-robot}
 \end{figure}
 
-\textbf{This thesis documents the project of reengineering the \cm , in the robot, with web technology instead of \flash , namely \acs{HTML5}, \acs{CSS3} and \acf{JS}}.
+
 
 \section{The New System}
 The \ac{WWW} was born as a document viewing platform and has evolved gradually into an application platform. 
