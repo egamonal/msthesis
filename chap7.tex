@@ -3,7 +3,7 @@
 This chapter describes the environment to develop and run Flango \cm.
 It illustrates the implementation of key features with code examples.
 
-\section{Development environment set-up}
+\section{Development Environment Set-Up}
 Flango \cm belongs to a bigger project.
 The development environment is adapted to this situation to ensure a correct integration.
 Moreover, the project uses tools to run unit tests, generate code, etc.
@@ -147,7 +147,7 @@ flango-gui  js
 flangoh     lib
 \end{lstlisting}
 
-\section{Directives and modules}
+\section{Directives and Modules}
 Modules encapsulate directives.
 Namespacing in JavaScript can be misleading (e.g. services should have unique names application-wide, even if they are in separate modules and a client only uses one of them).
 To enforce isolation of components, this project puts all modules in separate closures \ref{impl-modules-closure}.
@@ -265,7 +265,7 @@ moduleA.run(['palSettings', '$location', '$rootScope', 'palROSBridge',
 Components can be injected as shown in listing \ref{impl-injection-annotation}.
 The names are values of an array which, obviously, are not altered.
 
-\section{Promises and deferred objects}
+\section{Promises and Deferred Objects}
 Remote calls in JavaScript are executed asynchronously.
 The program in listing \ref{impl-async} generates the output shown in listing \ref{impl-async-out}.
 
