@@ -4,14 +4,14 @@ This chapter describes the environment to develop and run Flango \cm.
 It illustrates the implementation of key features with code examples.
 
 \section{Development Environment Set-Up}
-Flango \cm belongs to a bigger project.
+Flango \cm belongs to a bigger project, Flango and the robot system.
 The development environment is adapted to this situation to ensure a correct integration.
 Moreover, the project uses tools to run unit tests, generate code, etc.
 
 \subsection*{Integration}
 The files of Flango \cm live in the server as part of the \flangobe .
 The backend is developed with Django and requires a set of Python libraries that might not be available in the system.
-To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django, although Basestation uses Apache2, and the robot Lighttpd.
+To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django\footnote{\url{http://www.djangoproject.com}}, although Basestation uses Apache2\footnote{\url{http://httpd.apache.org}}, and the robot Lighttpd\footnote{\url{http://www.lighttpd.net}}.
 All the code is in a subversion repository.
 
 \begin{lstlisting}[caption=Creation of virtual environments, label=virtual-env]
@@ -20,11 +20,11 @@ $ workon local-flango
 $ pip install --upgrade -r requirements.txt
 \end{lstlisting}
 
-Virtual environments have pre and postactivate scripts to alter the default behaviour.
-Flango needs to modify environment variables to make \texttt{local-flango} live in the local copy of the repository, use a database, set aliases, etc.
+Virtual environments have pre and postactivate scripts to alter the default behaviour and can have versions of python and other packages different than the system's.
+Flango needs to modify environment variables have \texttt{local-flango} in the local copy of the repository, use a database, set aliases, etc.
 
 After the virtual environment is ready, it is easier to change between branches.
-Django is one of the packages available in the virtual environment and has a built-in web server to develop that runs on port 8000.
+Django is a web framework for Python and has a built-in development web server that runs on port 8000.
 
 \begin{lstlisting}[caption=Django web server, label=virtual-env-server]
 ~/contentMgmtBranches/trunk/backend$ django runserver
@@ -130,7 +130,8 @@ Listing \ref{sass-example} shows logical nesting and inheritance.
 \lstinputlisting[label=sass-example,language=SASS, caption={SASS code example}]{src/sass-example.css}
 
 \paragraph{Connection with robots} Robots are essentially two GNU/Linux computers with \ac{ssh} enabled.
-\reem{H3} has one in the torso (\texttt{media}) where Flango is installed \ref{impl-ssh}, and one in the lower half (\texttt{control}).
+\reem{H3} has one in the torso (\texttt{media}) where Flango is installed, and one in the lower half (\texttt{control}).
+Listing \ref{impl-ssh} illustrates the connection with the media computer.
 
 \begin{lstlisting}[columns=fixed,language=bash,caption=Connection with robots, label=impl-ssh]
 $ ssh pal@reemh3-1m
@@ -313,7 +314,7 @@ For example: an application runs with \lstinline$security_level = 1$ (user) beca
 If client-side code is altered and \lstinline$security_level$ is set to \lstinline$2$ (admin), it will send the command to Qt (or publish it to a \ac{ROS} Topic, depending on the version of this project) and arms will move.
 robotBehaviour assumes safe input from Flango \cm because the code can not be altered except by engineers in the company.
 
-\section{Transformation to \ac{HTML}}
+\section{Transformation to \acs{HTML}}
 The \texttt{flUi} directive makes decoupling and reusing directives possible (listing \ref{impl-directive-ui}).
 It removes the type attribute (\texttt{fl:type="base-button"} and creates an attribute with that value (\texttt{base-button}), which can trigger directives (\texttt{flBaseButton}, listing \ref{impl-directive-basebutton}).
 Dependencies are \textbf{injected} by using their name in the parameters of the function.
