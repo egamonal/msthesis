@@ -1,50 +1,50 @@
 \chapter{Conclusions}
 \section{Conclusions}
-Software products do not degrade with time or external factors but they are adapted, corrected and extended.
+Software products do not degrade with time or with external factors but they are continually adapted, corrected and extended.
 Changes in the project or dependency on third-party software can lead to critical situations  (e.g. the vendor stops supporting the product) and make the software unmaintainable.
 Reengineering the system, altering the internal structure of the code or even substituting it without changing the external behaviour, becomes a requirement.
 
 This thesis was eminently a practical work with a clear goal: reengineer Flango \cm with web technology.
 
-The first chapter, the introduction, provided an overview of the project regarding the context and the boundaries of this thesis.
+The introduction provided an overview of the project including the context and the boundaries of the problem that this thesis was going to address.
 
-Next, the second chapter contained a general overview of topics surrounding those that structure and support this thesis.
+The second chapter contained a general overview of topics that structure and support this thesis.
 It described the reengineering process proposed by Pressman \cite{Pressman:2007}, the evolution and present of web technology and the methodology of this project.
 
 Chapters 3 to 8 described the development of this project from the perspective of software engineering.
 Despite the fact that the software was developed in small iterations, each chapter presents a view of the system: plan, requirements, specification, internal design and deployment, details on the implementation, and testing.
 
 Initially, the project was \textbf{planned} in terms of scope, schedule and budget. 
-A risk analysis was conducted to prevent and mitigate situations that could make the project fail.
+A risk analysis was conducted in order to prevent and mitigate situations that could make the project fail.
 During the development, deviations were tracked and understood and the plan was adapted accordingly.
 The overall number of hours was approximately the same (+14\%) and the scope was slightly smaller.
 
-Secondly, \textbf{requirements} were gathered from exploring the old version and interviewing the previous developer.
+\textbf{Requirements} were then gathered from exploring the old version and interviewing the previous developer.
 This approach saved time and provided a deep understanding of the system.
 Functional and non-functional requirements were listed along with constraints and off-the-shelf solutions.
 
 After this, the \textbf{specification} of the system was made: system use cases, conceptual model and behaviour model, which combined test-driven development, where tests are executable specifications, and design by contract.
 Even though this was not a traditional approach to creating the specification of a system, it fitted very well in the development methodology.
 This part was kept as technology-agnostic as possible and emphasised the first three steps in a reengineering process: inventory analysis, documentation restructuring and reverse engineering.
-This \emph{reverse engineering} step was crucial to understand the old system and became the most complex and extensive.
+This \emph{reverse engineering} step was crucial to understand the old system and became the most complex and extensive step.
 
-Then, the system was \textbf{designed} internally with class and packages diagrams, sequence diagrams of relevant operations and deployment diagrams.
+The system was then \textbf{designed} internally with class and packages diagrams, sequence diagrams of relevant operations and deployment diagrams.
 The software was built with a \ac{MVC} architecture in a \ac{SOA}-like ecosystem (\ac{ROS}) and used the following patterns: dependency injection, command, factory, revealing module and remote facade.
 Designing the software as a service would have been a better choice to make integration with \ac{ROS} easier.
-In any case, the proposed solution is robust and interoperates correctly with the robot's system by using ROS Bridge and with Basestation, by using JSON.
+In any case, the solution proposed is robust and interoperates correctly with the robot's system by using ROS Bridge and with Basestation, by using JSON.
 This part was done after choosing the technology and emphasised the last three steps in a reengineering process: code restructuring, data restructuring and forward engineering.
-Because the new application substituted the old one, only the \emph{forward engineering} step was relevant, but minor changes in the \flangobe and robotBehaviour were done in the \emph{code/data restructuring} steps.
+Since the new application substituted the old one, only the \emph{forward engineering} step was relevant, but minor changes in the \flangobe and robotBehaviour were done in the \emph{code/data restructuring} steps.
 
 Finally, the software was \textbf{implemented} with Google Angular (JavaScript), \ac{HTML}, \ac{SASS}, ROSLibJS and other JavaScript libraries.
-There were minor changes in the back-end (Python) and even in the screens editor.
-Amongst other improvements, using web technology made the new system more flexible (changeability of themes, addition of new components) and easier to debug and interoperable (access to ROS Topics and, therefore, to hardware).
-Furthermore, the performance increased (audio and video with native codecs instead of \flash and use of Google Chrome JavaScript engine instead of QtWebKit's SquirrelFish).
-Google Angular was used in an exotic fashion to fit in the constraints of the \ac{XML}, which resulted in not using all the features of the framework (or even overriding a few of them) but, at the same time, it reduced the workload and the amount of code to write.
+There were minor changes in the back-end (Python) and in the screens editor.
+Amongst other improvements, using web technology made the new system more flexible (changeability of themes, addition of new components), easier to debug, and interoperable (access to ROS Topics and, therefore, to hardware).
+
+Google Angular was used in an exotic fashion to fit in the constraints of the \ac{XML}, which resulted in only using only some of the features of the framework (or even overriding a few of them) but also in reducing the workload and the amount of code to write.
 \ac{SASS} enabled thinking in object oriented design even for style sheets, code reuse and efficiency in the browser.
 
 Unit \textbf{tests} were used as \textbf{executable specifications} and helped design less coupled and more cohesive components.
 
-There are many ways to reengineer a system.
+It is clear that there are many ways to reengineer a system.
 Pressman's book provided a framework to divide the process in phases, set boundaries, discover new tasks (e.g. extending the \flangobe to obtain data in a suitable format) and structure this document.
 
 All the goals of this project have been fulfilled:
@@ -54,33 +54,32 @@ All the goals of this project have been fulfilled:
 \item It is compatible with non-reengineered parts of the system (\flangobe and \flangofe).
 \end{enumerate}
 
-Even though there are some limitations, I believe that this master's thesis has addressed the reengineering of the content manager and developed the new system with accuracy, creativity and consistency, applied a systematic approach and used proven techniques like software patterns and widely-known architectures.
+Even though there are some limitations, I believe that this master's thesis has addressed the reengineering of the content manager and developed the new system with accuracy, creativity and consistency. It applied a systematic approach and used proven techniques like software patterns and widely-known architectures.
 
 
 \section{Personal Insights}
-This work is the artifact that puts an end to a two-year master's course that has helped me strenghten my computer science and software engineering education.
+This work is the artifact that puts an end to a two-year masters' course that has helped me strengthen my computer science and software engineering education.
 In these 4 semesters I have gained a diverse and strong background in my field, including topics like compilers or artificial intelligence, a project-driven approach to software design and databases, or even business and project management.
-Part of this master's was done at Northeastern University (Boston, MA).
-There, I learned about research and explored topics that do not belong to my specialisation, like machine learning.
-However, it provided me with the base for academic writing that has been applied to this project.
-Moreover, I learned about human-computer interaction and web technology, which helped me understand the context of this project.
+Part of this Master was followed at Northeastern University (Boston, MA), where I learned about research and explored topics that did not belong to my field of specialisation, such as machine learning.
+I also learned about human-computer interaction and web technology, which helped me understand the context of this project.
 
-Specifically, this thesis gave me the opportunity to research topics that did not belong to the syllabus of the courses I took, namely service-oriented architectures, integration of systems, reengineering of software or applying and implementing software patterns in a real environment.
+Specifically, this thesis gave me the opportunity to research topics that did not belong to the syllabus of the courses I took.
+For example, I researched service-oriented architectures, integration of systems, reengineering of software or applying and implementing software patterns in a real environment.
 I worked with innovative technology that does not fit in classical software design models, like JavaScript, and I reviewed, extended and fixed code in Python or ActionScript developed by previous members of the team.
 
-This project was developed in a company that focuses on humanoid robots.
-Most of engineers work with either Python or C++, but not web technology.
-Being a one-man team helped me find ways to overcome all problems in order to make the project successful.
-Furthermore, this set up forced me to think about the trade-offs between time and scope of projects, and to build the product incrementally.
+This project was developed for a company that specialises in humanoid robots.
+Most of the engineers work with either Python or C++, but not with web technology.
+Being a one-man team helped me find ways to overcome all kind of problems in order to make the project successful.
+Furthermore, this set up forced me to think about the trade-offs between time and the scope of projects, and to build the product incrementally.
 
-In conclusion, this master's thesis consolidates not only my technical skills, but also a fundamental quality in a software engineer: problem-solving.
+In conclusion, this master's thesis consolidates not only my technical skills, but also an essential skill for a software engineer: problem-solving.
 
 
 \section{Future Work}
-Although I believe that this master's thesis provides a comprehensive and solid description of the system developed, it is important to note that there are limitations that could introduce future work.
+Although I believe that this master's thesis provides a comprehensive and solid description of the system previously described and developed, it is important to note that there are limitations that could be the base of  future work.
 
-\textbf{Project Scope} This thesis presented only a part of the Flango \cm . 
-A number of features were left out of the scope due to time constraints and should be added in the upcoming weeks.
+\textbf{Project Scope} This thesis presented only some parts of the Flango \cm . 
+A number of features were left out of the scope due to time constraints and should therefore be added in the upcoming weeks.
 These include the implementation of Entities (incomplete at the time of writing this document) and the management of user sessions.
 
 \textbf{Content and container} Reading inner and inherited properties \\(\lstinline$<elem><width>30</width></elem>$) instead of reading them in-line (\lstinline$<elem width="30" />$) becomes cumbersome when UI Components are in a container defined in the \ac{XML} \\ (\lstinline$<fl:ui fl:type="container">...</elem>$).
@@ -91,13 +90,12 @@ The most frequent use of containers is displaying entities.
 This code is not generated by the screens editor. 
 Therefore, it could be changed to regular Angular loop directives.
 
-\textbf{SOA and integration} There are two clients, at least, that use the software: the robot and a content application user.
+\textbf{SOA and integration} There are at least two clients that use the software: the robot and a content application user.
 It was only in the last weeks of development that we considered developing the software as a service, like other components in \ac{ROS} that use the messaging system.
-The software was not designed strictly as a service due to time constraints but included a remote facade to attend requests from the robot via Topics.
+Due to time constraints, the software was not originally designed as a service but included a remote facade to attend requests from the robot via Topics.
 This was a simple approach to a simple need (less than 10 types of requests).
-In the future, redesigning this remote facade should be considered to allow reuse of components and make the logic of Flango \cm a service in the robot.
+Redesigning this remote facade should be considered to allow the reuse of components and make the logic of Flango \cm a service in the robot.
 
-\textbf{Theming} The previous version only had one theme and did not implement the logic to change them.
-The new version is ready for this but it is incomplete.
-In the future, this implementation should be finished.
-\ac{SASS} elements, like variables, \textit{mixins} and inheritance will allow quick development and customisation of the look and feel of content applications.
+\textbf{Theming} The previous version only had one theme.
+The new version supports themes but the implementation is not completed.
+\ac{SASS} elements, such as variables, \textit{mixins} and inheritance will allow quick development and customisation of the look and feel of content applications.
