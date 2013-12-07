@@ -83,7 +83,7 @@ Although I believe that this master's thesis provides a comprehensive and solid 
 A number of features were left out of the scope due to time constraints and should be added in the upcoming weeks.
 These include the implementation of Entities (incomplete at the time of writing this document) and the management of user sessions.
 
-\textbf{Content and container} Reading inner and inherited properties \\(\lstinline$<elem><width>30</width></elem>$) instead of reading them in-line (\lstinline$<elem width="30" />$) becomes cumbersome when UI Components are in a container defined in the \ac{XML} (\lstinline$<fl:ui fl:type="container">...</elem>$).
+\textbf{Content and container} Reading inner and inherited properties \\(\lstinline$<elem><width>30</width></elem>$) instead of reading them in-line (\lstinline$<elem width="30" />$) becomes cumbersome when UI Components are in a container defined in the \ac{XML} \\ (\lstinline$<fl:ui fl:type="container">...</elem>$).
 With a first strategy, containers were modified by inner attributes of UI Components.
 The current strategy works but it makes logic reuse and maintenance harder than necessary.
 In the future, a better design should be implemented.
