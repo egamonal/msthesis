@@ -10,6 +10,6 @@ function Company(c) {
     this.cname = c;
 }
 
-var p1 = new Person("Eduard Gamonal", 25, "m", "PAL");
-var p2 = new Person("Reem C", 2, "m", "ESA");
+var p1 = new Person("Alice Goodfellow", 25, "m", "NSA");
+var p2 = new Person("Bob Chapman", 2, "m", "ESA");
 

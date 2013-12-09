@@ -4,7 +4,7 @@ This chapter describes the environment to develop and run Flango \cm.
 It illustrates the implementation of key features with code examples.
 
 \section{Development Environment Set-Up}
-Flango \cm belongs to a bigger project, Flango and the robot system.
+Flango \cm belongs to a bigger project, Flango and the robot's system.
 The development environment is adapted to this situation to ensure a correct integration.
 Moreover, the project uses tools to run unit tests, generate code, etc.
 
@@ -12,7 +12,7 @@ Moreover, the project uses tools to run unit tests, generate code, etc.
 The files of Flango \cm live in the server as part of the \flangobe .
 The backend is developed with Django and requires a set of Python libraries that might not be available in the system.
 To overcome this situation, Flango is developed in a virtual environment and files are made available to clients with the built-in web server in Django\footnote{\url{http://www.djangoproject.com}}, although Basestation uses Apache2\footnote{\url{http://httpd.apache.org}}, and the robot Lighttpd\footnote{\url{http://www.lighttpd.net}}.
-All the code is in a subversion repository.
+All the code is in a subversion\footnote{\url{http://subversion.tigris.org}} repository.
 
 \begin{lstlisting}[caption=Creation of virtual environments, label=virtual-env]
 $ mkvirtualenv local-flango
@@ -20,10 +20,10 @@ $ workon local-flango
 $ pip install --upgrade -r requirements.txt
 \end{lstlisting}
 
-Virtual environments have pre and postactivate scripts to alter the default behaviour and can have versions of python and other packages different than the system's.
+Virtual environments have pre and postactivate scripts to alter the default behaviour and can have versions of Python and other packages different than the system's.
 Flango needs to modify environment variables have \texttt{local-flango} in the local copy of the repository, use a database, set aliases, etc.
 
-After the virtual environment is ready, it is easier to change between branches.
+After the virtual environment is ready, it is easier to switch development branches (e.g. working on two features at the same time, but using different versions or different databases to avoid conflicts and guarantee that they both have a safe starting point).
 Django is a web framework for Python and has a built-in development web server that runs on port 8000.
 
 \begin{lstlisting}[caption=Django web server, label=virtual-env-server]
@@ -40,7 +40,7 @@ Quit the server with CONTROL-C.
 \end{lstlisting}
 
 The file structure of the whole project is shown in listing \ref{impl-flango-files-layout}.
-Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts to build Debian packages to deploy the software on the robot and basestation.
+Folders \texttt{build}, \texttt{packaging} and \texttt{conf} contain scripts that are used when building Debian packages that will deploy the software on the robot and basestation.
 \texttt{src} contains the \flangobe , which includes the \flangofe (and the \se).
 The project of this thesis, Flango \cm is in the \texttt{static} folder (listing \ref{impl-flango-static-files-layout}), that contains files served without any server-side processing.
 
@@ -61,18 +61,18 @@ exports     frontend  lib
 flango-gui  img       media
 \end{lstlisting}
 
-The development computer also has a working copy of the code for the robot and Basestation to run simulations and test the new \cm  without using robot time, a scarce resource.
+The development computer also has a working copy of the code for the robot and Basestation in order to run simulations and to test the new \cm  without using robot time, a scarce resource.
 
 There are 3 run levels (each with a matching executable file):
 \begin{enumerate}
 \item \textbf{htmlDialog}. A basic Qt dialog with a QtWebKit widget.
-\item \textbf{guiServer}. A version with more features enabled, like the sound server , navigation, etc.
-\item \textbf{stateMachine}. The complete suite with a testing state machine, Qt, sound server, etc.
+\item \textbf{guiServer}. A version with more features enabled, like the sound server, navigation, etc.
+\item \textbf{stateMachine}. A full program with a testing state machine, Qt, sound server, etc.
 \end{enumerate}
 
 An \ac{XML} file (\texttt{robot/sources/etc/reemh3/robot.xml}) defines the \ac{URL} to load.
 Listing \ref{impl-robot-xml} shows a part of the configuration file.
-In this case, the robot (or the simulation) loads the old version, an \ac{HTML} file in \texttt{http://localhost/static/frontend/index.html} that only contains a full-screen \flash object, the Flango \cm .
+In this case, the robot (or the simulation) loads the old version, an \ac{HTML} file in \texttt{http://localhost/static/frontend/index.html} that only contains a full-screen \flash object, the old Flango \cm .
 \begin{lstlisting}[language=xml,caption=Robot configuration file, label=impl-robot-xml]
 <controller type="Gui" implementation="" debug="1">
     <guiController>
@@ -107,8 +107,8 @@ In this case, interoperability is tested with \ac{ROS} topics in localhost and G
 \subsection*{Tools}
 The development of this project uses a number of tools to automate tasks and control de quality of the code to build a robust product.
 
-\paragraph{\ac{IDE}} WebStorm is an \ac{IDE} based on IntelliJ IDEA designed to develop \acp{RIA}.
-It provides integration with major frameworks, supports files with multiple languages (e.g. HTML with embedded \ac{CSS} or JavaScript), provides tools for refactoring and on-the-fly code analysis (e.g. with JSHint/JSLint)
+\paragraph{\ac{IDE}} WebStorm\footnote{\url{http://www.jetbrains.com/webstorm}} is an \ac{IDE} based on IntelliJ IDEA designed to develop \acp{RIA}.
+It provides integration with major frameworks, supports files with multiple languages (e.g. \ac{HTML} with embedded \ac{CSS} or JavaScript), provides tools for refactoring and on-the-fly code analysis (e.g. with JSHint/JSLint)
 
 \paragraph{Karma Runner and Jasmine} Angular mixes very well with \ac{TDD}. 
 It provides a framework (Jasmine) to write unit tests and a tool to automate them: Karma.
@@ -125,7 +125,7 @@ After this first stage, it was required to use a full browser: \textbf{Chrome} w
 \paragraph{SASS} \ac{SASS} is a scripting language that is interpreted into \ac{CSS}.
 It has variables, mixins, inheritance, logical nesting blocks, arithmetic operations and functions among other features, and the code can be separated in several files that are compiled into a single \ac{CSS}.
 It has two syntaxes: the original, and \ac{SCSS}, the newer one used in this project.
-Listing \ref{sass-example} shows logical nesting and inheritance.
+Listing \ref{sass-example} (L19) shows logical nesting and inheritance.
 
 \lstinputlisting[label=sass-example,language=SASS, caption={SASS code example}]{src/sass-example.css}
 
@@ -185,7 +185,7 @@ return {
 \section{Services}
 Angular Services can be declared with the \texttt{service()} constructor, with a \texttt{factory()} or, for complex scenarios, with a \texttt{provider()}.
 
-\begin{lstlisting}[language=JavaScript,caption=Examples of services definition, label=impl-services-definition]
+\begin{lstlisting}[language=JavaScript,caption=Examples of service definition, label=impl-services-definition]
     palPropertiesModule.service('palProperties', function (palSettings) {});
     palSettingsModule.factory('palSettings', function ($http, $q...) {});
 \end{lstlisting}
@@ -195,14 +195,14 @@ Angular Services can be declared with the \texttt{service()} constructor, with a
 
 \texttt{service()} (listing \ref{impl-services-definition-service}) returns an object, whereas \texttt{factory()}  (listings \ref{impl-factory-reveal} and \ref{impl-services-definition-factory}) first creates it and then returns the instance.
 
-\begin{lstlisting}[language=JavaScript,caption=Examples of services definition (service()), label=impl-services-definition-service]
+\begin{lstlisting}[language=JavaScript,caption=Examples of service definition (service()), label=impl-services-definition-service]
 palPropertiesModule.service('palProperties', function (...) {
     this.toCSS = function (scope, p) { ... };
     this.getProperty = function (scope, property, lang) { ... };
 });
 \end{lstlisting}
 
-\begin{lstlisting}[language=JavaScript,caption=Examples of services definition (factory()), label=impl-services-definition-factory]
+\begin{lstlisting}[language=JavaScript,caption=Examples of service definition (factory()), label=impl-services-definition-factory]
 palSettingsModule.factory('palSettings', function (...) {
      var config, qs;
      var deferred = $q.defer();
@@ -223,7 +223,7 @@ palSettingsModule.factory('palSettings', function (...) {
 \section{Controllers}
 \label{sec:controllers}
 Controllers are key parts of any \ac{CRUD} application.
-However, because Flango \cm does not know about the objects of the specific domain  of the content application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
+However, because Flango \cm does not know about the specific domain of the content application before running it, the only controllers that exist are those that receive events from the rendered \ac{GUI}, e.g. \texttt{ActionCtrl} (listing \ref{impl-action-ctrl}).
 \textbf{Command Pattern} This controller implements the \textbf{command pattern} and uses JavaScript's methods \texttt{call} and \texttt{apply} to call a method by its name and passing in arguments \cite{Osmani:2012}.
 
 \lstinputlisting[label=impl-action-ctrl,language=JavaScript, caption={ActionCtrl implementation}]{src/impl-controllers.js}
@@ -343,7 +343,6 @@ Exclusive properties (like the position or size) are transformed to \ac{CSS} and
 
 The result is a button like the one in the old version, one of the goals of the project.
 
-
 \section{Integration with ROS}
 \label{sec:integration-with-ROS}
 Flango \cm is built as a component in \ac{ROS} that can interoperate with the rest of the system using \ac{ROS} topics.
@@ -400,7 +399,6 @@ string           name
 #   goTo
 #   setLanguage
 string           arg
-
 \end{lstlisting}
 
 After compiling the new message becomes available to the system.
@@ -413,7 +411,6 @@ ROS Bridge provides a \ac{JSON} interface to \ac{ROS}. Listing \ref{impl-flango-
 [INFO] [WallTime: 1385407762] Rosbridge server started on port 9090
 [INFO] [WallTime: 1385408718] Client connected.  1 clients total.
 [INFO] [WallTime: 1385408718] [Client 0] Subscribed to /web_gui_events
-
 \end{lstlisting}
 
 Flango \cm uses two topics: one for listening and one for publishing with different types of messages for convenience in the integration with robotBehaviour.
@@ -460,7 +457,6 @@ var listener = new ROSLIB.Topic({
     name : '/topic_name',
     messageType : 'std_msgs/String'
 });
-
 listener.subscribe(function(message) { /* callback */ } );
 \end{lstlisting}
 
@@ -472,7 +468,6 @@ To make the subscribe callback available to the client instance, one of the para
 var listeners = {};
 var subscribe = function (name, messageType, callback) {
     listeners[name] = new ROSLIB.Topic({...});
-    
     listeners[name].subscribe(function(message) {
         callback(message);
     });
@@ -491,9 +486,7 @@ palROSBridgeModule.factory('palROSBridge', function () {
     // ROSLIB.Topic.subscribe creates a list of subscribers.
     // this is just delegating the task
     var subscribe = function (name, messageType, callback) {...};
-
     var unsubscribe = function (name, callback) {...};
-
     // Reveal methods as a public API
     var service = {
         'connect': connect,
@@ -501,7 +494,6 @@ palROSBridgeModule.factory('palROSBridge', function () {
         'unsubscribe': unsubscribe,
         ...
    };
-   
    return service;
 });
 \end{lstlisting}

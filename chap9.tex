@@ -92,10 +92,10 @@ Therefore, it could be changed to regular Angular loop directives.
 
 \textbf{SOA and integration} There are at least two clients that use the software: the robot and a content application user.
 It was only in the last weeks of development that we considered developing the software as a service, like other components in \ac{ROS} that use the messaging system.
-Due to time constraints, the software was not originally designed as a service but included a remote facade to attend requests from the robot via Topics.
+Due to time constraints, the software was not originally designed as a service but included a remote facade to attend requests from the robot.
 This was a simple approach to a simple need (less than 10 types of requests).
 Redesigning this remote facade should be considered to allow the reuse of components and make the logic of Flango \cm a service in the robot.
 
 \textbf{Theming} The previous version only had one theme.
-The new version supports themes but the implementation is not completed.
-\ac{SASS} elements, such as variables, \textit{mixins} and inheritance will allow quick development and customisation of the look and feel of content applications.
+The new version supports themes but the implementation is incomplete.
+\ac{SASS} elements, such as variables, \textit{mixins} and inheritance will allow quick development of the look and feel of content applications.
