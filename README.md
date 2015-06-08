@@ -1,11 +1,11 @@
 Master thesis
 ========
 
-[Eduard Gamonal](https://www.linkedin.com/in/egamonal)
+**Author**: [Eduard Gamonal](https://www.linkedin.com/in/egamonal)
 
-Master in Information Technology
+**Degree**: Master in Information Technology
 
-[Facultat d'Informàtica de Barcelona](http://www.fib.upc.edu), [Universitat Politècnica de Catalunya](http://www.upc.edu)
+**University** [Facultat d'Informàtica de Barcelona](http://www.fib.upc.edu), [Universitat Politècnica de Catalunya](http://www.upc.edu)
 
 Dec 18, 2013
 
@@ -15,8 +15,10 @@ UPC Commons http://hdl.handle.net/2099.1/20166
 
 > Gamonal Capdevila, Eduard. "Reengineering a Content Manager for Humanoid Robots with Web Technology". Castell, Núria. 2013. <http://hdl.handle.net/2099.1/20166>. [query: 08-06-15].
 
-Supervisor: Dr Núria Castell Arinyo
-Department: former LSI (systems and languages, 2013). currently Department of Computer Science http://www.cs.upc.edu/ 
+**Supervisor**: Dr Núria Castell Arinyo
+
+**Department**: former LSI (systems and languages, 2013). currently Department of Computer Science http://www.cs.upc.edu/ 
+
 This project aims to reengineer a content manager for humanoid robots with web technology at (PAL Robotics)[http://www.pal-robotics.com] in order to abandon the current Adobe Flash implementation. This software runs in the robot, displays content applications and handles user interaction.
 
 ### Abstract
@@ -61,7 +63,6 @@ Daniel Andersson, Oriol Arcas, Margaux Bigotte,  Oriol Collell, Clara Cowley, Jo
 I would like to express my deepest gratitude to the professors in high-school and university that inspired me, showed me that hard work pays off, encouraged me to always pursue bigger challenges, and gave me the opportunity to take semesters at the University of Aberdeen (Scotland) and Northeastern University (Boston, MA).
 
 Finally, I would like to thank my professor Núria Castell for her guidance and support while I completed this work.
-
 
 ### License
 This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
