@@ -19,8 +19,9 @@ UPC Commons http://hdl.handle.net/2099.1/20166
 
 **Department**: former LSI (systems and languages, 2013). currently Department of Computer Science http://www.cs.upc.edu/ 
 
-This project aims to reengineer a content manager for humanoid robots with web technology at (PAL Robotics)[http://www.pal-robotics.com] in order to abandon the current Adobe Flash implementation. This software runs in the robot, displays content applications and handles user interaction.
+This project aims to reengineer a content manager for humanoid robots with web technology at [PAL Robotics]([http://www.pal-robotics.com) in order to abandon the current Adobe Flash implementation. This software runs in the robot, displays content applications and handles user interaction.
 
+PAL Robotics humanoid robot REEM-H3. 1.8m, 90Kg:
 ![PAL Robotics REEM-H3](https://raw.githubusercontent.com/egamonal/msthesis/master/figures/reemh3.jpg)
 
 ### Abstract
