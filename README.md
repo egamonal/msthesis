@@ -21,6 +21,8 @@ UPC Commons http://hdl.handle.net/2099.1/20166
 
 This project aims to reengineer a content manager for humanoid robots with web technology at (PAL Robotics)[http://www.pal-robotics.com] in order to abandon the current Adobe Flash implementation. This software runs in the robot, displays content applications and handles user interaction.
 
+![PAL Robotics REEM-H3](https://raw.githubusercontent.com/egamonal/msthesis/master/figures/reemh3.jpg)
+
 ### Abstract
 
 Software products do not degrade with time or with external factors, but they are continually corrected and extended.
